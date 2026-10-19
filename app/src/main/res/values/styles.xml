@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Toolbox" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#0C1424</item>
+        <item name="android:navigationBarColor">#0C1424</item>
+    </style>
+</resources>

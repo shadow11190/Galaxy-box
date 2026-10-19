@@ -1,0 +1,12 @@
+<resources>
+    <string name="widget_overview_name">Galaxy box · 完整版</string>
+    <string name="widget_battery_name">Galaxy box · 精簡版</string>
+    <string name="widget_resources_name">Galaxy box · 記憶體與儲存</string>
+    <string name="widget_overview_description">日期時間、機型、記憶體、儲存、電量與電池溫度，可獨立設定背景。</string>
+    <string name="widget_battery_description">電量、電池溫度與充電狀態，支援點按更新。</string>
+    <string name="widget_resources_description">RAM、資料分割區及可讀核心最高頻率的快照。</string>
+    <string name="widget_refresh_symbol">↻</string>
+    <string name="widget_refresh_description">重新取樣小工具資料</string>
+    <string name="widget_waiting">尚未取樣 · 點 ↻ 更新</string>
+    <string name="widget_unknown">—</string>
+</resources>
