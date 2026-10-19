@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_cell"
+    android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+    android:orientation="vertical" android:paddingStart="3dp" android:paddingEnd="5dp" android:paddingTop="1dp" android:paddingBottom="1dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+        <TextView android:id="@+id/widget_metric_label" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:textSize="12sp" android:maxLines="2" />
+        <TextView android:id="@+id/widget_metric_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="14sp" android:textStyle="bold" android:maxLines="2" android:gravity="end" />
+    </LinearLayout>
+    <ImageView android:id="@+id/widget_metric_progress" android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="2dp" android:scaleType="fitXY" android:importantForAccessibility="no" android:visibility="gone" />
+    <TextView android:id="@+id/widget_metric_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12sp" android:visibility="gone" />
+</LinearLayout>
