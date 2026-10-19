@@ -1,6 +1,8 @@
 # Galaxy Box
 
-繁體中文原生 Android 硬體工具箱，使用 Kotlin 與 Jetpack Compose。**v0.6.7 為本專案第一個公開版本**。支援 Android 8.0（API 26）以上，基本功能免 Root、免 Shizuku，部分進階讀取可自行啟用 Shizuku。
+**主要為 Samsung Galaxy 三星手機設計**的繁體中文原生 Android 硬體工具箱，使用 Kotlin 與 Jetpack Compose。**v0.6.7 為本專案第一個公開版本**。支援 Android 8.0（API 26）以上，基本功能免 Root、免 Shizuku，部分進階讀取可自行啟用 Shizuku。
+
+部分通用功能可在其他 Android 裝置使用，但三星專屬讀值、機型對照與診斷不保證適用。
 
 ## 功能
 
@@ -26,6 +28,7 @@
 使用 JDK 21、Android SDK 35 與 Build Tools 35.0.0。Gradle Wrapper 固定 8.11.1，AGP 8.9.2，Kotlin 2.2.21。首次建置需要下載相依套件。
 
 ```sh
+chmod +x gradlew
 ./gradlew testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest
 ```
 
