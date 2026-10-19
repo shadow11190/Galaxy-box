@@ -1,0 +1,17 @@
+Galaxy box liquid navigation attribution
+
+Upstream: AndroidLiquidGlass / Backdrop Catalog by Kyant and contributors.
+License: Apache License, Version 2.0; see Backdrop-Apache-2.0.txt.
+Source tag: 1.0.0
+Commit: eada9a8600142c1bd6a5c5fc143d06f599cdfaef
+https://github.com/Kyant0/AndroidLiquidGlass/tree/eada9a8600142c1bd6a5c5fc143d06f599cdfaef
+
+LiquidNavigation.kt adapts the optical layering and interaction approach of:
+catalog/src/main/java/com/kyant/backdrop/catalog/components/LiquidBottomTabs.kt
+catalog/src/main/java/com/kyant/backdrop/catalog/utils/DampedDragAnimation.kt
+
+Galaxy box modifications (2026-10-19): own five-tab artwork and theme; one accessible
+interactive row; a separate non-interactive accent capture for icons AND labels;
+horizontal-slop gesture handling; cancellation and resizing; preserved root-free
+hardware pages; capability fallback, failure protection, and large-font sizing.
+The upstream demo icons, screenshot and videos are not included in the app.
