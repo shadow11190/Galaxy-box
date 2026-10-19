@@ -1,0 +1,7 @@
+{
+  "source": "https://storage.googleapis.com/play_public/supported_devices.csv",
+  "retrieved": "2026-10-19",
+  "sha256": "b323bd60142dd665a486ea3d7456c3fbcbaf1d2db444b008053366dbc11f5cd4",
+  "rows": 3376,
+  "description": "Samsung rows from Google Play supported devices. Marketing names only; no live hardware measurements. Exact model match; ambiguous names require exact device match, otherwise unknown."
+}
