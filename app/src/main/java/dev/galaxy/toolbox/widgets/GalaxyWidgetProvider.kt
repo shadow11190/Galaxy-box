@@ -107,9 +107,7 @@ object WidgetUpdates {
 object WidgetDataReader {
     @Volatile private var resolvedModel: String? = null
     private fun model(context: Context): String = resolvedModel ?: runCatching {
-        context.assets.open("samsung-device-names.tsv").bufferedReader().use {
-            DeviceNames.parse(it.lineSequence()).resolve(Build.MANUFACTURER, Build.MODEL, Build.DEVICE)
-        }
+        dev.galaxy.toolbox.data.HardwareCatalog.identity(context, reports = emptyList()).name
     }.getOrNull().let { name ->
         (name ?: Build.MODEL.takeUnless { it.isBlank() || it == Build.UNKNOWN } ?: "—").also { resolvedModel = it }
     }

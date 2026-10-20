@@ -3,8 +3,16 @@
 ## 固定且相容的版本
 
 - `io.github.kyant0:backdrop:1.0.0`（Kyant、Apache-2.0），不使用動態版本。
-- Kotlin／Compose compiler 2.2.21、Compose BOM 2025.11.01（UI／Foundation 1.9.4）、AGP 8.9.2、Gradle 8.11.1。
-- compile／target SDK 35、min SDK 26；Java／JVM target 21，建置 JDK 21+，本次 JDK 22。沿用已核對 Maven AAR metadata 並成功建置的相容組合。
+- Kotlin／Compose compiler 2.2.21、Compose BOM 2025.11.01（UI／Foundation 1.9.5）、AGP 8.10.1、Gradle 8.11.1。R8 建置相容性及保留規則見 R8-OPTIMIZATION.md。
+- compile SDK 36、target SDK 35、min SDK 26；Java／JVM target 21，建置 JDK 21+，本次 JDK 22。
+
+## 2026-10-20 桌面玻璃風格更新
+
+桌面小工具使用原生 RemoteViews 支援的 ImageView Bitmap，沒有執行 Compose／Backdrop，也沒有取得、截圖或即時模糊桌布。靜態材質加入透明中心、偏軸柔光、強調色折光風格及雙層高光邊緣，與 App 共用薄荷色調；此為靜態玻璃風格，不等同 App 的即時折射。
+
+背景長邊最多 320 像素，以限制多尺寸 RemoteViews 的 Bitmap 負擔。背景不透明度一次作用於整個背景材質，高光不會繞過設定。純色模式仍只有單一底色；完全透明／不透明度 0 時不建立 Bitmap，重套 RemoteViews 也會清除背景圖片、隱藏背景層，不留高光／邊框／背景陰影。文字、圖示、數值與有效進度條保留。
+
+既有每個 widget 的獨立設定、尺寸布局、文字／強調色、顯示欄位、即時設定預覽、未知顯示「—」與系統允許的低頻更新策略均保留。材質不增加持續動畫或背景輪詢。
 
 ## 依使用者影片重做導覽
 

@@ -47,7 +47,7 @@ class DiagnosticsUiTest {
         rule.onNodeWithText("SOH").assertDoesNotExist(); rule.onNodeWithText("設計容量").assertDoesNotExist()
         rule.onNodeWithText("系統回報 0").assertIsDisplayed()
     }
-    @Test fun lastButtonAndEntireScrollViewportStayAboveNavigationInAllTextSizes() {
+    @Test fun lastButtonClearsNavigationWhileBackdropExtendsBehindIt() {
         var clicks = 0
         show {
             val source = rememberLayerBackdrop()
@@ -69,7 +69,7 @@ class DiagnosticsUiTest {
             button.assertIsDisplayed().performClick()
             val bar = rule.onNodeWithTag("bottom-navigation").fetchSemanticsNode().boundsInRoot
             val viewport = rule.onNodeWithTag("app-scroll-content").fetchSemanticsNode().boundsInRoot
-            assertTrue("Content must not enter nav capture", viewport.bottom <= bar.top + 1f)
+            assertTrue("Capture must cover content behind transparent nav", viewport.bottom >= bar.bottom)
             assertTrue(button.fetchSemanticsNode().boundsInRoot.bottom <= bar.top)
             val bitmap = rule.runOnIdle { val v = view!!; Bitmap.createBitmap(v.width, v.height, Bitmap.Config.ARGB_8888).also { v.draw(Canvas(it)) } }
             val file = File("build/reports/visual-checks/battery-nav-${if (isDark) "dark" else "light"}-${if (font > 1f) "large" else "standard"}.png")

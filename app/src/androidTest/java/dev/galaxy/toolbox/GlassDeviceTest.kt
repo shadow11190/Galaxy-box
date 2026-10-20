@@ -66,7 +66,7 @@ class GlassDeviceTest {
         val bar = rule.onNodeWithTag("bottom-navigation")
         val rest = rule.onNodeWithTag("navigation-indicator").fetchSemanticsNode().boundsInRoot
         val panel = rule.onNodeWithTag("navigation-panel").fetchSemanticsNode().boundsInRoot
-        assertTrue("Resting bubble should extend above and below the frame", rest.top < panel.top && rest.bottom > panel.bottom)
+        assertTrue("Raised glass remains visible without pressing", rest.top < panel.top && rest.bottom > panel.bottom)
         val label = rule.onNodeWithText("總覽").fetchSemanticsNode().boundsInRoot
         assertTrue("The optical bubble must include the label, not only the icon", rest.bottom >= label.bottom)
         rule.onAllNodesWithText("總覽").assertCountEquals(1)
@@ -85,3 +85,4 @@ class GlassDeviceTest {
         rule.onNodeWithTag("navigation-page-2").assertIsSelected()
     }
 }
+

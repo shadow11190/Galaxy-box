@@ -11,22 +11,29 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withTimeout
+import kotlinx.coroutines.TimeoutCancellationException
 import rikka.shizuku.Shizuku
 import java.util.concurrent.Executors
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 
 enum class ShizukuConnection(val title: String) {
-    NOT_RUNNING("Shizuku 未連線"), TOO_OLD("需要 Shizuku 13 以上"), NOT_ADB("請使用 ADB 模式啟動 Shizuku"),
-    NEED_PERMISSION("Shizuku 已連線，尚未授權"), READY("已連接 Shizuku · ADB 模式"), FAILED("無法取得 Shizuku 狀態")
+    NOT_RUNNING("Shizuku 未連線"), TOO_OLD("需要 Shizuku 13 以上"), UNSUPPORTED_UID("Shizuku 執行身分不支援"),
+    NEED_PERMISSION("Shizuku 已連線，尚未授權"), READY("已連接 Shizuku"), FAILED("無法取得 Shizuku 狀態")
 }
-data class ShizukuAvailability(val connection: ShizukuConnection = ShizukuConnection.NOT_RUNNING, val permissionBlocked: Boolean = false)
+enum class ShizukuMode(val uid: Int, val label: String) {
+    ADB(2000, "ADB"), ROOT(0, "Root");
+    companion object { fun fromUid(uid: Int): ShizukuMode? = entries.firstOrNull { it.uid == uid } }
+}
+data class ShizukuAvailability(val connection: ShizukuConnection = ShizukuConnection.NOT_RUNNING,
+    val permissionBlocked: Boolean = false, val mode: ShizukuMode? = null) {
+    val title: String get() = if (mode == null) connection.title else "${connection.title} · ${mode.label} 模式"
+}
 
 class ShizukuDiagnosticsClient(context: Context, private val permissionResult: (Boolean) -> Unit) : AutoCloseable {
     private val mutable = MutableStateFlow(ShizukuAvailability())
     val availability = mutable.asStateFlow()
     private val main = Handler(Looper.getMainLooper())
-    private val worker = Executors.newSingleThreadExecutor()
     private val args = Shizuku.UserServiceArgs(ComponentName(context, DiagnosticUserService::class.java))
         .tag("readonly-diagnostics").processNameSuffix("readonly_diagnostics").daemon(false).version(13)
     private var active: ServiceConnection? = null
@@ -46,9 +53,14 @@ class ShizukuDiagnosticsClient(context: Context, private val permissionResult: (
             when {
                 !Shizuku.pingBinder() -> ShizukuAvailability()
                 Shizuku.isPreV11() || Shizuku.getVersion() < 13 -> ShizukuAvailability(ShizukuConnection.TOO_OLD)
-                Shizuku.getUid() != 2000 -> ShizukuAvailability(ShizukuConnection.NOT_ADB)
-                Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED -> ShizukuAvailability(ShizukuConnection.READY)
-                else -> ShizukuAvailability(ShizukuConnection.NEED_PERMISSION, Shizuku.shouldShowRequestPermissionRationale())
+                else -> {
+                    val mode = ShizukuMode.fromUid(Shizuku.getUid())
+                    when {
+                        mode == null -> ShizukuAvailability(ShizukuConnection.UNSUPPORTED_UID)
+                        Shizuku.checkSelfPermission() == PackageManager.PERMISSION_GRANTED -> ShizukuAvailability(ShizukuConnection.READY, mode = mode)
+                        else -> ShizukuAvailability(ShizukuConnection.NEED_PERMISSION, Shizuku.shouldShowRequestPermissionRationale(), mode)
+                    }
+                }
             }
         }.getOrElse { ShizukuAvailability(ShizukuConnection.FAILED) }
         mutable.value = next
@@ -56,10 +68,11 @@ class ShizukuDiagnosticsClient(context: Context, private val permissionResult: (
     }
     fun requestPermission() { Shizuku.requestPermission(REQUEST_CODE) }
 
-    suspend fun collect(kind: ProbeKind): PrivilegedSnapshot = withTimeout(15_000) {
+    suspend fun collect(kind: ProbeKind): PrivilegedSnapshot {
         check(refresh().connection == ShizukuConnection.READY) { "Shizuku 尚未授權或已斷線" }
-        try {
-            val remote = suspendCancellableCoroutine<IReadOnlyDiagnostics> { continuation ->
+        val worker = Executors.newSingleThreadExecutor()
+        return try {
+            val remote = try { withTimeout(30_000) { suspendCancellableCoroutine<IReadOnlyDiagnostics> { continuation ->
                 val connection = object : ServiceConnection {
                     override fun onServiceConnected(name: ComponentName?, binder: IBinder?) {
                         if (continuation.isActive) {
@@ -75,10 +88,10 @@ class ShizukuDiagnosticsClient(context: Context, private val permissionResult: (
                 continuation.invokeOnCancellation { disconnect() }
                 try { Shizuku.bindUserService(args, connection) }
                 catch (e: Exception) { if (continuation.isActive) continuation.resumeWithException(e) }
-            }
+            } } } catch (_: TimeoutCancellationException) { throw IllegalStateException("Shizuku 讀取服務連線逾時；請確認服務仍在執行後重試") }
             // Binder calls are blocking. Cancellation explicitly destroys the short-lived service,
             // so a timeout/background transition can interrupt a blocked remote call.
-            suspendCancellableCoroutine { continuation ->
+            try { withTimeout(20_000) { suspendCancellableCoroutine { continuation ->
                 continuation.invokeOnCancellation { disconnect() }
                 worker.execute {
                     try {
@@ -87,8 +100,8 @@ class ShizukuDiagnosticsClient(context: Context, private val permissionResult: (
                         if (continuation.isActive) continuation.resume(parsed)
                     } catch (e: Exception) { if (continuation.isActive) continuation.resumeWithException(e) }
                 }
-            }
-        } finally { disconnect() }
+            } } } catch (_: TimeoutCancellationException) { throw IllegalStateException("Shizuku 資料讀取逾時；請重試，若持續發生可查看 Shizuku 的服務紀錄") }
+        } finally { disconnect(); worker.shutdownNow() }
     }
     fun disconnect() {
         if (Looper.myLooper() != Looper.getMainLooper()) { main.post { disconnect() }; return }
@@ -98,7 +111,7 @@ class ShizukuDiagnosticsClient(context: Context, private val permissionResult: (
     }
     override fun close() {
         disconnect(); Shizuku.removeBinderReceivedListener(received); Shizuku.removeBinderDeadListener(dead)
-        Shizuku.removeRequestPermissionResultListener(permission); worker.shutdownNow()
+        Shizuku.removeRequestPermissionResultListener(permission)
     }
     companion object { private const val REQUEST_CODE = 6601 }
 }

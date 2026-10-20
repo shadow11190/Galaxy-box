@@ -5,16 +5,28 @@ plugins {
 }
 android {
     namespace = "dev.galaxy.toolbox"
-    compileSdk = 35
+    compileSdk = 36
     defaultConfig {
         applicationId = "dev.galaxy.toolbox"
         minSdk = 26
         targetSdk = 35
-        versionCode = 14
-        versionName = "0.6.7"
+        versionCode = 15
+        versionName = "0.7.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures { compose = true; aidl = true }
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            // Opt in only for local upgrades of the existing debug-signed installation.
+            // Normal release builds remain unsigned until a production signing config is supplied.
+            if (providers.gradleProperty("galaxyBox.localCompatibleSigning").orNull == "true") {
+                signingConfig = signingConfigs.getByName("debug")
+            }
+        }
+    }
     testOptions {
         unitTests.isIncludeAndroidResources = true
         unitTests.all {
@@ -32,7 +44,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.10.1")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    // Backdrop 1.0.0 / Compose 1.9.4 support compileSdk 35 and AGP 8.9.2.
+    // Backdrop 1.0.0 / Compose 1.9.5; AGP 8.10.1's R8 supports Kotlin 2.2 metadata.
     implementation("io.github.kyant0:backdrop:1.0.0")
     implementation("dev.rikka.shizuku:api:13.1.5")
     implementation("dev.rikka.shizuku:provider:13.1.5")

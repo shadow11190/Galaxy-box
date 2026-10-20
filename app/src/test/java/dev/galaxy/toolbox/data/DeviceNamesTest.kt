@@ -37,7 +37,7 @@ class DeviceNamesTest {
         assertNull(ChipNames.resolve(null, "qcom", "Galaxy S24 Ultra"))
         assertNull(ChipNames.resolve("SM8650Q", "qcom", "Galaxy S24 Ultra"))
         assertNull(ChipNames.resolve("SM86501", null, "Galaxy S24 Ultra"))
-        assertNull(ChipNames.resolve("S5E9945", null, "Galaxy S24"))
+        assertEquals(setOf("Samsung Exynos 2400", "Samsung Exynos 2400e"), ChipNames.resolve("S5E9945", null, "Galaxy S24")?.candidates?.toSet())
         assertEquals("Qualcomm Snapdragon 8 Gen 3 for Galaxy", ChipNames.resolve("SM8650-AC", "qcom", "Galaxy S24 Ultra")?.name)
         assertEquals("Qualcomm Snapdragon 8 Gen 3", ChipNames.resolve("SM8650", "qcom", "Other phone")?.name)
     }

@@ -1,0 +1,5 @@
+brand	model	device	name	soc	releaseYear	source
+ZTE	Z2464N	P780F01	nubia Neo 3 5G	UNISOC T8300	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
+ZTE	Z2465N	Z7606O	nubia Neo 3 GT 5G	UNISOC T9100	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
+Xiaomi	25042PN24C	dijun	Xiaomi 15S Pro	Xiaomi XRING O1	2025	https://ir.mi.com/static-files/f032d2b5-8fa8-4cb7-b00e-a22ec00b954d | https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	2608BPX34C	lhasa	Xiaomi 18 Fold	Xiaomi XRING O3	2026	https://www.mi.com/shop/buy/detail?cfrom=search&product_id=1230808907 | https://www.gadgets360.com/xiaomi-18-fold-price-in-india-137366

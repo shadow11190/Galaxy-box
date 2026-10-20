@@ -31,6 +31,10 @@ import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Locale
+import kotlin.math.ceil
+import kotlin.math.floor
+import kotlin.math.log10
+import kotlin.math.pow
 
 internal fun LazyListScope.temperatureItems(state: ToolboxState, expanded: List<String>, onToggle: (String) -> Unit,
     onSensor: (String) -> Unit, onRescan: () -> Unit) {
@@ -279,23 +283,73 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
         val minimum = valid.min()
         val maximum = valid.max()
         Text(String.format(Locale.ROOT, "最小 %.1f °C · 最大 %.1f °C", minimum, maximum), color = Muted, style = MaterialTheme.typography.bodySmall)
-        val trendColor = Muted
-        Canvas(Modifier.fillMaxWidth().height(100.dp)) {
-            val span = (maximum - minimum).coerceAtLeast(1.0)
-            val bottom = minimum - if (maximum == minimum) .5 else 0.0
-            var previous: Pair<TemperaturePoint, Offset>? = null
-            visible.forEach { point ->
-                val value = point.celsius
-                if (value == null || !value.isFinite()) previous = null else {
-                    val position = Offset(((point.atMs - (nowMs - TemperatureHistory.WINDOW_MS)).toFloat() / TemperatureHistory.WINDOW_MS * size.width),
-                        (size.height * (1 - (value - bottom) / span)).toFloat().coerceIn(0f, size.height))
-                    previous?.takeIf { point.atMs - it.first.atMs <= TemperatureHistory.MAX_CONNECTED_GAP_MS }?.let { drawLine(trendColor, it.second, position, 2.dp.toPx()) }
-                    drawCircle(trendColor, 1.5.dp.toPx(), position)
-                    previous = point to position
+        val axis = TemperatureTrendAxis.from(minimum, maximum)
+        val axisColor = Muted
+        val trendColor = Mint
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.width(44.dp).height(112.dp), verticalArrangement = Arrangement.SpaceBetween) {
+                axis.ticksDescending.forEach { value ->
+                    Text(axis.label(value), Modifier.fillMaxWidth(), color = axisColor,
+                        textAlign = TextAlign.End, style = MaterialTheme.typography.labelSmall, maxLines = 1)
+                }
+            }
+            Spacer(Modifier.width(6.dp))
+            Canvas(Modifier.weight(1f).height(112.dp)) {
+                axis.ticksDescending.forEach { value ->
+                    val y = (size.height * (axis.maximum - value) / axis.span).toFloat()
+                    drawLine(axisColor.copy(alpha = .23f), Offset(0f, y), Offset(size.width, y), 1.dp.toPx())
+                }
+                listOf(0f, .5f, 1f).forEach { fraction ->
+                    val x = size.width * fraction
+                    drawLine(axisColor.copy(alpha = .13f), Offset(x, 0f), Offset(x, size.height), 1.dp.toPx())
+                }
+                var previous: Pair<TemperaturePoint, Offset>? = null
+                visible.forEach { point ->
+                    val value = point.celsius
+                    if (value == null || !value.isFinite()) previous = null else {
+                        val position = Offset(((point.atMs - (nowMs - TemperatureHistory.WINDOW_MS)).toFloat() / TemperatureHistory.WINDOW_MS * size.width),
+                            (size.height * (axis.maximum - value) / axis.span).toFloat().coerceIn(0f, size.height))
+                        previous?.takeIf { point.atMs - it.first.atMs <= TemperatureHistory.MAX_CONNECTED_GAP_MS }
+                            ?.let { drawLine(trendColor, it.second, position, 2.dp.toPx()) }
+                        drawCircle(trendColor, 1.5.dp.toPx(), position)
+                        previous = point to position
+                    }
                 }
             }
         }
-        Text("失敗樣本與停止輪詢的時段留空；不同來源分開記錄，不補 0。縱軸依此來源有效範圍縮放。", color = Muted, style = MaterialTheme.typography.bodySmall)
+        Row(Modifier.fillMaxWidth()) {
+            Spacer(Modifier.width(50.dp))
+            Row(Modifier.weight(1f), horizontalArrangement = Arrangement.SpaceBetween) {
+                listOf("−5 分", "−2.5 分", "現在").forEach { label ->
+                    Text(label, color = axisColor, style = MaterialTheme.typography.labelSmall)
+                }
+            }
+        }
+        Text("縱軸：°C · 橫軸：距今時間。失敗或停止輪詢的時段留空，不補 0。", color = Muted, style = MaterialTheme.typography.bodySmall)
+    }
+}
+
+internal data class TemperatureTrendAxis(val minimum: Double, val maximum: Double, val step: Double) {
+    val span: Double get() = maximum - minimum
+    val ticksDescending: List<Double> get() = (0..((span / step).toInt())).map { maximum - it * step }
+    fun label(value: Double): String = String.format(Locale.ROOT, if (step < 1.0) "%.1f°" else "%.0f°", value)
+
+    companion object {
+        fun from(minimum: Double, maximum: Double): TemperatureTrendAxis {
+            require(minimum.isFinite() && maximum.isFinite() && minimum <= maximum)
+            val rough = (maximum - minimum).coerceAtLeast(1.0) / 4.0
+            val magnitude = 10.0.pow(floor(log10(rough)))
+            val fraction = rough / magnitude
+            val step = magnitude * when {
+                fraction <= 1.0 -> 1.0
+                fraction <= 2.0 -> 2.0
+                fraction <= 5.0 -> 5.0
+                else -> 10.0
+            }
+            val lower = floor((minimum - step * .25) / step) * step
+            val upper = ceil((maximum + step * .25) / step) * step
+            return TemperatureTrendAxis(lower, upper, step)
+        }
     }
 }
 

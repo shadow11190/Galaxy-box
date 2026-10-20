@@ -2,7 +2,7 @@
 
 ## Shizuku
 
-基本功能免 Root／免 Shizuku。進階電池與 GPU 卡片可選 Shizuku；固定 API／Provider 13.1.5（MIT），僅接受 ADB UID 2000，不接受 Root 模式。Android 11+ 可先在官方 Shizuku 完成無線偵錯配對／啟動，再返回 App 授權並點「讀取」。本 App 沒有內建 ADB 配對或 ADB TCP client。
+基本功能免 Root／免 Shizuku。進階電池與 GPU 卡片可選 Shizuku；固定 API／Provider 13.1.5（MIT），支援 ADB UID 2000 或 Root UID 0 啟動的 Shizuku，仍只做固定唯讀快照。Android 11+ 可先在官方 Shizuku 完成無線偵錯配對／啟動，Root 使用者也可由 Shizuku 啟動服務，再返回 App 授權並點「讀取」。本 App 沒有內建 ADB 配對或 ADB TCP client。連線與資料讀取分別有逾時提示；手機上的 Shizuku 服務啟動仍需實測。
 
 UserService 非常駐 daemon，無 exported Android Service。AIDL 只提供電池／GPU 收集與銷毀，不接受外部命令或路徑。服務核對呼叫 UID；固定檔案白名單，每檔最多 4096 字元。只有 battery 使用 `/system/bin/dumpsys -t 5 battery`（無 set/reset）；輸出最多 48 Ki 字元、程序限 7 秒，整體 15 秒。取消、退到背景、服務失聯或讀取結束會解綁並要求銷毀。沒有週期性特權輪詢。
 

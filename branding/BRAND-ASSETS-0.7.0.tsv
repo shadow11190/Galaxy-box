@@ -1,0 +1,35 @@
+brand	status	source	file	source_url
+xiaomi	OK	Simple Icons: xiaomi	app/src/main/res/drawable/brand_xiaomi.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/xiaomi.svg
+oppo	OK	Simple Icons: oppo	app/src/main/res/drawable/brand_oppo.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/oppo.svg
+oneplus	OK	Simple Icons: oneplus	app/src/main/res/drawable/brand_oneplus.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/oneplus.svg
+vivo	OK	Simple Icons: vivo	app/src/main/res/drawable/brand_vivo.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/vivo.svg
+huawei	OK	Simple Icons: huawei	app/src/main/res/drawable/brand_huawei.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/huawei.svg
+honor	OK	Simple Icons: honor	app/src/main/res/drawable/brand_honor.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/honor.svg
+meizu	OK	Simple Icons: meizu	app/src/main/res/drawable/brand_meizu.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/meizu.svg
+lenovo	OK	Simple Icons: lenovo	app/src/main/res/drawable/brand_lenovo.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/lenovo.svg
+motorola	OK	Simple Icons: motorola	app/src/main/res/drawable/brand_motorola.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/motorola.svg
+asus	OK	Simple Icons: asus	app/src/main/res/drawable/brand_asus.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/asus.svg
+htc	OK	Simple Icons: htc	app/src/main/res/drawable/brand_htc.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/htc.svg
+samsung	OK	Simple Icons: samsung	app/src/main/res/drawable/brand_samsung.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/samsung.svg
+lg	OK	Simple Icons: lg	app/src/main/res/drawable/brand_lg.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/lg.svg
+sony	OK	Simple Icons: sony	app/src/main/res/drawable/brand_sony.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/sony.svg
+sharp	OK	Simple Icons: sharp	app/src/main/res/drawable/brand_sharp.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/sharp.svg
+kyocera	OK	Simple Icons: kyocera	app/src/main/res/drawable/brand_kyocera.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/kyocera.svg
+fujitsu	OK	Simple Icons: fujitsu	app/src/main/res/drawable/brand_fujitsu.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/fujitsu.svg
+rakuten_mobile	OK	Simple Icons: rakuten	app/src/main/res/drawable/brand_rakuten_mobile.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/rakuten.svg
+google_pixel	OK	Simple Icons: google	app/src/main/res/drawable/brand_google_pixel.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/google.svg
+razer_phone	OK	Simple Icons: razer	app/src/main/res/drawable/brand_razer_phone.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/razer.svg
+fairphone	OK	Simple Icons: fairphone	app/src/main/res/drawable/brand_fairphone.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/fairphone.svg
+nokia	OK	Simple Icons: nokia	app/src/main/res/drawable/brand_nokia.xml	https://github.com/simple-icons/simple-icons/blob/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/nokia.svg
+redmi	OK	Wikimedia Commons: Redmi Logo.svg	app/src/main/res/drawable-nodpi/brand_redmi.png	https://commons.wikimedia.org/wiki/File:Redmi_Logo.svg
+poco	OK	Wikimedia Commons: Poco Logo Transparent.png	app/src/main/res/drawable-nodpi/brand_poco.png	https://commons.wikimedia.org/wiki/File:Poco_Logo_Transparent.png
+realme	OK	Wikimedia Commons: Realme-realme- logo box-RGB-01 with out back ground.svg	app/src/main/res/drawable-nodpi/brand_realme.png	https://commons.wikimedia.org/wiki/File:Realme-realme-_logo_box-RGB-01_with_out_back_ground.svg
+iqoo	OK	Wikimedia Commons: IQOO logo.svg	app/src/main/res/drawable-nodpi/brand_iqoo.png	https://commons.wikimedia.org/wiki/File:IQOO_logo.svg
+zte	OK	Wikimedia Commons: ZTE logo.svg	app/src/main/res/drawable-nodpi/brand_zte.png	https://commons.wikimedia.org/wiki/File:ZTE_logo.svg
+nubia	OK	Wikimedia Commons: Nubia logo.svg	app/src/main/res/drawable-nodpi/brand_nubia.png	https://commons.wikimedia.org/wiki/File:Nubia_logo.svg
+rog_phone	OK	Wikimedia Commons: ASUS ROG 2007 logo.svg	app/src/main/res/drawable-nodpi/brand_rog_phone.png	https://commons.wikimedia.org/wiki/File:ASUS_ROG_2007_logo.svg
+nothing	OK	Wikimedia Commons: Nothing.svg	app/src/main/res/drawable-nodpi/brand_nothing.png	https://commons.wikimedia.org/wiki/File:Nothing.svg
+cmf_by_nothing	OK	Wikimedia Commons: CMF by Nothing Logo.svg	app/src/main/res/drawable-nodpi/brand_cmf_by_nothing.png	https://commons.wikimedia.org/wiki/File:CMF_by_Nothing_Logo.svg
+black_shark	OK	Wikimedia Commons: Black Shark logo.svg	app/src/main/res/drawable-nodpi/brand_black_shark.png	https://commons.wikimedia.org/wiki/File:Black_Shark_logo.svg
+
+

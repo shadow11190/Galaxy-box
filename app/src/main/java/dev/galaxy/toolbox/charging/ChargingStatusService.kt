@@ -27,7 +27,7 @@ class ChargingStatusService : Service() {
             ChargingNotification.turnOffPreference(this); stopSelf(); return START_NOT_STICKY
         }
         if (!ChargingNotification.enabled(this) || !ChargingNotification.allowed(this)) { stopSelf(); return START_NOT_STICKY }
-        if (job?.isActive == true) return START_NOT_STICKY
+        if (job?.isActive == true) { signals.trySend(Unit); return START_NOT_STICKY }
         try {
             ChargingNotification.createChannel(this)
             ServiceCompat.startForeground(this, ChargingNotification.ID, ChargingNotification.build(this, ChargingPowerReading(), System.currentTimeMillis()),

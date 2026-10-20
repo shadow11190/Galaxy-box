@@ -74,6 +74,7 @@ object ChargingNotification {
             .setOngoing(true).setOnlyAlertOnce(true).setSilent(true).setShowWhen(false)
             .setCategory(NotificationCompat.CATEGORY_STATUS).setPriority(NotificationCompat.PRIORITY_LOW)
             .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
+            .setDeleteIntent(stop)
             .addAction(0, "停止監控", stop).build()
     }
 }

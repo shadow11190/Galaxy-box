@@ -141,21 +141,41 @@ class HardwareRepository(private val context: Context) {
                 add(Reading("CPU ${core.index} 當前頻率", core.currentKHz?.let { "${it / 1000} MHz" }, path, "可選唯讀來源；休眠核心或 SELinux 限制時未知"))
             }
         }
+        val rawCurrent = property(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW)
+        val rawCharge = property(BatteryManager.BATTERY_PROPERTY_CHARGE_COUNTER)
+        val energy = runCatching {
+            battery.getLongProperty(BatteryManager.BATTERY_PROPERTY_ENERGY_COUNTER)
+        }.getOrNull()
+        val usableCharge = BatteryVendorPolicy.remainingChargeMicroAh(rawCharge, percent,
+            BatteryVendor.of(Build.MANUFACTURER, Build.BRAND))
+        val reportedVoltage = extra(BatteryManager.EXTRA_VOLTAGE)
+        val batteryOptions = BatteryReadOptions.readResolved(context, reportedVoltage, energy, usableCharge)
+        val effectiveVoltage = BatteryElectricalInterpretation.usableMilliVolts(
+            reportedVoltage, batteryOptions.estimateVoltage, energy, usableCharge)
+        val adjustedCurrent = rawCurrent?.let { if (batteryOptions.invertCurrent) -it else it }
         return Snapshot(live, listOf(
             Reading("電量", percent?.let { "$it%" }, "ACTION_BATTERY_CHANGED · level / scale"),
             Reading("充放電狀態", status, "ACTION_BATTERY_CHANGED · status"),
             Reading("電源來源", when (extra(BatteryManager.EXTRA_PLUGGED)) { 0 -> "未接電源"; 1 -> "AC"; 2 -> "USB"; 4 -> "無線充電"; 8 -> "底座"; else -> null }, "ACTION_BATTERY_CHANGED · plugged"),
             Reading("電池溫度", temperature?.let { String.format(Locale.ROOT, "%.1f °C", it) }, "ACTION_BATTERY_CHANGED · temperature / 10"),
-            Reading("電壓", extra(BatteryManager.EXTRA_VOLTAGE)?.takeIf { it > 0 }?.let { "$it mV" }, "ACTION_BATTERY_CHANGED · voltage"),
-            Reading("瞬時電流", property(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW)?.let { "${it / 1000.0} mA" }, "BatteryManager.CURRENT_NOW · µA → mA", "正值代表流入，負值代表流出；依裝置回報"),
-            Reading("剩餘電荷", property(BatteryManager.BATTERY_PROPERTY_CHARGE_COUNTER)?.takeIf { it > 0 }?.let { "${it / 1000.0} mAh" }, "BatteryManager.CHARGE_COUNTER", "目前剩餘電荷，不是滿充容量"),
+            Reading(if (effectiveVoltage.second) "電壓 · 估算" else "電壓", effectiveVoltage.first?.let { "$it mV" },
+                if (effectiveVoltage.second) "BatteryManager.ENERGY_COUNTER / CHARGE_COUNTER" else "ACTION_BATTERY_CHANGED · voltage",
+                if (effectiveVoltage.second) "剩餘能量與剩餘電荷比，非瞬時實測電壓；不依電量百分比猜測。" else "Android 電池廣播回報。"),
+            Reading("瞬時電流", adjustedCurrent?.let { "${it / 1000.0} mA" }, "BatteryManager.CURRENT_NOW · µA → mA",
+                if (batteryOptions.invertCurrent) "使用者已反轉正負；原始值 $rawCurrent µA，僅更改顯示與功率方向。" else "正值代表流入，負值代表流出；原始值 $rawCurrent µA。"),
+            Reading("剩餘電荷", usableCharge?.let { "${it / 1000.0} mAh" },
+                "BatteryManager.CHARGE_COUNTER", "目前剩餘電荷，不是滿充容量；數值疑似百分比或單位異常時隱藏。原始值 ${rawCharge ?: "未知"} µAh。"),
+            Reading("雙電芯 · 每芯條件電壓", BatteryElectricalInterpretation.perCellMilliVolts(effectiveVoltage.first, batteryOptions.dualCell)?.let { "$it mV" },
+                "電池電壓 ÷ 2", "僅在來源電壓 6–10 V 且手動開啟雙電芯模式時顯示；假設為兩芯串聯，不代表接線已確認。"),
             Reading("電池狀態", health, "ACTION_BATTERY_CHANGED · health", "良好不代表容量健康度為 100%"),
             BatteryPresentation.cycleCount(if (Build.VERSION.SDK_INT >= 34) extra(BatteryManager.EXTRA_CYCLE_COUNT) else null)
         ), memory?.fraction, temperature,
             LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")),
             memory, storage, cores, percent, System.currentTimeMillis(), temperatureReadings, thermal.copy(headroom = headroom), includeTemperatures,
-            ChargingPowerReading(property(BatteryManager.BATTERY_PROPERTY_CURRENT_NOW), extra(BatteryManager.EXTRA_VOLTAGE), percent,
-                extra(BatteryManager.EXTRA_PLUGGED)?.let { it != 0 }, extra(BatteryManager.EXTRA_STATUS) == BatteryManager.BATTERY_STATUS_FULL, System.currentTimeMillis()), gpu)
+            ChargingPowerReading(rawCurrent, effectiveVoltage.first, percent,
+                extra(BatteryManager.EXTRA_PLUGGED)?.let { it != 0 }, extra(BatteryManager.EXTRA_STATUS) == BatteryManager.BATTERY_STATUS_FULL,
+                System.currentTimeMillis(), extra(BatteryManager.EXTRA_STATUS), batteryOptions.invertCurrent, effectiveVoltage.second,
+                batteryOptions.dualCell, batteryOptions.estimateVoltage), gpu)
     }
     private fun gib(bytes: Long) = String.format(Locale.ROOT, "%.2f GiB", bytes / 1073741824.0)
 }

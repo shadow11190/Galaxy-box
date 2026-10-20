@@ -26,7 +26,9 @@ import dev.galaxy.toolbox.charging.ChargingNotification
         if (granted && allowed) ChargingNotification.enable(context) else message = "通知未允許，可到通知設定開啟。"
     }
     DisposableEffect(owner) {
-        val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_RESUME) allowed = ChargingNotification.allowed(context) }
+        val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_RESUME) {
+            allowed = ChargingNotification.allowed(context)
+        } }
         owner.lifecycle.addObserver(observer); onDispose { owner.lifecycle.removeObserver(observer) }
     }
     InfoCard("狀態列充電通知") {

@@ -1,0 +1,695 @@
+# brand	model	device	name	soc	releaseYear	source
+ASUS	I006D	sake	ZenFone 8	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sake.yml
+ASUS	ZS590KS	sake	ZenFone 8	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sake.yml
+ASUS	ZS661KS	obiwan	ROG Phone 3	Qualcomm Snapdragon 865+	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/obiwan.yml
+Fairphone	FP4	FP4	4	Qualcomm Snapdragon 750G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP4.yml
+Fairphone	FP5	FP5	5	Qualcomm Dragonwing™ QCM6490 (QCM6490)	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP5.yml
+Fairphone	FP6	FP6	The Fairphone (Gen. 6)	Qualcomm Snapdragon 7s Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP6.yml
+Google	G020B	bonito	Pixel 3a XL	Qualcomm Snapdragon 670	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bonito.yml
+Google	G020C	bonito	Pixel 3a XL	Qualcomm Snapdragon 670	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bonito.yml
+Google	G020D	bonito	Pixel 3a XL	Qualcomm Snapdragon 670	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bonito.yml
+Google	G020F	sargo	Pixel 3a	Qualcomm Snapdragon 670	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sargo.yml
+Google	G020G	sargo	Pixel 3a	Qualcomm Snapdragon 670	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sargo.yml
+Google	G020H	sargo	Pixel 3a	Qualcomm Snapdragon 670	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sargo.yml
+Google	Pixel 10	frankel	Pixel 10	Google Tensor G5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/frankel.yml
+Google	Pixel 10 Pro	blazer	Pixel 10 Pro	Google Tensor G5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/blazer.yml
+Google	Pixel 10 Pro Fold	rango	Pixel 10 Pro Fold	Google Tensor G5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rango.yml
+Google	Pixel 10 Pro XL	mustang	Pixel 10 Pro XL	Google Tensor G5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mustang.yml
+Google	Pixel 10a	stallion	Pixel 10a	Google Tensor G4	2026	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/stallion.yml
+Google	Pixel 3	blueline	Pixel 3	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/blueline.yml
+Google	Pixel 3 XL	crosshatch	Pixel 3 XL	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/crosshatch.yml
+Google	Pixel 4	flame	Pixel 4	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/flame.yml
+Google	Pixel 4 XL	coral	Pixel 4 XL	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/coral.yml
+Google	Pixel 4a	sunfish	Pixel 4a	Qualcomm Snapdragon 730G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sunfish.yml
+Google	Pixel 5	redfin	Pixel 5	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/redfin.yml
+Google	Pixel 6	oriole	Pixel 6	Google Tensor	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oriole.yml
+Google	Pixel 6 Pro	raven	Pixel 6 Pro	Google Tensor	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/raven.yml
+Google	Pixel 6a	bluejay	Pixel 6a	Google Tensor	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bluejay.yml
+Google	Pixel 7	panther	Pixel 7	Google Tensor G2	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/panther.yml
+Google	Pixel 7 Pro	cheetah	Pixel 7 Pro	Google Tensor G2	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cheetah.yml
+Google	Pixel 7a	lynx	Pixel 7a	Google Tensor G2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lynx.yml
+Google	Pixel 8	shiba	Pixel 8	Google Tensor G3	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/shiba.yml
+Google	Pixel 8 Pro	husky	Pixel 8 Pro	Google Tensor G3	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/husky.yml
+Google	Pixel 8a	akita	Pixel 8a	Google Tensor G3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akita.yml
+Google	Pixel 9	tokay	Pixel 9	Google Tensor G4	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tokay.yml
+Google	Pixel 9 Pro	caiman	Pixel 9 Pro	Google Tensor G4	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caiman.yml
+Google	Pixel 9 Pro Fold	comet	Pixel 9 Pro Fold	Google Tensor G4	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/comet.yml
+Google	Pixel 9 Pro XL	komodo	Pixel 9 Pro XL	Google Tensor G4	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/komodo.yml
+Google	Pixel 9a	tegu	Pixel 9a	Google Tensor G4	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tegu.yml
+Google	Pixel Fold	felix	Pixel Fold	Google Tensor G2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/felix.yml
+Huawei	ANE-AL00	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	ANE-L21	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	ANE-L22	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	ANE-L23	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	ANE-LX1	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	ANE-LX2	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	ANE-LX2J	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	ANE-LX3	anne	P20 Lite	HiSilicon Kirin 659	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
+Huawei	BKL-AL00	berkeley	Honor View 10	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berkeley.yml
+Huawei	BKL-AL10	berkeley	Honor View 10	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berkeley.yml
+Huawei	BKL-AL20	berkeley	Honor View 10	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berkeley.yml
+Huawei	BKL-L09	berkeley	Honor View 10	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berkeley.yml
+Huawei	BKL-TL10	berkeley	Honor View 10	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berkeley.yml
+Huawei	BKL-TL20	berkeley	Honor View 10	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berkeley.yml
+Huawei	CLT-AL00	charlotte	P20 Pro	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+Huawei	CLT-AL01	charlotte	P20 Pro	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+Huawei	CLT-L04	charlotte	P20 Pro	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+Huawei	CLT-L09	charlotte	P20 Pro	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+Huawei	CLT-L29	charlotte	P20 Pro	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+Huawei	CLT-TL00	charlotte	P20 Pro	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+Huawei	CLT-TL01	charlotte	P20 Pro	HiSilicon Kirin 970	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+LG	L-41A	style3lm	Style3	Qualcomm Snapdragon 845	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/style3lm.yml
+LG	L-51A	timelm	V60 ThinQ	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml
+LG	LM-F100EM	winglm	Wing	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/winglm.yml
+LG	LM-F100N	winglm	Wing	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/winglm.yml
+LG	LM-G710AWM	judyln	G7 ThinQ (G710AWM/EM/EMW)	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judyln_variant1.yml
+LG	LM-G710EAW	judyln	G7+ ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judyln_variant2.yml
+LG	LM-G710EM	judyln	G7 ThinQ (G710AWM/EM/EMW)	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judyln_variant1.yml
+LG	LM-G710EMW	judyln	G7 ThinQ (G710AWM/EM/EMW)	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judyln_variant1.yml
+LG	LM-G710N	g710n	G7 ThinQ (G710N)	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g710n.yml
+LG	LM-G710ULM	g710ulm	G7 ThinQ (G710ULM/VMX)	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g710ulm.yml
+LG	LM-G710VMX	g710ulm	G7 ThinQ (G710ULM/VMX)	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g710ulm.yml
+LG	LM-G810EA	betalm	G8s ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/betalm.yml
+LG	LM-G810EAW	betalm	G8s ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/betalm.yml
+LG	LM-G810RA	betalm	G8s ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/betalm.yml
+LG	LM-G820N	alphaplus	G8 ThinQ (Korea)	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/alphaplus_variant2.yml
+LG	LM-G820QM	alphaplus	G8 ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/alphaplus_variant1.yml
+LG	LM-G820UM	alphaplus	G8 ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/alphaplus_variant1.yml
+LG	LM-G850EM	mh2lm	G8X ThinQ (G850EM/EMW)	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mh2lm_variant1.yml
+LG	LM-G850EMW	mh2lm	G8X ThinQ (G850EM/EMW)	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mh2lm_variant1.yml
+LG	LM-G850QM	mh2lm	G8X ThinQ (G850QM/UM)	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mh2lm_variant2.yml
+LG	LM-G850UM	mh2lm	G8X ThinQ (G850QM/UM)	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mh2lm_variant2.yml
+LG	LM-G900EM	caymanlm	Velvet 5G	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanlm.yml
+LG	LM-G900N	caymanlm	Velvet 5G	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanlm.yml
+LG	LM-G900UM	caymanlm	Velvet 5G	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanlm.yml
+LG	LM-G910EMW	caymanslm	Velvet 4G	Qualcomm Snapdragon 845	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanslm.yml
+LG	LM-G910HM	caymanslm	Velvet 4G	Qualcomm Snapdragon 845	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanslm.yml
+LG	LM-G910HMW	caymanslm	Velvet 4G	Qualcomm Snapdragon 845	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanslm.yml
+LG	LM-G910N	caymanlm	Velvet 5G	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanlm.yml
+LG	LM-V350AWM	judyp	V35 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judyp.yml
+LG	LM-V350N	judyp	V35 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judyp.yml
+LG	LM-V405EAW	judypn	V40 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judypn.yml
+LG	LM-V405EBW	judypn	V40 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judypn.yml
+LG	LM-V405QA7	judypn	V40 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judypn.yml
+LG	LM-V405UA	judypn	V40 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judypn.yml
+LG	LM-V405UA0	judypn	V40 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judypn.yml
+LG	LM-V409N	judypn	V40 ThinQ	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judypn.yml
+LG	LM-V500EM	flashlmdd	V50 ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/flashlmdd.yml
+LG	LM-V500N	flashlmdd	V50 ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/flashlmdd.yml
+LG	LM-V510N	mh2lm	V50S ThinQ	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mh2lm_variant3.yml
+LG	LM-V600EA	timelm	V60 ThinQ	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml
+LG	LM-V600N	timelm	V60 ThinQ	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml
+LG	LM-V600TM	timelm	V60 ThinQ	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml
+LG	LM-V600VM	timelm	V60 ThinQ	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml
+Lenovo	L78032	heart	Z5 Pro GT	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/heart.yml
+Lenovo	L78051	zippo	Z6 Pro	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/zippo.yml
+Lenovo	XT2081-4	guam	K12	Qualcomm Snapdragon 460	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guam_variant2.yml
+Lenovo	XT2083-4	guamp	K12 Note	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamp_variant3.yml
+Lenovo	XT2091-7	cebu	K12 Pro	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cebu_variant2.yml
+Lenovo	XT2091-8	cebu	K12 Pro	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cebu_variant2.yml
+Lenovo	XT2127-3	capri	K13 Note	Qualcomm Snapdragon 460	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/capri_variant3.yml
+Lenovo	XT2129-3	caprip	K13 Pro	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caprip_variant2.yml
+Motorola	XT1924-1	rhannah	moto e5 plus (XT1924-1/2/4/5)	Qualcomm Snapdragon 425	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rhannah.yml
+Motorola	XT1924-2	rhannah	moto e5 plus (XT1924-1/2/4/5)	Qualcomm Snapdragon 425	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rhannah.yml
+Motorola	XT1924-3	ahannah	moto e5 plus (XT1924-3/9)	Qualcomm Snapdragon 430	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ahannah.yml
+Motorola	XT1924-4	rhannah	moto e5 plus (XT1924-1/2/4/5)	Qualcomm Snapdragon 425	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rhannah.yml
+Motorola	XT1924-5	rhannah	moto e5 plus (XT1924-1/2/4/5)	Qualcomm Snapdragon 425	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rhannah.yml
+Motorola	XT1924-6	hannah	moto e5 plus (XT1924-6/7/8)	Qualcomm Snapdragon 435	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hannah.yml
+Motorola	XT1924-7	hannah	moto e5 plus (XT1924-6/7/8)	Qualcomm Snapdragon 435	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hannah.yml
+Motorola	XT1924-8	hannah	moto e5 plus (XT1924-6/7/8)	Qualcomm Snapdragon 435	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hannah.yml
+Motorola	XT1924-9	ahannah	moto e5 plus (XT1924-3/9)	Qualcomm Snapdragon 430	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ahannah.yml
+Motorola	XT1926-2	evert	moto g6 plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/evert.yml
+Motorola	XT1926-3	evert	moto g6 plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/evert.yml
+Motorola	XT1926-5	evert	moto g6 plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/evert.yml
+Motorola	XT1926-6	evert	moto g6 plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/evert.yml
+Motorola	XT1926-7	evert	moto g6 plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/evert.yml
+Motorola	XT1926-8	evert	moto g6 plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/evert.yml
+Motorola	XT1926-9	evert	moto g6 plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/evert.yml
+Motorola	XT1929-15	messi	moto z3	Qualcomm Snapdragon 835	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/messi.yml
+Motorola	XT1929-17	messi	moto z3	Qualcomm Snapdragon 835	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/messi.yml
+Motorola	XT1929-2	beckham	moto z3 play	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beckham.yml
+Motorola	XT1929-3	beckham	moto z3 play	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beckham.yml
+Motorola	XT1929-4	beckham	moto z3 play	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beckham.yml
+Motorola	XT1929-5	beckham	moto z3 play	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beckham.yml
+Motorola	XT1929-6	beckham	moto z3 play	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beckham.yml
+Motorola	XT1942-1	chef	one power	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/chef.yml
+Motorola	XT1942-2	chef	one power	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/chef.yml
+Motorola	XT1952-1	channel	moto g7 play	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/channel.yml
+Motorola	XT1952-2	channel	moto g7 play	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/channel.yml
+Motorola	XT1952-3	channel	moto g7 play	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/channel.yml
+Motorola	XT1955-1	ocean	moto g7 power	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ocean.yml
+Motorola	XT1955-2	ocean	moto g7 power	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ocean.yml
+Motorola	XT1955-4	ocean	moto g7 power	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ocean.yml
+Motorola	XT1955-5	ocean	moto g7 power	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ocean.yml
+Motorola	XT1955-7	ocean	moto g7 power	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ocean.yml
+Motorola	XT1962-01	river	moto g7	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/river.yml
+Motorola	XT1962-04	river	moto g7	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/river.yml
+Motorola	XT1962-05	river	moto g7	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/river.yml
+Motorola	XT1962-06	river	moto g7	Qualcomm Snapdragon 632	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/river.yml
+Motorola	XT1965-2	lake	moto g7 plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lake.yml
+Motorola	XT1965-3	lake	moto g7 plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lake.yml
+Motorola	XT1965-6	lake	moto g7 plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lake.yml
+Motorola	XT1965-T	lake	moto g7 plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lake.yml
+Motorola	XT1970-1	kane	one vision	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kane_variant1.yml
+Motorola	XT1970-2	kane	one vision	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kane_variant1.yml
+Motorola	XT1970-3	kane	one vision	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kane_variant1.yml
+Motorola	XT1970-5	kane	p50	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kane_variant2.yml
+Motorola	XT2010-1	parker	one zoom	Qualcomm Snapdragon 675	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/parker.yml
+Motorola	XT2013-1	troika	one action	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/troika.yml
+Motorola	XT2013-2	troika	one action	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/troika.yml
+Motorola	XT2013-3	troika	one action	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/troika.yml
+Motorola	XT2013-4	troika	one action	Samsung Exynos 9609	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/troika.yml
+Motorola	XT2063-2	racer	edge	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/racer.yml
+Motorola	XT2063-3	racer	edge	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/racer.yml
+Motorola	XT2067-2	liber	one fusion+	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/liber_variant1.yml
+Motorola	XT2067-2	liber	one fusion+ (India)	Qualcomm Snapdragon 730G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/liber_variant2.yml
+Motorola	XT2075-3	nairo	moto g 5G plus	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nairo_variant1.yml
+Motorola	XT2075-5	nairo	moto one 5G	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nairo_variant2.yml
+Motorola	XT2081-1	guam	moto e7 plus	Qualcomm Snapdragon 460	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guam_variant1.yml
+Motorola	XT2081-2	guam	moto e7 plus	Qualcomm Snapdragon 460	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guam_variant1.yml
+Motorola	XT2081-3	guam	moto e7 plus	Qualcomm Snapdragon 460	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guam_variant1.yml
+Motorola	XT2083-1	guamp	moto g9 play	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamp_variant1.yml
+Motorola	XT2083-3	guamp	moto g9	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamp_variant2.yml
+Motorola	XT2083-3	guamp	moto g9 play	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamp_variant1.yml
+Motorola	XT2083-5	guamp	moto g9 play	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamp_variant1.yml
+Motorola	XT2083-6	guamp	moto g9 play	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamp_variant1.yml
+Motorola	XT2083-7	guamp	moto g9 play	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamp_variant1.yml
+Motorola	XT2083-8	bathena	defy 2021	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bathena.yml
+Motorola	XT2083-9	bathena	defy 2021	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bathena.yml
+Motorola	XT2091-3	cebu	moto g9 power	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cebu_variant1.yml
+Motorola	XT2091-4	cebu	moto g9 power	Qualcomm Snapdragon 662	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cebu_variant1.yml
+Motorola	XT2093-3	guamna	moto g play (2021)	Qualcomm Snapdragon 460	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamna.yml
+Motorola	XT2093-4	guamna	moto g play (2021)	Qualcomm Snapdragon 460	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guamna.yml
+Motorola	XT2113-2	kiev	moto one 5G ace	Qualcomm Snapdragon 750G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kiev_variant2.yml
+Motorola	XT2113-3	kiev	moto g 5G	Qualcomm Snapdragon 750G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kiev_variant1.yml
+Motorola	XT2117-1	borneo	moto g power 2021	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/borneo.yml
+Motorola	XT2117-2	borneo	moto g power 2021	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/borneo.yml
+Motorola	XT2117-3	borneo	moto g power 2021	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/borneo.yml
+Motorola	XT2117-4	borneo	moto g power 2021	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/borneo.yml
+Motorola	XT2125-4	nio	edge s	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nio_variant1.yml
+Motorola	XT2125-4	nio	moto g100	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nio_variant2.yml
+Motorola	XT2127-1	capri	moto g10	Qualcomm Snapdragon 460	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/capri_variant1.yml
+Motorola	XT2127-2	capri	moto g10	Qualcomm Snapdragon 460	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/capri_variant1.yml
+Motorola	XT2127-4	capri	moto g10 power	Qualcomm Snapdragon 460	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/capri_variant2.yml
+Motorola	XT2129-1	caprip	moto g30	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caprip_variant1.yml
+Motorola	XT2129-2	caprip	moto g30	Qualcomm Snapdragon 662	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caprip_variant1.yml
+Motorola	XT2131-1	denver	moto g stylus 5G	Qualcomm Snapdragon 480	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/denver.yml
+Motorola	XT2137-1	ibiza	moto g50	Qualcomm Snapdragon 480	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ibiza.yml
+Motorola	XT2141-2	berlna	edge 2021	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berlna.yml
+Motorola	XT2143-1	berlin	edge 20	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/berlin.yml
+Motorola	XT2153-1	pstar	edge 20 pro	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pstar.yml
+Motorola	XT2175-1	xpeng	moto g200 5G	Qualcomm Snapdragon 888+	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xpeng_variant1.yml
+Motorola	XT2175-2	xpeng	Edge S30	Qualcomm Snapdragon 888+	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xpeng_variant2.yml
+Motorola	XT2203-1	dubai	edge 30	Qualcomm Snapdragon 778G+	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dubai.yml
+Motorola	XT2215-1	milanf	moto g stylus 5G (2022)	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/milanf.yml
+Motorola	XT2215-3	milanf	moto g stylus 5G (2022)	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/milanf.yml
+Motorola	XT2215-4	milanf	moto g stylus 5G (2022)	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/milanf.yml
+Motorola	XT2221-1	rhode	moto g52	Qualcomm Snapdragon 680	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rhode.yml
+Motorola	XT2221-2	rhode	moto g52	Qualcomm Snapdragon 680	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rhode.yml
+Motorola	XT2225-1	rhodep	moto g82 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rhodep.yml
+Motorola	XT2233-1	hawao	moto g42	Qualcomm Snapdragon 680	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hawao.yml
+Motorola	XT2233-2	hawao	moto g42	Qualcomm Snapdragon 680	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hawao.yml
+Motorola	XT2235-1	devon	moto g32	Qualcomm Snapdragon 680	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/devon.yml
+Motorola	XT2235-2	devon	moto g32	Qualcomm Snapdragon 680	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/devon.yml
+Motorola	XT2235-3	devon	moto g32	Qualcomm Snapdragon 680	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/devon.yml
+Motorola	XT2241-1	eqs	edge 30 ultra	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/eqs.yml
+Motorola	XT2241-2	eqs	edge 30 ultra	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/eqs.yml
+Motorola	XT2243-1	tundra	edge 30 fusion	Qualcomm Snapdragon 888+	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tundra_variant1.yml
+Motorola	XT2243-2	tundra	moto S30 Pro	Qualcomm Snapdragon 888+	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tundra_variant2.yml
+Motorola	XT2245-1	miami	edge 30 neo	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miami.yml
+Motorola	XT2301-1	rtwo	edge+ (2023)	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rtwo_variant3.yml
+Motorola	XT2301-4	rtwo	edge 40 pro	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rtwo_variant1.yml
+Motorola	XT2301-5	rtwo	moto X40	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rtwo_variant2.yml
+Motorola	XT2307-1	manaus	edge 40 neo	MediaTek Dimensity 7030	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/manaus.yml
+Motorola	XT2307-2	manaus	edge 40 neo	MediaTek Dimensity 7030	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/manaus.yml
+Motorola	XT2307-3	manaus	edge 40 neo	MediaTek Dimensity 7030	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/manaus.yml
+Motorola	XT2309-2	bronco	ThinkPhone by motorola	Qualcomm Snapdragon 8+ Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bronco.yml
+Motorola	XT2309-3	bronco	ThinkPhone by motorola	Qualcomm Snapdragon 8+ Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bronco.yml
+Motorola	XT2315-1	genevn	moto g stylus 5G (2023)	Qualcomm Snapdragon 6 Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/genevn.yml
+Motorola	XT2315-4	genevn	moto g stylus 5G (2023)	Qualcomm Snapdragon 6 Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/genevn.yml
+Motorola	XT2315-5	genevn	moto g stylus 5G (2023)	Qualcomm Snapdragon 6 Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/genevn.yml
+Motorola	XT2347-1	bangkk	moto g84 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bangkk.yml
+Motorola	XT2347-2	bangkk	moto g84 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bangkk.yml
+Motorola	XT2363-1	fogos	moto g34 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant1.yml
+Motorola	XT2363-2	fogos	moto g34 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant1.yml
+Motorola	XT2363-3	fogos	moto g34 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant1.yml
+Motorola	XT2363-4	fogos	moto g34 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant1.yml
+Motorola	XT2363-5	fogos	moto g34 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant1.yml
+Motorola	XT2363-8	fogos	moto g45 5G	Qualcomm Snapdragon 6s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant2.yml
+Motorola	XT2363-9	fogos	moto g45 5G	Qualcomm Snapdragon 6s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant2.yml
+Motorola	XT2405-1	avatrn	edge 2024	Qualcomm Snapdragon 7s Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avatrn.yml
+Motorola	XT2405V	avatrn	edge 2024	Qualcomm Snapdragon 7s Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avatrn.yml
+Motorola	XT2417-1	fogo	moto g 5G - 2024	Qualcomm Snapdragon 4 Gen 1	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogo.yml
+Motorola	XT2521-2	lamu	moto g15	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant1.yml
+Motorola	XT2521-3	lamu	moto g15	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant1.yml
+Motorola	XT2521-4	lamu	moto g15	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant1.yml
+Motorola	XT2521-5	lamu	moto g15 power	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant2.yml
+Motorola	XT2521-6	lamu	moto g15 power	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant2.yml
+Motorola	XT2523-10	lamu	moto g05	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant3.yml
+Motorola	XT2523-11	lamu	moto g05	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant3.yml
+Motorola	XT2523-2	lamu	moto g05	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant3.yml
+Motorola	XT2523-3	lamu	moto g05	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant3.yml
+Motorola	XT2523-4	lamu	moto g05	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant3.yml
+Motorola	XT2523-5	lamu	moto g05	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant3.yml
+Motorola	XT2523-9	lamu	moto g05	MediaTek Helio G81 Extreme	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lamu_variant3.yml
+Nokia	TA-1041	B2N	7 plus	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/B2N.yml
+Nokia	TA-1043	PL2	6.1 (2018)	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/PL2.yml
+Nokia	TA-1046	B2N	7 plus	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/B2N.yml
+Nokia	TA-1062	B2N	7 plus	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/B2N.yml
+Nokia	TA-1083	DRG	6.1 Plus	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/DRG.yml
+Nokia	TA-1089	PL2	6.1 (2018)	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/PL2.yml
+Nothing	A063	Spacewar	Phone (1)	Qualcomm Snapdragon 778G+	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Spacewar.yml
+Nothing	A065	Pong	Phone (2)	Qualcomm Snapdragon 8+ Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Pong.yml
+Nothing	AIN065	Pong	Phone (2)	Qualcomm Snapdragon 8+ Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Pong.yml
+Nubia	M3	nx611j	Z18 Mini	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx611j.yml
+Nubia	NX606J	nx606j	Z18	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx606j.yml
+Nubia	NX609J	nx609j	Red Magic	Qualcomm Snapdragon 835	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx609j.yml
+Nubia	NX611J	nx611j	Z18 Mini	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx611j.yml
+Nubia	NX616J	nx616j	X	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx616j.yml
+Nubia	NX619J	nx619j	Red Magic Mars	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx619j.yml
+Nubia	NX651J	nx651j	Play 5G	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx651j_variant1.yml
+Nubia	NX651J-EEA	nx651j	Red Magic 5G Lite	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx651j_variant2.yml
+Nubia	NX659J	nx659j	Red Magic 5G (China)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant2.yml
+Nubia	NX659J	nx659j	Red Magic 5G (Global)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant1.yml
+Nubia	NX659J	nx659j	Red Magic 5S (China)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant4.yml
+Nubia	NX659J	nx659j	Red Magic 5S (Global)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant3.yml
+Nubia	NX659J-EEA	nx659j	Red Magic 5G (China)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant2.yml
+Nubia	NX659J-EEA	nx659j	Red Magic 5G (Global)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant1.yml
+Nubia	NX659J-EEA	nx659j	Red Magic 5S (China)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant4.yml
+Nubia	NX659J-EEA	nx659j	Red Magic 5S (Global)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant3.yml
+Nubia	NX659J-UN	nx659j	Red Magic 5G (China)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant2.yml
+Nubia	NX659J-UN	nx659j	Red Magic 5G (Global)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant1.yml
+Nubia	NX659J-UN	nx659j	Red Magic 5S (China)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant4.yml
+Nubia	NX659J-UN	nx659j	Red Magic 5S (Global)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nx659j_variant3.yml
+OnePlus	AC2001	avicii	Nord	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avicii.yml
+OnePlus	AC2003	avicii	Nord	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avicii.yml
+OnePlus	BE2025	billie	Nord N10	Qualcomm Snapdragon 690	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/billie.yml
+OnePlus	BE2026	billie	Nord N10	Qualcomm Snapdragon 690	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/billie.yml
+OnePlus	BE2028	billie	Nord N10	Qualcomm Snapdragon 690	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/billie.yml
+OnePlus	BE2029	billie	Nord N10	Qualcomm Snapdragon 690	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/billie.yml
+OnePlus	CPH2381	oscaro	Nord CE 2 Lite 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscaro.yml
+OnePlus	CPH2409	oscaro	Nord CE 2 Lite 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscaro.yml
+OnePlus	CPH2447	salami	11 5G	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/salami.yml
+OnePlus	CPH2449	salami	11 5G	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/salami.yml
+OnePlus	CPH2451	salami	11 5G	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/salami.yml
+OnePlus	CPH2459	gunnar	Nord N20	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gunnar.yml
+OnePlus	CPH2465	larry	Nord CE 3 Lite 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/larry_variant1.yml
+OnePlus	CPH2467	larry	Nord CE 3 Lite 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/larry_variant1.yml
+OnePlus	CPH2513	larry	Nord N30 5G	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/larry_variant2.yml
+OnePlus	CPH2551	xueying	Open	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xueying.yml
+OnePlus	CPH2573	waffle	12	Qualcomm Snapdragon 8 Gen 3	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/waffle.yml
+OnePlus	CPH2581	waffle	12	Qualcomm Snapdragon 8 Gen 3	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/waffle.yml
+OnePlus	CPH2583	waffle	12	Qualcomm Snapdragon 8 Gen 3	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/waffle.yml
+OnePlus	CPH2585	aston	12R	Qualcomm Snapdragon 8 Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aston.yml
+OnePlus	CPH2609	aston	12R	Qualcomm Snapdragon 8 Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aston.yml
+OnePlus	CPH2611	aston	12R	Qualcomm Snapdragon 8 Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aston.yml
+OnePlus	CPH2613	benz	Nord CE4	Qualcomm Snapdragon 7 Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/benz.yml
+OnePlus	CPH2645	giulia	13R	Qualcomm Snapdragon 8 Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml
+OnePlus	CPH2647	giulia	13R	Qualcomm Snapdragon 8 Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml
+OnePlus	CPH2649	dodge	13	Qualcomm Snapdragon 8 Elite	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml
+OnePlus	CPH2653	dodge	13	Qualcomm Snapdragon 8 Elite	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml
+OnePlus	CPH2655	dodge	13	Qualcomm Snapdragon 8 Elite	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml
+OnePlus	CPH2661	avalon	Nord 4	Qualcomm Snapdragon 7+ Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avalon.yml
+OnePlus	CPH2663	avalon	Nord 4	Qualcomm Snapdragon 7+ Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avalon.yml
+OnePlus	CPH2691	giulia	13R	Qualcomm Snapdragon 8 Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml
+OnePlus	CPH2707	lexus	Nord 5	Qualcomm Snapdragon 8s Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lexus.yml
+OnePlus	CPH2709	lexus	Nord 5	Qualcomm Snapdragon 8s Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lexus.yml
+OnePlus	CPH2745	infiniti	15	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/infiniti.yml
+OnePlus	CPH2747	infiniti	15	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/infiniti.yml
+OnePlus	CPH2749	infiniti	15	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/infiniti.yml
+OnePlus	DE2117	dre	Nord N200	Qualcomm Snapdragon 480	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dre.yml
+OnePlus	GM1900	guacamoleb	7	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamoleb.yml
+OnePlus	GM1901	guacamoleb	7	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamoleb.yml
+OnePlus	GM1903	guacamoleb	7	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamoleb.yml
+OnePlus	GM1905	guacamoleb	7	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamoleb.yml
+OnePlus	GM1910	guacamole	7 Pro	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamole_variant1.yml
+OnePlus	GM1911	guacamole	7 Pro	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamole_variant1.yml
+OnePlus	GM1913	guacamole	7 Pro	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamole_variant1.yml
+OnePlus	GM1915	guacamole	7 Pro (T-Mobile)	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamole_variant2.yml
+OnePlus	GM1917	guacamole	7 Pro	Qualcomm Snapdragon 855	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/guacamole_variant1.yml
+OnePlus	HD1900	hotdogb	7T	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdogb_variant1.yml
+OnePlus	HD1901	hotdogb	7T	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdogb_variant1.yml
+OnePlus	HD1903	hotdogb	7T	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdogb_variant1.yml
+OnePlus	HD1905	hotdogb	7T	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdogb_variant1.yml
+OnePlus	HD1907	hotdogb	7T (T-Mobile)	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdogb_variant2.yml
+OnePlus	HD1910	hotdog	7T Pro	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdog.yml
+OnePlus	HD1911	hotdog	7T Pro	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdog.yml
+OnePlus	HD1913	hotdog	7T Pro	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdog.yml
+OnePlus	HD1917	hotdog	7T Pro	Qualcomm Snapdragon 855+	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hotdog.yml
+OnePlus	IN2010	instantnoodle	8	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodle_variant1.yml
+OnePlus	IN2011	instantnoodle	8	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodle_variant1.yml
+OnePlus	IN2013	instantnoodle	8	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodle_variant1.yml
+OnePlus	IN2015	instantnoodle	8	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodle_variant1.yml
+OnePlus	IN2017	instantnoodle	8 (T-Mobile)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodle_variant2.yml
+OnePlus	IN2020	instantnoodlep	8 Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodlep.yml
+OnePlus	IN2021	instantnoodlep	8 Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodlep.yml
+OnePlus	IN2023	instantnoodlep	8 Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodlep.yml
+OnePlus	IN2025	instantnoodlep	8 Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/instantnoodlep.yml
+OnePlus	KB2000	kebab	8T	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kebab_variant1.yml
+OnePlus	KB2001	kebab	8T	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kebab_variant1.yml
+OnePlus	KB2003	kebab	8T	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kebab_variant1.yml
+OnePlus	KB2005	kebab	8T	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kebab_variant1.yml
+OnePlus	KB2007	kebab	8T (T-Mobile)	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kebab_variant2.yml
+OnePlus	LE2100	lemonades	9R	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonades.yml
+OnePlus	LE2101	lemonades	9R	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonades.yml
+OnePlus	LE2110	lemonade	9	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonade_variant1.yml
+OnePlus	LE2111	lemonade	9	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonade_variant1.yml
+OnePlus	LE2113	lemonade	9	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonade_variant1.yml
+OnePlus	LE2115	lemonade	9	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonade_variant1.yml
+OnePlus	LE2117	lemonade	9 (T-Mobile)	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonade_variant2.yml
+OnePlus	LE2120	lemonadep	9 Pro	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonadep_variant1.yml
+OnePlus	LE2121	lemonadep	9 Pro	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonadep_variant1.yml
+OnePlus	LE2123	lemonadep	9 Pro	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonadep_variant1.yml
+OnePlus	LE2125	lemonadep	9 Pro	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonadep_variant1.yml
+OnePlus	LE2127	lemonadep	9 Pro (T-Mobile)	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lemonadep_variant2.yml
+OnePlus	MT2110	martini	9RT	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/martini.yml
+OnePlus	MT2111	martini	9RT	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/martini.yml
+OnePlus	PHB110	salami	11 5G	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/salami.yml
+OnePlus	PJD110	waffle	12	Qualcomm Snapdragon 8 Gen 3	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/waffle.yml
+OnePlus	PJE110	astonc	Ace 3	Qualcomm Snapdragon 8 Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/astonc.yml
+OnePlus	PJF110	audi	Ace 3V	Qualcomm Snapdragon 7+ Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/audi.yml
+OnePlus	PJX110	corvette	Ace 3 Pro	Qualcomm Snapdragon 8 Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/corvette.yml
+OnePlus	PJZ110	dodge	13	Qualcomm Snapdragon 8 Elite	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml
+OnePlus	PKG110	giuliac	Ace 5	Qualcomm Snapdragon 8 Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giuliac.yml
+OnePlus	PKR110	hummer	Ace 5 Pro	Qualcomm Snapdragon 8 Elite	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hummer.yml
+OnePlus	PLK110	infiniti	15	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/infiniti.yml
+OnePlus	PLZ110	fairlady	15T	Qualcomm Snapdragon 8 Elite Gen 5	2026	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fairlady.yml
+Razer	Phone 2	aura	Phone 2	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml
+Realme	RMX1801	RMX1801	2 Pro	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1801.yml
+Realme	RMX1851	RMX1851	3 Pro	Qualcomm Snapdragon 710	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1851.yml
+Realme	RMX3471	oscar	9 Pro 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscar.yml
+Realme	RMX3472	oscar	9 Pro 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscar.yml
+Realme	RMX3474	oscarru	9 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscarru.yml
+Realme	RMX3478	oscarc	Q5	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscarc.yml
+Realme	RMX3660	luigi	10 Pro 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/luigi.yml
+Realme	RMX3661	luigi	10 Pro 5G	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/luigi.yml
+Realme	RMX3852	bale	GT Neo6	Qualcomm Snapdragon 8s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bale.yml
+Realme	RMX5010	pista	GT7 Pro	Qualcomm Snapdragon 8 Elite	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pista.yml
+Realme	RMX5090	piloti	GT7 Pro Racing Edition	Qualcomm Snapdragon 8 Elite	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/piloti.yml
+SHIFT	SHIFT6mq	axolotl	SHIFT6mq	Qualcomm Snapdragon 845	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/axolotl.yml
+Samsung	SM-A217F	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
+Samsung	SM-A217F/DS	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
+Samsung	SM-A217F/DSN	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
+Samsung	SM-A217M	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
+Samsung	SM-A217M/DS	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
+Samsung	SM-A525F	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
+Samsung	SM-A525F/DS	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
+Samsung	SM-A525M	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
+Samsung	SM-A525M/DS	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
+Samsung	SM-A528B	a52sxq	Galaxy A52s 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
+Samsung	SM-A528B/DS	a52sxq	Galaxy A52s 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
+Samsung	SM-A528N	a52sxq	Galaxy A52s 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
+Samsung	SM-A715F	a71	Galaxy A71	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a71.yml
+Samsung	SM-A715F/DS	a71	Galaxy A71	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a71.yml
+Samsung	SM-A715F/DSM	a71	Galaxy A71	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a71.yml
+Samsung	SM-A715F/DSN	a71	Galaxy A71	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a71.yml
+Samsung	SM-A725F	a72q	Galaxy A72	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a72q.yml
+Samsung	SM-A725F/DS	a72q	Galaxy A72	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a72q.yml
+Samsung	SM-A725M	a72q	Galaxy A72	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a72q.yml
+Samsung	SM-A725M/DS	a72q	Galaxy A72	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a72q.yml
+Samsung	SM-A736B	a73xq	Galaxy A73 5G	Qualcomm Snapdragon 778G	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a73xq.yml
+Samsung	SM-A736B/DS	a73xq	Galaxy A73 5G	Qualcomm Snapdragon 778G	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a73xq.yml
+Samsung	SM-E625F	f62	Galaxy F62	Samsung Exynos 9825	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/f62_variant1.yml
+Samsung	SM-E625F/DS	f62	Galaxy F62	Samsung Exynos 9825	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/f62_variant1.yml
+Samsung	SM-G780F	r8s	Galaxy S20 FE (Exynos)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8s.yml
+Samsung	SM-G780F/DS	r8s	Galaxy S20 FE (Exynos)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8s.yml
+Samsung	SM-G780G	r8q	Galaxy S20 FE (Snapdragon)	Qualcomm Snapdragon 865	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8q_variant1.yml
+Samsung	SM-G780G/DS	r8q	Galaxy S20 FE (Snapdragon)	Qualcomm Snapdragon 865	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8q_variant1.yml
+Samsung	SM-G7810	r8q	Galaxy S20 FE 5G	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8q_variant2.yml
+Samsung	SM-G781B	r8q	Galaxy S20 FE 5G	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8q_variant2.yml
+Samsung	SM-G781B/DS	r8q	Galaxy S20 FE 5G	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8q_variant2.yml
+Samsung	SM-G781N	r8q	Galaxy S20 FE 5G	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r8q_variant2.yml
+Samsung	SM-G960F	starlte	Galaxy S9	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/starlte.yml
+Samsung	SM-G960F/DS	starlte	Galaxy S9	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/starlte.yml
+Samsung	SM-G960N	starlte	Galaxy S9	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/starlte.yml
+Samsung	SM-G965F	star2lte	Galaxy S9+	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/star2lte.yml
+Samsung	SM-G965F/DS	star2lte	Galaxy S9+	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/star2lte.yml
+Samsung	SM-G965N	star2lte	Galaxy S9+	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/star2lte.yml
+Samsung	SM-G970F	beyond0lte	Galaxy S10e	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond0lte.yml
+Samsung	SM-G970F/DS	beyond0lte	Galaxy S10e	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond0lte.yml
+Samsung	SM-G970N	beyond0lte	Galaxy S10e	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond0lte.yml
+Samsung	SM-G973F	beyond1lte	Galaxy S10	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond1lte.yml
+Samsung	SM-G973F/DS	beyond1lte	Galaxy S10	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond1lte.yml
+Samsung	SM-G973N	beyond1lte	Galaxy S10	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond1lte.yml
+Samsung	SM-G975F	beyond2lte	Galaxy S10+	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond2lte.yml
+Samsung	SM-G975F/DS	beyond2lte	Galaxy S10+	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond2lte.yml
+Samsung	SM-G975N	beyond2lte	Galaxy S10+	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyond2lte.yml
+Samsung	SM-G977B	beyondx	Galaxy S10 5G	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyondx.yml
+Samsung	SM-G977N	beyondx	Galaxy S10 5G	Samsung Exynos 9820	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beyondx.yml
+Samsung	SM-G980F	x1s	Galaxy S20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/x1s.yml
+Samsung	SM-G980F/DS	x1s	Galaxy S20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/x1s.yml
+Samsung	SM-G981B	x1s	Galaxy S20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/x1s.yml
+Samsung	SM-G981B/DS	x1s	Galaxy S20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/x1s.yml
+Samsung	SM-G985F	y2s	Galaxy S20+ (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/y2s.yml
+Samsung	SM-G985F/DS	y2s	Galaxy S20+ (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/y2s.yml
+Samsung	SM-G986B	y2s	Galaxy S20+ (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/y2s.yml
+Samsung	SM-G986B/DS	y2s	Galaxy S20+ (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/y2s.yml
+Samsung	SM-G988B	z3s	Galaxy S20 Ultra (5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/z3s.yml
+Samsung	SM-G988B/DS	z3s	Galaxy S20 Ultra (5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/z3s.yml
+Samsung	SM-M205F	m20lte	Galaxy M20	Samsung Exynos 7904	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m20lte.yml
+Samsung	SM-M205FN	m20lte	Galaxy M20	Samsung Exynos 7904	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m20lte.yml
+Samsung	SM-M205G	m20lte	Galaxy M20	Samsung Exynos 7904	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m20lte.yml
+Samsung	SM-M205M	m20lte	Galaxy M20	Samsung Exynos 7904	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m20lte.yml
+Samsung	SM-M205N	m20lte	Galaxy M20	Samsung Exynos 7904	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m20lte.yml
+Samsung	SM-M526B	m52xq	Galaxy M52 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m52xq.yml
+Samsung	SM-M526B/DS	m52xq	Galaxy M52 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m52xq.yml
+Samsung	SM-M526BR	m52xq	Galaxy M52 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m52xq.yml
+Samsung	SM-M526BR/DS	m52xq	Galaxy M52 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/m52xq.yml
+Samsung	SM-M625F	f62	Galaxy M62	Samsung Exynos 9825	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/f62_variant2.yml
+Samsung	SM-M625F/DS	f62	Galaxy M62	Samsung Exynos 9825	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/f62_variant2.yml
+Samsung	SM-N960F	crownlte	Galaxy Note 9	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/crownlte.yml
+Samsung	SM-N960F/DS	crownlte	Galaxy Note 9	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/crownlte.yml
+Samsung	SM-N960N	crownlte	Galaxy Note 9	Samsung Exynos 9810	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/crownlte.yml
+Samsung	SM-N970F	d1	Galaxy Note10	Samsung Exynos 9825	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d1.yml
+Samsung	SM-N970F/DS	d1	Galaxy Note10	Samsung Exynos 9825	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d1.yml
+Samsung	SM-N971N	d1x	Galaxy Note10 5G	Samsung Exynos 9825	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d1x.yml
+Samsung	SM-N975F	d2s	Galaxy Note10+	Samsung Exynos 9825	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2s.yml
+Samsung	SM-N975F/DS	d2s	Galaxy Note10+	Samsung Exynos 9825	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2s.yml
+Samsung	SM-N976B	d2x	Galaxy Note10+ 5G	Samsung Exynos 9825	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2x.yml
+Samsung	SM-N976N	d2x	Galaxy Note10+ 5G	Samsung Exynos 9825	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2x.yml
+Samsung	SM-N980F	c1s	Galaxy Note20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c1s.yml
+Samsung	SM-N980F/DS	c1s	Galaxy Note20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c1s.yml
+Samsung	SM-N981B	c1s	Galaxy Note20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c1s.yml
+Samsung	SM-N981B/DS	c1s	Galaxy Note20 (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c1s.yml
+Samsung	SM-N985F	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c2s.yml
+Samsung	SM-N985F/DS	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c2s.yml
+Samsung	SM-N986B	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c2s.yml
+Samsung	SM-N986B/DS	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c2s.yml
+Samsung	SM-S901B	r0s	Galaxy S22	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r0s.yml
+Samsung	SM-S901B/DS	r0s	Galaxy S22	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r0s.yml
+Samsung	SM-S906B	g0s	Galaxy S22+	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g0s.yml
+Samsung	SM-S906B/DS	g0s	Galaxy S22+	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g0s.yml
+Samsung	SM-S908B	b0s	Galaxy S22 Ultra	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/b0s.yml
+Samsung	SM-S908B/DS	b0s	Galaxy S22 Ultra	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/b0s.yml
+Samsung	SM-S911B	dm1q	Galaxy S23	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dm1q.yml
+Samsung	SM-S911B/DS	dm1q	Galaxy S23	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dm1q.yml
+Smartisan	DE106	trident	R1	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/trident.yml
+Sony	H3113	pioneer	Xperia XA2	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pioneer.yml
+Sony	H3123	pioneer	Xperia XA2	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pioneer.yml
+Sony	H3133	pioneer	Xperia XA2	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pioneer.yml
+Sony	H3213	discovery	Xperia XA2 Ultra	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/discovery.yml
+Sony	H3223	discovery	Xperia XA2 Ultra	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/discovery.yml
+Sony	H3413	voyager	Xperia XA2 Plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/voyager.yml
+Sony	H4113	pioneer	Xperia XA2	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pioneer.yml
+Sony	H4133	pioneer	Xperia XA2	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pioneer.yml
+Sony	H4213	discovery	Xperia XA2 Ultra	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/discovery.yml
+Sony	H4233	discovery	Xperia XA2 Ultra	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/discovery.yml
+Sony	H4413	voyager	Xperia XA2 Plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/voyager.yml
+Sony	H4493	voyager	Xperia XA2 Plus	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/voyager.yml
+Sony	H8116	aurora	Xperia XZ2 Premium	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aurora.yml
+Sony	H8166	aurora	Xperia XZ2 Premium	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aurora.yml
+Sony	H8216	akari	Xperia XZ2	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akari.yml
+Sony	H8266	akari	Xperia XZ2	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akari.yml
+Sony	H8276	akari	Xperia XZ2	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akari.yml
+Sony	H8296	akari	Xperia XZ2	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akari.yml
+Sony	H8314	xz2c	Xperia XZ2 Compact	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xz2c.yml
+Sony	H8324	xz2c	Xperia XZ2 Compact	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xz2c.yml
+Sony	H8416	akatsuki	Xperia XZ3	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akatsuki.yml
+Sony	H9436	akatsuki	Xperia XZ3	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akatsuki.yml
+Sony	H9493	akatsuki	Xperia XZ3	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akatsuki.yml
+Sony	I3113	kirin	Xperia 10	Qualcomm Snapdragon 630	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kirin.yml
+Sony	I3123	kirin	Xperia 10	Qualcomm Snapdragon 630	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kirin.yml
+Sony	I3213	mermaid	Xperia 10 Plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mermaid.yml
+Sony	I3223	mermaid	Xperia 10 Plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mermaid.yml
+Sony	I4113	kirin	Xperia 10	Qualcomm Snapdragon 630	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kirin.yml
+Sony	I4193	kirin	Xperia 10	Qualcomm Snapdragon 630	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kirin.yml
+Sony	I4213	mermaid	Xperia 10 Plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mermaid.yml
+Sony	I4293	mermaid	Xperia 10 Plus	Qualcomm Snapdragon 636	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mermaid.yml
+Sony	XQ-AS42	pdx206	Xperia 5 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx206.yml
+Sony	XQ-AS52	pdx206	Xperia 5 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx206.yml
+Sony	XQ-AS62	pdx206	Xperia 5 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx206.yml
+Sony	XQ-AS72	pdx206	Xperia 5 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx206.yml
+Sony	XQ-AT42	pdx203	Xperia 1 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx203.yml
+Sony	XQ-AT51	pdx203	Xperia 1 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx203.yml
+Sony	XQ-AT52	pdx203	Xperia 1 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx203.yml
+Sony	XQ-AT72	pdx203	Xperia 1 II	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx203.yml
+Sony	XQ-BC42	pdx215	Xperia 1 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx215.yml
+Sony	XQ-BC52	pdx215	Xperia 1 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx215.yml
+Sony	XQ-BC62	pdx215	Xperia 1 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx215.yml
+Sony	XQ-BC72	pdx215	Xperia 1 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx215.yml
+Sony	XQ-BQ42	pdx214	Xperia 5 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx214.yml
+Sony	XQ-BQ52	pdx214	Xperia 5 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx214.yml
+Sony	XQ-BQ62	pdx214	Xperia 5 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx214.yml
+Sony	XQ-BQ72	pdx214	Xperia 5 III	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx214.yml
+Sony	XQ-CC54	pdx225	Xperia 10 IV	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx225.yml
+Sony	XQ-CC72	pdx225	Xperia 10 IV	Qualcomm Snapdragon 695	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx225.yml
+Sony	XQ-CQ44	pdx224	Xperia 5 IV	Qualcomm Snapdragon 8 Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx224.yml
+Sony	XQ-CQ54	pdx224	Xperia 5 IV	Qualcomm Snapdragon 8 Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx224.yml
+Sony	XQ-CQ72	pdx224	Xperia 5 IV	Qualcomm Snapdragon 8 Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx224.yml
+Sony	XQ-CT44	pdx223	Xperia 1 IV	Qualcomm Snapdragon 8 Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx223.yml
+Sony	XQ-CT54	pdx223	Xperia 1 IV	Qualcomm Snapdragon 8 Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx223.yml
+Sony	XQ-CT72	pdx223	Xperia 1 IV	Qualcomm Snapdragon 8 Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx223.yml
+Sony	XQ-DC54	pdx235	Xperia 10 V	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx235.yml
+Sony	XQ-DC72	pdx235	Xperia 10 V	Qualcomm Snapdragon 695	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx235.yml
+Sony	XQ-DE44	pdx237	Xperia 5 V	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx237.yml
+Sony	XQ-DE54	pdx237	Xperia 5 V	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx237.yml
+Sony	XQ-DE72	pdx237	Xperia 5 V	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx237.yml
+Sony	XQ-DQ54	pdx234	Xperia 1 V	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx234.yml
+Sony	XQ-DQ72	pdx234	Xperia 1 V	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx234.yml
+Sony	XQ-EC54	pdx245	Xperia 1 VI	Qualcomm Snapdragon 8 Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml
+Sony	XQ-EC72	pdx245	Xperia 1 VI	Qualcomm Snapdragon 8 Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml
+Sony	XQ-FE54	pdx257	Xperia 10 VII	Qualcomm Snapdragon 6 Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
+Sony	XQ-FE72	pdx257	Xperia 10 VII	Qualcomm Snapdragon 6 Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
+Vsmart	V430A	casuarina	Joy 3	Qualcomm Snapdragon 632	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/casuarina_variant1.yml
+Vsmart	V430E	casuarina	Joy 3+	Qualcomm Snapdragon 632	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/casuarina_variant2.yml
+Xiaomi	2107119DC	lisa	Mi 11 LE	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lisa_variant3.yml
+Xiaomi	2109106A1I	miatoll	Redmi Note 10 Lite	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miatoll_variant6.yml
+Xiaomi	2109119DG	lisa	11 Lite 5G NE	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lisa_variant1.yml
+Xiaomi	2109119DI	lisa	11 Lite NE 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lisa_variant2.yml
+Xiaomi	2201122C	zeus	12 Pro	Qualcomm Snapdragon 8 Gen 1	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/zeus.yml
+Xiaomi	2201122G	zeus	12 Pro	Qualcomm Snapdragon 8 Gen 1	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/zeus.yml
+Xiaomi	2201123C	cupid	12	Qualcomm Snapdragon 8 Gen 1	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cupid.yml
+Xiaomi	2201123G	cupid	12	Qualcomm Snapdragon 8 Gen 1	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cupid.yml
+Xiaomi	22021211RC	munch	Redmi K40S	Qualcomm Snapdragon 870	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/munch_variant2.yml
+Xiaomi	22021211RG	munch	POCO F4	Qualcomm Snapdragon 870	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/munch_variant1.yml
+Xiaomi	22021211RI	munch	POCO F4	Qualcomm Snapdragon 870	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/munch_variant1.yml
+Xiaomi	2203121C	thor	12S Ultra	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/thor.yml
+Xiaomi	22041216C	xaga	Redmi Note 11T Pro	MediaTek Dimensity 8100	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xaga_variant2.yml
+Xiaomi	22041216G	xaga	POCO X4 GT	MediaTek Dimensity 8100	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xaga_variant1.yml
+Xiaomi	22041216I	xaga	Redmi K50i	MediaTek Dimensity 8100	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xaga_variant4.yml
+Xiaomi	22041216UC	xaga	Redmi Note 11T Pro+	MediaTek Dimensity 8100	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xaga_variant3.yml
+Xiaomi	22061218C	zizhan	MIX Fold 2	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/zizhan.yml
+Xiaomi	2206122SC	unicorn	12S Pro	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/unicorn.yml
+Xiaomi	2206123SC	mayfly	12S	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mayfly.yml
+Xiaomi	2207117BPG	rosemary	POCO M5s	MediaTek Helio G95	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rosemary_variant4.yml
+Xiaomi	22081212C	diting	Redmi K50 Ultra	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant2.yml
+Xiaomi	22081212R	diting	12T Pro	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
+Xiaomi	22081212UG	diting	12T Pro	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
+Xiaomi	2210132C	nuwa	13 Pro	Qualcomm Snapdragon 8 Gen 2	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nuwa.yml
+Xiaomi	2210132G	nuwa	13 Pro	Qualcomm Snapdragon 8 Gen 2	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/nuwa.yml
+Xiaomi	2211133C	fuxi	13	Qualcomm Snapdragon 8 Gen 2	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fuxi.yml
+Xiaomi	2211133G	fuxi	13	Qualcomm Snapdragon 8 Gen 2	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fuxi.yml
+Xiaomi	22127RK46C	socrates	Redmi K60 Pro	Qualcomm Snapdragon 8 Gen 2	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/socrates.yml
+Xiaomi	22200414R	diting	12T Pro	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
+Xiaomi	23013PC75G	mondrian	POCO F5 Pro	Qualcomm Snapdragon 8+ Gen 1	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mondrian_variant1.yml
+Xiaomi	23013RK75C	mondrian	Redmi K60	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mondrian_variant2.yml
+Xiaomi	23049PCD8G	marble	POCO F5 (Global)	Qualcomm Snapdragon 7+ Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/marble_variant1.yml
+Xiaomi	23049PCD8I	marble	POCO F5 (India)	Qualcomm Snapdragon 7+ Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/marble_variant2.yml
+Xiaomi	23049RAD8C	marble	Redmi Note 12 Turbo	Qualcomm Snapdragon 7+ Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/marble_variant3.yml
+Xiaomi	23113RKC6C	vermeer	Redmi K70	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/vermeer_variant2.yml
+Xiaomi	23113RKC6G	vermeer	POCO F6 Pro	Qualcomm Snapdragon 8 Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/vermeer_variant1.yml
+Xiaomi	23122PCD1G	garnet	POCO X6 5G	Qualcomm Snapdragon 7s Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/garnet_variant4.yml
+Xiaomi	23122PCD1I	garnet	POCO X6 5G (India)	Qualcomm Snapdragon 7s Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/garnet_variant5.yml
+Xiaomi	2312CRAD3C	garnet	Redmi Note 13 Pro 5G (China)	Qualcomm Snapdragon 7s Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/garnet_variant3.yml
+Xiaomi	2312DRA50C	garnet	Redmi Note 13 Pro 5G (China)	Qualcomm Snapdragon 7s Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/garnet_variant3.yml
+Xiaomi	2312DRA50G	garnet	Redmi Note 13 Pro 5G	Qualcomm Snapdragon 7s Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/garnet_variant1.yml
+Xiaomi	2312DRA50I	garnet	Redmi Note 13 Pro 5G (India)	Qualcomm Snapdragon 7s Gen 2	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/garnet_variant2.yml
+Xiaomi	24069PC21G	peridot	POCO F6	Qualcomm Snapdragon 8s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/peridot_variant1.yml
+Xiaomi	24069PC21I	peridot	POCO F6	Qualcomm Snapdragon 8s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/peridot_variant1.yml
+Xiaomi	24069RA21C	peridot	Redmi Turbo 3	Qualcomm Snapdragon 8s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/peridot_variant2.yml
+Xiaomi	25042PN24C	dijun	Xiaomi 15S Pro	Xiaomi XRING O1	2025	https://ir.mi.com/static-files/f032d2b5-8fa8-4cb7-b00e-a22ec00b954d | https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	2608BPX34C	lhasa	Xiaomi 18 Fold	Xiaomi XRING O3	2026	https://www.mi.com/shop/buy/detail?cfrom=search&product_id=1230808907 | https://www.gadgets360.com/xiaomi-18-fold-price-in-india-137366
+Xiaomi	A201XM	diting	12T Pro	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
+Xiaomi	M1805E2A	xmsirius	Mi 8 SE	Qualcomm Snapdragon 710	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xmsirius.yml
+Xiaomi	M1901F7BE	violet	Redmi Note 7 Pro	Qualcomm Snapdragon 675	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/violet.yml
+Xiaomi	M1901F7S	violet	Redmi Note 7 Pro	Qualcomm Snapdragon 675	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/violet.yml
+Xiaomi	M1903C3EC	Mi439	Redmi 7A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant1.yml
+Xiaomi	M1903C3EE	Mi439	Redmi 7A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant1.yml
+Xiaomi	M1903C3EG	Mi439	Redmi 7A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant1.yml
+Xiaomi	M1903C3EH	Mi439	Redmi 7A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant1.yml
+Xiaomi	M1903C3EI	Mi439	Redmi 7A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant1.yml
+Xiaomi	M1903C3ET	Mi439	Redmi 7A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant1.yml
+Xiaomi	M1903F10A	davinci	Redmi K20 (China)	Qualcomm Snapdragon 730	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/davinci_variant2.yml
+Xiaomi	M1903F10C	davinci	Redmi K20 (China)	Qualcomm Snapdragon 730	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/davinci_variant2.yml
+Xiaomi	M1903F10G	davinci	Mi 9T	Qualcomm Snapdragon 730	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/davinci_variant1.yml
+Xiaomi	M1903F10I	davinci	Redmi K20 (India)	Qualcomm Snapdragon 730	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/davinci_variant3.yml
+Xiaomi	M1903F2A	grus	Mi 9 SE	Qualcomm Snapdragon 712	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/grus.yml
+Xiaomi	M1903F2G	grus	Mi 9 SE	Qualcomm Snapdragon 712	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/grus.yml
+Xiaomi	M1904F3BC	pyxis	Mi CC9	Qualcomm Snapdragon 710	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pyxis_variant1.yml
+Xiaomi	M1904F3BG	pyxis	Mi 9 Lite	Qualcomm Snapdragon 710	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pyxis_variant2.yml
+Xiaomi	M1904F3BT	vela	Mi CC9 Meitu Edition	Qualcomm Snapdragon 710	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/vela.yml
+Xiaomi	M1906F9SH	laurel_sprout	Mi A3	Qualcomm Snapdragon 665	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/laurel_sprout.yml
+Xiaomi	M1906F9SI	laurel_sprout	Mi A3	Qualcomm Snapdragon 665	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/laurel_sprout.yml
+Xiaomi	M1908C3IC	Mi439	Redmi 8	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant2.yml
+Xiaomi	M1908C3IE	Mi439	Redmi 8	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant2.yml
+Xiaomi	M1908C3IG	Mi439	Redmi 8	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant2.yml
+Xiaomi	M1908C3IH	Mi439	Redmi 8	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant2.yml
+Xiaomi	M1908C3II	Mi439	Redmi 8	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant2.yml
+Xiaomi	M1908C3KE	Mi439	Redmi 8A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant3.yml
+Xiaomi	M1908C3KG	Mi439	Redmi 8A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant3.yml
+Xiaomi	M1908C3KH	Mi439	Redmi 8A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant3.yml
+Xiaomi	M1908C3KI	Mi439	Redmi 8A	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant3.yml
+Xiaomi	M1910F4E	tucana	Mi CC9 Pro	Qualcomm Snapdragon 730G	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tucana_variant3.yml
+Xiaomi	M1910F4G	tucana	Mi Note 10	Qualcomm Snapdragon 730G	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tucana_variant1.yml
+Xiaomi	M1910F4S	tucana	Mi Note 10 Pro	Qualcomm Snapdragon 730G	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tucana_variant2.yml
+Xiaomi	M2001C3K3I	Mi439	Redmi 8A Dual	Qualcomm Snapdragon 439	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Mi439_variant4.yml
+Xiaomi	M2001J11C	lmi	Redmi K30 Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lmi_variant2.yml
+Xiaomi	M2001J11C	lmi	Redmi K30 Pro Zoom Edition	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lmi_variant3.yml
+Xiaomi	M2001J11E	lmi	Redmi K30 Pro Zoom Edition	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lmi_variant3.yml
+Xiaomi	M2001J1G	cmi	Mi 10 Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cmi.yml
+Xiaomi	M2001J2G	umi	Mi 10	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/umi.yml
+Xiaomi	M2001J2I	umi	Mi 10	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/umi.yml
+Xiaomi	M2002J9G	monet	Mi 10 Lite 5G	Qualcomm Snapdragon 765G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/monet.yml
+Xiaomi	M2003J6A1G	miatoll	Redmi Note 9S	Qualcomm Snapdragon 720G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miatoll_variant2.yml
+Xiaomi	M2003J6A1I	miatoll	Redmi Note 9 Pro (India)	Qualcomm Snapdragon 720G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miatoll_variant4.yml
+Xiaomi	M2003J6A1R	miatoll	Redmi Note 9S	Qualcomm Snapdragon 720G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miatoll_variant2.yml
+Xiaomi	M2003J6B1I	miatoll	Redmi Note 9 Pro Max	Qualcomm Snapdragon 720G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miatoll_variant5.yml
+Xiaomi	M2003J6B2G	miatoll	Redmi Note 9 Pro (Global)	Qualcomm Snapdragon 720G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miatoll_variant3.yml
+Xiaomi	M2003J6CI	miatoll	POCO M2 Pro	Qualcomm Snapdragon 720G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/miatoll_variant1.yml
+Xiaomi	M2004J11G	lmi	POCO F2 Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lmi_variant1.yml
+Xiaomi	M2007J17C	gauguin	Redmi Note 9 Pro 5G	Qualcomm Snapdragon 750G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gauguin_variant3.yml
+Xiaomi	M2007J17G	gauguin	Mi 10T Lite 5G	Qualcomm Snapdragon 750G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gauguin_variant1.yml
+Xiaomi	M2007J17I	gauguin	Mi 10i 5G	Qualcomm Snapdragon 750G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gauguin_variant2.yml
+Xiaomi	M2007J1SC	cas	Mi 10 Ultra	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cas.yml
+Xiaomi	M2007J20CG	surya	POCO X3 NFC	Qualcomm Snapdragon 732G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/surya.yml
+Xiaomi	M2007J20CI	surya	POCO X3 NFC	Qualcomm Snapdragon 732G	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/surya.yml
+Xiaomi	M2007J3SC	apollon	Redmi K30S Ultra	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/apollon_variant3.yml
+Xiaomi	M2007J3SG	apollon	Mi 10T Pro	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/apollon_variant2.yml
+Xiaomi	M2007J3SY	apollon	Mi 10T	Qualcomm Snapdragon 865	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/apollon_variant1.yml
+Xiaomi	M2011K2C	venus	Mi 11	Qualcomm Snapdragon 888	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/venus.yml
+Xiaomi	M2011K2G	venus	Mi 11	Qualcomm Snapdragon 888	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/venus.yml
+Xiaomi	M2012K11AC	alioth	Redmi K40	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/alioth_variant2.yml
+Xiaomi	M2012K11AG	alioth	POCO F3	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/alioth_variant1.yml
+Xiaomi	M2012K11AI	alioth	Mi 11X	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/alioth_variant3.yml
+Xiaomi	M2012K11C	haydn	Redmi K40 Pro	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/haydn_variant2.yml
+Xiaomi	M2012K11C	haydn	Redmi K40 Pro+	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/haydn_variant3.yml
+Xiaomi	M2012K11G	haydn	Mi 11i	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/haydn_variant1.yml
+Xiaomi	M2012K11I	haydn	Mi 11X Pro	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/haydn_variant4.yml
+Xiaomi	M2101K6G	sweet	Redmi Note 10 Pro	Qualcomm Snapdragon 732G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sweet_variant1.yml
+Xiaomi	M2101K6I	sweet	Redmi Note 10 Pro Max (India)	Qualcomm Snapdragon 732G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sweet_variant3.yml
+Xiaomi	M2101K6P	sweet	Redmi Note 10 Pro (India)	Qualcomm Snapdragon 732G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sweet_variant2.yml
+Xiaomi	M2101K6R	sweet	Redmi Note 10 Pro	Qualcomm Snapdragon 732G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sweet_variant1.yml
+Xiaomi	M2101K9C	renoir	Mi 11 Lite 5G	Qualcomm Snapdragon 780G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/renoir.yml
+Xiaomi	M2101K9G	renoir	Mi 11 Lite 5G	Qualcomm Snapdragon 780G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/renoir.yml
+Xiaomi	M2101K9R	renoir	Mi 11 Lite 5G	Qualcomm Snapdragon 780G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/renoir.yml
+Xiaomi	M2102J20SG	vayu	POCO X3 Pro	Qualcomm Snapdragon 860	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/vayu.yml
+Xiaomi	M2102J20SI	vayu	POCO X3 Pro	Qualcomm Snapdragon 860	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/vayu.yml
+Xiaomi	M2102J2SC	thyme	Mi 10S	Qualcomm Snapdragon 870	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/thyme.yml
+Xiaomi	M2102K1AC	mars	Mi 11 Pro	Qualcomm Snapdragon 888	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mars.yml
+Xiaomi	MI 6X	wayne	MI 6X	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/wayne.yml
+Xiaomi	MI 8	dipper	MI 8	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dipper.yml
+Xiaomi	MI 8 Lite	platina	MI 8 Lite	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/platina.yml
+Xiaomi	Mi A2	jasmine_sprout	Mi A2	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/jasmine_sprout.yml
+Xiaomi	Mi MIX 2S	polaris	MI MIX 2S	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/polaris.yml
+Xiaomi	POCOPHONE F1	beryllium	POCO F1	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/beryllium.yml
+Xiaomi	Platina	platina	MI 8 Lite	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/platina.yml
+Xiaomi	Redmi Note 5	whyred	Redmi Note 5 Pro	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/whyred.yml
+Xiaomi	Redmi Note 5 Pro	whyred	Redmi Note 5 Pro	Qualcomm Snapdragon 636	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/whyred.yml
+Xiaomi	Redmi Note 8	ginkgo	Redmi Note 8	Qualcomm Snapdragon 665	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ginkgo_variant1.yml
+Xiaomi	SKR-A0	shark	Black Shark	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/shark.yml
+Xiaomi	SKR-H0	shark	Black Shark	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/shark.yml
+Xiaomi	XIG05	garnet	Redmi Note 13 Pro 5G	Qualcomm Snapdragon 7s Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/garnet_variant1.yml
+ZTE	P845A01	akershus	Axon 9 Pro	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akershus.yml
+ZTE	P845A02	akershus	Axon 9 Pro	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akershus.yml
+ZTE	Z2464N	P780F01	nubia Neo 3 5G	UNISOC T8300	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
+ZTE	Z2465N	Z7606O	nubia Neo 3 GT 5G	UNISOC T9100	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02

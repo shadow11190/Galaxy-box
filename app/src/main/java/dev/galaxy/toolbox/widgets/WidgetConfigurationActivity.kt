@@ -112,7 +112,7 @@ internal fun WidgetKind.title() = when (this) { WidgetKind.OVERVIEW -> "完整�
                 }
             }
             Text(when (settings.background) {
-                WidgetBackground.GLASS -> "桌面使用靜態玻璃漸層與柔和高光，不會即時取樣桌布；App 內才有 Backdrop 模糊與折射。"
+                WidgetBackground.GLASS -> "同款色調、透光與雙層高光邊緣；桌面為靜態玻璃風格，不會即時取樣桌布。App 內才有 Backdrop 模糊與折射。"
                 WidgetBackground.SOLID -> "單一底色，可調背景不透明度。"
                 WidgetBackground.TRANSPARENT -> "完整移除底色、漸層、邊框、高光與背景陰影；僅保留文字、數值與資訊進度條。"
             }, style = MaterialTheme.typography.bodySmall)

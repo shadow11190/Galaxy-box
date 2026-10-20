@@ -11,6 +11,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.unit.Density
@@ -41,6 +42,7 @@ class NavigationInteractionTest {
     private var drawingView: View? = null
     private val changes = mutableListOf<Int>()
     private var opticalFailures = 0
+    private var backgroundVisible by mutableStateOf(true)
     private val pages = listOf("總覽", "硬體", "電池", "更新", "檢測")
     private fun setup(requestGlass: Boolean = false) {
         rule.setContent {
@@ -51,13 +53,16 @@ class NavigationInteractionTest {
                 LocalLayoutDirection provides if (rtl) LayoutDirection.Rtl else LayoutDirection.Ltr) {
                 GalaxyBoxTheme(dark) {
                     val source = rememberLayerBackdrop()
+                    val navigation = rememberNavigationMotion(selected, pages.size)
                     Box(Modifier.width(width).fillMaxHeight()) {
                         GalaxyBackdrop(if (requestGlass) Modifier.layerBackdrop(source) else Modifier)
                         CompositionLocalProvider(LocalGlass provides GlassEnvironment(requestGlass, source, { opticalFailures++ })) {
                         Column(Modifier.fillMaxSize()) {
                             Text("導覽互動測試 · 無手機資料", color = androidx.compose.material3.MaterialTheme.colorScheme.onBackground)
-                            Spacer(Modifier.weight(1f))
-                            GlassNavigation(pages, selected, { changes += it; selected = it }, source, requestGlass)
+                            NavigationPages(navigation, Modifier.weight(1f)) { index ->
+                                Text("Page $index", Modifier.fillMaxSize().testTag("content-$index"))
+                            }
+                            GlassNavigation(pages, selected, { changes += it; selected = it }, source, requestGlass, navigation, backgroundVisible)
                         }
                         }
                     }
@@ -67,6 +72,67 @@ class NavigationInteractionTest {
     }
     private fun nav() = rule.onNodeWithTag("bottom-navigation")
     private fun page(index: Int) = rule.onNodeWithTag("navigation-page-$index")
+    private fun position() = nav().fetchSemanticsNode().config[NavigationPosition]
+
+    @Test fun contentAndIndicatorUseTheSameContinuousPosition() {
+        setup()
+        rule.mainClock.autoAdvance = false
+        page(1).performClick(); rule.mainClock.advanceTimeBy(64)
+        val p = position()
+        assertTrue(p > 0f && p < 1f)
+        val viewport = rule.onNodeWithTag("navigation-pages").fetchSemanticsNode().boundsInRoot
+        val incoming = rule.onNodeWithTag("content-1").fetchSemanticsNode().boundsInRoot
+        assertEquals(viewport.left + (1f-p)*viewport.width,incoming.left,3f)
+        rule.mainClock.advanceTimeBy(2000)
+        rule.onNodeWithTag("content-1").assertIsDisplayed()
+    }
+
+    @Test fun rapidTapsRetargetFromTheCurrentPositionWithoutWaitingOrResetting() {
+        setup()
+        rule.mainClock.autoAdvance = false
+        page(4).performClick(); rule.mainClock.advanceTimeBy(64)
+        val before = position()
+        assertTrue(before > 0f && before < 4f)
+        page(1).performClick()
+        assertEquals(before, position(), .001f)
+        rule.mainClock.advanceTimeBy(48)
+        val middle = position()
+        page(3).performClick()
+        assertEquals(middle,position(),.001f)
+        rule.mainClock.advanceTimeBy(2000)
+        assertEquals(3f,position(),.002f)
+        page(3).assertIsSelected()
+    }
+
+    @Test fun grabbingAnUnfinishedSpringAndReversingDragNeverJumpsToTheFingerOrOldTab() {
+        setup()
+        rule.mainClock.autoAdvance = false
+        page(4).performClick(); rule.mainClock.advanceTimeBy(64)
+        val start = position()
+        nav().performTouchInput { down(Offset(width * .3f,center.y)) }
+        assertEquals(start,position(),.001f)
+        nav().performTouchInput { moveTo(Offset(width * .4f,center.y),delayMillis=100) }
+        assertEquals((start+.5f).coerceAtMost(4f),position(),.02f)
+        nav().performTouchInput { moveTo(Offset(width * .2f,center.y),delayMillis=100) }
+        assertEquals((start-.5f).coerceAtLeast(0f),position(),.02f)
+        val cancelled = position()
+        nav().performTouchInput { cancel() }
+        assertEquals(cancelled,position(),.001f)
+        rule.mainClock.advanceTimeBy(2000)
+        assertEquals(4f,position(),.002f)
+    }
+
+    @Test fun fullyTransparentBarKeepsDragSnapAndTapAnimations() {
+        backgroundVisible = false
+        setup()
+        nav().performTouchInput {
+            down(Offset(width*.1f,center.y)); moveTo(Offset(width*.7f,center.y),delayMillis=250); up()
+        }
+        page(3).assertIsSelected()
+        assertEquals(3f,position(),.002f)
+        page(1).performClick().assertIsSelected()
+        assertEquals(1f,position(),.002f)
+    }
 
     @Test fun restingGlassBubbleCoversOneTabAndKeepsTouchAccessibility() {
         setup()
@@ -186,7 +252,7 @@ class NavigationInteractionTest {
         page(0).assertIsSelected()
     }
 
-    @Test fun opticalBubbleExtendsBeyondPanelAndStaysInsideReservedSpace() {
+    @Test fun opticalBubbleStaysRaisedWithoutLongPressAndInsideReserve() {
         width = 320.dp
         setup(requestGlass = true)
         for (scale in listOf(1f, 1.6f, 2f)) {
@@ -195,7 +261,7 @@ class NavigationInteractionTest {
             val panel = rule.onNodeWithTag("navigation-panel").fetchSemanticsNode().boundsInRoot
             val reserve = rule.onNodeWithTag("navigation-optical-container").fetchSemanticsNode().boundsInRoot
             val bubble = rule.onNodeWithTag("navigation-indicator").fetchSemanticsNode().boundsInRoot
-            assertTrue("Resting glass is taller than the original frame", bubble.top < panel.top && bubble.bottom > panel.bottom)
+            assertTrue("Raised glass remains visible without pressing", bubble.top < panel.top && bubble.bottom > panel.bottom)
             assertTrue(bubble.top >= reserve.top && bubble.bottom <= reserve.bottom)
             assertTrue(rule.onNodeWithTag("navigation-panel").fetchSemanticsNode().children.isEmpty())
             for (index in listOf(0, 4)) {
@@ -204,7 +270,7 @@ class NavigationInteractionTest {
                 nav().performTouchInput { down(Offset(if (index == 0) width * .1f else width * .9f, center.y)) }
                 rule.mainClock.advanceTimeBy(400)
                 val pressed = rule.onNodeWithTag("navigation-indicator").fetchSemanticsNode().boundsInRoot
-                assertTrue(pressed.height > panel.height)
+                assertTrue("Dragging keeps the same raised shape", pressed.height <= bubble.height * 1.08f)
                 assertTrue(pressed.top >= reserve.top && pressed.bottom <= reserve.bottom)
                 assertTrue(pressed.left >= 0 && pressed.right <= with(rule.density) { 320.dp.toPx() })
                 val label = rule.onNodeWithText(pages[index]).fetchSemanticsNode().boundsInRoot
@@ -238,3 +304,4 @@ class NavigationInteractionTest {
         if (!GlassCompatibility.refractionSupported) rule.runOnIdle { assertTrue(opticalFailures > 0) }
     }
 }
+

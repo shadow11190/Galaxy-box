@@ -11,11 +11,12 @@ jobs:
           java-version: '21'
       - uses: android-actions/setup-android@v3
         with:
-          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
+          packages: 'platform-tools platforms;android-36 build-tools;35.0.0'
           log-accepted-android-sdk-licenses: false
       - uses: gradle/actions/setup-gradle@v4
       - run: chmod +x gradlew
       - run: ./gradlew --no-daemon testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest
+      - run: ./gradlew --no-daemon lintRelease assembleRelease
       - uses: actions/upload-artifact@v4
         with:
           name: galaxy-box-debug
@@ -24,3 +25,10 @@ jobs:
             app/build/outputs/apk/androidTest/debug/*.apk
             app/build/reports/tests/testDebugUnitTest/
             app/build/reports/lint-results-debug.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: galaxy-box-r8-unsigned
+          path: |
+            app/build/outputs/apk/release/*.apk
+            app/build/outputs/mapping/release/
+            app/build/reports/lint-results-release.html

@@ -33,8 +33,8 @@ import dev.galaxy.toolbox.diagnostics.*
         }.onFailure { linkError = "無法開啟 Shizuku" }
     }
     InfoCard(if (kind == ProbeKind.BATTERY) "進階電池讀取 · Shizuku" else "可選備援 · Shizuku GPU 讀取") {
-        Text(availability.connection.title, color = Mint)
-        Text("可透過無線偵錯啟動 Shizuku，再授權本應用。只讀取資料，不修改系統。", color = Muted, style = MaterialTheme.typography.bodySmall)
+        Text(availability.title, color = Mint)
+        Text("可透過無線偵錯或 Root 啟動 Shizuku，再授權本應用。只讀取資料，不修改系統。", color = Muted, style = MaterialTheme.typography.bodySmall)
         if (busy) {
             LinearProgressIndicator(Modifier.fillMaxWidth())
             OutlinedButton(onClick = onCancel) { Text("取消讀取") }

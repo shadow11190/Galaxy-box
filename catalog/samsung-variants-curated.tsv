@@ -1,0 +1,63 @@
+models	soc	market	source
+SM-S921B|SM-S921N	Samsung Exynos 2400	國際版 / 韓國版；以完整型號區分	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S921W|SM-S921U1|SM-S921U	Qualcomm Snapdragon 8 Gen 3	加拿大 / 美國版；以完整型號區分	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S926B|SM-S926N	Samsung Exynos 2400	國際版 / 韓國版；以完整型號區分	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S926W|SM-S926U1|SM-S926U	Qualcomm Snapdragon 8 Gen 3	加拿大 / 美國版；以完整型號區分	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S928B|SM-S928N|SM-S928W|SM-S928U|SM-S928U1	Qualcomm Snapdragon 8 Gen 3	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S911B|SM-S911N|SM-S911W|SM-S911U|SM-S911U1	Qualcomm Snapdragon 8 Gen 2	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S916B|SM-S916N|SM-S916W|SM-S916U|SM-S916U1	Qualcomm Snapdragon 8 Gen 2	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S918B|SM-S918N|SM-S918W|SM-S918U|SM-S918U1	Qualcomm Snapdragon 8 Gen 2	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S931B|SM-S931N|SM-S931W|SM-S931U|SM-S931U1	Qualcomm Snapdragon 8 Elite	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S936B|SM-S936N|SM-S936W|SM-S936U|SM-S936U1	Qualcomm Snapdragon 8 Elite	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S938B|SM-S938N|SM-S938W|SM-S938U|SM-S938U1	Qualcomm Snapdragon 8 Elite	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F966B|SM-F966N|SM-F966W|SM-F966U|SM-F966U1	Qualcomm Snapdragon 8 Elite	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F956B|SM-F956N|SM-F956W|SM-F956U|SM-F956U1	Qualcomm Snapdragon 8 Gen 3	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F946B|SM-F946N|SM-F946W|SM-F946U|SM-F946U1	Qualcomm Snapdragon 8 Gen 2	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F936B|SM-F936N|SM-F936W|SM-F936U|SM-F936U1	Qualcomm Snapdragon 8+ Gen 1	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F926B|SM-F926N|SM-F926W|SM-F926U|SM-F926U1	Qualcomm Snapdragon 888	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F741B|SM-F741N|SM-F741W|SM-F741U|SM-F741U1	Qualcomm Snapdragon 8 Gen 3	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F731B|SM-F731N|SM-F731W|SM-F731U|SM-F731U1	Qualcomm Snapdragon 8 Gen 2	完整型號版本；不是作用中 CSC	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S711B	Samsung Exynos 2200	國際版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S711W|SM-S711U|SM-S711U1	Qualcomm Snapdragon 8 Gen 1	加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-F766B|SM-F766N|SM-F766W|SM-F766U|SM-F766U1	Samsung Exynos 2500	完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-A566B|SM-A566E	Samsung Exynos 1580	完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+SM-S942B|SM-S947B	Samsung Exynos 2600	歐洲 / 國際版	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/
+SM-S948B	Qualcomm Snapdragon 8 Elite Gen 5	歐洲 / 國際版	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/
+SM-S9480	Qualcomm Snapdragon 8 Elite Gen 5	台灣 / 香港 / 中國大陸版；不代表目前銷售地或 CSC	https://www.samsung.com/tw/smartphones/galaxy-s26-ultra/
+SM-S9210|SM-S9260|SM-S9280	Qualcomm Snapdragon 8 Gen 3	台灣 / 香港 / 中國大陸版；不代表目前銷售地或 CSC	https://www.samsung.com/tw/smartphones/galaxy-s24/
+SM-F976B|SM-F971B	Qualcomm Snapdragon 8 Elite Gen 5	歐洲 / 國際版	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-z-fold8-ultra-vs-galaxy-z-fold8-vs-galaxy-z-flip8/
+SM-F776B	Samsung Exynos 2600	歐洲 / 國際版	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-z-flip8-vs-galaxy-z-flip7/
+SM-G991B|SM-G991N	Samsung Exynos 2100	國際版 / 韓國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G991W|SM-G991U|SM-G991U1	Qualcomm Snapdragon 888	加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G996B|SM-G996N	Samsung Exynos 2100	國際版 / 韓國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G996W|SM-G996U|SM-G996U1	Qualcomm Snapdragon 888	加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G998B|SM-G998N	Samsung Exynos 2100	國際版 / 韓國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G998W|SM-G998U|SM-G998U1	Qualcomm Snapdragon 888	加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-S901B	Samsung Exynos 2200	歐洲 / 國際版	https://www.commoncriteriaportal.org/files/epfiles/st_vid11228-vr.pdf
+SM-S901E|SM-S901N|SM-S901W|SM-S901U|SM-S901U1	Qualcomm Snapdragon 8 Gen 1	完整型號版本	https://www.commoncriteriaportal.org/files/epfiles/st_vid11228-vr.pdf
+SM-S906B	Samsung Exynos 2200	歐洲 / 國際版	https://www.commoncriteriaportal.org/files/epfiles/st_vid11228-vr.pdf
+SM-S906E|SM-S906N|SM-S906W|SM-S906U|SM-S906U1	Qualcomm Snapdragon 8 Gen 1	完整型號版本	https://www.commoncriteriaportal.org/files/epfiles/st_vid11228-vr.pdf
+SM-S908B	Samsung Exynos 2200	歐洲 / 國際版	https://www.commoncriteriaportal.org/files/epfiles/st_vid11228-vr.pdf
+SM-S908E|SM-S908N|SM-S908W|SM-S908U|SM-S908U1	Qualcomm Snapdragon 8 Gen 1	完整型號版本	https://www.commoncriteriaportal.org/files/epfiles/st_vid11228-vr.pdf
+SM-G981B	Samsung Exynos 990	歐洲 / 國際版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G981N|SM-G981W|SM-G981U|SM-G981U1	Qualcomm Snapdragon 865	韓國 / 加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G986B	Samsung Exynos 990	歐洲 / 國際版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G986N|SM-G986W|SM-G986U|SM-G986U1	Qualcomm Snapdragon 865	韓國 / 加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G988B	Samsung Exynos 990	歐洲 / 國際版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G988N|SM-G988W|SM-G988U|SM-G988U1	Qualcomm Snapdragon 865	韓國 / 加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G980F|SM-G985F|SM-G780F	Samsung Exynos 990	LTE / 完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G781B|SM-G781N|SM-G781W|SM-G781U|SM-G781U1	Qualcomm Snapdragon 865	5G / 完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-G990B|SM-G990B2|SM-G990W|SM-G990W2|SM-G990U|SM-G990U1	Qualcomm Snapdragon 888	完整型號版本；不套用至 G990E	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-N981B	Samsung Exynos 990	歐洲 / 國際版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-N981N|SM-N981W|SM-N981U|SM-N981U1	Qualcomm Snapdragon 865+	韓國 / 加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-N986B	Samsung Exynos 990	歐洲 / 國際版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-N986N|SM-N986W|SM-N986U|SM-N986U1	Qualcomm Snapdragon 865+	韓國 / 加拿大 / 美國版	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-N980F|SM-N985F	Samsung Exynos 990	LTE / 完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-F916B|SM-F916F|SM-F916N|SM-F916U|SM-F916U1|SM-F916W	Qualcomm Snapdragon 865+	完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-F707B|SM-F707F|SM-F707N|SM-F707U|SM-F707U1|SM-F707W	Qualcomm Snapdragon 865+	完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-F700B|SM-F700F|SM-F700N|SM-F700U|SM-F700U1|SM-F700W	Qualcomm Snapdragon 855+	完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-F711B|SM-F711F|SM-F711N|SM-F711U|SM-F711U1|SM-F711W	Qualcomm Snapdragon 888	完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-F721B|SM-F721F|SM-F721N|SM-F721U|SM-F721U1|SM-F721W	Qualcomm Snapdragon 8+ Gen 1	完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-T870|SM-T875|SM-T875N|SM-T878U|SM-T970|SM-T975|SM-T975N|SM-T976B|SM-T976N|SM-T978U	Qualcomm Snapdragon 865+	Galaxy Tab S7 系列 / 完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-X700|SM-X706B|SM-X706N|SM-X708U|SM-X800|SM-X806B|SM-X806N|SM-X808U|SM-X900|SM-X906B|SM-X906N	Qualcomm Snapdragon 8 Gen 1	Galaxy Tab S8 系列 / 完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11342-st.pdf
+SM-X710|SM-X716B|SM-X716N|SM-X810|SM-X816B|SM-X816N|SM-X910|SM-X916B|SM-X916N	Qualcomm Snapdragon 8 Gen 2	Galaxy Tab S9 系列 / 完整型號版本	https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11630-st.pdf

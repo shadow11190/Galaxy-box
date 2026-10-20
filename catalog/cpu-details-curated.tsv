@@ -1,0 +1,86 @@
+name	generation	layout	cores	architecture	referenceClock	cache	source
+MediaTek Dimensity 6300		2 × Cortex-A76|6 × Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-6300
+MediaTek Dimensity 7020		Cortex-A78 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-7020
+MediaTek Dimensity 7030		Cortex-A78 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-7030
+MediaTek Dimensity 7050		Cortex-A78 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-7050
+MediaTek Dimensity 7200		2 × Cortex-A715|6 × Cortex-A510	8				https://www.mediatek.com/products/smartphones/mediatek-dimensity-7200
+MediaTek Dimensity 7300		4 × Cortex-A78|4 × Cortex-A55	8				https://www.mediatek.com/products/smartphones/mediatek-dimensity-7300
+MediaTek Dimensity 7400		4 × Cortex-A78|4 × Cortex-A55	8				https://www.mediatek.com/products/smartphones/mediatek-dimensity-7400
+MediaTek Dimensity 8000		4 × Cortex-A78|4 × Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-8000
+MediaTek Dimensity 8020		Cortex-A78 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-8020
+MediaTek Dimensity 8050		Cortex-A78 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-8050
+MediaTek Dimensity 8100		4 × Cortex-A78|4 × Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-8100
+MediaTek Dimensity 8200		1 × Cortex-A78|3 × Cortex-A78|4 × Cortex-A55	8	64 位元（官方規格）		L3：4MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8200
+MediaTek Dimensity 8250		1 × Cortex-A78|3 × Cortex-A78|4 × Cortex-A55	8	64 位元（官方規格）		L3：4MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8250
+MediaTek Dimensity 8300		4 × Cortex-A715|4 × Cortex-A510	8			L3：4MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8300
+MediaTek Dimensity 8350		4 × Cortex-A715|4 × Cortex-A510	8			L3：4MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8350
+MediaTek Dimensity 8400		1 × Cortex-A725|3 × Cortex-A725|4 × Cortex-A725	8			L3：6MB| 系統級 SLC：5MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8400
+MediaTek Dimensity 9000		1 × Cortex-X2|3 × Cortex-A710|4 × Cortex-A510	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-9000
+MediaTek Dimensity 9200		1 × Cortex-X3|3 × Cortex-A715|4 × Cortex-A510	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-dimensity-9200
+MediaTek Dimensity 9300		4 × Cortex-X4|4 × Cortex-A720	8				https://www.mediatek.com/products/smartphones/mediatek-dimensity-9300
+MediaTek Dimensity 9400		1 × Cortex-X925|3 × Cortex-X4|4 × Cortex-A720	8			L3：12MB| 系統級 SLC：10MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400
+MediaTek Dimensity 9400+		1 × Cortex-X925|3 × Cortex-X4|4 × Cortex-A720	8			L3：12MB| 系統級 SLC：10MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400-plus
+MediaTek Dimensity 9400e		1 × Cortex-X4|3 × Cortex-X4|4 × Cortex-A720	8			L3：8MB| 系統級 SLC：10MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400e
+MediaTek Dimensity 9500		1 × C1-Ultra|3 × C1-Premium|4 × C1-Pro	8			L3：16MB| 系統級 SLC：10MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9500
+MediaTek Dimensity 9500s		1 × Cortex-X925|3 × Cortex-X4|4 × Cortex-A720	8			L3：12MB| 系統級 SLC：10MB	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9500s
+MediaTek Helio A20		Cortex-A53	4	64 位元（官方規格）	最高 1.8GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-a20
+MediaTek Helio A22		Cortex-A53	4	64 位元（官方規格）	最高 2.0GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-a22
+MediaTek Helio A25		Cortex-A53	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-a25
+MediaTek Helio G100		2 × Cortex-A76|6 × Cortex-A55	8				https://www.mediatek.com/products/smartphones/mediatek-helio-g100
+MediaTek Helio G200		2 × Cortex-A76|6 × Cortex-A55	8				https://www.mediatek.com/products/smartphones/mediatek-helio-g200
+MediaTek Helio G25		Cortex-A53	8	64 位元（官方規格）	最高 2.0GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-g25
+MediaTek Helio G35		Cortex-A53	8	64 位元（官方規格）	最高 2.3GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-g35
+MediaTek Helio G70		Cortex-A75 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-g70
+MediaTek Helio G80		Cortex-A75 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-g80
+MediaTek Helio G81		Cortex-A75 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-g81
+MediaTek Helio G85		Cortex-A75 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-g85
+MediaTek Helio G88		Cortex-A55 + Cortex-A75	8	64 位元（官方規格）	最高 2GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-g88
+MediaTek Helio G90		Cortex-A55 + Cortex-A76	8	64 位元（官方規格）	最高 2.05GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-g90
+MediaTek Helio G95		Cortex-A55 + Cortex-A76	8	64 位元（官方規格）	最高 2.05GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-g95
+MediaTek Helio G96		Cortex-A55 + Cortex-A76	8	64 位元（官方規格）	最高 2.05GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-g96
+MediaTek Helio G99		2 × Cortex-A76|6 × Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-g99
+MediaTek Helio P10		ARM-A53	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-p10
+MediaTek Helio P20		Cortex-A53	8	64 位元（官方規格）	最高 2.3GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p20
+MediaTek Helio P22		Cortex-A53	8	64 位元（官方規格）	最高 2.0GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p22
+MediaTek Helio P23		Cortex-A53	8	64 位元（官方規格）	最高 2.3GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p23
+MediaTek Helio P25		Cortex-A53	8	64 位元（官方規格）	最高 2.6GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p25
+MediaTek Helio P30		Cortex-A53	8	64 位元（官方規格）	最高 2.3GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p30
+MediaTek Helio P35		Cortex-A53	8	64 位元（官方規格）	最高 2.3GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p35
+MediaTek Helio P60		Cortex-A53 + Cortex-A73	8	64 位元（官方規格）	最高 2.0GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p60
+MediaTek Helio P65		Cortex-A55 + Cortex-A75	8	64 位元（官方規格）	最高 2GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p65
+MediaTek Helio P70		Cortex-A53 + Cortex-A73	8	64 位元（官方規格）	最高 2.1GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p70
+MediaTek Helio P90		Cortex-A55 + Cortex-A75	8	64 位元（官方規格）	最高 2.2GHz		https://www.mediatek.com/products/smartphones/mediatek-helio-p90
+MediaTek Helio P95		Cortex-A75 + Cortex-A55	8	64 位元（官方規格）			https://www.mediatek.com/products/smartphones/mediatek-helio-p95
+Qualcomm Snapdragon 7 Gen 4		1 × Kryo Prime|4 × Kryo Performance|3 × Kryo Efficiency	8	64 位元（官方規格）	Prime 最高 2.8 GHz|Performance 最高 2.4 GHz|Efficiency 最高 1.8 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-7-Gen-4-Mobile-Platform-Product-Brief.pdf
+Qualcomm Snapdragon 8 Elite	第二代 Qualcomm Oryon（Gen 2）	Oryon Prime（Gen 2）+ Oryon Performance（Gen 2）	7／8（依平台版本）	64 位元（官方規格）	Prime 最高 4.32 GHz|Performance 最高 3.53 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Platform-Product-Brief.pdf|https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8-elite-mobile-platform
+Qualcomm Snapdragon 8 Elite Extreme Gen 6		2 × Oryon Prime|6 × Oryon Performance	8	64 位元（官方規格）	Prime 最高 5.0 GHz|Performance 最高 4.0 GHz	Oryon Flex Cache：16 MB	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Extreme-Gen-6-Product-Brief.pdf
+Qualcomm Snapdragon 8 Elite Gen 5	第三代 Qualcomm Oryon（Gen 3）	2 × Oryon Prime（Gen 3）|6 × Oryon Performance（Gen 3）	8	64 位元（官方規格）	Prime 最高 4.74 GHz；另有 4.6 GHz 版本|Performance 最高 3.62 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Gen-5-product-brief.pdf
+Qualcomm Snapdragon 8 Elite Gen 6		2 × Oryon Prime|6 × Oryon Performance	8	64 位元（官方規格）	Prime 最高 5.0 GHz|Performance 最高 4.0 GHz	Oryon Flex Cache：16 MB	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Gen-6-Product-Brief.pdf
+Qualcomm Snapdragon 8 Gen 2		1 × Kryo Prime（Cortex-X3）|4 × Kryo Performance|3 × Kryo Efficiency	8	64 位元（官方規格）	Prime 最高 3.2 GHz|Performance 最高 2.8 GHz|Efficiency 最高 2.0 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/images/company/news-media/media-center/press-kits/summit-2022/day-1/documents/Snapdragon_8_Gen_2_Product_Brief.pdf
+Qualcomm Snapdragon 8 Gen 5		2 × Oryon Prime|6 × Oryon Performance	8		Prime 最高 3.8 GHz|Performance 最高 3.32 GHz	Prime 群組 L2：4 MB|Performance 群組 L2：12 MB	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Product-Brief-Snapdragon-8-Gen-5.pdf
+Qualcomm Snapdragon 845		4 × Kryo 385 Performance|4 × Kryo 385 Efficiency	8	64 位元（官方規格）	最高 2.8 GHz		https://www.qualcomm.com/smartphones/products/8-series/snapdragon-845-mobile-platform
+Qualcomm Snapdragon 855		Kryo 485		64 位元（官方規格）	最高 2.84 GHz		https://www.qualcomm.com/smartphones/products/8-series/snapdragon-855-mobile-platform
+Qualcomm Snapdragon 855+		Kryo 485			Prime 最高 2.96 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/product_brief_-_qualcomm_snapdragon_855_860.pdf
+Qualcomm Snapdragon 860		Kryo 485			Prime 最高 2.96 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/product_brief_-_qualcomm_snapdragon_855_860.pdf
+Qualcomm Snapdragon 865+		Kryo 585					https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/snapdragon_865_product_brief.pdf
+Qualcomm Snapdragon 888		Kryo 680（含 Cortex-X1）		64 位元（官方規格）	最高 2.84 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/prod_brief_qcom_sd888_5g_1.pdf
+Qualcomm Snapdragon 8s Gen 4		Kryo Prime + Kryo Performance		64 位元（官方規格）	Prime 最高 3.2 GHz|Performance 最高 3.0 GHz		https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Product-Brief-Snapdragon-8s-Gen-4.pdf
+Samsung Exynos 1080		1 × Cortex-A78|3 × Cortex-A78|4 × Cortex-A55	8		A78 最高 2.8／2.6 GHz|A55 最高 2.0 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1080/
+Samsung Exynos 1280		2 × Cortex-A78|6 × Cortex-A55	8		A78 最高 2.4 GHz|A55 最高 2.0 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1280/
+Samsung Exynos 1330		2 × Cortex-A78|6 × Cortex-A55	8				https://semiconductor.samsung.com/processor/mobile-processor/exynos-1330/
+Samsung Exynos 1380		4 × Cortex-A78|4 × Cortex-A55	8				https://semiconductor.samsung.com/processor/mobile-processor/exynos-1380/
+Samsung Exynos 1480		4 × Cortex-A78|4 × Cortex-A55	8		A78 最高 2.75 GHz|A55 最高 2.0 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1480/
+Samsung Exynos 1580		1 × 大核心|3 × 中核心|4 × 小核心	8	Armv9			https://semiconductor.samsung.com/processor/mobile-processor/exynos-1580/
+Samsung Exynos 1680		1 × 大核心|4 × 中核心|3 × 小核心	8		最高 2.9／2.6／1.9 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1680/|https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-a57-5g-vs-galaxy-a37-5g/
+Samsung Exynos 2200		1 × Cortex-X2|3 × Cortex-A710|4 × Cortex-A510	8	Armv9			https://semiconductor.samsung.com/processor/mobile-processor/exynos-2200/
+Samsung Exynos 2400		Cortex-X4 + 效能／效率核心	10				https://semiconductor.samsung.com/processor/mobile-processor/exynos-2400/
+Samsung Exynos 2500		1 × Cortex-X925|7 × 中核心|2 × 小核心	10				https://semiconductor.samsung.com/processor/mobile-processor/exynos-2500/
+Samsung Exynos 2600		1 × Arm C1-Ultra|9 × Arm C1-Pro（依效能／效率分組）	10				https://semiconductor.samsung.com/processor/mobile-processor/exynos-2600/
+Samsung Exynos 7884		2 × Cortex-A73|6 × Cortex-A53	8	64 位元（官方規格）	A73 最高 1.6 GHz|A53 最高 1.35 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7884/
+Samsung Exynos 850		8 × Cortex-A55	8		最高 2.0 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-850/
+Samsung Exynos 880		2 × Cortex-A77|6 × Cortex-A55	8		A77 最高 2.0 GHz|A55 最高 1.8 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-880/
+Samsung Exynos 9609		4 × Cortex-A73|4 × Cortex-A53	8		A73 最高 2.2 GHz|A53 最高 1.6 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9609/
+Samsung Exynos 9611		4 × Cortex-A73|4 × Cortex-A53	8	64 位元（官方規格）	A73 最高 2.3 GHz|A53 最高 1.7 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9611/
+Samsung Exynos 980		2 × Cortex-A77|6 × Cortex-A55	8		A77 最高 2.2 GHz|A55 最高 1.8 GHz		https://semiconductor.samsung.com/processor/mobile-processor/exynos-980/
+Samsung Exynos 9825	第四代 Samsung 自訂 CPU	2 × Samsung Custom CPU|2 × Cortex-A75|4 × Cortex-A55	8				https://semiconductor.samsung.com/processor/mobile-processor/exynos-9825/
+Samsung Exynos 990	第五代 Samsung 自訂 CPU	2 × Samsung Custom CPU|2 × Cortex-A76|4 × Cortex-A55	8				https://semiconductor.samsung.com/processor/mobile-processor/exynos-990/

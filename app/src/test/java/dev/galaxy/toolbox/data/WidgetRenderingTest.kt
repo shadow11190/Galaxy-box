@@ -98,5 +98,15 @@ class WidgetRenderingTest {
             }
         }
     }
+    @Test fun glassMaterialIsTranslucentAndWholeLayerRespectsOpacity() {
+        val glass = WidgetBackgroundPainter.create(WidgetSettings(opacity = 40), 320, 280)!!
+        val solid = WidgetBackgroundPainter.create(WidgetSettings(background = WidgetBackground.SOLID, opacity = 40), 320, 280)!!
+        assertTrue(android.graphics.Color.alpha(glass.getPixel(160, 140)) < android.graphics.Color.alpha(solid.getPixel(160, 140)))
+        val pixels = IntArray(glass.width * glass.height)
+        glass.getPixels(pixels, 0, glass.width, 0, 0, glass.width, glass.height)
+        assertTrue(pixels.all { android.graphics.Color.alpha(it) <= 102 })
+        val large = WidgetBackgroundPainter.create(WidgetSettings(), 1500, 900)!!
+        assertTrue(large.width <= 320 && large.height <= 320)
+    }
     private fun descendants(view: View): List<View> = listOf(view) + if (view is ViewGroup) (0 until view.childCount).flatMap { descendants(view.getChildAt(it)) } else emptyList()
 }

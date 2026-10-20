@@ -1,6 +1,6 @@
 package dev.galaxy.toolbox.widgets
 
-enum class WidgetBackground(val title: String) { GLASS("靜態玻璃"), SOLID("純色背景"), TRANSPARENT("完全透明／無背景") }
+enum class WidgetBackground(val title: String) { GLASS("液態玻璃風格（靜態）"), SOLID("純色背景"), TRANSPARENT("完全透明／無背景") }
 enum class WidgetClick(val title: String) { APP("開啟 App"), SETTINGS("小工具設定"), NONE("無動作") }
 enum class WidgetField(val title: String) {
     BATTERY("電量"), TEMPERATURE("電池溫度"), MEMORY("記憶體"), STORAGE("儲存空間"), CPU("CPU 最高頻率"), TRAFFIC("流量 · 自開機累計")

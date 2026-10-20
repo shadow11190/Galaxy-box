@@ -4,11 +4,17 @@ import java.util.Locale
 
 data class ChargingPowerReading(
     val currentMicroAmps: Int? = null, val voltageMilliVolts: Int? = null, val batteryPercent: Int? = null,
-    val connected: Boolean? = null, val full: Boolean = false, val atMs: Long? = null, val statusCode: Int? = null
+    val connected: Boolean? = null, val full: Boolean = false, val atMs: Long? = null, val statusCode: Int? = null,
+    val invertCurrent: Boolean = false, val voltageEstimated: Boolean = false, val dualCell: Boolean = false,
+    val estimateVoltageEnabled: Boolean = false
 ) {
+    val adjustedCurrentMicroAmps: Int? get() = currentMicroAmps?.takeUnless { it == Int.MIN_VALUE }?.let {
+        if (invertCurrent) -it else it
+    }
+    val possiblePerCellMilliVolts: Int? get() = voltageMilliVolts?.takeIf { dualCell && it in 6000..10000 }?.div(2)
     // Signed net power at the battery. Device consumption and conversion losses are excluded.
-    val watts: Double? get() = if (currentMicroAmps != null && currentMicroAmps != Int.MIN_VALUE && voltageMilliVolts != null && voltageMilliVolts > 0)
-        currentMicroAmps.toDouble() * voltageMilliVolts / 1_000_000_000.0 else null
+    val watts: Double? get() = if (adjustedCurrentMicroAmps != null && voltageMilliVolts != null && voltageMilliVolts > 0)
+        adjustedCurrentMicroAmps!!.toDouble() * voltageMilliVolts / 1_000_000_000.0 else null
     fun fresh(nowMs: Long) = atMs != null && nowMs >= atMs && nowMs - atMs <= 15_000
     fun powerText(nowMs: Long): String = when {
         !fresh(nowMs) -> "無最新資料"

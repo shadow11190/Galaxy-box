@@ -45,6 +45,45 @@ class BugreportParserTest {
         }
         assertEquals(24, BugreportParser.parse(bytes.toByteArray().inputStream())[0].value)
     }
+    @Test fun seekableStoredReportUsesNoOptionalCodec() {
+        val file = File(temporary.root, "stored.zip")
+        val text = "DUMP OF SERVICE battery:\ncycle count: 31\nmSavedBatteryAsoc: 98".toByteArray()
+        ZipOutputStream(file.outputStream()).use { zip ->
+            val entry = ZipEntry("bugreport.txt").apply {
+                method = ZipEntry.STORED; size = text.size.toLong(); compressedSize = size
+                crc = java.util.zip.CRC32().apply { update(text) }.value
+            }
+            zip.putNextEntry(entry); zip.write(text); zip.closeEntry()
+        }
+        java.io.FileInputStream(file).use { input ->
+            val fields = BugreportParser.parseZip(input.channel)
+            assertEquals(31, fields[0].value); assertEquals(98, fields[1].value)
+        }
+    }
+    @Test fun seekableOptionalCodecEntriesAreRejectedBeforeDecoderConstruction() {
+        val bytes = ByteArrayOutputStream().also { out ->
+            ZipOutputStream(out).use { zip ->
+                zip.putNextEntry(ZipEntry("bugreport.txt"))
+                zip.write("DUMP OF SERVICE battery:\ncycle count: 31".toByteArray()); zip.closeEntry()
+            }
+        }.toByteArray()
+        val central = (0..bytes.size-4).first { offset ->
+            bytes[offset] == 0x50.toByte() && bytes[offset+1] == 0x4b.toByte() &&
+                bytes[offset+2] == 1.toByte() && bytes[offset+3] == 2.toByte()
+        }
+        // Zstandard and XZ entries must fail at our format guard, even without their jars.
+        for (method in listOf(93, 95)) {
+            val altered = bytes.copyOf().apply {
+                this[8] = method.toByte(); this[9] = 0
+                this[central+10] = method.toByte(); this[central+11] = 0
+            }
+            val file = File(temporary.root, "unsupported-$method.zip").apply { writeBytes(altered) }
+            java.io.FileInputStream(file).use { input ->
+                val error = assertThrows(IllegalArgumentException::class.java) { BugreportParser.parseZip(input.channel) }
+                assertTrue(error.message.orEmpty().contains("STORED／DEFLATE"))
+            }
+        }
+    }
     @Test fun skipsUnrelatedLongLinesWithoutLosingTheBatteryReport() {
         val report = BugreportParser.parseReport(("a".repeat(17000) + "\nDUMP OF SERVICE battery:\nmSavedBatteryAsoc: 96\n").byteInputStream())
         assertEquals(96, report.fields[1].value)

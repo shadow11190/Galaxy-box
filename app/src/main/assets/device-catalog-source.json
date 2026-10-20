@@ -1,7 +1,8 @@
 {
   "source": "https://storage.googleapis.com/play_public/supported_devices.csv",
-  "retrieved": "2026-10-19",
-  "sha256": "b323bd60142dd665a486ea3d7456c3fbcbaf1d2db444b008053366dbc11f5cd4",
-  "rows": 3376,
-  "description": "Samsung rows from Google Play supported devices. Marketing names only; no live hardware measurements. Exact model match; ambiguous names require exact device match, otherwise unknown."
+  "retrieved": "2026-10-20",
+  "sha256": "5c9f2d01f6c61d7f51807d3fd88a1baf269f5c6906673b7c1f1459538b07abe6",
+  "rows": 53014,
+  "samsungRows": 3378,
+  "description": "Exact brand/model/device marketing-name facts. No processor, memory, radio or current CSC is inferred from marketing name. Regional SKUs remain separate."
 }

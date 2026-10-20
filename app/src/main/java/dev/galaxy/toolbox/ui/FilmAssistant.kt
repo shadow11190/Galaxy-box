@@ -23,6 +23,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.text.font.FontWeight
@@ -43,6 +45,12 @@ internal fun FilmAssistant(onClose: () -> Unit) {
     var background by rememberSaveable { mutableIntStateOf(0) }
     var ink by rememberSaveable { mutableIntStateOf(0) }
     var border by rememberSaveable { mutableFloatStateOf(4f) }
+    var insetX by rememberSaveable { mutableFloatStateOf(0f) }
+    var insetY by rememberSaveable { mutableFloatStateOf(0f) }
+    var topRadius by rememberSaveable { mutableFloatStateOf(0f) }
+    var bottomRadius by rememberSaveable { mutableFloatStateOf(0f) }
+    var systemCorners by rememberSaveable { mutableStateOf(true) }
+    var reportedCorners by remember { mutableStateOf<Pair<Float, Float>?>(null) }
     var cross by rememberSaveable { mutableStateOf(true) }
     var grid by rememberSaveable { mutableStateOf(false) }
     var label by rememberSaveable { mutableStateOf("Galaxy box") }
@@ -55,9 +63,23 @@ internal fun FilmAssistant(onClose: () -> Unit) {
     var exporting by remember { mutableStateOf(false) }
     var exportMessage by remember { mutableStateOf<String?>(null) }
     val context = LocalContext.current
+    val view = LocalView.current
+    LaunchedEffect(view, size) {
+        if (android.os.Build.VERSION.SDK_INT >= 31) {
+            withFrameNanos { }
+            val insets = view.rootWindowInsets
+            fun radius(position: Int) = insets?.getRoundedCorner(position)?.radius?.toFloat() ?: 0f
+            val top = maxOf(radius(android.view.RoundedCorner.POSITION_TOP_LEFT), radius(android.view.RoundedCorner.POSITION_TOP_RIGHT))
+            val bottom = maxOf(radius(android.view.RoundedCorner.POSITION_BOTTOM_LEFT), radius(android.view.RoundedCorner.POSITION_BOTTOM_RIGHT))
+            reportedCorners = (top to bottom).takeIf { top > 0 || bottom > 0 }
+        }
+    }
+    val rTop = if (systemCorners) reportedCorners?.first ?: topRadius else topRadius
+    val rBottom = if (systemCorners) reportedCorners?.second ?: bottomRadius else bottomRadius
+    val panelSidePadding = maxOf(20f, maxOf(rTop, rBottom) * .3f / LocalDensity.current.density).dp
     val scope = rememberCoroutineScope()
     val pattern = FilmPattern(FilmBackgrounds[background].second.toArgb(), FilmInks[ink].second.toArgb(),
-        border.toInt(), cross, grid, if (showLabel) label else "")
+        border.toInt(), cross, grid, if (showLabel) label else "", insetX, insetY, rTop, rBottom)
     val latestPattern by rememberUpdatedState(pattern)
     val latestSize by rememberUpdatedState(size)
     val export = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("image/png")) { uri ->
@@ -98,7 +120,7 @@ internal fun FilmAssistant(onClose: () -> Unit) {
             modifier = Modifier.align(Alignment.TopCenter).safeDrawingPadding().padding(16.dp).background(Panel).padding(12.dp),
             style = MaterialTheme.typography.bodySmall)
         if (controls) {
-            Surface(Modifier.align(Alignment.BottomCenter).safeDrawingPadding().padding(12.dp).fillMaxWidth().fillMaxHeight(.83f),
+            Surface(Modifier.align(Alignment.BottomCenter).safeDrawingPadding().padding(horizontal = panelSidePadding, vertical = 12.dp).fillMaxWidth().fillMaxHeight(.83f),
                 shape = MaterialTheme.shapes.extraLarge, color = Panel) {
                 Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
@@ -112,12 +134,22 @@ internal fun FilmAssistant(onClose: () -> Unit) {
                         OutlinedButton(onClick = { background = 0; ink = 0; border = 0f; cross = false; grid = false; showLabel = false }) { Text("除塵白底") }
                         OutlinedButton(onClick = { background = 0; ink = 0; border = 4f; cross = false; grid = false; showLabel = true }) { Text("邊緣檢視") }
                         OutlinedButton(onClick = { background = 0; ink = 0; border = 4f; cross = true; grid = true; showLabel = false }) { Text("格線對位") }
+                        OutlinedButton(onClick = { systemCorners = false; topRadius = 80f; bottomRadius = 80f; insetX = 12f; insetY = 12f; border = 4f }) { Text("圓角邊框") }
                     }
                     FilmColorChoice("背景", FilmBackgrounds, background) { background = it }
                     FilmColorChoice("邊框與文字", FilmInks, ink) { ink = it }
                     Text("邊框寬度 ${border.toInt()} px", color = Mint)
                     Slider(border, { border = it }, valueRange = 0f..24f, steps = 23,
                         modifier = Modifier.semantics { contentDescription = "邊框寬度" })
+                    FilmToggle("使用系統回報 R 角", systemCorners) { systemCorners = it }
+                    Text(if (reportedCorners == null) "系統未提供 R 角，可手動調整。" else "系統 R 角：上 ${reportedCorners!!.first.toInt()}／下 ${reportedCorners!!.second.toInt()} px", color = Muted, style = MaterialTheme.typography.bodySmall)
+                    if (!systemCorners || reportedCorners == null) {
+                        FilmDimensionSlider("上方 R 角", topRadius, 300f) { topRadius = it }
+                        FilmDimensionSlider("下方 R 角", bottomRadius, 300f) { bottomRadius = it }
+                    }
+                    FilmDimensionSlider("水平內縮", insetX, 120f) { insetX = it }
+                    FilmDimensionSlider("垂直內縮", insetY, 160f) { insetY = it }
+                    TextButton(onClick = { insetX = 0f; insetY = 0f; topRadius = 0f; bottomRadius = 0f; systemCorners = true }) { Text("重設圓角與內縮") }
                     FilmToggle("中央十字", cross) { cross = it }
                     FilmToggle("對位格線", grid) { grid = it }
                     FilmToggle("中央文字", showLabel) { showLabel = it }
@@ -156,25 +188,44 @@ internal fun FilmAssistant(onClose: () -> Unit) {
     }
 }
 
+@Composable private fun FilmDimensionSlider(title: String, value: Float, maximum: Float, change: (Float) -> Unit) {
+    Text("$title ${value.toInt()} px", color = Mint)
+    Slider(value, change, valueRange = 0f..maximum, modifier = Modifier.semantics { contentDescription = title })
+}
+
 /** Original renderer shared by the preview and PNG export; no Xiaomi code or assets. */
-internal data class FilmPattern(val background: Int, val ink: Int, val borderPx: Int, val cross: Boolean, val grid: Boolean, val text: String) {
+internal data class FilmPattern(val background: Int, val ink: Int, val borderPx: Int, val cross: Boolean, val grid: Boolean, val text: String,
+    val insetXPx: Float = 0f, val insetYPx: Float = 0f, val topRadiusPx: Float = 0f, val bottomRadiusPx: Float = 0f) {
     fun draw(canvas: android.graphics.Canvas, width: Float, height: Float) {
         canvas.drawColor(background)
         val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = ink }
-        val border = borderPx.toFloat().coerceIn(0f, minOf(width, height) / 2)
-        if (border > 0) {
-            // Filled strips put the complete stroke inside the canvas, including a 1 px border.
-            canvas.drawRect(0f, 0f, width, border, paint)
-            canvas.drawRect(0f, height - border, width, height, paint)
-            canvas.drawRect(0f, 0f, border, height, paint)
-            canvas.drawRect(width - border, 0f, width, height, paint)
+        fun safe(value: Float, maximum: Float) = (value.takeIf { it.isFinite() } ?: 0f).coerceIn(0f, maximum.coerceAtLeast(0f))
+        val x = safe(insetXPx, width / 2 - 1f); val y = safe(insetYPx, height / 2 - 1f)
+        val frame = android.graphics.RectF(x, y, width - x, height - y)
+        val limit = minOf(frame.width(), frame.height()) / 2
+        val top = safe(topRadiusPx, limit); val bottom = safe(bottomRadiusPx, limit)
+        fun path(rect: android.graphics.RectF, inset: Float = 0f) = android.graphics.Path().apply {
+            val t = (top - inset).coerceAtLeast(0f); val b = (bottom - inset).coerceAtLeast(0f)
+            addRoundRect(rect, floatArrayOf(t,t,t,t,b,b,b,b), android.graphics.Path.Direction.CW)
         }
+        val outline = path(frame)
+        val border = borderPx.toFloat().coerceIn(0f, limit)
+        if (border > 0) {
+            val ring = android.graphics.Path(outline).apply {
+                fillType = android.graphics.Path.FillType.EVEN_ODD
+                val inner = android.graphics.RectF(frame).apply { inset(border, border) }
+                if (inner.width() > 0 && inner.height() > 0) addPath(path(inner, border))
+            }
+            canvas.drawPath(ring, paint)
+        }
+        val clipped = canvas.save()
+        canvas.clipPath(outline)
         paint.strokeWidth = 1f
         if (grid) {
             paint.alpha = 100
             (1..5).forEach { i ->
-                canvas.drawLine(width * i / 6, 0f, width * i / 6, height, paint)
-                canvas.drawLine(0f, height * i / 6, width, height * i / 6, paint)
+                canvas.drawLine(frame.left + frame.width() * i / 6, frame.top, frame.left + frame.width() * i / 6, frame.bottom, paint)
+                canvas.drawLine(frame.left, frame.top + frame.height() * i / 6, frame.right, frame.top + frame.height() * i / 6, paint)
             }
         }
         paint.alpha = 220
@@ -193,5 +244,6 @@ internal data class FilmPattern(val background: Int, val ink: Int, val borderPx:
             val start = height / 2 - (paint.ascent() + paint.descent()) / 2 - (lines.size - 1) * lineHeight / 2 + if (cross) minOf(width, height) * .10f else 0f
             lines.forEachIndexed { i, line -> canvas.drawText(line, width / 2, start + i * lineHeight, paint) }
         }
+        canvas.restoreToCount(clipped)
     }
 }

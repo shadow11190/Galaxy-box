@@ -1,0 +1,15 @@
+brand	model	device	name	soc	market	source
+Xiaomi	2407FPN8ER	rothko	Xiaomi 14T Pro	MediaTek Dimensity 9300+	日本版（SIM-free） / 完整型號規格參考	https://www.mi.com/jp/product/xiaomi-14t-pro/specs/ | https://support.mineo.jp/contract/pdf/xiaomi_14t_pro_01.pdf
+Xiaomi	2407FPN8EG	rothko	Xiaomi 14T Pro	MediaTek Dimensity 9300+	國際版 / 完整型號規格參考	https://www.mi.com/global/product/xiaomi-14t-pro/specs/
+Xiaomi	A402XM	rothko	Xiaomi 14T Pro	MediaTek Dimensity 9300+	日本 SoftBank 版 / 完整型號規格參考	https://www.softbank.jp/mobile/products/smartphone/xiaomi-14t-pro/
+Xiaomi	25042PN24C	dijun	Xiaomi 15S Pro	Xiaomi XRING O1	中國版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25053RP5CC	violin	Xiaomi Pad 7S Pro 12.5	Xiaomi XRING O1	中國版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25010PN30C	xuanyuan	Xiaomi 15 Ultra	Qualcomm Snapdragon 8 Elite	中國版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25010PN30G	xuanyuan	Xiaomi 15 Ultra	Qualcomm Snapdragon 8 Elite	國際版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25010PN30I	xuanyuan	Xiaomi 15 Ultra	Qualcomm Snapdragon 8 Elite	印度版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25019PNF3C	xuanyuan	Xiaomi 15 Ultra	Qualcomm Snapdragon 8 Elite	中國版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25113PN0EC	pudding	Xiaomi 17	Qualcomm Snapdragon 8 Elite Gen 5	中國版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25113PN0EG	pudding	Xiaomi 17	Qualcomm Snapdragon 8 Elite Gen 5	國際版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25113PN0EI	pudding	Xiaomi 17	Qualcomm Snapdragon 8 Elite Gen 5	印度版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	25098PN5AC	pandora	Xiaomi 17 Pro	Qualcomm Snapdragon 8 Elite Gen 5	中國版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	2509FPN0BC	popsicle	Xiaomi 17 Pro Max	Qualcomm Snapdragon 8 Elite Gen 5	中國版 / 完整型號規格參考	https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md

@@ -15,3 +15,13 @@ interactive row; a separate non-interactive accent capture for icons AND labels;
 horizontal-slop gesture handling; cancellation and resizing; preserved root-free
 hardware pages; capability fallback, failure protection, and large-font sizing.
 The upstream demo icons, screenshot and videos are not included in the app.
+
+2026-10-20 navigation revision: restored v0.6.7's panel and magnified accent
+glyph capture, chromatic lens, highlights and shadows; no solid tint/gradient
+is painted behind the navigation panel. The optical source has no second shadow
+or accessible/interactive tab set. Navigation optics stay raised at rest.
+Content capture extends behind the navigation, with end-of-list padding retaining
+access to the last action and a sibling overflow reserve preventing clipping.
+An interruptible shared spring drives pages, tab emphasis and the indicator;
+direct dragging does not wait for the spring. Foreground refresh requests and
+the optional background-off mode are independently implemented by Galaxy box.

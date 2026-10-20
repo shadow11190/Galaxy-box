@@ -13,10 +13,10 @@ import org.robolectric.annotation.Config
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [34])
 class ReadOnlyDiagnosticsTest {
-    private fun payload(kind: ProbeKind = ProbeKind.BATTERY, values: Map<String, String> = emptyMap(), dump: String = ""): JSONObject {
+    private fun payload(kind: ProbeKind = ProbeKind.BATTERY, values: Map<String, String> = emptyMap(), dump: String = "", manufacturer: String = "Samsung"): JSONObject {
         val items = JSONArray()
         values.forEach { (path, raw) -> items.put(JSONObject().put("path", path).put("raw", raw).put("status", "OK")) }
-        return JSONObject().put("schema", 1).put("kind", kind.name).put("uid", 2000).put("at", 1000).put("files", items)
+        return JSONObject().put("schema", 1).put("kind", kind.name).put("uid", 2000).put("at", 1000).put("manufacturer", manufacturer).put("files", items)
             .put("dump", JSONObject().put("status", "OK").put("text", dump))
     }
     private val battery = "/sys/class/power_supply/battery"
@@ -31,7 +31,7 @@ class ReadOnlyDiagnosticsTest {
         assertEquals("19000.0 mWh", result.fields.first { it.label.startsWith("設計能量") }.value)
         assertEquals("12345", result.fields.first { it.label.startsWith("Samsung 循環欄位") }.value)
         assertTrue(result.fields.first { it.label.startsWith("Samsung 循環欄位") }.detail.contains("不除以 100"))
-        assertEquals("0 次（來源回報）", result.fields.first { it.label.startsWith("循環次數") }.value)
+        assertEquals("未提供（原始 0）", result.fields.first { it.label.startsWith("循環次數") }.value)
         assertFalse(result.fields.any { it.label.contains("SOH") })
     }
     @Test fun wrongPowerSupplyTypeCannotBecomeBatteryCapacity() {
@@ -64,10 +64,18 @@ class ReadOnlyDiagnosticsTest {
         assertTrue(result.diagnostics.any { it.contains("衝突") })
     }
     @Test fun malformedOrOversizedMetadataIsRejected() {
-        val invalid = listOf(payload().put("schema", 2), payload().put("uid", 0), payload().put("kind", "GPU"), payload().put("at", 0),
+        val invalid = listOf(payload().put("schema", 2), payload().put("uid", 1001), payload().put("kind", "GPU"), payload().put("at", 0),
             payload(values = mapOf("/data/private" to "secret")))
         invalid.forEach { data -> assertThrows(IllegalArgumentException::class.java) { PrivilegedSnapshotParser.parse(data.toString(), ProbeKind.BATTERY) } }
         assertThrows(IllegalArgumentException::class.java) { PrivilegedSnapshotParser.parse("x".repeat(180001), ProbeKind.BATTERY) }
+    }
+    @Test fun shizukuRootModeIsAcceptedAndClearlySourced() {
+        assertEquals(ShizukuMode.ROOT, ShizukuMode.fromUid(0))
+        assertEquals(ShizukuMode.ADB, ShizukuMode.fromUid(2000))
+        assertNull(ShizukuMode.fromUid(1001))
+        val root = payload(values = mapOf("$battery/type" to "Battery", "$battery/cycle_count" to "8")).put("uid", 0)
+        val result = PrivilegedSnapshotParser.parse(root.toString(), ProbeKind.BATTERY)
+        assertTrue(result.fields.any { it.source.contains("Root UID 0") && it.value == "8 次（來源回報）" })
     }
     @Test fun duplicateSourcesAreRejected() {
         val data = payload(values = mapOf("$battery/type" to "Battery"))

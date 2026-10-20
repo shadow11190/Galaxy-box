@@ -47,10 +47,14 @@ import android.content.ClipboardManager
 private val Pages = listOf("總覽", "硬體", "電池", "更新", "檢測")
 
 @Composable
-fun ToolboxApp(model: ToolboxViewModel) {
+fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
     val state by model.state.collectAsStateWithLifecycle()
     var aboutVisible by rememberSaveable { mutableStateOf(false) }
+    var catalogVisible by rememberSaveable { mutableStateOf(false) }
     var page by rememberSaveable { mutableIntStateOf(0) }
+    val navigation = rememberNavigationMotion(page, Pages.size)
+    val pageScrollStates = Pages.map { androidx.compose.foundation.lazy.rememberLazyListState() }
+    val hardwareTabScroll = androidx.compose.foundation.lazy.rememberLazyListState()
     var screenTool by rememberSaveable { mutableStateOf<String?>(null) }
     var hardwareCategory by rememberSaveable { mutableStateOf(HardwareCategory.CPU) }
     var testQueue by rememberSaveable { mutableStateOf(listOf<DeviceTest>()) }
@@ -65,6 +69,7 @@ fun ToolboxApp(model: ToolboxViewModel) {
     val glassAvailable = rememberGlassAvailable()
     var glassFailed by remember { mutableStateOf(false) }
     val glass = glassEnabled && glassAvailable && !glassFailed
+    var navigationBackground by rememberSaveable { mutableStateOf(preferences.getBoolean("navigation_background", true)) }
     var themeMode by rememberSaveable { mutableStateOf(preferences.getString("theme", "system") ?: "system") }
     val dark = when (themeMode) { "dark" -> true; "light" -> false; else -> isSystemInDarkTheme() }
     val backgroundBackdrop = rememberLayerBackdrop()
@@ -85,26 +90,27 @@ fun ToolboxApp(model: ToolboxViewModel) {
     }
     GalaxyBoxTheme(dark) {
       CompositionLocalProvider(LocalGlass provides GlassEnvironment(glass, backgroundBackdrop) { view.post { glassFailed = true } }) {
-      Box(Modifier.fillMaxSize()) {
+      Box(modifier.fillMaxSize()) {
         GalaxyBackdrop(if (glass) Modifier.layerBackdrop(backgroundBackdrop) else Modifier)
         if (screenTool != null) {
             if (screenTool == "貼膜") FilmAssistant { screenTool = null }
             else ScreenTool(screenTool!!) { screenTool = null }
         } else {
         Scaffold(containerColor = Color.Transparent, contentColor = MaterialTheme.colorScheme.onBackground, bottomBar = {
-            GlassNavigation(Pages, page, { page = it }, navigationBackdrop, glass)
+            GlassNavigation(Pages, page, { page = it }, navigationBackdrop, glass, navigation, navigationBackground)
         }) { inset ->
-            AppScrollContent(inset, if (glass) Modifier.layerBackdrop(contentBackdrop) else Modifier) {
+            NavigationPages(navigation, if (glass) Modifier.layerBackdrop(contentBackdrop) else Modifier) { displayedPage ->
+            AppScrollContent(inset, state = pageScrollStates[displayedPage]) {
                 item {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                         Text("Galaxy box", color = Mint, style = MaterialTheme.typography.titleMedium)
                         TextButton(onClick = { aboutVisible = true }, modifier = Modifier.semantics { contentDescription = "關於本應用" }) { Text("關於") }
                     }
                     Spacer(Modifier.height(8.dp))
-                    Text(Pages[page], style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Bold)
-                    Text("免 Root · Shizuku 可選 · v0.6.7", color = Muted, style = MaterialTheme.typography.bodySmall)
+                    Text(Pages[displayedPage], style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Bold)
+                    Text("免 Root · Shizuku 可選 · v0.7.0", color = Muted, style = MaterialTheme.typography.bodySmall)
                 }
-                when (page) {
+                when (displayedPage) {
                     0 -> {
                         dashboardItems(state, { hardwareCategory = it; page = 1 }, { page = 2 }, { temperatureId = it })
                         item { InfoCard("顯示效果") {
@@ -124,6 +130,14 @@ fun ToolboxApp(model: ToolboxViewModel) {
                             },
                                 color = Muted, style = MaterialTheme.typography.bodySmall)
                             Text("底部導覽列可點按或左右拖動切換分頁。", color = Muted, style = MaterialTheme.typography.bodySmall)
+                            RefreshStatus()
+                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                                Text("導覽列背景", Modifier.weight(1f))
+                                Switch(checked = navigationBackground, onCheckedChange = {
+                                    navigationBackground = it; preferences.edit { putBoolean("navigation_background", it) }
+                                }, modifier = Modifier.semantics { contentDescription = "導覽列背景" })
+                            }
                             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                 listOf("system" to "跟隨系統", "light" to "淺色", "dark" to "深色").forEach { (mode, label) ->
                                     FilterChip(selected = themeMode == mode, onClick = {
@@ -134,11 +148,12 @@ fun ToolboxApp(model: ToolboxViewModel) {
                         } }
                     }
                     1 -> {
+                        item { TextButton(onClick = { catalogVisible = true }) { Text("離線裝置與處理器目錄") } }
                         if (hardwareCategory in listOf(HardwareCategory.NETWORK, HardwareCategory.AUDIO)) item {
                             TextButton(onClick = { model.refreshConnectionDetails(hardwareCategory) }) { Text("重新讀取連線與裝置") }
                         }
                         hardwareItems(state, hardwareCategory, { hardwareCategory = it }, { sourceReading = it }, model::rescanTemperatureSources,
-                            { temperatureId = it }, expandedTemperatures, { id -> expandedTemperatures = if (id in expandedTemperatures) expandedTemperatures - id else expandedTemperatures + id }, model::refreshCameras, model::rescanGpuSources)
+                            { temperatureId = it }, expandedTemperatures, { id -> expandedTemperatures = if (id in expandedTemperatures) expandedTemperatures - id else expandedTemperatures + id }, model::refreshCameras, model::rescanGpuSources, categoryScroll = hardwareTabScroll)
                         if (hardwareCategory == HardwareCategory.GPU) item {
                             ShizukuDiagnosticsCard(ProbeKind.GPU, state.shizuku, state.privilegedBusy,
                                 state.privilegedGpu, state.privilegedError.takeIf { state.privilegedKind == ProbeKind.GPU },
@@ -146,6 +161,7 @@ fun ToolboxApp(model: ToolboxViewModel) {
                         }
                     }
                     2 -> {
+                        item { BatteryReadOptionsCard(state.snapshot.chargingPower) }
                         item { ShizukuDiagnosticsCard(ProbeKind.BATTERY, state.shizuku, state.privilegedBusy,
                             state.privilegedBattery, state.privilegedError.takeIf { state.privilegedKind == ProbeKind.BATTERY },
                             { model.requestPrivileged(ProbeKind.BATTERY) }, model::cancelPrivileged, model::refreshShizuku, { sourceReading = it }) }
@@ -182,6 +198,7 @@ fun ToolboxApp(model: ToolboxViewModel) {
                 state.monitorError?.let { item { Notice(it) } }
                 item { Text("獨立開發工具，與 Samsung 無隸屬關係。", color = Muted, style = MaterialTheme.typography.bodySmall) }
             }
+            }
         }
         }
       }
@@ -193,6 +210,7 @@ fun ToolboxApp(model: ToolboxViewModel) {
             }
         }
         if (aboutVisible) { AboutApp { aboutVisible = false } }
+        if (catalogVisible) { HardwareCatalogSheet { catalogVisible = false } }
         sourceReading?.let { ReadingSourceSheet(it) { sourceReading = null } }
         temperatureId?.let { id ->
             state.temperatures.firstOrNull { it.sensor.id == id }?.let { reading ->

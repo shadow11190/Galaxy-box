@@ -12,27 +12,31 @@ object DeviceDetails {
     private fun file(path: String) = runCatching { File(path).bufferedReader().use { val chars = CharArray(16384); val count = it.read(chars); if (count > 0) String(chars, 0, count).trim() else null } }.getOrNull()?.let(::text)
 
     fun read(context: Context): List<Reading> = buildList {
-        val name = runCatching {
-            context.assets.open("samsung-device-names.tsv").bufferedReader().use { reader ->
-                DeviceNames.parse(reader.lineSequence()).resolve(Build.MANUFACTURER, Build.MODEL, Build.DEVICE)
-            }
-        }.getOrNull()
+        val identity = runCatching { HardwareCatalog.identity(context) }.getOrNull()
+        val name = identity?.name
+        val variants = identity?.exactVariants.orEmpty()
         val socModel = if (Build.VERSION.SDK_INT >= 31) text(Build.SOC_MODEL) else null
         val socVendor = if (Build.VERSION.SDK_INT >= 31) text(Build.SOC_MANUFACTURER) else null
-        val chip = ChipNames.resolve(socModel, Build.HARDWARE, name)
-        add(Reading("裝置名稱", name, "Google Play 公開裝置目錄 · ${DeviceNames.RETRIEVED}\n${DeviceNames.SOURCE}",
-            "本機離線對照完整型號；有歧義時再核對裝置代號，無法唯一確認即未知。不是使用者自訂的藍牙名稱。"))
+        val chip = identity?.chip
+        add(Reading("裝置名稱", name, identity?.nameSource ?: DeviceNames.SOURCE,
+            "優先對照完整型號，缺少時使用同品牌的內部代號；多個市售名稱衝突時保留未知。不是使用者自訂的藍牙名稱。"))
         add(Reading("裝置型號", text(Build.MODEL), "Build.MODEL"))
+        identity?.market?.let { add(Reading("地區版本", it, variants.map { r -> r.source }.distinct().joinToString("\n"), "此為完整型號的發售版本，不代表目前位置、SIM 國家或作用中 CSC。")) }
         add(Reading("品牌 / 製造商", "${Build.BRAND} / ${Build.MANUFACTURER}", "Build.BRAND / MANUFACTURER"))
         add(Reading("內部裝置代號", text(Build.DEVICE), "Build.DEVICE", "另列供查核，不當作市售名稱。"))
         add(Reading("產品代號", text(Build.PRODUCT), "Build.PRODUCT"))
         add(Reading("主機板代號", text(Build.BOARD), "Build.BOARD"))
-        add(Reading("處理器名稱", chip?.name, chip?.let { "本機 SoC / 硬體代碼對照公開晶片規格\n${it.source}" } ?: "Build.SOC_MODEL / HARDWARE · 本機晶片名稱表",
-            "依實際回報代碼辨識，不單靠手機名稱或地區猜晶片；名稱表未收錄時保留未知與下列原始代碼。"))
+        if (variants.isNotEmpty()) {
+            add(Reading("完整型號對照（規格參考）", variants.map { "${it.model} · ${it.device}\n${it.name}\n${it.soc}\n${it.market}" }.distinct().joinToString("\n\n"),
+                variants.map { it.source }.distinct().joinToString("\n"), "不同地區、電信商與硬體版本分開收錄；此為公開規格參考，不覆蓋本機讀值。市場標示不代表作用中 CSC 或目前所在地。"))
+        }
+        add(Reading("處理器名稱", chip?.name, identity?.chipSource ?: "Build.SOC_MODEL / HARDWARE · 本機晶片名稱表",
+            if (chip?.conflict == true) "來源有衝突，保留優先的本機硬體回報。" else "優先本機硬體資料，無法辨識時採完整型號或唯一內部代號的公開規格；不是本機實測規格。"))
         add(Reading("處理器製造商", socVendor ?: chip?.vendor, if (socVendor != null) "Build.SOC_MANUFACTURER · Android 12+" else chip?.source ?: "Build.SOC_MANUFACTURER"))
         add(Reading("SoC 原始型號", socModel, "Build.SOC_MODEL · Android 12+"))
-        add(Reading("CPU 品牌", chip?.cpu, chip?.source ?: "未取得可驗證的晶片規格", "晶片廠商的 CPU 品牌，非各核心架構實測。"))
+        add(Reading("CPU 品牌／架構（規格）", chip?.cpu, chip?.source ?: "未取得可驗證的晶片規格", "CPU 品牌或架構的公開規格，非本機逐核心量測。"))
         add(Reading("CPU 製程（規格）", chip?.process, chip?.source ?: "未取得可驗證的晶片規格", "公開晶片規格，非本機量測；不表示手機代工廠。"))
+        addAll(CpuSpecs.readings(chip))
         add(Reading("CPU 64 位元指令集", Build.SUPPORTED_64_BIT_ABIS.joinToString().ifBlank { null }, "Build.SUPPORTED_64_BIT_ABIS"))
         add(Reading("CPU 32 位元指令集", Build.SUPPORTED_32_BIT_ABIS.joinToString().ifBlank { null }, "Build.SUPPORTED_32_BIT_ABIS", "未知或空白也可能代表系統沒有提供 32 位元 App 支援。"))
         add(Reading("CPU App 執行位元", if (android.os.Process.is64Bit()) "64 位元" else "32 位元", "Process.is64Bit", "目前 App 程序的執行模式。"))

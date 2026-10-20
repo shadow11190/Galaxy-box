@@ -52,7 +52,16 @@ object ConnectionDetails {
     internal fun traffic(bytes: Long): String? = bytes.takeIf { it >= 0 }?.let { String.format(Locale.ROOT, "%.2f MiB · %,d B", it / 1048576.0, it) }
     fun audio(context: Context): List<Reading> = buildList {
         val am = context.getSystemService(AudioManager::class.java) ?: return@buildList
-        for (d in am.getDevices(AudioManager.GET_DEVICES_INPUTS or AudioManager.GET_DEVICES_OUTPUTS)) {
+        val devices = runCatching { am.getDevices(AudioManager.GET_DEVICES_INPUTS or AudioManager.GET_DEVICES_OUTPUTS).toList() }
+        val microphones = if (Build.VERSION.SDK_INT >= 28) runCatching { am.microphones } else null
+        val micStatus = when (val error = microphones?.exceptionOrNull()) {
+            is SecurityException -> "權限不足"
+            null -> if (Build.VERSION.SDK_INT < 28) "此 Android 版本不支援" else if (microphones?.getOrNull().isNullOrEmpty()) "系統未提供麥克風清單" else "系統公開特徵清單"
+            else -> "無法取得麥克風清單（${error.javaClass.simpleName}）"
+        }
+        addAll(AudioInventory.summary(devices.getOrNull()?.map { AudioPort(it.id, it.type, it.isSource, it.isSink) },
+            if (Build.VERSION.SDK_INT >= 28) microphones?.getOrNull()?.map { AudioMic(it.description.orEmpty(), it.type, it.group, it.indexInTheGroup) } else null, micStatus))
+        for (d in devices.getOrDefault(emptyList())) {
             val group = "${if (d.isSource) "輸入" else "輸出"} · ${audioType(d.type)} · ID ${d.id}"
             fun row(label: String, value: String?, source: String) {
                 if (value != null) add(Reading(label, value, source, "公開音訊裝置能力快照；非實際錄音或播放測試。", H.AUDIO, group))
@@ -66,6 +75,7 @@ object ConnectionDetails {
     }
     fun audioType(type: Int): String = when (type) {
         AudioDeviceInfo.TYPE_BUILTIN_SPEAKER -> "內建揚聲器"; AudioDeviceInfo.TYPE_BUILTIN_EARPIECE -> "聽筒"
+        AudioDeviceInfo.TYPE_BUILTIN_SPEAKER_SAFE -> "內建揚聲器（安全音量路徑）"
         AudioDeviceInfo.TYPE_BUILTIN_MIC -> "內建麥克風"; AudioDeviceInfo.TYPE_WIRED_HEADPHONES -> "有線耳機"
         AudioDeviceInfo.TYPE_WIRED_HEADSET -> "有線耳麥"; AudioDeviceInfo.TYPE_USB_HEADSET -> "USB 耳麥"
         AudioDeviceInfo.TYPE_USB_DEVICE -> "USB 音訊"; AudioDeviceInfo.TYPE_BLUETOOTH_A2DP -> "藍牙 A2DP"

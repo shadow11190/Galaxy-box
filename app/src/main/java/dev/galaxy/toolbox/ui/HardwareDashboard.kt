@@ -26,6 +26,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import dev.galaxy.toolbox.ToolboxState
+import dev.galaxy.toolbox.data.BrandMarks
 import dev.galaxy.toolbox.model.*
 import java.util.Locale
 
@@ -37,9 +38,19 @@ internal fun LazyListScope.dashboardItems(state: ToolboxState, onHardware: (Hard
     item {
         GlassCard(modifier = Modifier.fillMaxWidth()) {
             Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("掌握你的 Galaxy", color = Muted, style = MaterialTheme.typography.labelLarge)
-                Text(state.hardware.firstOrNull { it.label == "裝置名稱" }?.value ?: "裝置名稱待辨識", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-                Text(Build.MODEL, color = Muted, style = MaterialTheme.typography.bodyMedium)
+                val deviceName = state.hardware.firstOrNull { it.label == "裝置名稱" }?.value
+                val mark = BrandMarks.resolve(Build.MANUFACTURER, Build.BRAND, deviceName)
+                Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
+                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text("目前裝置", color = Muted, style = MaterialTheme.typography.labelLarge)
+                        Text(deviceName ?: "裝置名稱待辨識", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+                        Text(Build.MODEL, color = Muted, style = MaterialTheme.typography.bodyMedium)
+                    }
+                    if (mark != null) {
+                        Spacer(Modifier.width(10.dp))
+                        BrandLogo(mark)
+                    }
+                }
                 Text(state.hardware.firstOrNull { it.label == "處理器名稱" }?.value ?: "處理器名稱未知", color = Blue, style = MaterialTheme.typography.bodyMedium)
                 Text(state.hardware.firstOrNull { it.label == "GPU 名稱" }?.value?.let { "GPU · $it" } ?: "GPU 名稱未知", color = Lilac, style = MaterialTheme.typography.bodyMedium)
                 Text("Android ${Build.VERSION.RELEASE}  ·  ${Runtime.getRuntime().availableProcessors()} 個邏輯核心", color = Muted)
@@ -79,15 +90,10 @@ internal fun LazyListScope.dashboardItems(state: ToolboxState, onHardware: (Hard
 internal fun LazyListScope.hardwareItems(
     state: ToolboxState, category: HardwareCategory, onCategory: (HardwareCategory) -> Unit, onReading: (Reading) -> Unit,
     onRescanTemperatures: () -> Unit = {}, onTemperature: (String) -> Unit = {},
-    expandedTemperatures: List<String> = emptyList(), onToggleTemperature: (String) -> Unit = {}, onRefreshCameras: () -> Unit = {}, onRescanGpu: () -> Unit = {}
+    expandedTemperatures: List<String> = emptyList(), onToggleTemperature: (String) -> Unit = {}, onRefreshCameras: () -> Unit = {}, onRescanGpu: () -> Unit = {},
+    categoryScroll: androidx.compose.foundation.lazy.LazyListState
 ) {
-    item {
-        Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            HardwareCategory.entries.forEach {
-                FilterChip(selected = it == category, onClick = { onCategory(it) }, label = { Text(it.title) })
-            }
-        }
-    }
+    item(key = "hardware-category-tabs") { HardwareCategoryTabs(category, onCategory, categoryScroll) }
     item {
         Text(category.title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
         Text("即時監控每 2 秒更新；規格與能力為讀取時快照。點按資料查看完整值與來源。", color = Muted, style = MaterialTheme.typography.bodySmall)

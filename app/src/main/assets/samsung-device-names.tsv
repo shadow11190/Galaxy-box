@@ -1,4 +1,4 @@
-# Model	Device	Marketing name
+# model	device	name
 403SC	403SC	Galaxy Tab4 7.0
 404SC	404SC	Galaxy S6 Edge
 EK-GC100	gd1	GALAXY Camera
@@ -1431,6 +1431,7 @@ SM-E346B	m34x	Galaxy F34 5G
 SM-E366B	m36x	Galaxy F36 5G
 SM-E426B	f42x	Galaxy F42 5G
 SM-E426S	f42x	Galaxy Wide5
+SM-E476B	m47xq	Galaxy F70 Pro 5G
 SM-E500F	e5lte	Galaxy E5
 SM-E500H	e53g	Galaxy E5
 SM-E500M	e5lte	Galaxy E5
@@ -2375,6 +2376,7 @@ SM-M366K	m36x	Galaxy Jump4
 SM-M405F	m40	Galaxy M40
 SM-M426B	a42xq	Galaxy M42 5G
 SM-M446K	m44x	Galaxy Jump3
+SM-M476B	m47xq	Galaxy M47 5G
 SM-M515F	m51	Galaxy M51
 SM-M526B	m52xq	Galaxy M52 5G
 SM-M526BR	m52xq	Galaxy M52 5G

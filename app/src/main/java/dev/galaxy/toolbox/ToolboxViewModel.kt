@@ -12,6 +12,8 @@ import dev.galaxy.toolbox.data.HardwareRepository
 import dev.galaxy.toolbox.data.TemperatureHistory
 import dev.galaxy.toolbox.model.*
 import kotlinx.coroutines.*
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import java.time.Instant
@@ -64,6 +66,7 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
     private var firmwareJob: Job? = null
     private var lastWidgetUpdate = -30_000L
     private val temperatureHistory = TemperatureHistory()
+    private val temperatureHistoryMutex = Mutex()
     private var temperatureVisible = false
     init {
         viewModelScope.launch { shizukuClient.availability.collect { next -> mutable.update { it.copy(shizuku = next) } } }
@@ -135,17 +138,21 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
         pendingPrivileged?.let { kind -> viewModelScope.launch { yield(); readPrivileged(kind) } }
         monitor = viewModelScope.launch {
             while (isActive) {
-                mutable.value = mutable.value.copy(temperatureNowMs = System.currentTimeMillis())
                 try {
                     val pollTemperatures = temperatureVisible
                     val rawNext = withContext(Dispatchers.IO) { repository.sample(includeTemperatures = pollTemperatures) }
                     val next = rawNext.copy(systemThermal = rawNext.systemThermal.copy(lastSuccessAtMs =
                         rawNext.systemThermal.lastSuccessAtMs ?: mutable.value.snapshot.systemThermal.lastSuccessAtMs))
                     val temperatureNow = System.currentTimeMillis()
-                    temperatureHistory.update(next.temperatureReadings, temperatureNow, next.temperatureFilesPolled)
+                    val (readings, series) = withContext(Dispatchers.Default) {
+                        temperatureHistoryMutex.withLock {
+                            temperatureHistory.update(next.temperatureReadings, temperatureNow, next.temperatureFilesPolled)
+                            temperatureHistory.readings() to temperatureHistory.series()
+                        }
+                    }
                     mutable.value = mutable.value.copy(snapshot = next, monitorError = null,
                         history = (mutable.value.history + listOfNotNull(next.memoryUsed)).takeLast(60),
-                        temperatures = temperatureHistory.readings(), temperatureHistory = temperatureHistory.series(), temperatureNowMs = temperatureNow)
+                        temperatures = readings, temperatureHistory = series, temperatureNowMs = temperatureNow)
                     val now = SystemClock.elapsedRealtime()
                     if (now - lastWidgetUpdate >= 30_000L) {
                         withContext(Dispatchers.IO) { runCatching { WidgetUpdates.publishAll(getApplication(), next) } }
@@ -154,9 +161,15 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
                 } catch (e: CancellationException) { throw e }
                 catch (e: Exception) {
                     val now = System.currentTimeMillis()
-                    temperatureHistory.update(mutable.value.temperatures.map { it.copy(raw = null, celsius = null, status = TemperatureReadStatus.UNAVAILABLE, attemptedAtMs = now) }, now)
-                    mutable.value = mutable.value.copy(monitorError = "取樣失敗：${e.message}", temperatures = temperatureHistory.readings(),
-                        temperatureHistory = temperatureHistory.series(), temperatureNowMs = now)
+                    val previous = mutable.value.temperatures
+                    val (readings, series) = withContext(Dispatchers.Default) {
+                        temperatureHistoryMutex.withLock {
+                            temperatureHistory.update(previous.map { it.copy(raw = null, celsius = null, status = TemperatureReadStatus.UNAVAILABLE, attemptedAtMs = now) }, now)
+                            temperatureHistory.readings() to temperatureHistory.series()
+                        }
+                    }
+                    mutable.value = mutable.value.copy(monitorError = "取樣失敗：${e.message}", temperatures = readings,
+                        temperatureHistory = series, temperatureNowMs = now)
                 }
                 delay(2000)
             }

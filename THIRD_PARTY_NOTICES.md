@@ -1,6 +1,12 @@
 # Data and platform sources
 
-Galaxy box code and native vector artwork are original except for the explicitly attributed Apache-2.0 liquid navigation adaptation below. No code, artwork, marketing-name database, or proprietary sensor matching table from DevCheck or the user-provided Xiaomi toolbox has been included.
+2026-10-20 CPU detail revision additionally extracts unanimously matching core counts, reference clock-group sizes and architecture labels from the pinned LineageOS Wiki files, and factual CPU specifications from individually cited Qualcomm, Samsung and MediaTek product pages. Detailed curated fields and their URLs are preserved in catalog/cpu-details-curated.tsv; the reviewed MediaTek CPU section and original-page SHA-256 are recorded in mediatek-cpu-detail-review.json. No proprietary DevCheck/AIDA64 matching database is included. Public specifications never replace runtime CPU flags or frequencies.
+
+Galaxy box code and its native navigation/background artwork are original except for the explicitly attributed Apache-2.0 liquid navigation adaptation below. The v0.7.0 device-card brand marks are third-party artwork listed separately below. No code, artwork, marketing-name database, or proprietary sensor matching table from DevCheck or the user-provided Xiaomi toolbox has been included.
+
+## Device-card brand marks · v0.7.0
+
+The 32 transparent marks in `app/src/main/res/drawable/brand_*` and `drawable-nodpi/brand_*` come from [Simple Icons](https://github.com/simple-icons/simple-icons) at commit `c71c69e3a27e4436936b831c72643e6513b9f49b` (CC0-1.0) or individually linked [Wikimedia Commons](https://commons.wikimedia.org/) logo files. `branding/BRAND-ASSETS-0.7.0.tsv` records each source URL and installed resource. Simple Icons paths were converted to Android vector drawables; Commons SVG thumbnails were saved as transparent PNGs. The UI tints marks for contrast without adding a background. Logos and brand names remain trademarks of their owners; their presence does not imply endorsement or affiliation. Unknown device/brand pairs show no mark.
 
 ## Samsung marketing names
 
@@ -12,6 +18,14 @@ Galaxy box code and native vector artwork are original except for the explicitly
 - Machine-readable provenance: `app/src/main/assets/device-catalog-source.json`
 
 Chip code translations cite Qualcomm or Samsung official specification pages in `ChipNames.kt`. The short name and process fields are product facts, separately marked as reference specifications. They do not override the runtime GPU renderer or infer the chip from the phone's marketing name alone.
+
+### 2026-10-20 local catalogue revision (version remains 0.6.7)
+
+The current Google CSV snapshot hash and date supersede the historical snapshot above; see `app/src/main/assets/device-catalog-source.json` and `hardware-catalog-coverage.json`. All public brands with nonempty brand/model/device/name fields are included. This is not a census of every Android device ever released.
+
+Additional processor and exact-model SoC facts are derived from LineageOS Wiki, fixed commit `56a157866af6232edf646ae0f3e1b300e509c8e5`, and individually cited vendor specification / Samsung Security Target documents. The Wiki's MIT copyright and permission notice (Copyright 2016 Tom Johnson) is reproduced unmodified in `assets/licenses/LineageOS-wiki-MIT.txt`, with thanks to LineageOS contributors and links accessible in About. Every imported Wiki fact retains its source filename and commit URL. Device data adaptations consist of extracting name/model/codename/SoC and consistent CPU description fields, preserving regional full models, indexing exact aliases, and retaining ambiguous candidates. Additional reviewed official CPU/process facts and their source references are recorded in catalog/processor-fact-review.json. No Wiki installation instructions or scripts are executed or bundled.
+
+Curated source records are in `catalog/`; generated data and coverage are reproducible with `tools/build_hardware_catalog.py`. Qualcomm, MediaTek, Exynos, XRING, Tensor, Kirin and other names remain their owners' product facts and trademarks. Product specifications are separate from measurements. The consulted PyTorch cpuinfo and Linux source files are research references only: their implementation code is not incorporated in the app.
 
 Thermal reading is independently implemented against the public Linux thermal sysfs ABI: https://docs.kernel.org/driver-api/thermal/sysfs-api.html . No Linux source code is copied.
 
@@ -27,6 +41,12 @@ The app links unmodified `io.github.kyant0:backdrop:1.0.0` by Kyant, Apache Lice
 - Official docs: https://kyant.gitbook.io/backdrop
 - Licence: https://github.com/Kyant0/AndroidLiquidGlass/blob/1.0.0/LICENSE
 - API compatibility and capture design: GLASS-WIDGETS.md
+
+2026-10-20 navigation revision retains the original v0.6.7 optical panel/glyph
+capture, chromatic refraction and magnification, while removing the panel's
+solid tint/gradient and reserving unclipped overflow. One independently
+implemented motion controller synchronizes direct dragging, interrupted spring
+settling and pages. Foreground refresh-rate policy is separate from Backdrop.
 
 Haze is no longer linked in v0.6.0; its old licence file is retained for the historical distribution record.
 

@@ -1,0 +1,13 @@
+{
+  "processorNames": 293,
+  "reviewedDetailRecords": 85,
+  "withCpuDetail": 195,
+  "withCoreCount": 190,
+  "withGeneration": 4,
+  "withReferenceClock": 41,
+  "limits": [
+    "Not all released chipsets are covered. Missing or conflicting facts stay empty.",
+    "Reference groups describe published configurations, not a measured mapping to Linux CPU indices.",
+    "Arm64/64-bit does not establish an Armv9 sub-version or enabled CPU instructions."
+  ]
+}

@@ -1,0 +1,322 @@
+name	aliases	process	cpu	source
+Qualcomm Snapdragon 8 Gen 1	SM8450|SM8450-AB|SM8450-AC|Snapdragon 8 Gen 1	4 nm	Qualcomm Kryo	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8-gen-1-mobile-platform
+Qualcomm Snapdragon 8+ Gen 1	SM8475|SM8475-AB|SM8475-AC|Snapdragon 8+ Gen 1	4 nm	Qualcomm Kryo	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8-plus-gen-1-mobile-platform
+Qualcomm Snapdragon 8 Gen 2	SM8550|SM8550-AB|SM8550-AC|Snapdragon 8 Gen 2	4 nm	Qualcomm Kryo	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8-gen-2-mobile-platform
+Qualcomm Snapdragon 8 Gen 3	SM8650|SM8650-AB|SM8650-AC|Snapdragon 8 Gen 3	4 nm	Qualcomm Kryo	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8-gen-3-mobile-platform
+Qualcomm Snapdragon 8s Gen 3	SM8635|SM8635-AB|SM8635-AC|Snapdragon 8s Gen 3	4 nm	Qualcomm Kryo	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8s-gen-3-mobile-platform
+Qualcomm Snapdragon 8 Elite	SM8750|SM8750-AB|SM8750-AC|Snapdragon 8 Elite|SM8750-3-AB	3 nm	Qualcomm Oryon	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8-elite-mobile-platform
+Qualcomm Snapdragon 8 Elite Gen 5	SM8850|SM8850-AB|SM8850-AC|Snapdragon 8 Elite Gen 5|SM8850-1-AD|SM8850-5-AC|SM8850-1-AB	3 nm	Qualcomm Oryon	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Gen-5-product-brief.pdf
+Qualcomm Snapdragon 8s Gen 4	SM8735|SM8735-AB|Snapdragon 8s Gen 4	4 nm	Qualcomm Kryo	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Product-Brief-Snapdragon-8s-Gen-4.pdf
+Qualcomm Snapdragon 8 Gen 5	SM8845|Snapdragon 8 Gen 5	3 nm	Qualcomm Oryon	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Product-Brief-Snapdragon-8-Gen-5.pdf
+Qualcomm Snapdragon 7 Gen 4	SM7750|SM7750-AB|Snapdragon 7 Gen 4	4 nm	Qualcomm Kryo	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-7-Gen-4-Mobile-Platform-Product-Brief.pdf
+Qualcomm Snapdragon 8 Elite Gen 6	SM8950|Snapdragon 8 Elite Gen 6	2 nm	Qualcomm Oryon	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Gen-6-Product-Brief.pdf
+Qualcomm Snapdragon 8 Elite Extreme Gen 6	SM8975|Snapdragon 8 Elite Extreme Gen 6	2 nm	Qualcomm Oryon	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Extreme-Gen-6-Product-Brief.pdf
+Qualcomm Snapdragon 8 Gen 5	Snapdragon 8 Gen 5			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 7 Gen 4	Snapdragon 7 Gen 4			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 7s Gen 4	Snapdragon 7s Gen 4			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 7s Gen 2	Snapdragon 7s Gen 2			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 7s Gen 3	Snapdragon 7s Gen 3			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 7 Gen 1	Snapdragon 7 Gen 1			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 7 Gen 3	Snapdragon 7 Gen 3			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 7+ Gen 2	Snapdragon 7+ Gen 2			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 7+ Gen 3	Snapdragon 7+ Gen 3			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 6 Gen 1	Snapdragon 6 Gen 1			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 6 Gen 3	Snapdragon 6 Gen 3			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 6 Gen 4	Snapdragon 6 Gen 4			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 6s Gen 3	Snapdragon 6s Gen 3			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 4 Gen 1	Snapdragon 4 Gen 1			https://www.qualcomm.com/smartphones/products/4-series
+Qualcomm Snapdragon 4 Gen 2	Snapdragon 4 Gen 2			https://www.qualcomm.com/smartphones/products/4-series
+Qualcomm Snapdragon 4s Gen 2	Snapdragon 4s Gen 2			https://www.qualcomm.com/smartphones/products/4-series
+Qualcomm Snapdragon 888	Snapdragon 888			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 888+	Snapdragon 888+			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 870	Snapdragon 870			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 865	Snapdragon 865			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 865+	Snapdragon 865+			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 860	Snapdragon 860			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 855	Snapdragon 855			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 855+	Snapdragon 855+			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 845	Snapdragon 845			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 835	Snapdragon 835			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 821	Snapdragon 821			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 820	Snapdragon 820			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 810	Snapdragon 810			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 808	Snapdragon 808			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 805	Snapdragon 805			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 801	Snapdragon 801			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 800	Snapdragon 800			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 782G	Snapdragon 782G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 778G	Snapdragon 778G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 778G+	Snapdragon 778G+			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 780G	Snapdragon 780G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 768G	Snapdragon 768G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 765	Snapdragon 765			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 765G	Snapdragon 765G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 750G	Snapdragon 750G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 732G	Snapdragon 732G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 730	Snapdragon 730			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 730G	Snapdragon 730G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 720G	Snapdragon 720G			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 695	Snapdragon 695			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 690	Snapdragon 690			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 685	Snapdragon 685			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 680	Snapdragon 680			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 855	SM8150			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 855+	SM8150			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 860	SM8150			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 865	SM8250			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 865+	SM8250			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 870	SM8250			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 888	SM8350			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 888+	SM8350			https://www.qualcomm.com/smartphones/products/8-series
+Qualcomm Snapdragon 778G	SM7325			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 778G+	SM7325			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 782G	SM7325			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 765	SM7250			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 765G	SM7250			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 768G	SM7250			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 695	SM6375			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 6s Gen 3	SM6375			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 680	SM6225			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 685	SM6225			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 730	SM7150			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 730G	SM7150			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 732G	SM7150			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 782G	SM7325-AF			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 685	SM6225-AD			https://www.qualcomm.com/smartphones/products/6-series
+Qualcomm Snapdragon 765	SM7250-AA			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 765G	SM7250-AB			https://www.qualcomm.com/smartphones/products/7-series
+Qualcomm Snapdragon 768G	SM7250-AC			https://www.qualcomm.com/smartphones/products/7-series
+Samsung Exynos 2600	Exynos 2600|Samsung Exynos 2600|universal2600|S5E9965	2 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-2600/
+Samsung Exynos 2500	Exynos 2500|Samsung Exynos 2500|universal2500|S5E9955	3 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-2500/
+Samsung Exynos 2400	Exynos 2400|Samsung Exynos 2400|universal2400|S5E9945	4 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-2400/
+Samsung Exynos 2400e	Exynos 2400e|Samsung Exynos 2400e|universal2400e|S5E9945	4 nm		https://news.samsung.com/global/galaxy-s24-series-expands-with-s24-fe-a-premium-experience-that-makes-full-galaxy-ai-capabilities-attainable-for-more-users
+Samsung Exynos 2200	Exynos 2200|Samsung Exynos 2200|universal2200|S5E9925	4 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-2200/
+Samsung Exynos 2100	Exynos 2100|Samsung Exynos 2100|universal2100|S5E9840	5 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-2100/
+Samsung Exynos 990	Exynos 990|Samsung Exynos 990|universal990|S5E9830	7 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-990/
+Samsung Exynos 9825	Exynos 9825|Samsung Exynos 9825|universal9825|S5E9825	7 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9825/
+Samsung Exynos 9820	Exynos 9820|Samsung Exynos 9820|universal9820|S5E9820	8 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9820/
+Samsung Exynos 9810	Exynos 9810|Samsung Exynos 9810|universal9810|S5E9810	10 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9810/
+Samsung Exynos 8895	Exynos 8895|Samsung Exynos 8895|universal8895|S5E8895	10 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-8895/
+Samsung Exynos 8890	Exynos 8890|Samsung Exynos 8890|universal8890|S5E8890	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-8890/
+Samsung Exynos 7420	Exynos 7420|Samsung Exynos 7420|universal7420|S5E7420	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7420/
+Samsung Exynos 1580	Exynos 1580|Samsung Exynos 1580|universal1580|S5E8855	4 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1580/
+Samsung Exynos 1680	Exynos 1680|Samsung Exynos 1680|universal1680|S5E8865	4 nm	1 × 大核心 + 4 × 中核心 + 3 × 小核心	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-a57-5g-vs-galaxy-a37-5g/
+Samsung Exynos 1480	Exynos 1480|Samsung Exynos 1480|universal1480|S5E8845	4 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1480/
+Samsung Exynos 1380	Exynos 1380|Samsung Exynos 1380|universal1380|S5E8835	5 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1380/
+Samsung Exynos 1330	Exynos 1330|Samsung Exynos 1330|universal1330|S5E8535	5 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1330/
+Samsung Exynos 1280	Exynos 1280|Samsung Exynos 1280|universal1280|S5E8825	5 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1280/
+Samsung Exynos 1080	Exynos 1080|Samsung Exynos 1080|universal1080|S5E9815	5 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-1080/
+Samsung Exynos 980	Exynos 980|Samsung Exynos 980|universal980|S5E9630	8 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-980/
+Samsung Exynos 9611	Exynos 9611|Samsung Exynos 9611|universal9611	10 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9611/
+Samsung Exynos 9610	Exynos 9610|Samsung Exynos 9610|universal9610	10 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9610/
+Samsung Exynos 9609	Exynos 9609|Samsung Exynos 9609|universal9609	10 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-9609/
+Samsung Exynos 850	Exynos 850|Samsung Exynos 850|universal850|S5E3830	8 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-850/
+Samsung Exynos 880	Exynos 880|Samsung Exynos 880|universal880	8 nm	2 × Cortex-A77 + 6 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-880/
+Samsung Exynos 7904	Exynos 7904|Samsung Exynos 7904|universal7904	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7904/
+Samsung Exynos 7885	Exynos 7885|Samsung Exynos 7885|universal7885	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7885/
+Samsung Exynos 7884	Exynos 7884|Samsung Exynos 7884|universal7884	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7884/
+Samsung Exynos 7880	Exynos 7880|Samsung Exynos 7880|universal7880	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7880/
+Samsung Exynos 7870	Exynos 7870|Samsung Exynos 7870|universal7870	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7870/
+Samsung Exynos 7570	Exynos 7570|Samsung Exynos 7570|universal7570	14 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7570/
+Samsung Exynos 7580	Exynos 7580|Samsung Exynos 7580|universal7580	28 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7580/
+Samsung Exynos 7578	Exynos 7578|Samsung Exynos 7578|universal7578	28 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-7578/
+Samsung Exynos 5433	Exynos 5433|Samsung Exynos 5433|universal5433	20 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-5433/
+Samsung Exynos 5422	Exynos 5422|Samsung Exynos 5422|universal5422	28 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-5422/
+Samsung Exynos 5420	Exynos 5420|Samsung Exynos 5420|universal5420	28 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-5420/
+Samsung Exynos 5260	Exynos 5260|Samsung Exynos 5260|universal5260	28 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-5260/
+Samsung Exynos 5250	Exynos 5250|Samsung Exynos 5250|universal5250	32 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-5250/
+Samsung Exynos 4412	Exynos 4412|Samsung Exynos 4412|universal4412	32 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-4412/
+Samsung Exynos 4212	Exynos 4212|Samsung Exynos 4212|universal4212	32 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-4212/
+Samsung Exynos 4210	Exynos 4210|Samsung Exynos 4210|universal4210	45 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-4210/
+Samsung Exynos 3110	Exynos 3110|Samsung Exynos 3110|universal3110	45 nm		https://semiconductor.samsung.com/processor/mobile-processor/exynos-3110/
+Samsung Exynos 2600	S5E9965			https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/
+Samsung Exynos 2500	S5E9955			https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+Samsung Exynos 2400	S5E9945			https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+Samsung Exynos 1580	S5E8855			https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/st_vid11664-st.pdf
+MediaTek Dimensity 9500	MT6993|Dimensity 9500|MediaTek Dimensity 9500	3 nm（第三代）	1× Arm C1-Ultra（最高 4.21 GHz）＋3× C1-Premium（最高 3.5 GHz）＋4× C1-Pro（最高 2.7 GHz）	https://www.mediatek.com/dimensity-9500
+MediaTek Dimensity 9500s	MT6991|Dimensity 9500s|MediaTek Dimensity 9500s	3 nm	Arm Cortex-X925 + Cortex-X4 + Cortex-A720	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9500s
+MediaTek Dimensity 9400	MT6991|Dimensity 9400|MediaTek Dimensity 9400	TSMC 3 nm（第二代）	Arm Cortex-X925 + Cortex-X4 + Cortex-A720	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400
+MediaTek Dimensity 9400+	MT6991|Dimensity 9400+|MediaTek Dimensity 9400+		Arm Cortex-X925 + Cortex-X4 + Cortex-A720	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400-plus
+MediaTek Dimensity 9400e	MT6989|Dimensity 9400e|MediaTek Dimensity 9400e	TSMC 4 nm（第三代）	Arm Cortex-X4 + Cortex-A720	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400e
+MediaTek Dimensity 9300	MT6989|Dimensity 9300|MediaTek Dimensity 9300	TSMC 4 nm（第三代）	Arm Cortex-X4 + Cortex-A720	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9300
+MediaTek Dimensity 9300+	MT6989|Dimensity 9300+|MediaTek Dimensity 9300+	TSMC 4 nm（第三代）	1× Arm Cortex-X4（最高 3.4 GHz）＋3× Cortex-X4（最高 2.85 GHz）＋4× Cortex-A720（最高 2.0 GHz）	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9300-plus
+MediaTek Dimensity 9200	MT6985|Dimensity 9200|MediaTek Dimensity 9200	TSMC 4 nm+（第二代）	Arm Cortex-X3 + Cortex-A715 + Cortex-A510	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9200
+MediaTek Dimensity 9200+	MT6985|Dimensity 9200+|MediaTek Dimensity 9200+			https://www.mediatek.com/products/smartphones/mediatek-dimensity-9200-plus
+MediaTek Dimensity 9000	MT6983|Dimensity 9000|MediaTek Dimensity 9000	TSMC N4（4 nm）	Arm Cortex-X2 + Cortex-A710 + Cortex-A510	https://www.mediatek.com/products/smartphones/mediatek-dimensity-9000
+MediaTek Dimensity 9000+	MT6983|Dimensity 9000+|MediaTek Dimensity 9000+			https://www.mediatek.com/products/smartphones/mediatek-dimensity-9000-plus
+MediaTek Dimensity 8400	MT6899|Dimensity 8400|MediaTek Dimensity 8400		Arm Cortex-A725	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8400
+MediaTek Dimensity 8350	MT6897|Dimensity 8350|MediaTek Dimensity 8350	4 nm	Arm Cortex-A715 + Cortex-A510	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8350
+MediaTek Dimensity 8300	MT6897|Dimensity 8300|MediaTek Dimensity 8300	4 nm	Arm Cortex-A715 + Cortex-A510	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8300
+MediaTek Dimensity 8250	MT6896|Dimensity 8250|MediaTek Dimensity 8250	4 nm	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8250
+MediaTek Dimensity 8200	MT6896|Dimensity 8200|MediaTek Dimensity 8200	TSMC 4 nm	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8200
+MediaTek Dimensity 8100	MT6895|Dimensity 8100|MediaTek Dimensity 8100	TSMC N5（5 nm）	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8100
+MediaTek Dimensity 8000	MT6895|Dimensity 8000|MediaTek Dimensity 8000	TSMC N5（5 nm）	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8000
+MediaTek Dimensity 8050	MT6893|Dimensity 8050|MediaTek Dimensity 8050	TSMC N6（6 nm）	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8050
+MediaTek Dimensity 8020	MT6891|Dimensity 8020|MediaTek Dimensity 8020	TSMC N6（6 nm）	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-8020
+MediaTek Dimensity 1300	MT6893|Dimensity 1300|MediaTek Dimensity 1300			https://www.mediatek.com/products/smartphones/mediatek-dimensity-1300
+MediaTek Dimensity 1200	MT6893|Dimensity 1200|MediaTek Dimensity 1200			https://www.mediatek.com/products/smartphones/mediatek-dimensity-1200
+MediaTek Dimensity 1100	MT6891|Dimensity 1100|MediaTek Dimensity 1100			https://www.mediatek.com/products/smartphones/mediatek-dimensity-1100
+MediaTek Dimensity 1000+	MT6889|Dimensity 1000+|MediaTek Dimensity 1000+			https://www.mediatek.com/products/smartphones/mediatek-dimensity-1000-plus
+MediaTek Dimensity 7300	MT6878|Dimensity 7300|MediaTek Dimensity 7300	4 nm	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-7300
+MediaTek Dimensity 7400	MT6878|Dimensity 7400|MediaTek Dimensity 7400	4 nm	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-7400
+MediaTek Dimensity 7200	MT6886|Dimensity 7200|MediaTek Dimensity 7200	TSMC 4 nm（第二代）	Arm Cortex-A715 + Cortex-A510	https://www.mediatek.com/products/smartphones/mediatek-dimensity-7200
+MediaTek Dimensity 7050	MT6877|Dimensity 7050|MediaTek Dimensity 7050	TSMC N6（6 nm）	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-7050
+MediaTek Dimensity 7030	MT6877|Dimensity 7030|MediaTek Dimensity 7030	TSMC N6（6 nm）	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-7030
+MediaTek Dimensity 7020	MT6855|Dimensity 7020|MediaTek Dimensity 7020	TSMC N6（6 nm）	Arm Cortex-A78 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-7020
+MediaTek Dimensity 1080	MT6877|Dimensity 1080|MediaTek Dimensity 1080			https://www.mediatek.com/products/smartphones/mediatek-dimensity-1080
+MediaTek Dimensity 920	MT6877|Dimensity 920|MediaTek Dimensity 920			https://www.mediatek.com/products/smartphones/mediatek-dimensity-920
+MediaTek Dimensity 900	MT6877|Dimensity 900|MediaTek Dimensity 900			https://www.mediatek.com/products/smartphones/mediatek-dimensity-900
+MediaTek Dimensity 810	MT6833|Dimensity 810|MediaTek Dimensity 810			https://www.mediatek.com/products/smartphones/mediatek-dimensity-810
+MediaTek Dimensity 800U	MT6853|Dimensity 800U|MediaTek Dimensity 800U			https://www.mediatek.com/products/smartphones/mediatek-dimensity-800u
+MediaTek Dimensity 800	MT6873|Dimensity 800|MediaTek Dimensity 800			https://www.mediatek.com/products/smartphones/mediatek-dimensity-800
+MediaTek Dimensity 720	MT6853|Dimensity 720|MediaTek Dimensity 720			https://www.mediatek.com/products/smartphones/mediatek-dimensity-720
+MediaTek Dimensity 720		7 nm		https://www.mediatek.com/press-room/mediatek-announces-dimensity-720-its-newest-5g-chip-for-premium-5g-experiences-on-mid-tier-smartphones
+Qualcomm Snapdragon 765		7 nm	Kryo 475	https://www.qualcomm.com/smartphones/products/7-series/snapdragon-765g-5g-mobile-platform
+Qualcomm Snapdragon 765G		7 nm	Kryo 475	https://www.qualcomm.com/smartphones/products/7-series/snapdragon-765g-5g-mobile-platform
+Qualcomm Snapdragon 778G		6 nm		https://www.qualcomm.com/smartphones/products/7-series/snapdragon-765g-5g-mobile-platform
+Qualcomm Snapdragon 855		7 nm		https://www.qualcomm.com/smartphones/products/8-series/snapdragon-855-mobile-platform
+Qualcomm Snapdragon 855+		7 nm		https://www.qualcomm.com/smartphones/products/8-series/snapdragon-865-5g-mobile-platform
+Qualcomm Snapdragon 860		7 nm		https://www.qualcomm.com/smartphones/products/8-series/snapdragon-865-5g-mobile-platform
+Qualcomm Snapdragon 865		7 nm		https://www.qualcomm.com/smartphones/products/8-series/snapdragon-865-5g-mobile-platform
+Qualcomm Snapdragon 865+		7 nm		https://www.qualcomm.com/smartphones/products/8-series/snapdragon-865-5g-mobile-platform
+UNISOC T8200	T8200	6 nm	2 × Cortex-A76 + 6 × Cortex-A55	https://www.unisoc.com/en/product/SmartPhoneUS/T8200
+UNISOC T8300	T8300	6 nm	2 × Cortex-A78 + 6 × Cortex-A55	https://www.unisoc.com/en/product/SmartPhone/T8300
+UNISOC T9100	T9100	6 nm	4 × Cortex-A76 + 4 × Cortex-A55	https://www.unisoc.com/en/product/SmartPhoneUS/T9100
+UNISOC T9300	T9300	6 nm	2 × Cortex-A78 + 6 × Cortex-A55	https://www.unisoc.com/en/product/SmartPhone/T9300
+MediaTek Dimensity 700	MT6833|Dimensity 700|MediaTek Dimensity 700			https://www.mediatek.com/products/smartphones/mediatek-dimensity-700
+MediaTek Dimensity 6100+	MT6835|Dimensity 6100+|MediaTek Dimensity 6100+			https://www.mediatek.com/products/smartphones/mediatek-dimensity-6100-plus
+MediaTek Dimensity 6300	MT6835|Dimensity 6300|MediaTek Dimensity 6300	TSMC 6 nm	Arm Cortex-A76 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-dimensity-6300
+MediaTek Dimensity 9600 Pro	Dimensity 9600 Pro			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 9600M	Dimensity 9600M			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 8550	Dimensity 8550			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 8500	Dimensity 8500			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 8450	Dimensity 8450			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7500	Dimensity 7500			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7450X	Dimensity 7450X			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7450	Dimensity 7450			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7400X	Dimensity 7400X			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7360	Dimensity 7360			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7350	Dimensity 7350			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7300e	Dimensity 7300e			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7300X	Dimensity 7300X			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7100	Dimensity 7100			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 7025	Dimensity 7025			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 6500	Dimensity 6500			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 6400	Dimensity 6400			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 6360	Dimensity 6360			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 6080	Dimensity 6080			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Dimensity 6020	Dimensity 6020			https://www.mediatek.com/products/smartphones/dimensity-5g
+MediaTek Helio G200	Helio G200	TSMC 6 nm	Arm Cortex-A76 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g200
+MediaTek Helio G100	Helio G100	TSMC N6（6 nm）	Arm Cortex-A76 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g100
+MediaTek Helio G99	Helio G99	TSMC N6（6 nm）	Arm Cortex-A76 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g99
+MediaTek Helio G96	Helio G96		Arm Cortex-A55 + Cortex-A76	https://www.mediatek.com/products/smartphones/mediatek-helio-g96
+MediaTek Helio G95	Helio G95		Arm Cortex-A55 + Cortex-A76	https://www.mediatek.com/products/smartphones/mediatek-helio-g95
+MediaTek Helio G90T	Helio G90T			https://www.mediatek.com/products/smartphones/mediatek-helio-g90t
+MediaTek Helio G90	Helio G90		Arm Cortex-A55 + Cortex-A76	https://www.mediatek.com/products/smartphones/mediatek-helio-g90
+MediaTek Helio G88	Helio G88		Arm Cortex-A55 + Cortex-A75	https://www.mediatek.com/products/smartphones/mediatek-helio-g88
+MediaTek Helio G85	Helio G85		Arm Cortex-A75 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g85
+MediaTek Helio G81	Helio G81		Arm Cortex-A75 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g81
+MediaTek Helio G81 Extreme	Helio G81 Extreme			https://www.mediatek.com/products/smartphones/mediatek-helio-g81-extreme
+MediaTek Helio G80	Helio G80		Arm Cortex-A75 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g80
+MediaTek Helio G70	Helio G70		Arm Cortex-A75 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g70
+MediaTek Helio G35	Helio G35	12 nm FinFET	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-g35
+MediaTek Helio G25	Helio G25	12 nm	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-g25
+MediaTek Helio P95	Helio P95		Arm Cortex-A75 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-p95
+MediaTek Helio P90	Helio P90		Arm Cortex-A55 + Cortex-A75	https://www.mediatek.com/products/smartphones/mediatek-helio-p90
+MediaTek Helio P70	Helio P70	TSMC 12 nm FinFET	Arm Cortex-A53 + Cortex-A73	https://www.mediatek.com/products/smartphones/mediatek-helio-p70
+MediaTek Helio P65	Helio P65		Arm Cortex-A55 + Cortex-A75	https://www.mediatek.com/products/smartphones/mediatek-helio-p65
+MediaTek Helio P60	Helio P60	TSMC 12 nm FinFET	Arm Cortex-A53 + Cortex-A73	https://www.mediatek.com/products/smartphones/mediatek-helio-p60
+MediaTek Helio P35	Helio P35	TSMC 12 nm FinFET	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-p35
+MediaTek Helio P30	Helio P30		Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-p30
+MediaTek Helio P25	Helio P25	16 nm FinFET+	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-p25
+MediaTek Helio P23	Helio P23	TSMC 16 nm FinFET	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-p23
+MediaTek Helio P22	Helio P22	TSMC 12 nm FinFET	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-p22
+MediaTek Helio P20	Helio P20	16 nm	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-p20
+MediaTek Helio P10	Helio P10	TSMC 28 nm HPC+		https://www.mediatek.com/products/smartphones/mediatek-helio-p10
+MediaTek Helio X30	Helio X30			https://www.mediatek.com/products/smartphones/mediatek-helio-x30
+MediaTek Helio X25	Helio X25			https://www.mediatek.com/products/smartphones/mediatek-helio-x25
+MediaTek Helio X20	Helio X20			https://www.mediatek.com/products/smartphones/mediatek-helio-x20
+MediaTek Helio X10	Helio X10			https://www.mediatek.com/products/smartphones/mediatek-helio-x10
+MediaTek Helio A25	Helio A25	TSMC 12 nm FinFET	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-a25
+MediaTek Helio A22	Helio A22		Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-a22
+MediaTek Helio A20	Helio A20	12 nm	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-a20
+MediaTek Helio G99	MT6789	TSMC N6（6 nm）	Arm Cortex-A76 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g99
+MediaTek Helio G100	MT6789	TSMC N6（6 nm）	Arm Cortex-A76 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g100
+MediaTek Helio G96	MT6781		Arm Cortex-A55 + Cortex-A76	https://www.mediatek.com/products/smartphones/mediatek-helio-g96
+MediaTek Helio G95	MT6785		Arm Cortex-A55 + Cortex-A76	https://www.mediatek.com/products/smartphones/mediatek-helio-g95
+MediaTek Helio G90T	MT6785			https://www.mediatek.com/products/smartphones/mediatek-helio-g90t
+MediaTek Helio P60	MT6771	TSMC 12 nm FinFET	Arm Cortex-A53 + Cortex-A73	https://www.mediatek.com/products/smartphones/mediatek-helio-p60
+MediaTek Helio P70	MT6771	TSMC 12 nm FinFET	Arm Cortex-A53 + Cortex-A73	https://www.mediatek.com/products/smartphones/mediatek-helio-p70
+MediaTek Helio P35	MT6765	TSMC 12 nm FinFET	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-p35
+MediaTek Helio G35	MT6765	12 nm FinFET	Arm Cortex-A53	https://www.mediatek.com/products/smartphones/mediatek-helio-g35
+MediaTek Helio G80	MT6769		Arm Cortex-A75 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g80
+MediaTek Helio G85	MT6769		Arm Cortex-A75 + Cortex-A55	https://www.mediatek.com/products/smartphones/mediatek-helio-g85
+MediaTek Helio G88	MT6769		Arm Cortex-A55 + Cortex-A75	https://www.mediatek.com/products/smartphones/mediatek-helio-g88
+Xiaomi XRING O1	XRING O1|Xring O1|Xiaomi XRING O1	3 nm		https://ir.mi.com/static-files/5e0e71ff-8769-45f0-ba3e-fc8a37ab9feb
+Xiaomi XRING O3	XRING O3|Xring O3|Xiaomi XRING O3			https://ir.mi.com/static-files/015c0e14-54ef-45d7-af3d-1c85979a74b3
+Google Tensor G3	Tensor G3			https://store.google.com/magazine/google_tensor
+Google Tensor G4	Tensor G4			https://store.google.com/magazine/google_tensor
+Google Tensor G5	Tensor G5			https://store.google.com/magazine/google_tensor
+HiSilicon Kirin 990	Kirin 990			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 990 5G	Kirin 990 5G			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 985	Kirin 985			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 980	Kirin 980			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 970	Kirin 970			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 960	Kirin 960			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 950	Kirin 950			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 930	Kirin 930			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 920	Kirin 920			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 910	Kirin 910			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 9000	Kirin 9000			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 9000S	Kirin 9000S			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 9000SL	Kirin 9000SL			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 9010	Kirin 9010			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 9020	Kirin 9020			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 9030	Kirin 9030			https://consumer.huawei.com/en/phones/
+HiSilicon Kirin 8000	Kirin 8000			https://consumer.huawei.com/en/phones/
+UNISOC T820	T820			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T8100	T8100			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T760	T760			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T765	T765			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T770	T770			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T750	T750			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T7250	T7250			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T7200	T7200			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T620	T620			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T616	T616			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T615	T615			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T612	T612			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T610	T610			https://www.unisoc.com/en_us/home/TZNSJ
+UNISOC T606	T606			https://www.unisoc.com/en_us/home/TZNSJ
+MediaTek Dimensity 9400+	Dimensity 9400+|MediaTek Dimensity 9400+	3 nm		https://www.mi.com/global/product/xiaomi-15t-pro/specs/
+Qualcomm Snapdragon 8 Elite Gen 5			第三代 Qualcomm Oryon（Gen 3） · 2 × Oryon Prime（Gen 3） + 6 × Oryon Performance（Gen 3）	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Gen-5-product-brief.pdf
+Qualcomm Snapdragon 8 Elite			第二代 Qualcomm Oryon（Gen 2） · Oryon Prime（Gen 2）+ Oryon Performance（Gen 2）	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Platform-Product-Brief.pdf
+Qualcomm Snapdragon 8 Gen 5			2 × Oryon Prime + 6 × Oryon Performance	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Product-Brief-Snapdragon-8-Gen-5.pdf
+Qualcomm Snapdragon 8 Elite Gen 6			2 × Oryon Prime + 6 × Oryon Performance	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Gen-6-Product-Brief.pdf
+Qualcomm Snapdragon 8 Elite Extreme Gen 6			2 × Oryon Prime + 6 × Oryon Performance	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-8-Elite-Extreme-Gen-6-Product-Brief.pdf
+Qualcomm Snapdragon 7 Gen 4			1 × Kryo Prime + 4 × Kryo Performance + 3 × Kryo Efficiency	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-7-Gen-4-Mobile-Platform-Product-Brief.pdf
+Qualcomm Snapdragon 8s Gen 4			Kryo Prime + Kryo Performance	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Product-Brief-Snapdragon-8s-Gen-4.pdf
+Qualcomm Snapdragon 8 Gen 2			1 × Kryo Prime（Cortex-X3） + 4 × Kryo Performance + 3 × Kryo Efficiency	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/images/company/news-media/media-center/press-kits/summit-2022/day-1/documents/Snapdragon_8_Gen_2_Product_Brief.pdf
+Qualcomm Snapdragon 888			Kryo 680（含 Cortex-X1）	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/prod_brief_qcom_sd888_5g_1.pdf
+Qualcomm Snapdragon 855+			Kryo 485	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/product_brief_-_qualcomm_snapdragon_855_860.pdf
+Qualcomm Snapdragon 860			Kryo 485	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/product_brief_-_qualcomm_snapdragon_855_860.pdf
+Qualcomm Snapdragon 855			Kryo 485	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-855-mobile-platform
+Qualcomm Snapdragon 845			4 × Kryo 385 Performance + 4 × Kryo 385 Efficiency	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-845-mobile-platform
+Qualcomm Snapdragon 865+			Kryo 585	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/snapdragon_865_product_brief.pdf
+Samsung Exynos 2600			1 × Arm C1-Ultra + 9 × Arm C1-Pro（依效能／效率分組）	https://semiconductor.samsung.com/processor/mobile-processor/exynos-2600/
+Samsung Exynos 2500			1 × Cortex-X925 + 7 × 中核心 + 2 × 小核心	https://semiconductor.samsung.com/processor/mobile-processor/exynos-2500/
+Samsung Exynos 2400			Cortex-X4 + 效能／效率核心	https://semiconductor.samsung.com/processor/mobile-processor/exynos-2400/
+Samsung Exynos 2200			1 × Cortex-X2 + 3 × Cortex-A710 + 4 × Cortex-A510	https://semiconductor.samsung.com/processor/mobile-processor/exynos-2200/
+Samsung Exynos 1580			1 × 大核心 + 3 × 中核心 + 4 × 小核心	https://semiconductor.samsung.com/processor/mobile-processor/exynos-1580/
+Samsung Exynos 1480			4 × Cortex-A78 + 4 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-1480/
+Samsung Exynos 1380			4 × Cortex-A78 + 4 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-1380/
+Samsung Exynos 1330			2 × Cortex-A78 + 6 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-1330/
+Samsung Exynos 1280			2 × Cortex-A78 + 6 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-1280/
+Samsung Exynos 1080			1 × Cortex-A78 + 3 × Cortex-A78 + 4 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-1080/
+Samsung Exynos 990			第五代 Samsung 自訂 CPU · 2 × Samsung Custom CPU + 2 × Cortex-A76 + 4 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-990/
+Samsung Exynos 9825			第四代 Samsung 自訂 CPU · 2 × Samsung Custom CPU + 2 × Cortex-A75 + 4 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-9825/
+Samsung Exynos 980			2 × Cortex-A77 + 6 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-980/
+Samsung Exynos 9611			4 × Cortex-A73 + 4 × Cortex-A53	https://semiconductor.samsung.com/processor/mobile-processor/exynos-9611/
+Samsung Exynos 9609			4 × Cortex-A73 + 4 × Cortex-A53	https://semiconductor.samsung.com/processor/mobile-processor/exynos-9609/
+Samsung Exynos 850			8 × Cortex-A55	https://semiconductor.samsung.com/processor/mobile-processor/exynos-850/
+Samsung Exynos 7884			2 × Cortex-A73 + 6 × Cortex-A53	https://semiconductor.samsung.com/processor/mobile-processor/exynos-7884/

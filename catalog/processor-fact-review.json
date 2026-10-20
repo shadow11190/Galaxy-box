@@ -1,0 +1,560 @@
+{
+  "reviewed": "2026-10-20",
+  "note": "Reviewed official product facts; connectivity-chip process mentions are excluded from SoC process facts.",
+  "records": [
+    {
+      "name": "MediaTek Dimensity 9500s",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9500s",
+      "sha256": "9765496fded5c0b59fc6cf137e476550ed372673721cecb846f0ac81d21ee752",
+      "fields": {
+        "process": "3 nm",
+        "cpu": "Arm Cortex-X925 + Cortex-X4 + Cortex-A720"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 9400",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400",
+      "sha256": "a67cb608781c4c662e4ab278ae6c1b3941411977e03d9f4318c1a0b1d665f5a6",
+      "fields": {
+        "process": "TSMC 3 nm（第二代）",
+        "cpu": "Arm Cortex-X925 + Cortex-X4 + Cortex-A720"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 9400+",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400-plus",
+      "sha256": "7b8266df13c6858401ece45e98c05e8cdc24798ac8b348bf6925b5830c965685",
+      "fields": {
+        "cpu": "Arm Cortex-X925 + Cortex-X4 + Cortex-A720"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 9400e",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9400e",
+      "sha256": "5e39b97d1a0bcfa96734ad517248effc7fa58897c163b9c78d791cef94455ed5",
+      "fields": {
+        "process": "TSMC 4 nm（第三代）",
+        "cpu": "Arm Cortex-X4 + Cortex-A720"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 9300",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9300",
+      "sha256": "1073c91a3d2a28ecf129ee3631030855eb2a75c151fda4ac513312ed4088eee1",
+      "fields": {
+        "process": "TSMC 4 nm（第三代）",
+        "cpu": "Arm Cortex-X4 + Cortex-A720"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 9200",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9200",
+      "sha256": "da8c4e903d9138e1c447376ea4db95b61b1b32b1107fa8657c557e41e5c769bc",
+      "fields": {
+        "process": "TSMC 4 nm+（第二代）",
+        "cpu": "Arm Cortex-X3 + Cortex-A715 + Cortex-A510"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 9000",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-9000",
+      "sha256": "fa23be894d2d793b0ef83126cdb61cecade28600cdb6d44a73f5737c0ddad518",
+      "fields": {
+        "process": "TSMC N4（4 nm）",
+        "cpu": "Arm Cortex-X2 + Cortex-A710 + Cortex-A510"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8400",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8400",
+      "sha256": "145bf4552ae83648afdfece40ec3d17dc2e8634ea60c6e0e6134c1b3d6e8e6db",
+      "fields": {
+        "cpu": "Arm Cortex-A725"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8350",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8350",
+      "sha256": "582cd8c815e558f4a589058e46972a6929eeb177057aa1ed880053435860fa6b",
+      "fields": {
+        "process": "4 nm",
+        "cpu": "Arm Cortex-A715 + Cortex-A510"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8300",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8300",
+      "sha256": "31f0f69a2ec00a83a9233aa554683569089afff4184b72e63d1fe2190ecae8c7",
+      "fields": {
+        "process": "4 nm",
+        "cpu": "Arm Cortex-A715 + Cortex-A510"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8250",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8250",
+      "sha256": "76d78e8b59bfdc7bddb29be4f0216e762e42b8151e726ef4b9bc9e905d7881a1",
+      "fields": {
+        "process": "4 nm",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8200",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8200",
+      "sha256": "430d4e6434028302650d50c17afe710f5cf5fa84622034658166d5ed84627a8b",
+      "fields": {
+        "process": "TSMC 4 nm",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8100",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8100",
+      "sha256": "a0c41367b031b088aa00bfd32f5aed031a13e94a702759c348e104018348f664",
+      "fields": {
+        "process": "TSMC N5（5 nm）",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8000",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8000",
+      "sha256": "651c2379e39bc892c4989040fb23100dfe756b1656a6bae4d390cdc859767247",
+      "fields": {
+        "process": "TSMC N5（5 nm）",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8050",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8050",
+      "sha256": "3c61526c216e4d744e6cd014a0340df4fd50765620e36280e10f91294da906a5",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 8020",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-8020",
+      "sha256": "9a41afc72e7c18ee31ba3355eeb05b4bc3cd3f8d2d271dd270ef0f18cc9063a6",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 7300",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-7300",
+      "sha256": "0b4f636f61585f437bc49c49483084ce4dafc2ff26bb0a4ab7bf71480beea517",
+      "fields": {
+        "process": "4 nm",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 7400",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-7400",
+      "sha256": "7064905f4ac14d729aea1b211a28e2443d4ce2255d7e0c02a5deec973aa02f58",
+      "fields": {
+        "process": "4 nm",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 7200",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-7200",
+      "sha256": "f1c4eb70242d88142f501a660287c7a04936a2ed2b80e7265f70c0c1457643f5",
+      "fields": {
+        "process": "TSMC 4 nm（第二代）",
+        "cpu": "Arm Cortex-A715 + Cortex-A510"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 7050",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-7050",
+      "sha256": "dac5baa74577bb1892a0e145ca474d4f075aa206c8d17e3add63b91e0cf80d45",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 7030",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-7030",
+      "sha256": "463b4eced73df60afb944c10b7405ad15ec6cef78968071462f0e766ca68198d",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 7020",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-7020",
+      "sha256": "3736b43e9353be6081460149245b5080a3d14d41186d9ad6d5481d4aff48518e",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A78 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 6300",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-dimensity-6300",
+      "sha256": "98b2c4ce0d21dbfe3a1490364306f338b53030f527d7db52563100abf679dbc6",
+      "fields": {
+        "process": "TSMC 6 nm",
+        "cpu": "Arm Cortex-A76 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G200",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g200",
+      "sha256": "9d223024abb4184f1ca689a450486bb8ba6036f7b2bb14f1605b9f7632836707",
+      "fields": {
+        "process": "TSMC 6 nm",
+        "cpu": "Arm Cortex-A76 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G100",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g100",
+      "sha256": "4343ab8abe7650f7c3d64536763527e8520af0c6d1abb5b2038d5e14c787dd24",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A76 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G99",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g99",
+      "sha256": "30224218ff23e6b7edd383e9ebacded977d0c697338e25402bf01579865203d2",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A76 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G96",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g96",
+      "sha256": "25dc5563a61bdebd0475509c85c474e9f77a833c87582257c03482546e06162b",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A76"
+      }
+    },
+    {
+      "name": "MediaTek Helio G95",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g95",
+      "sha256": "91ab2406eb560fd31f7a936b70aea9d837f19b95720d5043166c5cb951854415",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A76"
+      }
+    },
+    {
+      "name": "MediaTek Helio G90",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g90",
+      "sha256": "f41de1bc3519619d2df68adea79a2d7bd7c8ad064aadcc2549ea20b8d4592034",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A76"
+      }
+    },
+    {
+      "name": "MediaTek Helio G88",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g88",
+      "sha256": "89ee9aa287f5100ca2a08a176c7dd168b2c4a93457c5212dfcb72dd24c26494a",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A75"
+      }
+    },
+    {
+      "name": "MediaTek Helio G85",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g85",
+      "sha256": "b5d290bc98f844eedc7d98de017244afb2228a2546828744b133cb801e2eb54e",
+      "fields": {
+        "cpu": "Arm Cortex-A75 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G81",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g81",
+      "sha256": "e7b6fa3b51c56a3477a85165abef33a3790ae0d5061a1c42afa5f1aca2d501a9",
+      "fields": {
+        "cpu": "Arm Cortex-A75 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G80",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g80",
+      "sha256": "9322894570bb80560d05e499bf392a15770ae831bc8e889708306e15490dbffa",
+      "fields": {
+        "cpu": "Arm Cortex-A75 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G70",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g70",
+      "sha256": "6f77782cd64fdff8a75ea61d55c83dba435993ff120de4a7bc2572e7213c91b2",
+      "fields": {
+        "cpu": "Arm Cortex-A75 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G35",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g35",
+      "sha256": "89f8325f2e1b5ef18b854a2f943b74574bc60f275772fd8887f131f1a4de4e51",
+      "fields": {
+        "process": "12 nm FinFET",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio G25",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g25",
+      "sha256": "63b2668e2f28a2746d28643149dc03ed23c6aa2ffd97bd3b2c86e5773f1e99e7",
+      "fields": {
+        "process": "12 nm",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio P95",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p95",
+      "sha256": "18abb0766022bf2fd8bc8a62484962aba4dfb8e8629d87bb5a1c0016e31ca89f",
+      "fields": {
+        "cpu": "Arm Cortex-A75 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio P90",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p90",
+      "sha256": "81e4b057ad71dedbdf23944ffbef266b8647d348b30abfb65b877f51f50c6ccc",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A75"
+      }
+    },
+    {
+      "name": "MediaTek Helio P70",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p70",
+      "sha256": "c34e57cd3e38862161e78e4f385ffe4bc517d7533d647c96dae34a05fdd50a80",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53 + Cortex-A73"
+      }
+    },
+    {
+      "name": "MediaTek Helio P65",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p65",
+      "sha256": "af59dc18d5126ee79c7d468f7e06e1b5be56d6a43ec7302dc22fca86a80a9986",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A75"
+      }
+    },
+    {
+      "name": "MediaTek Helio P60",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p60",
+      "sha256": "93f12f58486b9077cd744ab1757d71d26853a858dc07c01dd3da567f74a17654",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53 + Cortex-A73"
+      }
+    },
+    {
+      "name": "MediaTek Helio P35",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p35",
+      "sha256": "e7b36b2ea6e0875c12e9f431313d749b10c65e508e774eff58af1ce9e8f9e9ea",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio P30",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p30",
+      "sha256": "b2c27ca21b794b8e9914fced1887349fd7a566c69b6aa6ef375c0d91ea7e4641",
+      "fields": {
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio P25",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p25",
+      "sha256": "4c73d3a92a8596debf6d985332e4ccbb61ce3d35e21ba48dbe5053d7debe0cd0",
+      "fields": {
+        "process": "16 nm FinFET+",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio P23",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p23",
+      "sha256": "83d9d1f5948c0fbb63b543409daae06e7a249bdc507a77cc6140b3921cec19b6",
+      "fields": {
+        "process": "TSMC 16 nm FinFET",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio P22",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p22",
+      "sha256": "a24aa2916f5d3001338e088de3691f8c23e384381de3e28248531e81bcbda746",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio P20",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p20",
+      "sha256": "72ab0baeae636735edd4f7e9c0a6c4849d06d7cabbe402e74f119de5a96b70e4",
+      "fields": {
+        "process": "16 nm",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio P10",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p10",
+      "sha256": "c1eaf865f7a1f265a11bd511ffb297cdd9a387d2dc0369a4b03046184d43a3a4",
+      "fields": {
+        "process": "TSMC 28 nm HPC+"
+      }
+    },
+    {
+      "name": "MediaTek Helio A25",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-a25",
+      "sha256": "a73140681fd94461097a5eaea3b98598b32174d295a395f5dd4eba1801d8112b",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio A22",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-a22",
+      "sha256": "3ee650999e3d88fba5a43685ec63705e44cd54be15e4f912dec70993a2a041d8",
+      "fields": {
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio A20",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-a20",
+      "sha256": "f59f6a1aafe9b0db7d441307dac53b98a654f39004b7a8c753ae7faaace7220b",
+      "fields": {
+        "process": "12 nm",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio G99",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g99",
+      "sha256": "30224218ff23e6b7edd383e9ebacded977d0c697338e25402bf01579865203d2",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A76 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G100",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g100",
+      "sha256": "4343ab8abe7650f7c3d64536763527e8520af0c6d1abb5b2038d5e14c787dd24",
+      "fields": {
+        "process": "TSMC N6（6 nm）",
+        "cpu": "Arm Cortex-A76 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G96",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g96",
+      "sha256": "25dc5563a61bdebd0475509c85c474e9f77a833c87582257c03482546e06162b",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A76"
+      }
+    },
+    {
+      "name": "MediaTek Helio G95",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g95",
+      "sha256": "91ab2406eb560fd31f7a936b70aea9d837f19b95720d5043166c5cb951854415",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A76"
+      }
+    },
+    {
+      "name": "MediaTek Helio P60",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p60",
+      "sha256": "93f12f58486b9077cd744ab1757d71d26853a858dc07c01dd3da567f74a17654",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53 + Cortex-A73"
+      }
+    },
+    {
+      "name": "MediaTek Helio P70",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p70",
+      "sha256": "c34e57cd3e38862161e78e4f385ffe4bc517d7533d647c96dae34a05fdd50a80",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53 + Cortex-A73"
+      }
+    },
+    {
+      "name": "MediaTek Helio P35",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-p35",
+      "sha256": "e7b36b2ea6e0875c12e9f431313d749b10c65e508e774eff58af1ce9e8f9e9ea",
+      "fields": {
+        "process": "TSMC 12 nm FinFET",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio G35",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g35",
+      "sha256": "89f8325f2e1b5ef18b854a2f943b74574bc60f275772fd8887f131f1a4de4e51",
+      "fields": {
+        "process": "12 nm FinFET",
+        "cpu": "Arm Cortex-A53"
+      }
+    },
+    {
+      "name": "MediaTek Helio G80",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g80",
+      "sha256": "9322894570bb80560d05e499bf392a15770ae831bc8e889708306e15490dbffa",
+      "fields": {
+        "cpu": "Arm Cortex-A75 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G85",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g85",
+      "sha256": "b5d290bc98f844eedc7d98de017244afb2228a2546828744b133cb801e2eb54e",
+      "fields": {
+        "cpu": "Arm Cortex-A75 + Cortex-A55"
+      }
+    },
+    {
+      "name": "MediaTek Helio G88",
+      "source": "https://www.mediatek.com/products/smartphones/mediatek-helio-g88",
+      "sha256": "89ee9aa287f5100ca2a08a176c7dd168b2c4a93457c5212dfcb72dd24c26494a",
+      "fields": {
+        "cpu": "Arm Cortex-A55 + Cortex-A75"
+      }
+    },
+    {
+      "name": "MediaTek Dimensity 9400+",
+      "source": "https://www.mi.com/global/product/xiaomi-15t-pro/specs/",
+      "fields": {
+        "process": "3 nm"
+      },
+      "reviewMethod": "Official specs read in browser; SoC process distinct from companion 4 nm Wi-Fi chip"
+    },
+    {
+      "name": "MediaTek Dimensity 9500",
+      "source": "https://www.mediatek.com/dimensity-9500",
+      "fields": {
+        "process": "3 nm (3rd generation)",
+        "cpu": "1x C1-Ultra + 3x C1-Premium + 4x C1-Pro"
+      },
+      "reviewMethod": "Official product page read in browser"
+    }
+  ]
+}

@@ -23,6 +23,7 @@ class ChargingNotificationTest {
         assertEquals("電池淨功率 +8.0 W", n.extras.getCharSequence(Notification.EXTRA_TEXT).toString())
         assertFalse(n.extras.toString().contains("10⁹")); assertEquals("停止監控", n.actions.single().title)
         assertTrue(n.flags and Notification.FLAG_ONGOING_EVENT != 0)
+        assertFalse(n.extras.getBoolean("android.requestPromotedOngoing", false))
     }
     @Test fun missingOrStaleValuesNeverBecomeZero() {
         assertEquals("電池淨功率 —", ChargingNotification.content(ChargingPowerReading(), 1000))

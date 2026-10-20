@@ -33,11 +33,11 @@ import kotlinx.coroutines.withContext
             verticalArrangement = Arrangement.spacedBy(12.dp)) {
             Text("關於 Galaxy box", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
             Text("版本 $version · 個人獨立製作", color = Mint)
-            Text("免 Root 的 Galaxy 硬體資訊與檢測工具；Shizuku 為可選的 ADB 進階讀取模式。資料依手機實際開放的 API 與來源讀取；未知數據不以示範數字補上。")
+            Text("免 Root 的 Galaxy 硬體資訊與檢測工具；Shizuku 可選用 ADB 或 Root 模式進階讀取。資料依手機實際開放的 API 與來源讀取；未知數據不以示範數字補上。")
             HorizontalDivider()
             Text("開源致謝", style = MaterialTheme.typography.titleLarge)
             Text("AndroidLiquidGlass／Backdrop · Kyant", color = Mint, fontWeight = FontWeight.SemiBold)
-            Text("Backdrop 1.0.0 提供 App 內的背景捕捉、模糊、折射與高光。底部液態導覽改編自 Kyant 的 LiquidBottomTabs 範例，包含圖示／文字的折射放大與彈性形變。桌面小工具使用本應用自行繪製的靜態玻璃風格。Apache License 2.0。")
+            Text("Backdrop 1.0.0 提供 App 內的背景捕捉、模糊、折射與高光。底部液態導覽改編自 Kyant 的 LiquidBottomTabs 範例，保留圖示／文字的折射放大、色散與彈性形變，選取泡泡停留時仍保持凸起。桌面小工具使用本應用自行繪製的靜態玻璃風格。Apache License 2.0。")
             TextButton(onClick = { open("https://github.com/Kyant0/AndroidLiquidGlass/tree/1.0.0") }) { Text("開啟 AndroidLiquidGlass 專案") }
             TextButton(onClick = { license = if (license == "Backdrop-Apache-2.0.txt") null else "Backdrop-Apache-2.0.txt" }) { Text("查看 Backdrop 授權") }
             TextButton(onClick = { license = if (license == "Backdrop-Catalog-NOTICE.txt") null else "Backdrop-Catalog-NOTICE.txt" }) { Text("查看液態導覽來源與修改聲明") }
@@ -52,8 +52,14 @@ import kotlinx.coroutines.withContext
             Text("Kotlin、kotlinx.coroutines 與 Android Jetpack／Compose", color = Mint, fontWeight = FontWeight.SemiBold)
             Text("感謝 JetBrains、Google、Android 開源社群及相關貢獻者提供語言、介面與生命週期工具。相關元件採 Apache License 2.0。")
             Text("公開資料與文件", color = Mint, fontWeight = FontWeight.SemiBold)
-            Text("市售機型名稱參考 Google Play 公開裝置目錄；處理器名稱表依 Qualcomm／Samsung 公開規格，更新頁連至 SamFW 第三方機型目錄，是否可更新以手機系統為準。商品名稱與商標仍屬各權利人所有。")
+            Text("市售機型名稱參考 Google Play 公開裝置目錄。離線晶片與型號對照另參考晶片廠商規格、Samsung 安全認證文件及 LineageOS 裝置資料；各地區版本分列，資料涵蓋範圍可在硬體頁的離線目錄查看，不能視為所有已上市手機均已完整收錄。LineageOS Wiki 資料依 MIT 授權，感謝原作者與所有貢獻者。更新頁連至 SamFW 第三方機型目錄，是否可更新以手機系統為準。商品名稱與商標仍屬各權利人所有。")
+            TextButton(onClick = { open("https://github.com/LineageOS/lineage_wiki") }) { Text("開啟 LineageOS Wiki") }
+            TextButton(onClick = { license = if (license == "LineageOS-wiki-MIT.txt") null else "LineageOS-wiki-MIT.txt" }) { Text("查看 LineageOS Wiki 授權") }
             TextButton(onClick = { open("https://storage.googleapis.com/play_public/supported_devices.html") }) { Text("查看公開裝置目錄") }
+            Text("品牌標誌 · Simple Icons／Wikimedia Commons", color = Mint, fontWeight = FontWeight.SemiBold)
+            Text("首頁裝置卡片的透明標誌來自 Simple Icons 及個別 Wikimedia Commons 檔案。只有辨識到裝置與品牌時才顯示；品牌標誌屬各權利人，並不表示官方合作。完整逐項來源見專案 BRAND-ASSETS-0.7.0.tsv。")
+            TextButton(onClick = { open("https://github.com/simple-icons/simple-icons") }) { Text("查看 Simple Icons") }
+            TextButton(onClick = { open("https://commons.wikimedia.org/") }) { Text("查看 Wikimedia Commons") }
             license?.let {
                 HorizontalDivider()
                 Text("授權原文", fontWeight = FontWeight.Bold)
