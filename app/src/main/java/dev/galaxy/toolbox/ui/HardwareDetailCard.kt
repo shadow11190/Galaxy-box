@@ -39,7 +39,7 @@ import dev.galaxy.toolbox.model.*
     val prominent = reading.label in listOf("最大 JPEG（一般模式）", "處理器名稱", "GPU 名稱", "啟動時顯示模式")
     val color = if (prominent && reading.value != null) Mint else if (reading.value == null) Muted else MaterialTheme.colorScheme.onSurface
     val style = if (prominent) MaterialTheme.typography.titleMedium else MaterialTheme.typography.bodyMedium
-    BoxWithConstraints(Modifier.fillMaxWidth().clickable(role = Role.Button, onClickLabel = "查看${reading.label}來源") { onReading(reading) }.padding(vertical = 9.dp)) {
+    BoxWithConstraints(Modifier.fillMaxWidth().clickable(role = Role.Button, onClickLabel = "查看${reading.label}詳細資訊") { onReading(reading) }.padding(vertical = 9.dp)) {
         if (large || maxWidth < 290.dp || prominent) {
             Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
                 Text(reading.label, color = Muted, style = MaterialTheme.typography.labelLarge)

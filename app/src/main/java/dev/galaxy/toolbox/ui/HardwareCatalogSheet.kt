@@ -29,8 +29,9 @@ import org.json.JSONObject
         summary = withContext(Dispatchers.IO) { runCatching {
             val json = context.assets.open("hardware-catalog-coverage.json").bufferedReader().use { JSONObject(it.readText()) }
             "${json.getInt("processorNames")} 個處理器名稱 · ${json.getInt("deviceRows")} 筆原始裝置紀錄\n" +
-                "已核對 2018 年起手機 ${json.getInt("verified2018PhoneModels")} 款型號、${json.getInt("verified2018PhoneProcessors")} 款處理器\n" +
-                "三星 ${json.getInt("samsungRows")} 筆原始紀錄 · ${json.getInt("deviceSpecRows")} 筆完整型號與處理器對照\n資料日期 ${json.getString("retrieved")}"
+                "已核對 2018 年起手機 ${json.getInt("verified2018PhoneModels")} 款、平板 ${json.getInt("verified2018TabletModels")} 款完整型號\n" +
+                "合計使用 ${json.getInt("verified2018DeviceProcessors")} 款處理器；2026 年已核對手機 ${json.getInt("verified2026PhoneModels")} 款、平板 ${json.getInt("verified2026TabletModels")} 款\n" +
+                "三星 ${json.getInt("samsungRows")} 筆原始紀錄 · ${json.getInt("deviceSpecRows")} 筆完整型號與處理器對照\nGoogle 原始清單擷取 ${json.getString("retrieved")}；已核對規格並非截至該日的完整產品名單"
         }.getOrElse { "離線目錄資訊無法取得" } }
     }
     LaunchedEffect(query, chips) {
@@ -39,10 +40,10 @@ import org.json.JSONObject
         results = withContext(Dispatchers.IO) { runCatching {
             if (chips) ChipNames.search(query).map { chip ->
                 val details = CpuSpecs.readings(chip).joinToString("\n") { "${it.label}：${it.value}" }
-                val usage = HardwareCatalog.processorPhoneUsage(context).lookup(chip.name)
-                val scope = usage?.let { "已核對用於 ${it.firstPhoneYear} 年起的 Android 手機\n手機資料來源：${it.source}" }
-                    ?: "2018 年起手機對照尚未核對"
-                chip.name to "$scope\n${chip.process.orEmpty()}\n${chip.cpu.orEmpty()}\n$details\n處理器資料來源\n${chip.source}"
+                val usage = HardwareCatalog.processorDeviceUsage(context).lookup(chip.name)
+                val scope = usage?.let { "已核對用於 ${it.firstDeviceYear} 年起的 Android 手機或平板" }
+                    ?: "2018 年起手機／平板對照尚未核對"
+                chip.name to "$scope\n${chip.process.orEmpty()}\n${chip.cpu.orEmpty()}\n$details"
             } else {
                 val names = HardwareCatalog.names(context)
                 val variants = HardwareCatalog.variants(context)
@@ -51,8 +52,7 @@ import org.json.JSONObject
                     val specs = variants.lookup(d.brand, d.model, d.device)
                     val classification = classifications.lookup(d.brand, d.model, d.device)
                     "${d.name} · ${d.model}" to "${d.brand} · ${d.device}\n${classification?.label ?: "上市年／裝置類型待核對"}\n" +
-                        (if (specs.isEmpty()) "尚未收錄此完整型號的處理器規格" else specs.map { "${it.soc}\n${it.market}\n${it.source}" }.distinct().joinToString("\n\n")) +
-                        "\n分類來源：${classification?.source ?: "無可核對資料"}\n名稱來源：Google Play 公開裝置目錄\n${DeviceNames.SOURCE}"
+                        (if (specs.isEmpty()) "尚未收錄此完整型號的處理器規格" else specs.map { "${it.soc}\n${it.market}" }.distinct().joinToString("\n\n"))
                 }
             }
         }.getOrElse { listOf("無法讀取目錄" to "請稍後重試") } }
@@ -62,7 +62,7 @@ import org.json.JSONObject
         Column(Modifier.fillMaxWidth().fillMaxHeight(.94f).padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Text("裝置與處理器目錄", style = MaterialTheme.typography.titleLarge)
             Text(summary, color = Muted, style = MaterialTheme.typography.bodySmall)
-            Text("2018 年起的手機逐筆核對；原有裝置名稱均保留，未核對者標示未知。不同地區完整型號分列，公開規格與本機讀值分開。", color = Muted, style = MaterialTheme.typography.bodySmall)
+            Text("2018 年起的手機與平板逐筆核對；原有裝置名稱均保留，未核對者標示未知。上市年份不代表出廠 Android 版本。不同地區完整型號分列，公開規格與本機讀值分開。", color = Muted, style = MaterialTheme.typography.bodySmall)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 FilterChip(selected = !chips, onClick = { chips = false }, label = { Text("裝置型號") })
                 FilterChip(selected = chips, onClick = {
@@ -78,7 +78,7 @@ import org.json.JSONObject
                     var expanded by remember(title, detail) { mutableStateOf(false) }
                     InfoCard(title) {
                         SelectionContainer { Text(if (expanded) detail else detail.lineSequence().take(2).joinToString("\n"), style = MaterialTheme.typography.bodySmall) }
-                        TextButton(onClick = { expanded = !expanded }) { Text(if (expanded) "收合" else "查看對照與來源") }
+                        TextButton(onClick = { expanded = !expanded }) { Text(if (expanded) "收合" else "查看對照") }
                     }
                 }
             }

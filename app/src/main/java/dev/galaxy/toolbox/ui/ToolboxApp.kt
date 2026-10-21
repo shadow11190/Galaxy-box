@@ -50,7 +50,6 @@ private val Pages = listOf("總覽", "硬體", "電池", "更新", "檢測")
 fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
     val state by model.state.collectAsStateWithLifecycle()
     var aboutVisible by rememberSaveable { mutableStateOf(false) }
-    var catalogVisible by rememberSaveable { mutableStateOf(false) }
     var page by rememberSaveable { mutableIntStateOf(0) }
     val navigation = rememberNavigationMotion(page, Pages.size)
     val pageScrollStates = Pages.map { androidx.compose.foundation.lazy.rememberLazyListState() }
@@ -65,6 +64,8 @@ fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val availableTests = remember(context) { TestCatalogue.available(TestCatalogue.read(context)) }
     val preferences = remember(context) { context.getSharedPreferences("display", android.content.Context.MODE_PRIVATE) }
+    var visualStyleName by rememberSaveable { mutableStateOf(preferences.getString("visual_style", "original") ?: "original") }
+    val visualStyle = GalaxyVisualStyle.fromPreference(visualStyleName)
     var glassEnabled by rememberSaveable { mutableStateOf(preferences.getBoolean("liquid_glass", false)) }
     val glassAvailable = rememberGlassAvailable()
     var glassFailed by remember { mutableStateOf(false) }
@@ -88,7 +89,7 @@ fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
         model.setTemperatureVisible(temperatureVisible)
         onDispose { model.setTemperatureVisible(false) }
     }
-    GalaxyBoxTheme(dark) {
+    GalaxyBoxTheme(dark, visualStyle) {
       CompositionLocalProvider(LocalGlass provides GlassEnvironment(glass, backgroundBackdrop) { view.post { glassFailed = true } }) {
       Box(modifier.fillMaxSize()) {
         GalaxyBackdrop(if (glass) Modifier.layerBackdrop(backgroundBackdrop) else Modifier)
@@ -106,14 +107,25 @@ fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
                         Text("Galaxy box", color = Mint, style = MaterialTheme.typography.titleMedium)
                         TextButton(onClick = { aboutVisible = true }, modifier = Modifier.semantics { contentDescription = "關於本應用" }) { Text("關於") }
                     }
-                    Spacer(Modifier.height(8.dp))
+                    Spacer(Modifier.height(if (visualStyle == GalaxyVisualStyle.MIUIX) 16.dp else 8.dp))
                     Text(Pages[displayedPage], style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Bold)
-                    Text("免 Root · Shizuku 可選 · v0.7.0", color = Muted, style = MaterialTheme.typography.bodySmall)
+                    Text("免 Root · Shizuku 可選 · v0.7.1", color = Muted, style = MaterialTheme.typography.bodySmall)
                 }
                 when (displayedPage) {
                     0 -> {
                         dashboardItems(state, { hardwareCategory = it; page = 1 }, { page = 2 }, { temperatureId = it })
                         item { InfoCard("顯示效果") {
+                            Text("介面風格", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.SemiBold)
+                            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                GalaxyVisualStyle.entries.forEach { choice ->
+                                    FilterChip(selected = visualStyle == choice, onClick = {
+                                        visualStyleName = choice.preferenceValue
+                                        preferences.edit { putString("visual_style", choice.preferenceValue) }
+                                    }, label = { Text(choice.label) })
+                                }
+                            }
+                            Text("Miuix 風格調整頁面層級、色彩與卡片；液態玻璃可另外開啟。", color = Muted,
+                                style = MaterialTheme.typography.bodySmall)
                             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
                                 Text("液態玻璃", Modifier.weight(1f))
@@ -148,7 +160,6 @@ fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
                         } }
                     }
                     1 -> {
-                        item { TextButton(onClick = { catalogVisible = true }) { Text("離線裝置與處理器目錄") } }
                         if (hardwareCategory in listOf(HardwareCategory.NETWORK, HardwareCategory.AUDIO)) item {
                             TextButton(onClick = { model.refreshConnectionDetails(hardwareCategory) }) { Text("重新讀取連線與裝置") }
                         }
@@ -210,8 +221,7 @@ fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
             }
         }
         if (aboutVisible) { AboutApp { aboutVisible = false } }
-        if (catalogVisible) { HardwareCatalogSheet { catalogVisible = false } }
-        sourceReading?.let { ReadingSourceSheet(it) { sourceReading = null } }
+        sourceReading?.let { ReadingDetailSheet(it) { sourceReading = null } }
         temperatureId?.let { id ->
             state.temperatures.firstOrNull { it.sensor.id == id }?.let { reading ->
                 TemperatureDetailSheet(reading, state.temperatureHistory[id].orEmpty(), state.temperatureNowMs) { temperatureId = null }
@@ -222,10 +232,21 @@ fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
 }
 
 @Composable fun InfoCard(title: String, content: @Composable ColumnScope.() -> Unit) {
-    GlassCard(Modifier.fillMaxWidth()) {
-        Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Text(title, color = Mint, style = MaterialTheme.typography.titleMedium)
-            content()
+    if (LocalVisualStyle.current == GalaxyVisualStyle.MIUIX) {
+        Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text(title, Modifier.padding(start = 6.dp), color = Muted,
+                style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.SemiBold)
+            GlassCard(Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(horizontal = 18.dp, vertical = 16.dp),
+                    verticalArrangement = Arrangement.spacedBy(10.dp), content = content)
+            }
+        }
+    } else {
+        GlassCard(Modifier.fillMaxWidth()) {
+            Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text(title, color = Mint, style = MaterialTheme.typography.titleMedium)
+                content()
+            }
         }
     }
 }
@@ -234,7 +255,6 @@ fun ToolboxApp(model: ToolboxViewModel, modifier: Modifier = Modifier) {
     InfoCard(reading.label) {
         Text(reading.value ?: "未知", style = MaterialTheme.typography.titleLarge,
             color = if (reading.value == null) Muted else MaterialTheme.colorScheme.onSurface)
-        Text("來源：${reading.source}", style = MaterialTheme.typography.bodySmall, color = Muted)
         if (reading.detail.isNotEmpty()) Text(reading.detail, style = MaterialTheme.typography.bodySmall, color = Muted)
     }
 }

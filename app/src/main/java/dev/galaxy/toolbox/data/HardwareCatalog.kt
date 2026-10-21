@@ -11,6 +11,7 @@ object HardwareCatalog {
     @Volatile private var variants: DeviceVariants? = null
     @Volatile private var classifications: DeviceClassifications? = null
     @Volatile private var processorPhoneUsage: ProcessorPhoneUsage? = null
+    @Volatile private var processorDeviceUsage: ProcessorDeviceUsage? = null
     @Synchronized fun names(context: Context): DeviceNames = names ?: context.assets.open("android-device-names.tsv")
         .bufferedReader().use { DeviceNames.parse(it.lineSequence()) }.also { names = it }
     @Synchronized fun variants(context: Context): DeviceVariants = variants ?: context.assets.open("device-variants.tsv")
@@ -21,6 +22,9 @@ object HardwareCatalog {
     @Synchronized fun processorPhoneUsage(context: Context): ProcessorPhoneUsage = processorPhoneUsage ?:
         context.assets.open("processor-phone-usage-2018plus.tsv").bufferedReader()
             .use { ProcessorPhoneUsage.parse(it.lineSequence()) }.also { processorPhoneUsage = it }
+    @Synchronized fun processorDeviceUsage(context: Context): ProcessorDeviceUsage = processorDeviceUsage ?:
+        context.assets.open("processor-device-usage-2018plus.tsv").bufferedReader()
+            .use { ProcessorDeviceUsage.parse(it.lineSequence()) }.also { processorDeviceUsage = it }
     fun identity(context: Context, reports: List<ChipReport> = chipReports()): HardwareIdentity = HardwareIdentityResolver.resolve(
         names(context), variants(context), Build.MANUFACTURER, Build.MODEL, Build.DEVICE, Build.BRAND, reports)
     fun chipReports(): List<ChipReport> = buildList {

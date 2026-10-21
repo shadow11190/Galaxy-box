@@ -62,6 +62,7 @@ internal object CpuSpecData {
   "MediaTek Dimensity 7350\t\t\t\t\t\t\thttps://www.mediatek.com/products/smartphones/dimensity-5g",
   "MediaTek Dimensity 7360\t\t\t\t\t\t\thttps://www.mediatek.com/products/smartphones/dimensity-5g",
   "MediaTek Dimensity 7400\t\t4 × Cortex-A78|4 × Cortex-A55\t8\t\t\t\thttps://www.mediatek.com/products/smartphones/mediatek-dimensity-7400",
+  "MediaTek Dimensity 7400-Ultra\t\t\t\t\t\t\thttps://www.mi.com/tw/product/redmi-note-15-pro-5g/specs/",
   "MediaTek Dimensity 7400X\t\t\t\t\t\t\thttps://www.mediatek.com/products/smartphones/dimensity-5g",
   "MediaTek Dimensity 7450\t\t\t\t\t\t\thttps://www.mediatek.com/products/smartphones/dimensity-5g",
   "MediaTek Dimensity 7450X\t\t\t\t\t\t\thttps://www.mediatek.com/products/smartphones/dimensity-5g",

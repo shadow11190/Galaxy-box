@@ -30,6 +30,16 @@ internal val Navy: Color @Composable get() = MaterialTheme.colorScheme.backgroun
 internal val Panel: Color @Composable get() = MaterialTheme.colorScheme.surface
 internal val Muted: Color @Composable get() = MaterialTheme.colorScheme.onSurfaceVariant
 
+internal enum class GalaxyVisualStyle(val preferenceValue: String, val label: String) {
+    ORIGINAL("original", "原有風格"), MIUIX("miuix", "Miuix 風格");
+
+    companion object {
+        fun fromPreference(value: String?) = entries.firstOrNull { it.preferenceValue == value } ?: ORIGINAL
+    }
+}
+
+internal val LocalVisualStyle = staticCompositionLocalOf { GalaxyVisualStyle.ORIGINAL }
+
 internal data class GlassEnvironment(val enabled: Boolean = false, val backdrop: Backdrop? = null, val onFailure: () -> Unit = {})
 internal val LocalGlass = staticCompositionLocalOf { GlassEnvironment() }
 
@@ -72,12 +82,13 @@ internal val LocalGlass = staticCompositionLocalOf { GlassEnvironment() }
 
 @Composable internal fun GlassCard(
     modifier: Modifier = Modifier,
-    shape: Shape = RoundedCornerShape(28.dp),
+    shape: Shape? = null,
     onClick: (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
     val glass = LocalGlass.current.let { it.enabled && it.backdrop != null }
-    Surface(modifier.galaxyGlass(shape), shape = shape,
+    val resolvedShape = shape ?: if (LocalVisualStyle.current == GalaxyVisualStyle.MIUIX) RoundedCornerShape(24.dp) else RoundedCornerShape(28.dp)
+    Surface(modifier.galaxyGlass(resolvedShape), shape = resolvedShape,
         color = if (glass) Color.Transparent else Panel,
         contentColor = MaterialTheme.colorScheme.onSurface) {
         Column(if (onClick != null) Modifier.clickable(role = Role.Button, onClick = onClick) else Modifier,
@@ -90,8 +101,20 @@ internal val LocalGlass = staticCompositionLocalOf { GlassEnvironment() }
     val base = Navy
     val accent = Mint
     val dark = base.red < .3f
+    val miuix = LocalVisualStyle.current == GalaxyVisualStyle.MIUIX
+    val glass = LocalGlass.current.enabled
     Canvas(modifier.fillMaxSize()) {
         drawRect(base)
+        if (miuix && !glass) return@Canvas
+        if (miuix) {
+            drawCircle(Brush.radialGradient(listOf(accent.copy(alpha = if (dark) .20f else .13f), Color.Transparent),
+                center = Offset(size.width * .15f, size.height * .14f), radius = size.width * .95f),
+                radius = size.width * .95f, center = Offset(size.width * .15f, size.height * .14f))
+            drawCircle(Brush.radialGradient(listOf(Color(0xFF90A6E8).copy(alpha = .13f), Color.Transparent),
+                center = Offset(size.width * .92f, size.height * .72f), radius = size.width),
+                radius = size.width, center = Offset(size.width * .92f, size.height * .72f))
+            return@Canvas
+        }
         drawCircle(Brush.radialGradient(listOf(accent.copy(alpha = if (dark) .38f else .26f), Color.Transparent),
             center = Offset(size.width * .12f, size.height * .22f), radius = size.width * .85f),
             radius = size.width * .85f, center = Offset(size.width * .12f, size.height * .22f))
@@ -107,8 +130,21 @@ internal val LocalGlass = staticCompositionLocalOf { GlassEnvironment() }
     }
 }
 
-@Composable internal fun GalaxyBoxTheme(dark: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
-    val colors = if (dark) darkColorScheme(
+@Composable internal fun GalaxyBoxTheme(dark: Boolean = isSystemInDarkTheme(),
+    style: GalaxyVisualStyle = GalaxyVisualStyle.ORIGINAL, content: @Composable () -> Unit) {
+    val colors = if (style == GalaxyVisualStyle.MIUIX && dark) darkColorScheme(
+        primary = Color(0xFF8BB7FF), onPrimary = Color(0xFF132D51),
+        background = Color(0xFF111216), onBackground = Color(0xFFF5F6FA),
+        surface = Color(0xFF23252B), onSurface = Color(0xFFF5F6FA),
+        onSurfaceVariant = Color(0xFFC1C5CE), secondary = Color(0xFFB2BEF5),
+        surfaceContainer = Color(0xFF23252B)
+    ) else if (style == GalaxyVisualStyle.MIUIX) lightColorScheme(
+        primary = Color(0xFF1766C4), onPrimary = Color.White,
+        background = Color(0xFFF4F5F7), onBackground = Color(0xFF1A1D23),
+        surface = Color.White, onSurface = Color(0xFF1A1D23),
+        onSurfaceVariant = Color(0xFF555D68), secondary = Color(0xFF4568B8),
+        surfaceContainer = Color.White
+    ) else if (dark) darkColorScheme(
         primary = Color(0xFF76E1C3), onPrimary = Color(0xFF073C31),
         background = Color(0xFF0C1424), onBackground = Color(0xFFEDF3FF),
         surface = Color(0xFF162237), onSurface = Color(0xFFEDF3FF),
@@ -119,7 +155,12 @@ internal val LocalGlass = staticCompositionLocalOf { GlassEnvironment() }
         surface = Color(0xFFF8FBFD), onSurface = Color(0xFF142537),
         onSurfaceVariant = Color(0xFF45596C), secondary = Color(0xFF365D9B)
     )
-    MaterialTheme(colorScheme = colors,
-        shapes = Shapes(small = RoundedCornerShape(12.dp), medium = RoundedCornerShape(22.dp),
-            large = RoundedCornerShape(28.dp), extraLarge = RoundedCornerShape(32.dp)), content = content)
+    val shapes = if (style == GalaxyVisualStyle.MIUIX)
+        Shapes(small = RoundedCornerShape(14.dp), medium = RoundedCornerShape(20.dp),
+            large = RoundedCornerShape(24.dp), extraLarge = RoundedCornerShape(28.dp))
+    else Shapes(small = RoundedCornerShape(12.dp), medium = RoundedCornerShape(22.dp),
+        large = RoundedCornerShape(28.dp), extraLarge = RoundedCornerShape(32.dp))
+    MaterialTheme(colorScheme = colors, shapes = shapes) {
+        CompositionLocalProvider(LocalVisualStyle provides style, content = content)
+    }
 }

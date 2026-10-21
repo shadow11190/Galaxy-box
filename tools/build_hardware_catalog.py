@@ -51,6 +51,7 @@ variants=set()
 lineage_device_facts=set()
 lineage_without_models=[]
 PHONE_TYPES={'phone','foldable','phone (slider)'}
+TABLET_TYPES={'tablet'}
 def release_year(value):
     if not isinstance(value,str):return None
     match=re.match(r'^(20\d\d)(?:\b|-)',value or '')
@@ -168,13 +169,28 @@ for brand,code,name,soc,kind,year,source in lineage_without_models:
     for google in google_by_identity[(brand_key(brand),code.casefold(),name.casefold())]:
         lineage_device_facts.add((*google,soc,kind,year,source))
         variants.add((*google,soc,'完整型號 / Google 名稱 × LineageOS 代號核對',source))
+def curated_source_ok(row):
+    source=row['source'].strip()
+    if not source:return False
+    if 'sogi.com.tw' not in source:return True
+    official={'samsung':'samsung.com','oppo':'oppo.com','vivo':'vivo.com',
+              'xiaomi':'mi.com','redmi':'mi.com'}.get(brand_key(row['brand']))
+    return bool(official and 'sogi.com.tw' in source and official in source)
 with (DATA/'phones-2018-curated.tsv').open(encoding='utf-8') as f:
     for row in csv.DictReader(f,delimiter='\t'):
         google=(row['brand'],row['model'],row['device'],row['name'])
         year=release_year(row['releaseYear'])
-        if google not in devices or row['soc'] not in processors or year is None or year < 2018:
+        if google not in devices or row['soc'] not in processors or year is None or year < 2018 or not curated_source_ok(row):
             raise ValueError(f'Unverified curated phone: {google}')
         lineage_device_facts.add((*google,row['soc'],'phone',year,row['source']))
+        variants.add((*google,row['soc'],'完整型號 / 廠商公開規格核對',row['source']))
+with (DATA/'tablets-2018-curated.tsv').open(encoding='utf-8') as f:
+    for row in csv.DictReader(f,delimiter='\t'):
+        google=(row['brand'],row['model'],row['device'],row['name'])
+        year=release_year(row['releaseYear'])
+        if google not in devices or row['soc'] not in processors or year is None or year < 2018 or not curated_source_ok(row):
+            raise ValueError(f'Unverified curated tablet: {google}')
+        lineage_device_facts.add((*google,row['soc'],'tablet',year,row['source']))
         variants.add((*google,row['soc'],'完整型號 / 廠商公開規格核對',row['source']))
 lineage_by_model=collections.defaultdict(set)
 for brand,model,code,name,soc,kind,year,source in lineage_device_facts:
@@ -187,20 +203,33 @@ for brand,model,code,name in sorted(devices):
         kind,year=next(iter(kinds_and_years))
         if kind and year:
             classifications.append((brand,model,code,kind,str(year),'|'.join(sorted(source for _,_,source in candidates))))
-verified_phones=sorted((brand,model,code,name,soc,str(year),source)
-    for brand,model,code,name,soc,kind,year,source in lineage_device_facts
-    if kind in PHONE_TYPES and year is not None and year>=2018)
-processor_usage=collections.defaultdict(lambda:{'years':set(),'sources':set()})
+def verified_devices_of(types):
+    return sorted((brand,model,code,name,soc,str(year),source)
+        for brand,model,code,name,soc,kind,year,source in lineage_device_facts
+        if kind in types and year is not None and year>=2018)
+verified_phones=verified_devices_of(PHONE_TYPES)
+verified_tablets=verified_devices_of(TABLET_TYPES)
+verified_devices=sorted(set(verified_phones+verified_tablets))
+phone_processor_usage=collections.defaultdict(lambda:{'years':set(),'sources':set()})
 for brand,model,code,name,soc,year,source in verified_phones:
+    phone_processor_usage[soc]['years'].add(int(year))
+    phone_processor_usage[soc]['sources'].add(source)
+(ASSETS/'processor-phone-usage-2018plus.tsv').write_text('# processor\tfirstVerifiedPhoneYear\tlastVerifiedPhoneYear\tsource\n'+
+    '\n'.join('\t'.join([soc,str(min(fact['years'])),str(max(fact['years'])),'|'.join(sorted(fact['sources']))])
+      for soc,fact in sorted(phone_processor_usage.items()))+'\n',encoding='utf-8')
+processor_usage=collections.defaultdict(lambda:{'years':set(),'sources':set()})
+for brand,model,code,name,soc,year,source in verified_devices:
     processor_usage[soc]['years'].add(int(year))
     processor_usage[soc]['sources'].add(source)
-(ASSETS/'processor-phone-usage-2018plus.tsv').write_text('# processor\tfirstVerifiedPhoneYear\tlastVerifiedPhoneYear\tsource\n'+
+(ASSETS/'processor-device-usage-2018plus.tsv').write_text('# processor\tfirstVerifiedDeviceYear\tlastVerifiedDeviceYear\tsource\n'+
     '\n'.join('\t'.join([soc,str(min(fact['years'])),str(max(fact['years'])),'|'.join(sorted(fact['sources']))])
       for soc,fact in sorted(processor_usage.items()))+'\n',encoding='utf-8')
 (ASSETS/'device-classifications.tsv').write_text('# brand\tmodel\tdevice\ttype\treleaseYear\tsource\n'+
     '\n'.join('\t'.join(row) for row in classifications)+'\n',encoding='utf-8')
 (ASSETS/'verified-phones-2018plus.tsv').write_text('# brand\tmodel\tdevice\tname\tsoc\treleaseYear\tsource\n'+
     '\n'.join('\t'.join(row) for row in verified_phones)+'\n',encoding='utf-8')
+(ASSETS/'verified-tablets-2018plus.tsv').write_text('# brand\tmodel\tdevice\tname\tsoc\treleaseYear\tsource\n'+
+    '\n'.join('\t'.join(row) for row in verified_tablets)+'\n',encoding='utf-8')
 (ASSETS/'android-device-names.tsv').write_text('# brand\tmodel\tdevice\tname\n'+'\n'.join('\t'.join(r) for r in sorted(devices))+'\n',encoding='utf-8')
 (ASSETS/'samsung-device-names.tsv').write_text('# model\tdevice\tname\n'+'\n'.join('\t'.join(r[1:]) for r in sorted(devices) if r[0].lower()=='samsung')+'\n',encoding='utf-8')
 
@@ -224,19 +253,39 @@ coverage.update({'processorsWithProcess':sum(bool(p['process']) for p in process
     'deviceModelsWithSpecs':len({(r[0],r[1]) for r in variants}),
     'verified2018PhoneRows':len(verified_phones),
     'verified2018PhoneModels':len({(r[0].lower(),r[1].upper()) for r in verified_phones}),
-    'verified2018PhoneProcessors':len(processor_usage),
+    'verified2018PhoneProcessors':len({r[4] for r in verified_phones}),
+    'verified2018TabletRows':len(verified_tablets),
+    'verified2018TabletModels':len({(r[0].lower(),r[1].upper()) for r in verified_tablets}),
+    'verified2018TabletProcessors':len({r[4] for r in verified_tablets}),
+    'verified2018DeviceProcessors':len(processor_usage),
+    'verified2026PhoneModels':len({(r[0].lower(),r[1].upper()) for r in verified_phones if r[5]=='2026'}),
+    'verified2026TabletModels':len({(r[0].lower(),r[1].upper()) for r in verified_tablets if r[5]=='2026'}),
     'classifiedGoogleRows':len(classifications),
     'classifiedGoogle2018PhoneRows':sum(kind in PHONE_TYPES and int(year)>=2018 for _,_,_,kind,year,_ in classifications),
+    'classifiedGoogle2018TabletRows':sum(kind in TABLET_TYPES and int(year)>=2018 for _,_,_,kind,year,_ in classifications),
     'classifiedGooglePre2018Rows':sum(int(year)<2018 for _,_,_,_,year,_ in classifications),
     'classifiedGoogleOtherRows':sum(kind not in PHONE_TYPES for _,_,_,kind,_,_ in classifications)})
-coverage['limits'].append('A 2018+ phone is counted only when a source provides both release year and phone form factor; all other Google rows remain unclassified, not deleted.')
+coverage['limits'].append('A 2018+ phone or tablet is counted only when a source provides both release year and form factor; all other Google rows remain unclassified, not deleted.')
+coverage['limits'].append('Release year does not establish the factory or latest Android version; Android 9 eligibility requires separate firmware evidence.')
 phone_brands=collections.defaultdict(set)
 for brand,model,code,name,soc,year,source in verified_phones:
     phone_brands[brand].add(model.upper())
 (DATA/'phone-coverage-by-brand.tsv').write_text('brand\tverified2018PhoneModels\n'+
     '\n'.join(f'{brand}\t{len(models)}' for brand,models in sorted(phone_brands.items(),key=lambda item:(-len(item[1]),item[0])))+'\n',encoding='utf-8')
+tablet_brands=collections.defaultdict(set)
+for brand,model,code,name,soc,year,source in verified_tablets:
+    tablet_brands[brand].add(model.upper())
+(DATA/'tablet-coverage-by-brand.tsv').write_text('brand\tverified2018TabletModels\n'+
+    '\n'.join(f'{brand}\t{len(models)}' for brand,models in sorted(tablet_brands.items(),key=lambda item:(-len(item[1]),item[0])))+'\n',encoding='utf-8')
+by_year=collections.defaultdict(lambda:{'phones':set(),'tablets':set()})
+for category,records in [('phones',verified_phones),('tablets',verified_tablets)]:
+    for brand,model,code,name,soc,year,source in records:
+        by_year[year][category].add((brand.lower(),model.upper()))
+(DATA/'device-coverage-by-year.tsv').write_text('releaseYear\tverifiedPhoneModels\tverifiedTabletModels\n'+
+    '\n'.join(f"{year}\t{len(by_year[str(year)]['phones'])}\t{len(by_year[str(year)]['tablets'])}"
+      for year in range(2018,2027))+'\n',encoding='utf-8')
 vendor_totals=collections.Counter(name.split(' ',1)[0] if name.split(' ',1)[0]!='HiSilicon' else 'HiSilicon' for name in processors)
-vendor_verified=collections.Counter(soc.split(' ',1)[0] for soc in processor_usage)
+vendor_verified=collections.Counter(soc.split(' ',1)[0] for soc in phone_processor_usage)
 (DATA/'processor-coverage-by-vendor.tsv').write_text('vendor\tallCatalogNames\tverified2018PhoneUse\n'+
     '\n'.join(f'{vendor}\t{count}\t{vendor_verified[vendor]}' for vendor,count in sorted(vendor_totals.items()))+'\n',encoding='utf-8')
 (DATA/'processor-spec-gaps.tsv').write_text('# name\tmissing\tsources\n'+'\n'.join('\t'.join([name,

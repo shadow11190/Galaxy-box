@@ -34,6 +34,50 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class GlassRenderingTest {
     @get:Rule val rule = createComposeRule()
+    @Test fun visualStylesProduceComparableLightAndDarkPreviews() {
+        var drawingView: View? = null
+        var style by mutableStateOf(GalaxyVisualStyle.ORIGINAL)
+        var dark by mutableStateOf(true)
+        rule.setContent {
+            val view = LocalView.current
+            SideEffect { drawingView = view }
+            GalaxyBoxTheme(dark, style) {
+                val backdrop = rememberLayerBackdrop()
+                Box(Modifier.fillMaxSize()) {
+                    GalaxyBackdrop(Modifier.layerBackdrop(backdrop))
+                    Column(Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 20.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                        Text("Galaxy box", color = Mint, style = MaterialTheme.typography.titleMedium)
+                        Text("總覽", color = MaterialTheme.colorScheme.onBackground,
+                            style = MaterialTheme.typography.headlineLarge)
+                        Text("介面預覽 · 非裝置讀值", color = Muted)
+                        InfoCard("目前裝置") {
+                            Text("Galaxy Box", style = MaterialTheme.typography.headlineSmall)
+                            Text("裝置與處理器資料以實機讀值顯示", color = Muted)
+                        }
+                        InfoCard("溫度摘要") {
+                            Text("CPU 測點最高溫　—")
+                            Text("沒有可靠來源時顯示無可用資料", color = Muted)
+                        }
+                        Spacer(Modifier.weight(1f))
+                        GlassNavigation(listOf("總覽", "硬體", "電池", "更新", "檢測"), 0, {}, backdrop, false)
+                    }
+                }
+            }
+        }
+        for (isDark in listOf(true, false)) for (choice in GalaxyVisualStyle.entries) {
+            rule.runOnIdle { dark = isDark; style = choice }
+            rule.onNodeWithText("介面預覽 · 非裝置讀值").assertIsDisplayed()
+            rule.onNodeWithText("CPU 測點最高溫　—").assertIsDisplayed()
+            val bitmap = rule.runOnIdle {
+                val view = drawingView!!
+                Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888).also { view.draw(Canvas(it)) }
+            }
+            val file = File("build/reports/visual-checks/style-${choice.preferenceValue}-${if (isDark) "dark" else "light"}.png")
+            file.parentFile?.mkdirs(); file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        }
+    }
+
     @Test fun capabilityPolicyRejectsUnsupportedAndPowerSavingDevices() {
         assertTrue(GlassCompatibility.canUse(33, true, false, false, true))
         assertFalse(GlassCompatibility.canUse(32, true, false, false, true))

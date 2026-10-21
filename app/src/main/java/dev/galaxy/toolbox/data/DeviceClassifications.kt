@@ -6,9 +6,12 @@ import java.util.Locale
 class DeviceClassifications private constructor(private val entries: Map<Key, Entry>) {
     data class Entry(val type: String, val year: Int, val source: String) {
         val isPhoneSince2018: Boolean get() = type in PHONE_TYPES && year >= 2018
+        val isTabletSince2018: Boolean get() = type == "tablet" && year >= 2018
         val label: String get() = when {
             isPhoneSince2018 -> "${year} 年 Android 手機（已核對）"
+            isTabletSince2018 -> "${year} 年 Android 平板（已核對）"
             type in PHONE_TYPES -> "${year} 年手機（2018 年以前）"
+            type == "tablet" -> "${year} 年平板（2018 年以前）"
             else -> "${year} 年${type}（非手機）"
         }
     }

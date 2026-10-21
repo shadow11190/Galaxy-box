@@ -1,6 +1,6 @@
-# 離線硬體目錄 / 0.6.7 本機修訂
+# 離線硬體目錄
 
-使用「硬體 → 離線裝置與處理器目錄」搜尋市售名稱、完整型號、裝置代號或晶片代號。對照資料不需 Root、Shizuku 或網路。版本號及原有簽章維持不變。
+本機型號與處理器辨識仍使用隨 App 打包的離線對照資料，不需 Root、Shizuku 或網路。尚未完善的目錄搜尋入口暫時關閉；規格的核對方式、逐項來源與收錄缺口在此 GitHub 文件及 `catalog/` 資料中公開，App 的一般規格卡不顯示來源網址。實際溫度等動態讀值的系統 API 與感測器路徑仍保留在診斷頁，方便核對讀數。版本號及原有簽章維持不變。
 
 ## 資料與範圍
 
@@ -8,8 +8,9 @@
 - LineageOS Wiki：固定 commit `56a157866af6232edf646ae0f3e1b300e509c8e5` 的 766 個裝置檔案。只匯入明確列出的完整型號與 SoC 關係，不傳播到其他地區版本；保留多候選，不將 RAM／容量範圍當成實機讀數。
 - 手工核對：`catalog/processors-curated.tsv` 與 `catalog/samsung-variants-curated.tsv`。每列有來源網址；Samsung CC 文件存在錯誤標籤（例如部分 S22 型號誤作 G 開頭），沒有自動照單匯入。只有完整 Google SKU 符合才加入手工地區規格。
 - 最新計數、來源雜湊、品牌統計、缺漏說明：`catalog/coverage.json`，同一份也隨 APK 打包。
-- 2018 年起 Android 手機核對：LineageOS 的 `type` 必須是 phone、foldable 或 phone (slider)，且有 2018 年起的 `release` 年份。`verified-phones-2018plus.tsv` 與 `processor-phone-usage-2018plus.tsv` 保留完整型號、處理器、年份與來源；`device-classifications.tsv` 只標記 Google 目錄中與來源完整型號相符的紀錄。原有名稱與處理器清單均不刪除；其餘年份／類型保持「待核對」。年份是手機上市年份，不是晶片發表年份。
-- 目前已有 680 款不同品牌加完整型號的 2018 年起手機、78 款曾用於這些手機的處理器，另有 365 筆 Google 裝置名稱紀錄可核對為該時期手機。除了 LineageOS，`catalog/phones-2018-curated.tsv` 也可加入有完整型號與廠商來源的手機，包括 Xiaomi 18 Fold × 玄戒 O3。`catalog/phone-coverage-by-brand.tsv` 和 `catalog/processor-coverage-by-vendor.tsv` 記錄品牌缺口。53,014 筆 Google 裝置名稱包括舊機、平板與其他裝置，不能稱為 2018 年起手機總數。上述數量只表示已核對範圍，不代表所有 Android 手機已蒐齊。
+- 2018 年起手機與平板核對：LineageOS 的 `type` 必須是 phone、foldable、phone (slider) 或 tablet，且有 2018 年起的 `release` 年份。`verified-phones-2018plus.tsv`、`verified-tablets-2018plus.tsv` 與 `processor-device-usage-2018plus.tsv` 保留完整型號、處理器、年份與來源；舊手機清單及 `processor-phone-usage-2018plus.tsv` 繼續保留。`device-classifications.tsv` 只標記 Google 目錄中與來源完整型號相符的紀錄。年份是裝置上市年份，不是晶片發表年份，也不能證明原廠出貨或目前使用的 Android 版本；Android 9 以上適用性需另有系統版本證據。
+- 目前已有 704 款 2018 年起手機、55 款平板的不同品牌加完整型號對照，兩類合計使用 96 款已收錄處理器。除了 LineageOS，`catalog/phones-2018-curated.tsv` 與 `catalog/tablets-2018-curated.tsv` 也可加入有完整型號與廠商來源的裝置。`catalog/phone-coverage-by-brand.tsv`、`catalog/tablet-coverage-by-brand.tsv` 記錄品牌覆蓋與缺口；`catalog/device-coverage-by-year.tsv` 可檢視年份缺口。53,014 筆 Google 裝置名稱包括舊機、手機、平板與其他裝置，不能稱為 Android 9 以上裝置總數。上述數量只表示已核對範圍，不代表所有 Android 9 之後產品已蒐齊。
+- SOGI 手機王作為台灣上市機型與缺漏發現來源；每筆仍以 Google 完整型號和品牌官網、手冊或廠商文件核對，不能只憑 SOGI 的市售名稱把同晶片套到國際版。此次補入 16 筆手機、3 筆平板完整型號；國際版另用各地官方來源查核。來源與保留項目見 `SOGI-CATALOG.md`。
 - 不包含 DevCheck 或 AIDA64 的專有程式碼、素材或識別表。參考其分類與原始來源呈現方式。
 
 ## 辨識規則

@@ -96,7 +96,7 @@ internal fun LazyListScope.hardwareItems(
     item(key = "hardware-category-tabs") { HardwareCategoryTabs(category, onCategory, categoryScroll) }
     item {
         Text(category.title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
-        Text("即時監控每 2 秒更新；規格與能力為讀取時快照。點按資料查看完整值與來源。", color = Muted, style = MaterialTheme.typography.bodySmall)
+        Text("即時監控每 2 秒更新；規格與能力為讀取時快照。點按資料查看詳細資訊。", color = Muted, style = MaterialTheme.typography.bodySmall)
     }
     if (category == HardwareCategory.THERMAL) {
         temperatureItems(state, expandedTemperatures, onToggleTemperature, onTemperature, onRescanTemperatures)
@@ -209,13 +209,11 @@ private data class Metric(val label: String, val value: String, val detail: Stri
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Composable internal fun ReadingSourceSheet(reading: Reading, onDismiss: () -> Unit) {
+@Composable internal fun ReadingDetailSheet(reading: Reading, onDismiss: () -> Unit) {
     ModalBottomSheet(onDismissRequest = onDismiss, containerColor = Panel) {
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 24.dp).padding(bottom = 36.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
             Text(reading.label, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
             Text(reading.value ?: "未知", color = Mint, style = MaterialTheme.typography.headlineSmall)
-            Text("資料來源", color = Muted, style = MaterialTheme.typography.labelLarge)
-            Text(reading.source)
             if (reading.detail.isNotEmpty()) Text(reading.detail, color = Muted)
             TextButton(onClick = onDismiss) { Text("關閉") }
         }
@@ -231,7 +229,13 @@ private data class Metric(val label: String, val value: String, val detail: Stri
             1 -> { drawRoundRect(color, Offset(2 * unit, 2 * unit), Size(6 * unit, 6 * unit), style = stroke)
                 listOf(3.5f, 6.5f).forEach { x -> drawLine(color, Offset(x * unit, 0f), Offset(x * unit, 2 * unit), 1.5.dp.toPx()); drawLine(color, Offset(x * unit, 8 * unit), Offset(x * unit, 10 * unit), 1.5.dp.toPx()) } }
             2 -> { drawRoundRect(color, Offset(2 * unit, 2 * unit), Size(6 * unit, 7 * unit), style = stroke); drawLine(color, Offset(4 * unit, .5f * unit), Offset(6 * unit, .5f * unit), 2.dp.toPx()); drawLine(color, Offset(5 * unit, 4 * unit), Offset(5 * unit, 7 * unit), 2.dp.toPx()) }
-            3 -> { drawArc(color, -70f, 285f, false, Offset(unit, unit), Size(8 * unit, 8 * unit), style = stroke); drawLine(color, Offset(8.5f * unit, unit), Offset(8.5f * unit, 4 * unit), 1.7.dp.toPx()) }
+            3 -> {
+                // A clear system-update/download symbol at 22 dp, instead of the broken circular arrow.
+                drawLine(color, Offset(5f * unit, 1.2f * unit), Offset(5f * unit, 6.5f * unit), 1.8.dp.toPx(), cap = StrokeCap.Round)
+                drawLine(color, Offset(2.9f * unit, 4.6f * unit), Offset(5f * unit, 6.7f * unit), 1.8.dp.toPx(), cap = StrokeCap.Round)
+                drawLine(color, Offset(7.1f * unit, 4.6f * unit), Offset(5f * unit, 6.7f * unit), 1.8.dp.toPx(), cap = StrokeCap.Round)
+                drawLine(color, Offset(2f * unit, 8.4f * unit), Offset(8f * unit, 8.4f * unit), 1.8.dp.toPx(), cap = StrokeCap.Round)
+            }
             else -> { drawCircle(color, 4 * unit, style = stroke); drawLine(color, Offset(3 * unit, 5 * unit), Offset(7 * unit, 5 * unit), 1.7.dp.toPx()); drawLine(color, Offset(5 * unit, 3 * unit), Offset(5 * unit, 7 * unit), 1.7.dp.toPx()) }
         }
     }

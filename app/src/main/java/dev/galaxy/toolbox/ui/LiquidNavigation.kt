@@ -195,7 +195,8 @@ internal var SemanticsPropertyReceiver.navigationPosition by NavigationPosition
 }
 
 @Composable private fun Modifier.liquidPanel(backdrop: Backdrop, enabled: Boolean, shadow: Boolean = true): Modifier {
-    if (!enabled) return background(Panel, RoundedCornerShape(50))
+    if (!enabled) return background(Panel,
+        if (LocalVisualStyle.current == GalaxyVisualStyle.MIUIX) RoundedCornerShape(24.dp) else RoundedCornerShape(50))
     val fallback = Panel
     val failure = LocalGlass.current.onFailure
     val failed = remember(backdrop) { AtomicBoolean(false) }
@@ -215,8 +216,13 @@ internal var SemanticsPropertyReceiver.navigationPosition by NavigationPosition
     progress: () -> Float, scaleX: () -> Float, scaleY: () -> Float): Modifier {
     val shape = RoundedCornerShape(50)
     val fallback = Panel
-    if (!enabled) return graphicsLayer { this.scaleX = scaleX(); this.scaleY = scaleY() }
-        .background((if (dark) Color.White else Color.Black).copy(alpha = .1f), shape)
+    if (!enabled) {
+        val miuix = LocalVisualStyle.current == GalaxyVisualStyle.MIUIX
+        return graphicsLayer { this.scaleX = scaleX(); this.scaleY = scaleY() }
+            .background(if (miuix) Mint.copy(alpha = if (dark) .23f else .13f)
+                else (if (dark) Color.White else Color.Black).copy(alpha = .1f),
+                if (miuix) RoundedCornerShape(18.dp) else shape)
+    }
     val failure = LocalGlass.current.onFailure
     val failed = remember(backdrop) { AtomicBoolean(false) }
     return drawBackdrop(backdrop, shape = { shape }, effects = {

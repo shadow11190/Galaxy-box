@@ -279,6 +279,15 @@ OnePlus	PKG110	OP5D2BL1	phone	2024	https://github.com/LineageOS/lineage_wiki/blo
 OnePlus	PKR110	OP60EBL1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hummer.yml
 OnePlus	PLK110	OP60FFL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/infiniti.yml
 OnePlus	PLZ110	OP64DDL1	phone	2026	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fairlady.yml
+Oppo	CPH2651	OP5AA5L1	phone	2024	https://www.oppo.com/ph/smartphones/series-find-x/find-x8/specs/ | https://www.oppo.com/en/newsroom/press/find-x8-series-coloros-mediatek-launch/
+Oppo	CPH2659	OP5AB0L1	phone	2024	https://www.oppo.com/lu/smartphones/series-find-x/find-x8-pro/specs/ | https://www.oppo.com/en/newsroom/press/find-x8-series-coloros-mediatek-launch/
+Oppo	CPH2791	OP5E8EL1	phone	2025	https://www.sogi.com.tw/products/oppo-find-x9-pro/17303 | https://www.oppo.com/tw/smartphones/series-find-x/find-x9-pro/specs/
+Oppo	CPH2797	OP5E8BL1	phone	2025	https://www.sogi.com.tw/products/oppo-find-x9/17302 | https://www.oppo.com/de/smartphones/series-find-x/find-x9/specs/
+Oppo	CPH2813	OP629AL1	phone	2025	https://www.sogi.com.tw/products/oppo-reno15-pro/17316 | https://www.oppo.com/tw/smartphones/series-reno/reno15-pro/specs/
+Oppo	CPH2813	OP629AL1	phone	2025	https://www.sogi.com.tw/products/oppo-reno15-pro/17316 | https://www.oppo.com/tw/smartphones/series-reno/reno15-pro/specs/
+Oppo	CPH2825	OP62B1L1	phone	2025	https://www.sogi.com.tw/products/oppo-reno15/17315 | https://www.oppo.com/tw/smartphones/series-reno/reno15/specs/
+Oppo	CPH2841	OP627CL1	phone	2026	https://www.sogi.com.tw/products/oppo-find-x9-ultra/17377 | https://www.oppo.com/pl/smartphones/series-find-x/find-x9-ultra/specs/
+Oppo	CPH2873	OP6275L1	phone	2026	https://www.sogi.com.tw/products/oppo-find-x9s/17378 | https://www.oppo.com/tw/smartphones/series-find-x/find-x9s/specs/
 Oppo	F1f	F1f	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/f1f.yml
 Oppo	F1f	F1f	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/f1f.yml
 Oppo	F1f	F1f	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/f1f.yml
@@ -294,6 +303,9 @@ Razer	Phone 2	bolt	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a
 Razer	Phone 2	linus	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml
 Realme	RMX1801	RMX1801	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1801.yml
 Realme	RMX1851	RMX1851	phone	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1851.yml
+Redmi	25080RABDG	lapis	phone	2026	https://www.sogi.com.tw/products/xiaomi-redmi-note-15-pro-5g/17263 | https://www.mi.com/tw/product/redmi-note-15-pro-5g/specs/
+Redmi	25099RP13G	flute	tablet	2025	https://www.sogi.com.tw/products/xiaomi-redmi-pad-2-pro/17286 | https://www.mi.com/tw/product/redmi-pad-2-pro/specs/
+Redmi	2509BRP2DG	organ	tablet	2025	https://www.sogi.com.tw/products/xiaomi-redmi-pad-2-pro-5g/17291 | https://www.mi.com/tw/product/redmi-pad-2-pro-5g/specs/
 SHIFT	SHIFT6mq	axolotl	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/axolotl.yml
 Samsung	GT-I9100	GT-I9100	phone	2011	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/i9100.yml
 Samsung	GT-I9100M	GT-I9100M	phone	2011	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/i9100.yml
@@ -335,10 +347,13 @@ Samsung	SGH-T999	d2tmo	phone	2012	https://github.com/LineageOS/lineage_wiki/blob
 Samsung	SHV-E370K	serranoltektt	phone	2013	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/serranoltexx.yml
 Samsung	SM-A217F	a21s	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
 Samsung	SM-A217M	a21s	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
+Samsung	SM-A266B	a26x	phone	2025	https://www.sogi.com.tw/products/samsung-galaxy-a26-5g/17194 | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
 Samsung	SM-A310F	a3xelte	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a3xelte.yml
 Samsung	SM-A310M	a3xelte	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a3xelte.yml
 Samsung	SM-A310N0	a3xeltekx	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a3xelte.yml
 Samsung	SM-A310Y	a3xelte	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a3xelte.yml
+Samsung	SM-A3660	a36xq	phone	2025	https://www.sogi.com.tw/products/samsung-galaxy-a36-5g/17190 | https://www.samsung.com/tw/support/model/SM-A5660ZGDBRI/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
+Samsung	SM-A366B	a36xq	phone	2025	https://www.sogi.com.tw/products/samsung-galaxy-a36-5g/17190 | https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-a36-galaxy-a56-5g/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
 Samsung	SM-A5108	a5xeltecmcc	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a5xelte.yml
 Samsung	SM-A510F	a5xelte	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a5xelte.yml
 Samsung	SM-A510K	a5xeltektt	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a5xelte.yml
@@ -357,6 +372,8 @@ Samsung	SM-A525F	a52q	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/
 Samsung	SM-A525M	a52q	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
 Samsung	SM-A528B	a52sxq	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
 Samsung	SM-A528N	a52sxq	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
+Samsung	SM-A5660	a56x	phone	2025	https://www.sogi.com.tw/products/samsung-galaxy-a56-5g/17189 | https://www.samsung.com/tw/support/model/SM-A5660ZGDBRI/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
+Samsung	SM-A566B	a56x	phone	2025	https://www.sogi.com.tw/products/samsung-galaxy-a56-5g/17189 | https://www.samsung.com/es/support/model/SM-A566BZGCEUB/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
 Samsung	SM-A710F	a7xelte	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a7xelte.yml
 Samsung	SM-A710K	a7xeltektt	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a7xelte.yml
 Samsung	SM-A710L	a7xeltelgt	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a7xelte.yml
@@ -468,10 +485,15 @@ Samsung	SM-P620	gta4xlswifi	tablet	2024	https://github.com/LineageOS/lineage_wik
 Samsung	SM-P900	v1awifi	tablet	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/v1awifi.yml
 Samsung	SM-P900	v1awifi	tablet	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/v1awifi.yml
 Samsung	SM-P900	v1awifikx	tablet	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/v1awifi.yml
+Samsung	SM-S741B	r14s	phone	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-fe-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-s26-series
 Samsung	SM-S901B	r0s	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r0s.yml
 Samsung	SM-S906B	g0s	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g0s.yml
 Samsung	SM-S908B	b0s	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/b0s.yml
 Samsung	SM-S911B	dm1q	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dm1q.yml
+Samsung	SM-S942B	m1s	phone	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
+Samsung	SM-S947B	m2s	phone	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
+Samsung	SM-S9480	m3q	phone	2026	https://www.samsung.com/tw/support/model/SM-S9480ZV8BRI/ | https://www.samsung.com/tw/smartphones/galaxy-s26-ultra/
+Samsung	SM-S948B	m3q	phone	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
 Samsung	SM-T217S	lt02ltespr	tablet	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lt02ltespr.yml
 Samsung	SM-T290	gtowifi	tablet	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gtowifi.yml
 Samsung	SM-T290	gtowifi	tablet	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gtowifi.yml
@@ -515,6 +537,26 @@ Samsung	SM-T875	gts7l	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob
 Samsung	SM-T970	gts7xlwifi	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gts7xlwifi.yml
 Samsung	SM-T975	gts7xl	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gts7xl.yml
 Samsung	SM-T976B	gts7xl	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gts7xl.yml
+Samsung	SM-X700	gts8wifi	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
+Samsung	SM-X706B	gts8	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
+Samsung	SM-X710	gts9wifi	tablet	2023	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s9-serie/ | https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet
+Samsung	SM-X716B	gts9	tablet	2023	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s9-serie/ | https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet
+Samsung	SM-X730	gts11wifi	tablet	2025	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s11-ultra-vs-galaxy-tab-s11/ | https://news.samsung.com/global/meet-samsung-galaxy-tab-s11-series-packing-everything-you-expect-from-a-premium-tablet
+Samsung	SM-X736B	gts11	tablet	2025	https://www.samsung.com/tr/support/mobile-devices/how-to-use-hearing-aids-with-samsung-galaxy-devices/ | https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s11-ultra-vs-galaxy-tab-s11/ | https://news.samsung.com/global/meet-samsung-galaxy-tab-s11-series-packing-everything-you-expect-from-a-premium-tablet
+Samsung	SM-X800	gts8pwifi	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
+Samsung	SM-X806B	gts8p	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
+Samsung	SM-X810	gts9pwifi	tablet	2023	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s9-serie/ | https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet
+Samsung	SM-X816B	gts9p	tablet	2023	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s9-serie/ | https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet
+Samsung	SM-X820	gts10pwifi	tablet	2024	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s10-ultra-galaxy-tab-s9-ultra/ | https://news.samsung.com/kr/삼성전자-갤럭시-탭-s10-시리즈-공개
+Samsung	SM-X826B	gts10p	tablet	2024	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s10-ultra-galaxy-tab-s9-ultra/ | https://news.samsung.com/kr/삼성전자-갤럭시-탭-s10-시리즈-공개
+Samsung	SM-X900	gts8uwifi	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
+Samsung	SM-X906B	gts8u	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
+Samsung	SM-X910	gts9uwifi	tablet	2023	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s9-serie/ | https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet
+Samsung	SM-X916B	gts9u	tablet	2023	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s9-serie/ | https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet
+Samsung	SM-X920	gts10uwifi	tablet	2024	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s10-ultra-galaxy-tab-s9-ultra/ | https://news.samsung.com/kr/삼성전자-갤럭시-탭-s10-시리즈-공개
+Samsung	SM-X926B	gts10u	tablet	2024	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s10-ultra-galaxy-tab-s9-ultra/ | https://news.samsung.com/kr/삼성전자-갤럭시-탭-s10-시리즈-공개
+Samsung	SM-X930	gts11uwifi	tablet	2025	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s11-ultra-vs-galaxy-tab-s11/ | https://news.samsung.com/global/meet-samsung-galaxy-tab-s11-series-packing-everything-you-expect-from-a-premium-tablet
+Samsung	SM-X936B	gts11u	tablet	2025	https://www.samsung.com/tr/support/mobile-devices/how-to-use-hearing-aids-with-samsung-galaxy-devices/ | https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s11-ultra-vs-galaxy-tab-s11/ | https://news.samsung.com/global/meet-samsung-galaxy-tab-s11-series-packing-everything-you-expect-from-a-premium-tablet
 Samsung	SPH-L710	d2spr	phone	2012	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2spr.yml
 Samsung	SPH-L710	d2vmu	phone	2012	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2spr.yml
 Samsung	SPH-L720	jfltespr	phone	2013	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/jfltespr.yml
@@ -605,6 +647,7 @@ Sony	XQ-EC54	XQ-EC54	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/5
 Sony	XQ-EC72	XQ-EC72	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml
 Sony	XQ-FE54	XQ-FE	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
 Sony	XQ-FE72	XQ-FE	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
+Vivo	V2413	V2413	phone	2024	https://www.vivo.com/eu/features | https://www.vivo.com/in/products/param/x200-pro | https://www.vivo.com/it/about-vivo/news/x200-event
 Wileyfox	Wileyfox Storm	kipper	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kipper.yml
 Wileyfox	Wileyfox Swift	crackling	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/crackling.yml
 Xiaomi	2107119DC	lisa	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lisa_variant3.yml
@@ -627,7 +670,11 @@ Xiaomi	2210132G	nuwa	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/5
 Xiaomi	2211133C	fuxi	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fuxi.yml
 Xiaomi	2211133G	fuxi	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fuxi.yml
 Xiaomi	22200414R	diting	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
+Xiaomi	24091RPADG	muyu	tablet	2025	https://www.mi.com/tw/product/xiaomi-pad-7-pro/specs/ | https://www.mi.com/tw/product/xiaomi-pad-7-pro/faq/
+Xiaomi	2410CRP4CG	uke	tablet	2025	https://www.mi.com/tw/product/xiaomi-pad-7/specs/ | https://www.mi.com/tw/support/terms/xiaomi-15-series/
 Xiaomi	25042PN24C	dijun	phone	2025	https://ir.mi.com/static-files/f032d2b5-8fa8-4cb7-b00e-a22ec00b954d | https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	2506BPN68G	klimt	phone	2025	https://www.sogi.com.tw/products/xiaomi-xiaomi-15t-pro/17285 | https://www.mi.com/tw/product/xiaomi-15t-pro/specs/
+Xiaomi	25079RPDCG	turner	tablet	2025	https://www.sogi.com.tw/products/xiaomi-xiaomi-pad-mini/17287 | https://www.mi.com/tw/product/xiaomi-pad-mini/specs/
 Xiaomi	2608BPX34C	lhasa	phone	2026	https://www.mi.com/shop/buy/detail?cfrom=search&product_id=1230808907 | https://www.gadgets360.com/xiaomi-18-fold-price-in-india-137366
 Xiaomi	A201XM	diting	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
 Xiaomi	M2002J9G	monet	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/monet.yml
@@ -688,3 +735,6 @@ realme	RMX3661	RE588BL1	phone	2022	https://github.com/LineageOS/lineage_wiki/blo
 realme	RMX3852	RE5C46L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bale.yml
 realme	RMX5010	RE6018L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pista.yml
 realme	RMX5090	RE602CL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/piloti.yml
+vivo	V2503	V2503	phone	2025	https://www.sogi.com.tw/products/vivo-x200-fe/17232 | https://ru.vivo.com/smartfony/72022/smartfon-vivo-x200-fe-12-256-gb-5g-elite-black/
+vivo	V2514	V2514	phone	2025	https://www.sogi.com.tw/products/vivo-x300-pro/17296 | https://www.vivo.com/tw/products/param/x300-pro | https://de-gdpr-exstatic-vivofs.vivo.com/sFhAQhTYYDsNOJz1/1759492495417/0bc690d53b474d44c9c149914bed216c.pdf
+vivo	V2515	V2515	phone	2025	https://www.sogi.com.tw/products/vivo-x300/17295 | https://www.vivo.com/tw/products/x300 | https://de-gdpr-exstatic-vivofs.vivo.com/sFhAQhTYYDsNOJz1/1759492523795/8f69b574020576861a2b9d148c4e0fba.pdf

@@ -51,11 +51,13 @@ import kotlinx.coroutines.withContext
             TextButton(onClick = { license = if (license == "Shizuku-API-MIT.txt") null else "Shizuku-API-MIT.txt" }) { Text("查看 Shizuku API 授權") }
             Text("Kotlin、kotlinx.coroutines 與 Android Jetpack／Compose", color = Mint, fontWeight = FontWeight.SemiBold)
             Text("感謝 JetBrains、Google、Android 開源社群及相關貢獻者提供語言、介面與生命週期工具。相關元件採 Apache License 2.0。")
+            Text("介面設計參考 · Miuix Skill", color = Mint, fontWeight = FontWeight.SemiBold)
+            Text("可選的 Miuix 風格參考其頁面層級、分組與色彩建議，以本應用既有 Compose 元件實作；未引入 Miuix 函式庫或小米官方素材。液態玻璃仍由 Backdrop 提供，可獨立切換。")
+            TextButton(onClick = { open("https://github.com/limczhh/miuix-skill") }) { Text("查看 Miuix Skill") }
             Text("公開資料與文件", color = Mint, fontWeight = FontWeight.SemiBold)
-            Text("市售機型名稱參考 Google Play 公開裝置目錄。離線晶片與型號對照另參考晶片廠商規格、Samsung 安全認證文件及 LineageOS 裝置資料；各地區版本分列，資料涵蓋範圍可在硬體頁的離線目錄查看，不能視為所有已上市手機均已完整收錄。LineageOS Wiki 資料依 MIT 授權，感謝原作者與所有貢獻者。更新頁連至 SamFW 第三方機型目錄，是否可更新以手機系統為準。商品名稱與商標仍屬各權利人所有。")
-            TextButton(onClick = { open("https://github.com/LineageOS/lineage_wiki") }) { Text("開啟 LineageOS Wiki") }
+            Text("硬體規格與機型對照的核對方式、逐項來源及收錄範圍，隨專案資料公開於 GitHub。離線資料搜尋入口仍在整理，暫不於 App 顯示。公開規格僅供參考，不覆蓋本機讀值；尚未收錄的資料保持未知。LineageOS Wiki 資料依 MIT 授權，感謝原作者與所有貢獻者。商品名稱與商標仍屬各權利人所有。")
+            TextButton(onClick = { open("https://github.com/shadow11190/Galaxy-box/blob/main/HARDWARE-CATALOG.md") }) { Text("查看 GitHub 硬體資料與來源") }
             TextButton(onClick = { license = if (license == "LineageOS-wiki-MIT.txt") null else "LineageOS-wiki-MIT.txt" }) { Text("查看 LineageOS Wiki 授權") }
-            TextButton(onClick = { open("https://storage.googleapis.com/play_public/supported_devices.html") }) { Text("查看公開裝置目錄") }
             Text("品牌標誌 · Simple Icons／Wikimedia Commons", color = Mint, fontWeight = FontWeight.SemiBold)
             Text("首頁裝置卡片的透明標誌來自 Simple Icons 及個別 Wikimedia Commons 檔案。只有辨識到裝置與品牌時才顯示；品牌標誌屬各權利人，並不表示官方合作。完整逐項來源見專案 BRAND-ASSETS-0.7.0.tsv。")
             TextButton(onClick = { open("https://github.com/simple-icons/simple-icons") }) { Text("查看 Simple Icons") }

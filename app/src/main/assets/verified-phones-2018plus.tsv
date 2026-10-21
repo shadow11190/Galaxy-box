@@ -374,6 +374,14 @@ OnePlus	PKG110	giuliac	Ace 5	Qualcomm Snapdragon 8 Gen 3	2024	https://github.com
 OnePlus	PKR110	hummer	Ace 5 Pro	Qualcomm Snapdragon 8 Elite	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/hummer.yml
 OnePlus	PLK110	infiniti	15	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/infiniti.yml
 OnePlus	PLZ110	fairlady	15T	Qualcomm Snapdragon 8 Elite Gen 5	2026	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fairlady.yml
+Oppo	CPH2651	OP5AA5L1	Find X8	MediaTek Dimensity 9400	2024	https://www.oppo.com/ph/smartphones/series-find-x/find-x8/specs/ | https://www.oppo.com/en/newsroom/press/find-x8-series-coloros-mediatek-launch/
+Oppo	CPH2659	OP5AB0L1	Find X8 Pro	MediaTek Dimensity 9400	2024	https://www.oppo.com/lu/smartphones/series-find-x/find-x8-pro/specs/ | https://www.oppo.com/en/newsroom/press/find-x8-series-coloros-mediatek-launch/
+Oppo	CPH2791	OP5E8EL1	Find X9 Pro	MediaTek Dimensity 9500	2025	https://www.sogi.com.tw/products/oppo-find-x9-pro/17303 | https://www.oppo.com/tw/smartphones/series-find-x/find-x9-pro/specs/
+Oppo	CPH2797	OP5E8BL1	Find X9	MediaTek Dimensity 9500	2025	https://www.sogi.com.tw/products/oppo-find-x9/17302 | https://www.oppo.com/de/smartphones/series-find-x/find-x9/specs/
+Oppo	CPH2813	OP629AL1	Reno15 Pro 5G	MediaTek Dimensity 8450	2025	https://www.sogi.com.tw/products/oppo-reno15-pro/17316 | https://www.oppo.com/tw/smartphones/series-reno/reno15-pro/specs/
+Oppo	CPH2825	OP62B1L1	Reno15 5G	Qualcomm Snapdragon 7 Gen 4	2025	https://www.sogi.com.tw/products/oppo-reno15/17315 | https://www.oppo.com/tw/smartphones/series-reno/reno15/specs/
+Oppo	CPH2841	OP627CL1	Find X9 Ultra	Qualcomm Snapdragon 8 Elite Gen 5	2026	https://www.sogi.com.tw/products/oppo-find-x9-ultra/17377 | https://www.oppo.com/pl/smartphones/series-find-x/find-x9-ultra/specs/
+Oppo	CPH2873	OP6275L1	Find X9s	MediaTek Dimensity 9500s	2026	https://www.sogi.com.tw/products/oppo-find-x9s/17378 | https://www.oppo.com/tw/smartphones/series-find-x/find-x9s/specs/
 Razer	Phone 2	aura	Phone 2	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml
 Realme	RMX1801	RMX1801	2 Pro	Qualcomm Snapdragon 660	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1801.yml
 Realme	RMX1851	RMX1851	3 Pro	Qualcomm Snapdragon 710	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1851.yml
@@ -386,12 +394,16 @@ Realme	RMX3661	luigi	10 Pro 5G	Qualcomm Snapdragon 695	2022	https://github.com/L
 Realme	RMX3852	bale	GT Neo6	Qualcomm Snapdragon 8s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bale.yml
 Realme	RMX5010	pista	GT7 Pro	Qualcomm Snapdragon 8 Elite	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pista.yml
 Realme	RMX5090	piloti	GT7 Pro Racing Edition	Qualcomm Snapdragon 8 Elite	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/piloti.yml
+Redmi	25080RABDG	lapis	REDMI Note 15 Pro 5G	MediaTek Dimensity 7400-Ultra	2026	https://www.sogi.com.tw/products/xiaomi-redmi-note-15-pro-5g/17263 | https://www.mi.com/tw/product/redmi-note-15-pro-5g/specs/
 SHIFT	SHIFT6mq	axolotl	SHIFT6mq	Qualcomm Snapdragon 845	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/axolotl.yml
 Samsung	SM-A217F	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
 Samsung	SM-A217F/DS	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
 Samsung	SM-A217F/DSN	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
 Samsung	SM-A217M	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
 Samsung	SM-A217M/DS	a21s	Galaxy A21s	Samsung Exynos 850	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a21s.yml
+Samsung	SM-A266B	a26x	Galaxy A26 5G	Samsung Exynos 1380	2025	https://www.sogi.com.tw/products/samsung-galaxy-a26-5g/17194 | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
+Samsung	SM-A3660	a36xq	Galaxy A36 5G	Qualcomm Snapdragon 6 Gen 3	2025	https://www.sogi.com.tw/products/samsung-galaxy-a36-5g/17190 | https://www.samsung.com/tw/support/model/SM-A5660ZGDBRI/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
+Samsung	SM-A366B	a36xq	Galaxy A36 5G	Qualcomm Snapdragon 6 Gen 3	2025	https://www.sogi.com.tw/products/samsung-galaxy-a36-5g/17190 | https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-a36-galaxy-a56-5g/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
 Samsung	SM-A525F	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
 Samsung	SM-A525F/DS	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
 Samsung	SM-A525M	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
@@ -399,6 +411,8 @@ Samsung	SM-A525M/DS	a52q	Galaxy A52 4G	Qualcomm Snapdragon 720G	2021	https://git
 Samsung	SM-A528B	a52sxq	Galaxy A52s 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
 Samsung	SM-A528B/DS	a52sxq	Galaxy A52s 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
 Samsung	SM-A528N	a52sxq	Galaxy A52s 5G	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
+Samsung	SM-A5660	a56x	Galaxy A56 5G	Samsung Exynos 1580	2025	https://www.sogi.com.tw/products/samsung-galaxy-a56-5g/17189 | https://www.samsung.com/tw/support/model/SM-A5660ZGDBRI/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
+Samsung	SM-A566B	a56x	Galaxy A56 5G	Samsung Exynos 1580	2025	https://www.sogi.com.tw/products/samsung-galaxy-a56-5g/17189 | https://www.samsung.com/es/support/model/SM-A566BZGCEUB/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
 Samsung	SM-A715F	a71	Galaxy A71	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a71.yml
 Samsung	SM-A715F/DS	a71	Galaxy A71	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a71.yml
 Samsung	SM-A715F/DSM	a71	Galaxy A71	Qualcomm Snapdragon 730	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a71.yml
@@ -475,6 +489,7 @@ Samsung	SM-N985F	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https:/
 Samsung	SM-N985F/DS	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c2s.yml
 Samsung	SM-N986B	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c2s.yml
 Samsung	SM-N986B/DS	c2s	Galaxy Note20 Ultra (4G/5G)	Samsung Exynos 990	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/c2s.yml
+Samsung	SM-S741B	r14s	Galaxy S26 FE	Samsung Exynos 2500	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-fe-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-s26-series
 Samsung	SM-S901B	r0s	Galaxy S22	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r0s.yml
 Samsung	SM-S901B/DS	r0s	Galaxy S22	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r0s.yml
 Samsung	SM-S906B	g0s	Galaxy S22+	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g0s.yml
@@ -483,6 +498,10 @@ Samsung	SM-S908B	b0s	Galaxy S22 Ultra	Samsung Exynos 2200	2022	https://github.co
 Samsung	SM-S908B/DS	b0s	Galaxy S22 Ultra	Samsung Exynos 2200	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/b0s.yml
 Samsung	SM-S911B	dm1q	Galaxy S23	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dm1q.yml
 Samsung	SM-S911B/DS	dm1q	Galaxy S23	Qualcomm Snapdragon 8 Gen 2	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dm1q.yml
+Samsung	SM-S942B	m1s	Galaxy S26	Samsung Exynos 2600	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
+Samsung	SM-S947B	m2s	Galaxy S26+	Samsung Exynos 2600	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
+Samsung	SM-S9480	m3q	Galaxy S26 Ultra	Qualcomm Snapdragon 8 Elite Gen 5	2026	https://www.samsung.com/tw/support/model/SM-S9480ZV8BRI/ | https://www.samsung.com/tw/smartphones/galaxy-s26-ultra/
+Samsung	SM-S948B	m3q	Galaxy S26 Ultra	Qualcomm Snapdragon 8 Elite Gen 5	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
 Smartisan	DE106	trident	R1	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/trident.yml
 Sony	H3113	pioneer	Xperia XA2	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pioneer.yml
 Sony	H3123	pioneer	Xperia XA2	Qualcomm Snapdragon 630	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pioneer.yml
@@ -550,6 +569,7 @@ Sony	XQ-EC54	pdx245	Xperia 1 VI	Qualcomm Snapdragon 8 Gen 3	2024	https://github.
 Sony	XQ-EC72	pdx245	Xperia 1 VI	Qualcomm Snapdragon 8 Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml
 Sony	XQ-FE54	pdx257	Xperia 10 VII	Qualcomm Snapdragon 6 Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
 Sony	XQ-FE72	pdx257	Xperia 10 VII	Qualcomm Snapdragon 6 Gen 3	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
+Vivo	V2413	V2413	X200 Pro	MediaTek Dimensity 9400	2024	https://www.vivo.com/eu/features | https://www.vivo.com/in/products/param/x200-pro | https://www.vivo.com/it/about-vivo/news/x200-event
 Vsmart	V430A	casuarina	Joy 3	Qualcomm Snapdragon 632	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/casuarina_variant1.yml
 Vsmart	V430E	casuarina	Joy 3+	Qualcomm Snapdragon 632	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/casuarina_variant2.yml
 Xiaomi	2107119DC	lisa	Mi 11 LE	Qualcomm Snapdragon 778G	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lisa_variant3.yml
@@ -598,6 +618,7 @@ Xiaomi	24069PC21G	peridot	POCO F6	Qualcomm Snapdragon 8s Gen 3	2024	https://gith
 Xiaomi	24069PC21I	peridot	POCO F6	Qualcomm Snapdragon 8s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/peridot_variant1.yml
 Xiaomi	24069RA21C	peridot	Redmi Turbo 3	Qualcomm Snapdragon 8s Gen 3	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/peridot_variant2.yml
 Xiaomi	25042PN24C	dijun	Xiaomi 15S Pro	Xiaomi XRING O1	2025	https://ir.mi.com/static-files/f032d2b5-8fa8-4cb7-b00e-a22ec00b954d | https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
+Xiaomi	2506BPN68G	klimt	Xiaomi 15T Pro	MediaTek Dimensity 9400+	2025	https://www.sogi.com.tw/products/xiaomi-xiaomi-15t-pro/17285 | https://www.mi.com/tw/product/xiaomi-15t-pro/specs/
 Xiaomi	2608BPX34C	lhasa	Xiaomi 18 Fold	Xiaomi XRING O3	2026	https://www.mi.com/shop/buy/detail?cfrom=search&product_id=1230808907 | https://www.gadgets360.com/xiaomi-18-fold-price-in-india-137366
 Xiaomi	A201XM	diting	12T Pro	Qualcomm Snapdragon 8+ Gen 1	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
 Xiaomi	M1805E2A	xmsirius	Mi 8 SE	Qualcomm Snapdragon 710	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xmsirius.yml
@@ -693,3 +714,6 @@ ZTE	P845A01	akershus	Axon 9 Pro	Qualcomm Snapdragon 845	2018	https://github.com/
 ZTE	P845A02	akershus	Axon 9 Pro	Qualcomm Snapdragon 845	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akershus.yml
 ZTE	Z2464N	P780F01	nubia Neo 3 5G	UNISOC T8300	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
 ZTE	Z2465N	Z7606O	nubia Neo 3 GT 5G	UNISOC T9100	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
+vivo	V2503	V2503	X200 FE	MediaTek Dimensity 9300+	2025	https://www.sogi.com.tw/products/vivo-x200-fe/17232 | https://ru.vivo.com/smartfony/72022/smartfon-vivo-x200-fe-12-256-gb-5g-elite-black/
+vivo	V2514	V2514	X300 Pro	MediaTek Dimensity 9500	2025	https://www.sogi.com.tw/products/vivo-x300-pro/17296 | https://www.vivo.com/tw/products/param/x300-pro | https://de-gdpr-exstatic-vivofs.vivo.com/sFhAQhTYYDsNOJz1/1759492495417/0bc690d53b474d44c9c149914bed216c.pdf
+vivo	V2515	V2515	X300	MediaTek Dimensity 9500	2025	https://www.sogi.com.tw/products/vivo-x300/17295 | https://www.vivo.com/tw/products/x300 | https://de-gdpr-exstatic-vivofs.vivo.com/sFhAQhTYYDsNOJz1/1759492523795/8f69b574020576861a2b9d148c4e0fba.pdf
