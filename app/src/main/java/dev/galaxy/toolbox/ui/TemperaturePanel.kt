@@ -16,6 +16,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
@@ -38,23 +39,23 @@ import kotlin.math.pow
 
 internal fun LazyListScope.temperatureItems(state: ToolboxState, expanded: List<String>, onToggle: (String) -> Unit,
     onSensor: (String) -> Unit, onRescan: () -> Unit) {
-    item { TemperatureSummaryCard(state, onSensor) }
-    item {
+    item(key = "temperature-summary", contentType = "temperature-summary") { TemperatureSummaryCard(state, onSensor) }
+    item(key = "temperature-actions", contentType = "temperature-actions") {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedButton(onClick = onRescan) { Text("重新偵測溫度來源") }
+            GalaxyOutlinedButton(onClick = onRescan) { GalaxyText("重新偵測溫度來源") }
             TemperatureExport(state)
-            Text("每 2 秒取樣；離開總覽／溫度／GPU 頁即停止檔案輪詢。點按測點查看原始資料。", color = Muted, style = MaterialTheme.typography.bodySmall)
+            GalaxyText("每 2 秒取樣；離開總覽／溫度／GPU 頁即停止檔案輪詢。點按測點查看原始資料。", color = Muted, style = GalaxyTypography.bodySmall)
         }
     }
     val sections = TemperatureSections.build(state.temperatures, state.temperatureNowMs)
-    item { Text("分類感測器", style = MaterialTheme.typography.titleLarge) }
+    item(key = "temperature-identified-heading", contentType = "heading") { GalaxyText("分類感測器", style = GalaxyTypography.titleLarge) }
     sections.filterNot { it.advanced }.forEach { section ->
         temperatureSection(section, section.id in expanded, onToggle, onSensor, state.temperatureNowMs)
     }
-    item {
+    item(key = "temperature-diagnostics-heading", contentType = "heading") {
         Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            Text("進階診斷", style = MaterialTheme.typography.titleLarge)
-            Text("原始狀態、門檻與未辨識項目不參與最高溫計算；數字不一定代表 °C。", color = Muted, style = MaterialTheme.typography.bodySmall)
+            GalaxyText("進階診斷", style = GalaxyTypography.titleLarge)
+            GalaxyText("原始狀態、門檻與未辨識項目不參與最高溫計算；數字不一定代表 °C。", color = Muted, style = GalaxyTypography.bodySmall)
         }
     }
     sections.filter { it.advanced }.forEach { section ->
@@ -64,19 +65,21 @@ internal fun LazyListScope.temperatureItems(state: ToolboxState, expanded: List<
 
 private fun LazyListScope.temperatureSection(section: TemperatureSection, expanded: Boolean, onToggle: (String) -> Unit,
     onSensor: (String) -> Unit, nowMs: Long) {
-    item(key = "temperature-section-${section.id}") {
-        GlassCard(Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium) {
-            Row(Modifier.fillMaxWidth().clickable(role = Role.Button, onClickLabel = if (expanded) "收合${section.title}" else "展開${section.title}") { onToggle(section.id) }.padding(14.dp),
+    item(key = "temperature-section-${section.id}", contentType = "temperature-section") {
+        val language = LocalAppLanguage.current
+        GlassCard(Modifier.fillMaxWidth(), shape = GalaxyShapes.medium) {
+            Row(Modifier.fillMaxWidth().clickable(role = Role.Button,
+                onClickLabel = AppText.translate(if (expanded) "收合${section.title}" else "展開${section.title}", language)) { onToggle(section.id) }.padding(14.dp),
                 verticalAlignment = Alignment.CenterVertically) {
-                Text(section.title, Modifier.weight(1f), fontWeight = FontWeight.Medium)
-                Text("${section.readings.size}", color = Muted)
-                Text(if (expanded) "  −" else "  ＋", color = Muted)
+                GalaxyText(section.title, Modifier.weight(1f), fontWeight = FontWeight.Medium)
+                GalaxyText("${section.readings.size}", color = Muted)
+                GalaxyText(if (expanded) "  −" else "  ＋", color = Muted)
             }
         }
     }
     if (expanded) {
-        if (section.readings.isEmpty()) item { Text("無可用資料", color = Muted, style = MaterialTheme.typography.bodySmall) }
-        items(section.readings.chunked(2), key = { "temperature-${it.first().sensor.id}" }) { pair ->
+        if (section.readings.isEmpty()) item(key = "temperature-empty-${section.id}", contentType = "empty") { GalaxyText("無可用資料", color = Muted, style = GalaxyTypography.bodySmall) }
+        items(section.readings.chunked(2), key = { "temperature-${it.first().sensor.id}" }, contentType = { "temperature-reading-pair" }) { pair ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 pair.forEach { reading -> Box(Modifier.weight(1f)) { TemperatureCompactRow(reading, nowMs) { onSensor(reading.sensor.id) } } }
                 if (pair.size == 1) Spacer(Modifier.weight(1f))
@@ -86,6 +89,7 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
 }
 
 @Composable internal fun TemperatureSummaryCard(state: ToolboxState, onSensor: (String) -> Unit = {}, onAll: (() -> Unit)? = null) {
+    val language = LocalAppLanguage.current
     val summary = TemperatureSelection.summary(state.temperatures, state.temperatureNowMs)
     var systemDetail by remember { mutableStateOf(false) }
     var socDetail by remember { mutableStateOf(false) }
@@ -103,35 +107,37 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
             }
         }
         val active = tiles.first { it.first == selected }.third
-        Column(Modifier.fillMaxWidth().background(Navy.copy(alpha = .45f), MaterialTheme.shapes.medium).padding(14.dp),
+        Column(Modifier.fillMaxWidth().background(Navy.copy(alpha = .45f), GalaxyShapes.medium).padding(14.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text("$selected · 溫度趨勢", style = MaterialTheme.typography.titleSmall)
-            if (active == null) Text(if (selected == "SoC") socDiagnostics.explanation else "無可用資料；等待此元件的有效來源。", color = Muted, style = MaterialTheme.typography.bodySmall)
+            GalaxyText("$selected · 溫度趨勢", style = GalaxyTypography.titleSmall)
+            if (active == null) GalaxyText(if (selected == "SoC") socDiagnostics.explanation else "無可用資料；等待此元件的有效來源。", color = Muted, style = GalaxyTypography.bodySmall)
             else {
-                Text("${active.sensor.rawName} · ${sourceTitle(active.sensor.source)}", color = Muted, style = MaterialTheme.typography.labelSmall)
+                GalaxyText("${active.sensor.rawName} · ${sourceTitle(active.sensor.source)}", color = Muted, style = GalaxyTypography.labelSmall)
                 TemperatureTrend(state.temperatureHistory[active.sensor.id].orEmpty(), state.temperatureNowMs)
-                Text("各測點獨立記錄，來源切換不拼接曲線。", color = Muted, style = MaterialTheme.typography.labelSmall)
-                TextButton(onClick = { onSensor(active.sensor.id) }) { Text("查看原始資料與來源") }
+                GalaxyText("各測點獨立記錄，來源切換不拼接曲線。", color = Muted, style = GalaxyTypography.labelSmall)
+                GalaxyTextButton(onClick = { onSensor(active.sensor.id) }) { GalaxyText("查看原始資料與來源") }
             }
         }
-        if (summary.soc?.sensor?.classification?.ruleId == "soc-s26-video-category")
-            Text("SoC 採 video 影音相關測點，與你提供的 DevCheck 分類對應；實體位置未確認。",
-                color = Muted, style = MaterialTheme.typography.bodySmall)
-        TextButton(onClick = { socDetail = true }) { Text("查看 SoC 來源與讀取狀態") }
-        HorizontalDivider(color = Muted.copy(alpha = .12f))
-        Row(Modifier.fillMaxWidth().clickable(role = Role.Button, onClickLabel = "查看系統熱狀態原始資料") { systemDetail = true }.padding(vertical = 4.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Text("系統熱狀態", Modifier.weight(1f), color = Muted)
-            Text(state.snapshot.systemThermal.title(state.temperatureNowMs), Modifier.weight(1f), textAlign = TextAlign.End)
+        summary.soc?.sensor?.let { sensor ->
+            GalaxyText("SoC 來源 · " + sensor.rawName + " · " + sourceTitle(sensor.source) + "\n" + sensor.path,
+                color = Muted, style = GalaxyTypography.bodySmall)
         }
-        Text("Android 熱狀態 API · 更新 ${temperatureTime(state.snapshot.systemThermal.atMs)}", color = Muted, style = MaterialTheme.typography.labelSmall)
-        Text(SystemThermalReading.EXPLANATION, color = Muted, style = MaterialTheme.typography.bodySmall)
+        GalaxyTextButton(onClick = { socDetail = true }) { GalaxyText("查看 SoC 來源與讀取狀態") }
+        GalaxyDivider(color = Muted.copy(alpha = .12f))
+        Row(Modifier.fillMaxWidth().clickable(role = Role.Button,
+            onClickLabel = AppText.translate("查看系統熱狀態原始資料", language)) { systemDetail = true }.padding(vertical = 4.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            GalaxyText("系統熱狀態", Modifier.weight(1f), color = Muted)
+            GalaxyText(state.snapshot.systemThermal.title(state.temperatureNowMs), Modifier.weight(1f), textAlign = TextAlign.End)
+        }
+        GalaxyText("Android 熱狀態 API · 更新 ${temperatureTime(state.snapshot.systemThermal.atMs)}", color = Muted, style = GalaxyTypography.labelSmall)
+        GalaxyText(SystemThermalReading.EXPLANATION, color = Muted, style = GalaxyTypography.bodySmall)
         Row(Modifier.fillMaxWidth().clickable(role = Role.Button) { systemDetail = true }, verticalAlignment = Alignment.CenterVertically) {
-            Text("熱壓力預估 · 10 秒", Modifier.weight(1f), color = Muted, style = MaterialTheme.typography.bodySmall)
-            Text(state.snapshot.systemThermal.headroom.display(state.temperatureNowMs), fontWeight = FontWeight.Medium)
+            GalaxyText("熱壓力預估 · 10 秒", Modifier.weight(1f), color = Muted, style = GalaxyTypography.bodySmall)
+            GalaxyText(state.snapshot.systemThermal.headroom.display(state.temperatureNowMs), fontWeight = FontWeight.Medium)
         }
-        Text("更新 ${temperatureTime(state.snapshot.systemThermal.headroom.atMs)} · 每 15 秒讀取", color = Muted, style = MaterialTheme.typography.labelSmall)
-        Text("CPU／SoC 分開統計，不代表所有核心或整顆晶片。點按卡片切換趨勢；清單可查看原始資料。", color = Muted, style = MaterialTheme.typography.bodySmall)
-        onAll?.let { action -> TextButton(onClick = action) { Text("查看感測器與進階診斷") } }
+        GalaxyText("更新 ${temperatureTime(state.snapshot.systemThermal.headroom.atMs)} · 每 15 秒讀取", color = Muted, style = GalaxyTypography.labelSmall)
+        GalaxyText("CPU／SoC 分開統計，不代表所有核心或整顆晶片。點按卡片切換趨勢；清單可查看原始資料。", color = Muted, style = GalaxyTypography.bodySmall)
+        onAll?.let { action -> GalaxyTextButton(onClick = action) { GalaxyText("查看感測器與進階診斷") } }
     }
     if (systemDetail) SystemThermalDetailSheet(state.snapshot.systemThermal, state.temperatureNowMs) { systemDetail = false }
     if (socDetail) SocSourceSheet(state, socDiagnostics, { socDetail = false }, { id -> socDetail = false; onSensor(id) })
@@ -140,37 +146,37 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable private fun SocSourceSheet(state: ToolboxState, diagnostics: SocTemperatureDiagnostics,
     onDismiss: () -> Unit, onSensor: (String) -> Unit) {
-    ModalBottomSheet(onDismissRequest = onDismiss,
+    GalaxyBottomSheet(onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true), containerColor = Panel) {
         LazyColumn(Modifier.fillMaxWidth(), contentPadding = PaddingValues(start = 22.dp, end = 22.dp, bottom = 36.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)) {
             item {
-                Text("SoC 來源診斷", style = MaterialTheme.typography.titleLarge)
+                GalaxyText("SoC 來源診斷", style = GalaxyTypography.titleLarge)
                 Spacer(Modifier.height(8.dp))
-                Text(diagnostics.explanation)
-                Text("CPU、GPU、電池與保護節點不拿來補 SoC。點按來源可查看分類依據與驅動設定。",
-                    color = Muted, style = MaterialTheme.typography.bodySmall)
+                GalaxyText(diagnostics.explanation)
+                GalaxyText("CPU、GPU、電池與保護節點不拿來補 SoC。點按來源可查看分類依據與驅動設定。",
+                    color = Muted, style = GalaxyTypography.bodySmall)
             }
-            item { Text("已辨識 SoC 來源 · ${diagnostics.identified.size}", fontWeight = FontWeight.Medium) }
-            items(diagnostics.identified, key = { "soc-known-${it.sensor.id}" }) { reading ->
+            item { GalaxyText("已辨識 SoC 來源 · ${diagnostics.identified.size}", fontWeight = FontWeight.Medium) }
+            items(diagnostics.identified, key = { "soc-known-${it.sensor.id}" }, contentType = { "soc-source" }) { reading ->
                 SocSourceRow(reading, state.temperatureNowMs) { onSensor(reading.sensor.id) }
             }
             item {
-                Text("其他來源 · 未確認為 SoC · ${diagnostics.unconfirmed.size}", fontWeight = FontWeight.Medium)
-                Text("此清單供對照原始名稱，並非已確認的 SoC 測點，不納入 SoC 摘要。", color = Muted,
-                    style = MaterialTheme.typography.bodySmall)
+                GalaxyText("其他來源 · 未確認為 SoC · ${diagnostics.unconfirmed.size}", fontWeight = FontWeight.Medium)
+                GalaxyText("此清單供對照原始名稱，並非已確認的 SoC 測點，不納入 SoC 摘要。", color = Muted,
+                    style = GalaxyTypography.bodySmall)
             }
-            items(diagnostics.unconfirmed, key = { "soc-other-${it.sensor.id}" }) { reading ->
+            items(diagnostics.unconfirmed, key = { "soc-other-${it.sensor.id}" }, contentType = { "soc-source" }) { reading ->
                 SocSourceRow(reading, state.temperatureNowMs) { onSensor(reading.sensor.id) }
             }
             if (diagnostics.discoveryIssues.isNotEmpty()) {
-                item { Text("來源探索記錄", fontWeight = FontWeight.Medium) }
-                items(diagnostics.discoveryIssues, key = { it.sensor.id }) { reading ->
+                item { GalaxyText("來源探索記錄", fontWeight = FontWeight.Medium) }
+                items(diagnostics.discoveryIssues, key = { "soc-issue-${it.sensor.id}" }, contentType = { "soc-source" }) { reading ->
                     SocSourceRow(reading, state.temperatureNowMs) { onSensor(reading.sensor.id) }
                 }
             }
             item { TemperatureExport(state) }
-            item { TextButton(onClick = onDismiss) { Text("關閉") } }
+            item { GalaxyTextButton(onClick = onDismiss) { GalaxyText("關閉") } }
         }
     }
 }
@@ -179,59 +185,61 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
     Column(Modifier.fillMaxWidth().clickable(role = Role.Button, onClick = onClick).padding(vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text(reading.sensor.rawName, Modifier.weight(1f))
-            Text(reading.displayValue(nowMs), Modifier.weight(1f), textAlign = TextAlign.End)
+            GalaxyText(reading.sensor.rawName, Modifier.weight(1f))
+            GalaxyText(reading.displayValue(nowMs), Modifier.weight(1f), textAlign = TextAlign.End)
         }
-        Text("${sourceTitle(reading.sensor.source)} · ${reading.effectiveStatus(nowMs).title}\n${reading.sensor.path}",
-            color = Muted, style = MaterialTheme.typography.labelSmall)
-        Text("更新 ${temperatureTime(reading.lastSuccessAtMs)}", color = Muted, style = MaterialTheme.typography.labelSmall)
-        HorizontalDivider(color = Muted.copy(alpha = .12f))
+        GalaxyText("${sourceTitle(reading.sensor.source)} · ${reading.effectiveStatus(nowMs).title}\n${reading.sensor.path}",
+            color = Muted, style = GalaxyTypography.labelSmall)
+        GalaxyText("更新 ${temperatureTime(reading.lastSuccessAtMs)}", color = Muted, style = GalaxyTypography.labelSmall)
+        GalaxyDivider(color = Muted.copy(alpha = .12f))
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable private fun SystemThermalDetailSheet(reading: SystemThermalReading, nowMs: Long, onDismiss: () -> Unit) {
-    ModalBottomSheet(onDismissRequest = onDismiss, containerColor = Panel) {
+    GalaxyBottomSheet(onDismissRequest = onDismiss, containerColor = Panel) {
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 22.dp).padding(bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            Text("系統熱狀態", style = MaterialTheme.typography.titleLarge)
+            GalaxyText("系統熱狀態", style = GalaxyTypography.titleLarge)
             DetailField("原始名稱與 API", SystemThermalReading.SOURCE)
             DetailField("原始值／單位", "${reading.level ?: "未提供"} · 系統熱壓力等級（不是 °C）")
             DetailField("對應結果／狀態", "${reading.title(nowMs)} / ${reading.status.title}")
             DetailField("分類、依據與可信程度", "系統狀態；高可信度：Android 公開 API 常數。Android 10 / API 29 起支援。")
             DetailField("本次嘗試／最後成功讀取", "${temperatureTime(reading.atMs, true)}\n${temperatureTime(reading.lastSuccessAtMs, true)}")
             DetailField("溫度摘要／最高溫資格", "不參與攝氏溫度計算，於摘要獨立呈現狀態。")
-            Text(SystemThermalReading.EXPLANATION, color = Muted)
+            GalaxyText(SystemThermalReading.EXPLANATION, color = Muted)
             DetailField("熱壓力預估 API／原始值", "${ThermalHeadroomReading.SOURCE}\n${reading.headroom.value ?: "未提供"} · 無單位\n${reading.headroom.display(nowMs)} · 更新 ${temperatureTime(reading.headroom.atMs, true)}")
-            Text(ThermalHeadroomReading.EXPLANATION, color = Muted)
+            GalaxyText(ThermalHeadroomReading.EXPLANATION, color = Muted)
             DetailField("裝置回報的預估門檻 · API 35+", reading.headroom.thresholds.entries.sortedBy { it.key }.joinToString("\n") {
                 "${SystemThermalReading.labels.getOrNull(it.key) ?: it.key.toString()}：${it.value}"
             }.ifEmpty { "無可用門檻；不自行套用通用分級。" })
             DetailField("官方常數對照", SystemThermalReading.labels.mapIndexed { index, label -> "$index · $label" }.joinToString("\n"))
             DetailField("官方定義", "https://developer.android.com/reference/android/os/PowerManager#getCurrentThermalStatus()")
-            TextButton(onClick = onDismiss) { Text("關閉") }
+            GalaxyTextButton(onClick = onDismiss) { GalaxyText("關閉") }
         }
     }
 }
 
 @Composable private fun SummaryTemperature(title: String, reading: TemperatureReading?, nowMs: Long, selected: Boolean, onSelect: () -> Unit) {
-    Column(Modifier.fillMaxWidth().background(Navy.copy(alpha = .45f), MaterialTheme.shapes.medium)
-        .border(1.dp, if (selected) Mint.copy(alpha = .5f) else Color.Transparent, MaterialTheme.shapes.medium)
-        .clickable(role = Role.Button, onClickLabel = "切換$title 趨勢", onClick = onSelect)
+    val language = LocalAppLanguage.current
+    Column(Modifier.fillMaxWidth().clip(GalaxyShapes.medium)
+        .background(Navy.copy(alpha = .45f), GalaxyShapes.medium)
+        .border(1.dp, if (selected) Mint.copy(alpha = .5f) else Color.Transparent, GalaxyShapes.medium)
+        .clickable(role = Role.Button, onClickLabel = AppText.translate("切換$title 趨勢", language), onClick = onSelect)
         .padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
-        Text(title, color = Muted, style = MaterialTheme.typography.labelMedium)
-        Text(reading?.displayValue(nowMs) ?: "無可用資料", fontWeight = FontWeight.Medium,
-            style = if (reading == null) MaterialTheme.typography.titleMedium else MaterialTheme.typography.headlineSmall)
-        Text(reading?.let { "${it.sensor.rawName}\n${sourceTitle(it.sensor.source)} · ${temperatureTime(it.lastSuccessAtMs)}" } ?: "等待可辨識且有效的來源",
-            color = Muted, style = MaterialTheme.typography.labelSmall, maxLines = 3, overflow = TextOverflow.Ellipsis)
+        GalaxyText(title, color = Muted, style = GalaxyTypography.labelMedium)
+        GalaxyText(reading?.displayValue(nowMs) ?: "無可用資料", fontWeight = FontWeight.Medium,
+            style = if (reading == null) GalaxyTypography.titleMedium else GalaxyTypography.headlineSmall)
+        GalaxyText(reading?.let { "${it.sensor.rawName}\n${sourceTitle(it.sensor.source)} · ${temperatureTime(it.lastSuccessAtMs)}" } ?: "等待可辨識且有效的來源",
+            color = Muted, style = GalaxyTypography.labelSmall, maxLines = 3, overflow = TextOverflow.Ellipsis)
     }
 }
 
 @Composable private fun TemperatureCompactRow(reading: TemperatureReading, nowMs: Long, onClick: () -> Unit) {
-    GlassCard(Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, onClick = onClick) {
+    GlassCard(Modifier.fillMaxWidth(), shape = GalaxyShapes.medium, onClick = onClick) {
       Column(Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 10.dp), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-        Text(reading.sensor.rawName, color = Muted, style = MaterialTheme.typography.labelMedium, maxLines = 2, overflow = TextOverflow.Ellipsis)
-        Text(reading.displayValue(nowMs), Modifier.fillMaxWidth(), textAlign = TextAlign.End, style = MaterialTheme.typography.titleMedium)
-        Text(sourceTitle(reading.sensor.source), color = Muted, style = MaterialTheme.typography.labelSmall)
+        GalaxyText(reading.sensor.rawName, color = Muted, style = GalaxyTypography.labelMedium, maxLines = 2, overflow = TextOverflow.Ellipsis)
+        GalaxyText(reading.displayValue(nowMs), Modifier.fillMaxWidth(), textAlign = TextAlign.End, style = GalaxyTypography.titleMedium)
+        GalaxyText(sourceTitle(reading.sensor.source), color = Muted, style = GalaxyTypography.labelSmall)
       }
     }
 }
@@ -239,10 +247,10 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable internal fun TemperatureDetailSheet(reading: TemperatureReading, points: List<TemperaturePoint>, nowMs: Long, onDismiss: () -> Unit) {
     val c = reading.sensor.classification
-    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true), containerColor = Panel) {
+    GalaxyBottomSheet(onDismissRequest = onDismiss, sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true), containerColor = Panel) {
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal = 22.dp).padding(bottom = 36.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            Text(c.title, style = MaterialTheme.typography.titleLarge)
-            Text(reading.displayValue(nowMs), style = MaterialTheme.typography.headlineSmall)
+            GalaxyText(c.title, style = GalaxyTypography.titleLarge)
+            GalaxyText(reading.displayValue(nowMs), style = GalaxyTypography.headlineSmall)
             DetailField("原始名稱", reading.sensor.rawName)
             DetailField("來源／實際路徑或 API", "${sourceTitle(reading.sensor.source)}\n${reading.sensor.path}")
             DetailField("原始值", reading.raw ?: "本次無原始值")
@@ -259,38 +267,39 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
             DetailField("摘要選擇規則", "電池只採 Android 電池 API。CPU／SoC 分類各取有效最高測點，互不替代。GPU 順序：機型驗證規則 → 本機裝置樹綁定 → 驅動綁定 thermal → 公開 Qualcomm 類型與本機 SoC 佐證 → 驅動綁定 hwmon → 本機 compatible 佐證的 KGSL。相同優先序依原始名稱、來源 ID 固定選取；不挑最高或平均。有效資料上限 10 秒。")
             if (c.kind == TemperatureKind.MEASUREMENT) TemperatureTrend(points, nowMs)
             if (reading.sensor.metadata.isNotEmpty()) {
-                Text("可讀驅動／裝置設定（探索時快照）", fontWeight = FontWeight.Medium)
+                GalaxyText("可讀驅動／裝置設定（探索時快照）", fontWeight = FontWeight.Medium)
                 reading.sensor.metadata.forEach { (key, value) -> DetailField(key, value) }
             }
             if (reading.sensor.reference.isNotBlank()) DetailField("介面依據", reading.sensor.reference)
-            TextButton(onClick = onDismiss) { Text("關閉") }
+            GalaxyTextButton(onClick = onDismiss) { GalaxyText("關閉") }
         }
     }
 }
 
 @Composable private fun DetailField(title: String, value: String) {
     Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
-        Text(title, color = Muted, style = MaterialTheme.typography.labelMedium)
-        SelectionContainer { Text(value, style = MaterialTheme.typography.bodyMedium) }
+        GalaxyText(title, color = Muted, style = GalaxyTypography.labelMedium)
+        SelectionContainer { GalaxyText(value, style = GalaxyTypography.bodyMedium) }
     }
 }
 
 @Composable private fun TemperatureTrend(points: List<TemperaturePoint>, nowMs: Long) {
+    val temperatureUnit = LocalTemperatureDisplayUnit.current
     val visible = points.filter { it.atMs in (nowMs - TemperatureHistory.WINDOW_MS)..nowMs }
     val valid = visible.mapNotNull { it.celsius?.takeIf(Double::isFinite) }
-    Text("最近五分鐘 · 此來源", fontWeight = FontWeight.Medium)
-    if (valid.isEmpty()) Text("無有效溫度樣本", color = Muted) else {
+    GalaxyText("最近五分鐘 · 此來源", fontWeight = FontWeight.Medium)
+    if (valid.isEmpty()) GalaxyText("無有效溫度樣本", color = Muted) else {
         val minimum = valid.min()
         val maximum = valid.max()
-        Text(String.format(Locale.ROOT, "最小 %.1f °C · 最大 %.1f °C", minimum, maximum), color = Muted, style = MaterialTheme.typography.bodySmall)
+        GalaxyText(String.format(Locale.ROOT, "最小 %.1f °C · 最大 %.1f °C", minimum, maximum), color = Muted, style = GalaxyTypography.bodySmall)
         val axis = TemperatureTrendAxis.from(minimum, maximum)
         val axisColor = Muted
         val trendColor = Mint
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.width(44.dp).height(112.dp), verticalArrangement = Arrangement.SpaceBetween) {
                 axis.ticksDescending.forEach { value ->
-                    Text(axis.label(value), Modifier.fillMaxWidth(), color = axisColor,
-                        textAlign = TextAlign.End, style = MaterialTheme.typography.labelSmall, maxLines = 1)
+                    GalaxyText(axis.label(TemperatureText.displayNumber(value, temperatureUnit)), Modifier.fillMaxWidth(), color = axisColor,
+                        textAlign = TextAlign.End, style = GalaxyTypography.labelSmall, maxLines = 1)
                 }
             }
             Spacer(Modifier.width(6.dp))
@@ -321,11 +330,11 @@ private fun LazyListScope.temperatureSection(section: TemperatureSection, expand
             Spacer(Modifier.width(50.dp))
             Row(Modifier.weight(1f), horizontalArrangement = Arrangement.SpaceBetween) {
                 listOf("−5 分", "−2.5 分", "現在").forEach { label ->
-                    Text(label, color = axisColor, style = MaterialTheme.typography.labelSmall)
+                    GalaxyText(label, color = axisColor, style = GalaxyTypography.labelSmall)
                 }
             }
         }
-        Text("縱軸：°C · 橫軸：距今時間。失敗或停止輪詢的時段留空，不補 0。", color = Muted, style = MaterialTheme.typography.bodySmall)
+        GalaxyText("縱軸：${if (temperatureUnit == TemperatureDisplayUnit.CELSIUS) "°C" else "°F"} · 橫軸：距今時間。失敗或停止輪詢的時段留空，不補 0。", color = Muted, style = GalaxyTypography.bodySmall)
     }
 }
 

@@ -3,7 +3,6 @@ package dev.galaxy.toolbox.ui
 import android.app.ActivityManager
 import android.content.*
 import android.os.Build
-import android.os.PowerManager
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -19,9 +18,7 @@ internal fun rememberGlassAvailable(): Boolean {
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     val view = LocalView.current
     fun available() = GlassCompatibility.canUse(Build.VERSION.SDK_INT, view.isHardwareAccelerated,
-        context.getSystemService(ActivityManager::class.java).isLowRamDevice,
-        context.getSystemService(PowerManager::class.java).isPowerSaveMode,
-        Build.VERSION.SDK_INT >= 33 && view.isHardwareAccelerated && GlassCompatibility.refractionSupported)
+        context.getSystemService(ActivityManager::class.java).isLowRamDevice)
     var supported by remember(context) { mutableStateOf(available()) }
     DisposableEffect(context, lifecycle) {
         // The first composition can run before the View has an accelerated window.
@@ -32,17 +29,13 @@ internal fun rememberGlassAvailable(): Boolean {
         }
         view.addOnAttachStateChangeListener(attachment)
         view.post(refresh)
-        val receiver = object : BroadcastReceiver() {
-            override fun onReceive(context: Context?, intent: Intent?) { supported = available() }
-        }
-        ContextCompat.registerReceiver(context, receiver, IntentFilter(PowerManager.ACTION_POWER_SAVE_MODE_CHANGED), ContextCompat.RECEIVER_NOT_EXPORTED)
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) supported = available()
         }
         lifecycle.addObserver(observer)
         onDispose {
             view.removeCallbacks(refresh); view.removeOnAttachStateChangeListener(attachment)
-            context.unregisterReceiver(receiver); lifecycle.removeObserver(observer)
+            lifecycle.removeObserver(observer)
         }
     }
     return supported

@@ -55,6 +55,7 @@ class HardwareRepository(private val context: Context) {
         section(HardwareCategory.DEVICE, "功能宣告") { HardwareDetails.features(context) }
         section(HardwareCategory.CAMERA, "相機資訊") { CameraDetails.read(context.getSystemService(CameraManager::class.java)) }
         section(HardwareCategory.SENSORS, "感測器資訊") { HardwareDetails.sensors(context) }
+        section(HardwareCategory.CODECS, "受保護影片播放") { DrmDetails.read() }
         section(HardwareCategory.CODECS, "編解碼資訊") { HardwareDetails.codecs() }
         section(HardwareCategory.NETWORK, "網路資訊") { ConnectionDetails.network(context) }
         section(HardwareCategory.AUDIO, "音訊資訊") { ConnectionDetails.audio(context) }

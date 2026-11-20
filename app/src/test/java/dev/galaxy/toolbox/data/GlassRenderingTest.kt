@@ -5,13 +5,20 @@ import android.graphics.Canvas
 import android.view.View
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Outline
+import androidx.compose.ui.graphics.Shape
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.unit.Density
@@ -34,9 +41,23 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class GlassRenderingTest {
     @get:Rule val rule = createComposeRule()
+    @Test fun originalDynamicThemeSetsReadablePageTextColor() {
+        rule.setContent {
+            GalaxyBoxTheme(dark = true, style = AppStyle.LIQUID_GLASS, themeMode = "monet") {
+                assertEquals(MaterialTheme.colorScheme.onBackground, LocalContentColor.current)
+            }
+        }
+    }
+    @Test fun miuixSquircleExposesCornersForBackdropLens() {
+        val squircle: Shape = GalaxySquircleShape(22.dp)
+        assertTrue(squircle is CornerBasedShape)
+        assertTrue(squircle.createOutline(Size(300f, 180f), LayoutDirection.Ltr, Density(2f)) is Outline.Generic)
+    }
+    // Robolectric's native shader compiler cannot parse MIUIX's AGSL shader;
+    // use the same path silhouette as the app's older-Android fallback.
     @Test fun visualStylesProduceComparableLightAndDarkPreviews() {
         var drawingView: View? = null
-        var style by mutableStateOf(GalaxyVisualStyle.ORIGINAL)
+        var style by mutableStateOf(AppStyle.LIQUID_GLASS)
         var dark by mutableStateOf(true)
         rule.setContent {
             val view = LocalView.current
@@ -47,17 +68,19 @@ class GlassRenderingTest {
                     GalaxyBackdrop(Modifier.layerBackdrop(backdrop))
                     Column(Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 20.dp),
                         verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                        Text("Galaxy box", color = Mint, style = MaterialTheme.typography.titleMedium)
-                        Text("總覽", color = MaterialTheme.colorScheme.onBackground,
-                            style = MaterialTheme.typography.headlineLarge)
-                        Text("介面預覽 · 非裝置讀值", color = Muted)
-                        InfoCard("目前裝置") {
-                            Text("Galaxy Box", style = MaterialTheme.typography.headlineSmall)
-                            Text("裝置與處理器資料以實機讀值顯示", color = Muted)
-                        }
-                        InfoCard("溫度摘要") {
-                            Text("CPU 測點最高溫　—")
-                            Text("沒有可靠來源時顯示無可用資料", color = Muted)
+                        GalaxyText("Galaxy box", color = Mint, style = GalaxyTypography.titleMedium)
+                        GalaxyText("總覽", color = GalaxyPalette.onBackground,
+                            style = GalaxyTypography.headlineLarge)
+                        GalaxyText("介面預覽 · 非裝置讀值", color = Muted)
+                        CompositionLocalProvider(LocalNativeMiuixCard provides false) {
+                            InfoCard("目前裝置") {
+                                GalaxyText("Galaxy Box", style = GalaxyTypography.headlineSmall)
+                                GalaxyText("裝置與處理器資料以實機讀值顯示", color = Muted)
+                            }
+                            InfoCard("溫度摘要") {
+                                GalaxyText("CPU 測點最高溫　—")
+                                GalaxyText("沒有可靠來源時顯示無可用資料", color = Muted)
+                            }
                         }
                         Spacer(Modifier.weight(1f))
                         GlassNavigation(listOf("總覽", "硬體", "電池", "更新", "檢測"), 0, {}, backdrop, false)
@@ -65,7 +88,7 @@ class GlassRenderingTest {
                 }
             }
         }
-        for (isDark in listOf(true, false)) for (choice in GalaxyVisualStyle.entries) {
+        for (isDark in listOf(true, false)) for (choice in AppStyle.entries) {
             rule.runOnIdle { dark = isDark; style = choice }
             rule.onNodeWithText("介面預覽 · 非裝置讀值").assertIsDisplayed()
             rule.onNodeWithText("CPU 測點最高溫　—").assertIsDisplayed()
@@ -78,13 +101,45 @@ class GlassRenderingTest {
         }
     }
 
-    @Test fun capabilityPolicyRejectsUnsupportedAndPowerSavingDevices() {
-        assertTrue(GlassCompatibility.canUse(33, true, false, false, true))
-        assertFalse(GlassCompatibility.canUse(32, true, false, false, true))
-        assertFalse(GlassCompatibility.canUse(34, false, false, false, true))
-        assertFalse(GlassCompatibility.canUse(34, true, true, false, true))
-        assertFalse(GlassCompatibility.canUse(34, true, false, true, true))
-        assertFalse(GlassCompatibility.canUse(34, true, false, false, false))
+    @Test fun capabilityPolicyUsesBlurOnAndroid12WithoutRequiringLens() {
+        assertTrue(GlassCompatibility.canUse(33, true, false))
+        assertTrue(GlassCompatibility.canUse(31, true, false))
+        assertFalse(GlassCompatibility.canUse(30, true, false))
+        assertFalse(GlassCompatibility.canUse(34, false, false))
+        assertFalse(GlassCompatibility.canUse(34, true, true))
+        assertTrue(GlassCompatibility.tier(AppStyle.LIQUID_GLASS, true, false, false,
+            33, true, false, true) == dev.galaxy.toolbox.ui.GlassTier.REFRACTIVE)
+        assertTrue(GlassCompatibility.tier(AppStyle.LIQUID_GLASS, true, false, false,
+            31, true, false, false) == dev.galaxy.toolbox.ui.GlassTier.BLUR)
+        assertTrue(GlassCompatibility.tier(AppStyle.LIQUID_GLASS, true, false, false,
+            30, true, false, false) == dev.galaxy.toolbox.ui.GlassTier.STATIC)
+        assertTrue(GlassCompatibility.tier(AppStyle.LIQUID_GLASS, true, true, false,
+            33, true, false, true) == dev.galaxy.toolbox.ui.GlassTier.REDUCED)
+        assertTrue(GlassCompatibility.tier(AppStyle.MIUIX, true, false, false,
+            33, true, false, true) == dev.galaxy.toolbox.ui.GlassTier.REFRACTIVE)
+        assertTrue(GlassCompatibility.tier(AppStyle.LIQUID_GLASS, false, false, false,
+            33, true, false, true) == dev.galaxy.toolbox.ui.GlassTier.OFF)
+    }
+
+    @Test fun navigationAdaptsToCompactAndUnfoldedWidths() {
+        var width by mutableIntStateOf(320)
+        rule.setContent {
+            GalaxyBoxTheme(style = AppStyle.LIQUID_GLASS) {
+                val backdrops = rememberAppBackdrops()
+                val pages = listOf("總覽", "硬體", "電池", "更新", "檢測")
+                Box(Modifier.requiredWidth(width.dp).requiredHeight(700.dp)) {
+                    AppScaffold(pages, 0, {}, backdrops.controls,
+                        rememberNavigationMotion(0, pages.size), true,
+                        rememberLazyListState(), {}, {}) {
+                        Text("頁面內容")
+                    }
+                }
+            }
+        }
+        rule.onNodeWithTag("bottom-navigation").assertExists()
+        rule.runOnIdle { width = 673 }
+        rule.onNodeWithTag("bottom-navigation").assertDoesNotExist()
+        rule.onNodeWithText("頁面內容").assertExists()
     }
 
     @Test fun sharedCardsRenderInLightDarkLargeTextWithCapabilityFallback() {

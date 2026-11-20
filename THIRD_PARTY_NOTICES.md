@@ -33,13 +33,26 @@ v0.3.1 also reads the documented hwmon ABI (https://docs.kernel.org/hwmon/sysfs-
 
 Android and AndroidX dependencies retain their respective licences. Samsung, Galaxy, Snapdragon, Exynos, Adreno, and other product names belong to their respective owners; the project is independent and unaffiliated.
 
-## Backdrop 1.0.0 (AndroidLiquidGlass)
+## Miuix 0.9.4
 
-The app links unmodified `io.github.kyant0:backdrop:1.0.0` by Kyant, Apache License 2.0. The full licence is included at `app/src/main/assets/licenses/Backdrop-Apache-2.0.txt`. From v0.6.3, `LiquidNavigation.kt` adapts the upstream catalog's LiquidBottomTabs optical layering and DampedDragAnimation interaction approach at tag 1.0.0, commit `eada9a8600142c1bd6a5c5fc143d06f599cdfaef`. Source headers and the in-app `Backdrop-Catalog-NOTICE.txt` identify the adaptation and modifications. This third-party adaptation retains Apache-2.0 terms. Galaxy box colours, native icons, background contours and widget artwork remain original. No upstream demo icons or screenshots are bundled.
+The optional MIUIX-style interface uses the `miuix-ui`, `miuix-preference`, `miuix-squircle`, and `miuix-icons` Android artifacts from the community-maintained [compose-miuix-ui/miuix](https://github.com/compose-miuix-ui/miuix/tree/v0.9.4) project. It is licensed under Apache License 2.0; the full licence is included at `app/src/main/assets/licenses/Miuix-Apache-2.0.txt`. This is a third-party Compose library, not a Xiaomi system SDK or an official Xiaomi endorsement. The original Galaxy box style and independent Backdrop glass option remain available.
 
-- Tagged source: https://github.com/Kyant0/AndroidLiquidGlass/tree/1.0.0
+## AndroidSVG 1.4
+
+Custom SVG background import uses the unmodified `com.caverock:androidsvg-aar:1.4` library by Paul LeBeau, licensed under Apache License 2.0. The licence text is bundled in `app/src/main/assets/licenses/AndroidSVG-Apache-2.0.txt`. Source: https://github.com/BigBadaboom/androidsvg . The renderer supports static SVG elements; unsupported SVG features cause an import error rather than a claim of full SVG compatibility.
+
+## OpenCC4J 1.14.0
+
+Simplified Chinese conversion uses the unmodified `com.github.houbb:opencc4j:1.14.0` library and its runtime dependencies `heaven:0.13.0` and `nlp-common:0.0.5`. These are Apache License 2.0; the licence text is bundled in `app/src/main/assets/licenses/OpenCC4J-Apache-2.0.txt`. Source: https://github.com/houbb/opencc4j .
+
+## Backdrop 2.0.1 (AndroidLiquidGlass)
+
+The app links unmodified `io.github.kyant0:backdrop:2.0.1` by Kyant, Apache License 2.0. The full licence is included at `app/src/main/assets/licenses/Backdrop-Apache-2.0.txt`. `LiquidNavigation.kt` originally adapted the upstream catalog's LiquidBottomTabs optical layering and DampedDragAnimation interaction approach at tag 1.0.0, commit `eada9a8600142c1bd6a5c5fc143d06f599cdfaef`; the runtime dependency is now 2.0.1. Source headers and the in-app `Backdrop-Catalog-NOTICE.txt` identify the adaptation and modifications. This third-party adaptation retains Apache-2.0 terms. Galaxy box colours, native icons, background contours and widget artwork remain original. No upstream demo icons or screenshots are bundled.
+
+- Runtime source: https://github.com/Kyant0/AndroidLiquidGlass/tree/2.0.1
+- Original adapted example: https://github.com/Kyant0/AndroidLiquidGlass/tree/1.0.0
 - Official docs: https://kyant.gitbook.io/backdrop
-- Licence: https://github.com/Kyant0/AndroidLiquidGlass/blob/1.0.0/LICENSE
+- Licence: https://github.com/Kyant0/AndroidLiquidGlass/blob/2.0.1/LICENSE
 - API compatibility and capture design: GLASS-WIDGETS.md
 
 2026-10-20 navigation revision retains the original v0.6.7 optical panel/glyph

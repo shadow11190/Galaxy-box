@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Galaxy box</string>
+    <string name="widget_overview_name">Galaxy box · Full</string>
+    <string name="widget_battery_name">Galaxy box · Battery</string>
+    <string name="widget_resources_name">Galaxy box · Memory and storage</string>
+    <string name="widget_wide_name">Galaxy box · Wide dashboard</string>
+    <string name="widget_strip_name">Galaxy box · Bluetooth batteries</string>
+    <string name="widget_overview_description">Date, time, model, memory, storage, battery level and temperature. Background settings are independent.</string>
+    <string name="widget_battery_description">Battery level, temperature and charging status, with manual refresh.</string>
+    <string name="widget_resources_description">Snapshot of RAM, storage and the highest readable CPU frequency.</string>
+    <string name="widget_wide_description">Wide dashboard with adjustable height.</string>
+    <string name="widget_strip_description">Battery levels for the phone and connected earbuds or watches. Resizable from 5 × 1 to 2 × 1. Missing data shows —.</string>
+    <string name="widget_refresh_symbol">↻</string>
+    <string name="widget_refresh_description">Refresh widget data</string>
+    <string name="widget_waiting">No sample yet · Tap ↻ to refresh</string>
+    <string name="widget_unknown">—</string>
+    <string name="widget_config_title">Widget settings</string>
+    <string name="widget_preview_date">Date and time</string>
+    <string name="widget_preview_model">Device model</string>
+    <string name="widget_preview_battery_memory">Battery\n—\n\nMemory\n—</string>
+    <string name="widget_preview_temperature_storage">Battery temperature\n—\n\nStorage\n—</string>
+    <string name="widget_preview_waiting">Shown after refresh</string>
+    <string name="widget_preview_battery">Battery</string>
+    <string name="widget_preview_temperature">Battery temperature  —</string>
+    <string name="widget_preview_memory">Memory   —</string>
+    <string name="widget_preview_storage">Storage   —</string>
+    <string name="widget_preview_cpu">CPU frequency   —</string>
+</resources>

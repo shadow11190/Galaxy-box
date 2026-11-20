@@ -1,0 +1,62 @@
+brand	model	name	soc	releaseYear	source
+Honor	ELZ-AN00	荣耀Magic3	Qualcomm Snapdragon 888	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/magic/
+Honor	ELZ-AN10	荣耀Magic3 Pro	Qualcomm Snapdragon 888+	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/magic/
+Honor	ELZ-AN20	荣耀Magic3 至臻版	Qualcomm Snapdragon 888+	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/magic/
+Honor	MGI-AN00	荣耀Magic V	Qualcomm Snapdragon 8 Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-magic-v/spec/
+Honor	LGE-AN00	荣耀Magic4	Qualcomm Snapdragon 8 Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-announces-magic4-series-at-mwc-2022/
+Honor	LGE-AN10	荣耀Magic4 Pro	Qualcomm Snapdragon 8 Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-announces-magic4-series-at-mwc-2022/
+Honor	LGE-AN20	荣耀Magic4 至臻版	Qualcomm Snapdragon 8 Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-announces-magic4-series/
+Honor	FRI-AN00	荣耀Magic Vs	Qualcomm Snapdragon 8+ Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/magic-vs-os/
+Honor	FRI-AN10	荣耀Magic Vs 至臻版	Qualcomm Snapdragon 8+ Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/magic-vs-os/
+Honor	PGT-AN00	荣耀Magic5	Qualcomm Snapdragon 8 Gen 2	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic-5-product-launch/
+Honor	PGT-AN10	荣耀Magic5 Pro	Qualcomm Snapdragon 8 Gen 2	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic-5-product-launch/
+Honor	PGT-AN20	荣耀Magic5 至臻版	Qualcomm Snapdragon 8 Gen 2	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic-5-product-launch/
+Honor	VER-AN00	荣耀Magic Vs2	Qualcomm Snapdragon 8+ Gen 1	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magicvs2-chinalaunch/
+Honor	VER-AN10	荣耀Magic V2	Qualcomm Snapdragon 8 Gen 2	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-magic-v2/
+Honor	LRA-AN00	荣耀Magic V Flip	Qualcomm Snapdragon 8+ Gen 1	2024	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic-v-flip-launch/
+Honor	FCP-AN10	荣耀Magic V3	Qualcomm Snapdragon 8 Gen 3	2024	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-magic-v3/
+Honor	FCP-AN20	荣耀Magic V3 双卫星版	Qualcomm Snapdragon 8 Gen 3	2024	https://www.honor.com/cn/phones/honor-magic-v3/ | https://github.com/KHwang9883/MobileModels/blob/master/brands/honor_cn.md
+Honor	FLC-AN00	荣耀Magic Vs3	Qualcomm Snapdragon 8 Gen 2	2024	https://www.honor.com/cn/phones/honor-magic-vs-3/ | https://github.com/KHwang9883/MobileModels/blob/master/brands/honor_cn.md
+Honor	PTP-AN00	荣耀Magic7	Qualcomm Snapdragon 8 Elite	2024	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic7-launch/
+Honor	PTP-AN10	荣耀Magic7 Pro	Qualcomm Snapdragon 8 Elite	2024	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic7-launch/
+Honor	PTP-AN20	荣耀Magic7 RSR 保时捷设计	Qualcomm Snapdragon 8 Elite	2024	https://www.honor.com/cn/phones/honor-magic7-rsr/ | https://github.com/KHwang9883/MobileModels/blob/master/brands/honor_cn.md
+Honor	MBH-AN10	荣耀Magic V5	Qualcomm Snapdragon 8 Elite	2025	https://www.honor.com/cn/shop/product/10086925726202.html?cid=132367
+Honor	BKQ-AN00	荣耀Magic8	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic8-launch/
+Honor	BKQ-AN10	荣耀Magic8 Pro	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://www.honor.com/cn/shop/product/10086048644581.html?cid=132349
+Honor	CLE-AN00	荣耀Magic V Flip2	Qualcomm Snapdragon 8 Gen 3	2025	https://www.honor.com/cn/phones/honor-magic-v-flip2/ | https://github.com/KHwang9883/MobileModels/blob/master/brands/honor_cn.md
+Honor	PNM-AN10	荣耀Magic V6	Qualcomm Snapdragon 8 Elite Gen 5	2026	https://www.honor.com/cn/news/honor-magic-v6-launch/ | https://github.com/KHwang9883/MobileModels/blob/master/brands/honor_cn.md
+Honor	NTH-AN00	荣耀50	Qualcomm Snapdragon 778G	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor50-series-launch/
+Honor	RNA-AN00	荣耀50 Pro	Qualcomm Snapdragon 778G	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor50-series-launch/
+Honor	JLH-AN00	荣耀50 SE	MediaTek Dimensity 900	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor50-se/
+Honor	LSA-AN00	荣耀60	Qualcomm Snapdragon 778G	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor60/
+Honor	TNA-AN00	荣耀60 Pro	Qualcomm Snapdragon 778G+	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor60-pro/
+Honor	FNE-AN00	荣耀70	Qualcomm Snapdragon 778G+	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/pk/phones/honor-70/spec/
+Honor	SDY-AN00	荣耀70 Pro	MediaTek Dimensity 8000	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-70-series-launch/
+Honor	HPB-AN00	荣耀70 Pro+	MediaTek Dimensity 9000	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-70-series-launch/
+Honor	ANN-AN00	荣耀80	Qualcomm Snapdragon 782G	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-80/
+Honor	ANP-AN00	荣耀80 Pro	Qualcomm Snapdragon 8+ Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-80-pro/
+Honor	AGT-AN00	荣耀80 GT	Qualcomm Snapdragon 8+ Gen 1	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-80-gt/
+Honor	ANB-AN00	荣耀80 Pro 直屏版	Qualcomm Snapdragon 8+ Gen 1	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-80-pro/spec/
+Honor	REA-AN00	荣耀90	Qualcomm Snapdragon 7 Gen 1 Accelerated Edition	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-90/
+Honor	REP-AN00	荣耀90 Pro	Qualcomm Snapdragon 8+ Gen 1	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-90-pro/
+Honor	MAG-AN00	荣耀90 GT	Qualcomm Snapdragon 8 Gen 2	2023	https://www.honor.com/cn/phones/honor-90-gt/ | https://github.com/KHwang9883/MobileModels/blob/master/brands/honor_cn.md
+Honor	AMM-AN00	荣耀300	Qualcomm Snapdragon 7 Gen 3	2024	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-300/
+Honor	AMP-AN00	荣耀300 Pro	Qualcomm Snapdragon 8 Gen 3	2024	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-300-pro/spec/
+Honor	AMP-AN10	荣耀300 Ultra	Qualcomm Snapdragon 8 Gen 3	2024	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-300-ultra/
+Honor	DNN-AN00	荣耀400	Qualcomm Snapdragon 7 Gen 4	2025	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-400-launch/
+Honor	DNP-AN00	荣耀400 Pro	Qualcomm Snapdragon 8 Gen 3	2025	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-400-launch/
+Honor	MEP-AN00	荣耀500 Pro	Qualcomm Snapdragon 8 Elite	2025	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-500-launch/
+Honor	PNM-AN20	荣耀Magic V6	Qualcomm Snapdragon 8 Elite Gen 5	2026	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/news/honor-magic-v6-launch/
+Honor	GIA-AN80	荣耀80 SE	MediaTek Dimensity 900	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/shop/product/10086529814258.html?cid=132357
+Honor	HJC-AN90	荣耀Play5	MediaTek Dimensity 800U	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/shop/help/category-148.html
+Honor	NTN-AN20	荣耀X20	MediaTek Dimensity 900	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-x20/
+Honor	CHL-AN00	荣耀X20 SE	MediaTek Dimensity 700	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/shop/help/category-164.html
+Honor	KKG-AN70	荣耀X30 Max	MediaTek Dimensity 900	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honorx30-max/
+Honor	TFY-AN00	荣耀X30i	MediaTek Dimensity 810	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honorx30i/
+Honor	ANY-AN00	荣耀X30	Qualcomm Snapdragon 695	2021	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/shop/help/category-206.html
+Honor	RMO-AN00	荣耀X40	Qualcomm Snapdragon 695	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/shop/help/category-238.html
+Honor	ADT-AN00	荣耀X40 GT	Qualcomm Snapdragon 888	2022	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-x40-gt/
+Honor	ADT-AN00	荣耀X40 GT 竞速版	Qualcomm Snapdragon 888	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://club.honor.com/cn/thread-27817200-1-1.html
+Honor	ALI-AN00	荣耀X50	Qualcomm Snapdragon 6 Gen 1	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-x50/
+Honor	CLK-AN00	荣耀Play8T	MediaTek Dimensity 6080	2023	https://www.honor.com/cn/shop/product/10086942553498.html
+Honor	CLK-AN00	荣耀畅玩50 Plus	MediaTek Dimensity 6020	2023	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://club.honor.com/cn/thread-28199731-1-1.html

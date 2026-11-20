@@ -73,10 +73,10 @@ import org.json.JSONObject
         }
     }
     Column {
-        OutlinedButton(enabled = !busy && state.temperatures.isNotEmpty(), onClick = { launcher.launch("Galaxy-box-temperature.json") }) {
-            Text(if (busy) "匯出中…" else "匯出溫度診斷")
+        GalaxyOutlinedButton(enabled = !busy && state.temperatures.isNotEmpty(), onClick = { launcher.launch("Galaxy-box-temperature.json") }) {
+            GalaxyText(if (busy) "匯出中…" else "匯出溫度診斷")
         }
-        Text("包含型號、測點、路徑、原始值與讀取狀態，方便核對手機的實際來源；不含完整 Bugreport。", color = Muted, style = MaterialTheme.typography.bodySmall)
-        result?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+        GalaxyText("包含型號、測點、路徑、原始值與讀取狀態，方便核對手機的實際來源；不含完整 Bugreport。", color = Muted, style = GalaxyTypography.bodySmall)
+        result?.let { GalaxyText(it, style = GalaxyTypography.bodySmall) }
     }
 }

@@ -3,5 +3,5 @@
     android:targetCellWidth="4" android:targetCellHeight="2" android:resizeMode="horizontal|vertical"
     android:configure="dev.galaxy.toolbox.widgets.WidgetConfigurationActivity" android:widgetFeatures="reconfigurable|configuration_optional"
     android:updatePeriodMillis="1800000" android:widgetCategory="home_screen"
-    android:initialLayout="@layout/widget_dashboard" android:previewLayout="@layout/widget_dashboard"
+    android:initialLayout="@layout/widget_dashboard" android:previewLayout="@layout/widget_picker_preview_resources"
     android:previewImage="@drawable/widget_preview" android:description="@string/widget_resources_description" />

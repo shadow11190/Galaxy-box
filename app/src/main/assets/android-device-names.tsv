@@ -4435,27 +4435,52 @@ Blackfox	BMM542D	BMM542D	BMM542D
 Blackfox	BMM543D	BMM543D	BMM543D
 Blackfox	BMM543S	BMM543S	BMM543S
 Blackfox	BMM_533D	BMM_533D	BMM_533D
+Blackshark	AWM-A0	bullhead	Black Shark Helo
 Blackshark	AWM-A0	bullhead	Shark 1S
 Blackshark	BSG1	Black_Shark_Gaming_Tablet	Black_Shark_Gaming_Tablet
+Blackshark	BSM1	Pad7	Black Shark Pad 7
 Blackshark	BSM1	Pad7	Pad7
 Blackshark	BSM2	PadSE	BSM2
+Blackshark	BSM2	PadSE	Black Shark Pad SE
+Blackshark	BSM3	Pad7_Pro	Black Shark Pad 7 Pro
 Blackshark	BSM3	Pad7_Pro	Pad7_Pro
+Blackshark	BSM4	Pad7_WiFi	Black Shark Pad 7 Wi-Fi
 Blackshark	BSM4	Pad7_WiFi	Pad7_WiFi
+Blackshark	BSM4	Pad_Air7	Black Shark Pad Air 7
 Blackshark	BSM4	Pad_Air7	Pad_Air7
 Blackshark	DLT-A0	darklighter	黑鲨游戏手机 2 Pro
 Blackshark	DLT-H0	darklighter	Black Shark 2 Pro
 Blackshark	ML1107H	Pad6	Pad6
 Blackshark	Pad6	Pad6	Pad6
+Blackshark	Pad_7_Pro_UE	Pad_7_Pro_UE	Black Shark Pad 7 Pro UE
 Blackshark	Pad_7_Pro_UE	Pad_7_Pro_UE	Pad_7_Pro_UE
+Blackshark	SHARK KLE-A0	klein	Black Shark 3
+Blackshark	SHARK KLE-A0	klein	Black Shark 3S
 Blackshark	SHARK KLE-A0	klein	KLE-A0
+Blackshark	SHARK KLE-H0	klein	Black Shark 3
 Blackshark	SHARK KLE-H0	klein	KLE-H0
+Blackshark	SHARK KSR-A0	kaiser	Black Shark 4 Pro
+Blackshark	SHARK KSR-A0	kaiser	Black Shark 4S Pro
+Blackshark	SHARK KSR-A0	kaiser	Black Shark 5 RS
 Blackshark	SHARK KSR-A0	kaiser	SHARK KSR-A0
+Blackshark	SHARK KSR-H0	kaiser-os	Black Shark 4 Pro
 Blackshark	SHARK KSR-H0	kaiser-os	Black shark 4 pro
+Blackshark	SHARK KTUS-A0	katyusha	Black Shark 5 Pro
+Blackshark	SHARK KTUS-H0	katyusha	Black Shark 5 Pro
+Blackshark	SHARK MBU-A0	mobius	Black Shark 3 Pro
 Blackshark	SHARK MBU-A0	mobius	MBU-A0
+Blackshark	SHARK MBU-H0	mobius	Black Shark 3 Pro
 Blackshark	SHARK MBU-H0	mobius	MBU-H0
+Blackshark	SHARK PAR-A0	patriot	Black Shark 5
+Blackshark	SHARK PAR-H0	patriot	Black Shark 5
+Blackshark	SHARK PRS-A0	penrose	Black Shark 4
+Blackshark	SHARK PRS-A0	penrose	Black Shark 4S
 Blackshark	SHARK PRS-A0	penrose	SHARK PRS-A0
+Blackshark	SHARK PRS-H0	penrose	Black Shark 4
 Blackshark	SHARK PRS-H0	penrose	SHARK PRS-H0
+Blackshark	SKR-A0	shark	Black Shark
 Blackshark	SKR-A0	shark	黑鲨游戏手机
+Blackshark	SKR-H0	shark	Black Shark
 Blackshark	SKR-H0	shark	Shark
 Blackshark	SKW-A0	skywalker	Black Shark 2
 Blackshark	SKW-H0	skywalker	Black Shark 2
@@ -15083,6 +15108,8 @@ Honor	MLA-W09	HNMLA-Q1	HONOR Pad 20 Pro
 Honor	MLD-LX2	HNMLD-M	HONOR X5e s
 Honor	MLD-LX2	HNMLD-M	Melody
 Honor	MLD-LX3	HNMLD-M	Melody
+Honor	MLM-AN00	hnmlm	HONOR Magic9 超能版
+Honor	MLY-AN00	hnmly	HONOR Magic9
 Honor	MRK-LX1	HNMRK-QL	HONOR X7e Plus
 Honor	MRK-LX1	HNMRK-QL	HONOR X8e
 Honor	MRK-LX2	HNMRK-QL	HONOR X7e Plus
@@ -15163,6 +15190,7 @@ Honor	VNE-N41	HNVNE-Q	HONOR X8 5G
 Honor	WDY-LX1	HNWDY-M	HONOR X6a
 Honor	WDY-LX2	HNWDY-M	HONOR X6a
 Honor	WDY-LX3	HNWDY-M	HONOR X6a
+Honor	WKL-AN20	hnwkl	HONOR Magic9 Pro Max
 Honor	WOD-LX1	HNWDY-M	HONOR X5 Plus
 Honor	WOD-LX2	HNWDY-M	HONOR X5 Plus
 Honor	WOD-LX3	HNWDY-M	HONOR X5 Plus

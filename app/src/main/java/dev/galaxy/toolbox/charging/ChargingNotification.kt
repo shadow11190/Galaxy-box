@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.edit
 import dev.galaxy.toolbox.MainActivity
 import dev.galaxy.toolbox.R
+import dev.galaxy.toolbox.ui.AppText
 import dev.galaxy.toolbox.model.ChargingPowerReading
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -50,7 +51,9 @@ object ChargingNotification {
     internal fun turnOffPreference(context: Context) { context.getSharedPreferences("charging_notice", 0).edit { putBoolean("enabled", false) } }
     internal fun createChannel(context: Context) {
         context.getSystemService(NotificationManager::class.java).createNotificationChannel(
-            NotificationChannel(CHANNEL, "充電狀態", NotificationManager.IMPORTANCE_LOW).apply { description = "充電狀態、電量與電池淨功率"; setShowBadge(false) })
+            NotificationChannel(CHANNEL, AppText.forContext(context, "充電狀態"), NotificationManager.IMPORTANCE_LOW).apply {
+                description = AppText.forContext(context, "充電狀態、電量與電池淨功率"); setShowBadge(false)
+            })
     }
     internal fun interval(connected: Boolean?, interactive: Boolean): Long = when { connected != true -> 60_000; interactive -> 5_000; else -> 30_000 }
     internal fun title(r: ChargingPowerReading, now: Long): String {
@@ -70,11 +73,12 @@ object ChargingNotification {
         val open = PendingIntent.getActivity(context, 207, Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP or Intent.FLAG_ACTIVITY_CLEAR_TOP), PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
         val stop = PendingIntent.getService(context, 208, Intent(context, ChargingStatusService::class.java).setAction(STOP), PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
         return NotificationCompat.Builder(context, CHANNEL).setSmallIcon(R.drawable.ic_charging_status)
-            .setContentTitle(title(reading, now)).setContentText(content(reading, now)).setContentIntent(open)
+            .setContentTitle(AppText.forContext(context, title(reading, now)))
+            .setContentText(AppText.forContext(context, content(reading, now))).setContentIntent(open)
             .setOngoing(true).setOnlyAlertOnce(true).setSilent(true).setShowWhen(false)
             .setCategory(NotificationCompat.CATEGORY_STATUS).setPriority(NotificationCompat.PRIORITY_LOW)
             .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
             .setDeleteIntent(stop)
-            .addAction(0, "停止監控", stop).build()
+            .addAction(0, AppText.forContext(context, "停止監控"), stop).build()
     }
 }

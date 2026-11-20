@@ -1,12 +1,18 @@
 package dev.galaxy.toolbox.widgets
 
 import android.appwidget.AppWidgetManager
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.content.Intent
 import android.os.Bundle
 import android.widget.FrameLayout
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.compose.BackHandler
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -26,14 +32,29 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.text.TextStyle
 import dev.galaxy.toolbox.model.Snapshot
+import dev.galaxy.toolbox.MainActivity
 import dev.galaxy.toolbox.ui.GalaxyBoxTheme
 import dev.galaxy.toolbox.ui.InfoCard
+import dev.galaxy.toolbox.ui.AppText
+import dev.galaxy.toolbox.ui.AppDisplayPreferences
+import dev.galaxy.toolbox.ui.LocalAppLanguage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class WidgetConfigurationActivity : ComponentActivity() {
+    companion object { const val EXTRA_RETURN_TO_OVERVIEW = "dev.galaxy.toolbox.widget.RETURN_TO_OVERVIEW" }
+    private fun returnToOverview() {
+        if (intent.getBooleanExtra(EXTRA_RETURN_TO_OVERVIEW, false) ||
+            intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID) == AppWidgetManager.INVALID_APPWIDGET_ID) {
+            startActivity(Intent(this, MainActivity::class.java)
+                .putExtra(MainActivity.EXTRA_OPEN_OVERVIEW, true)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP))
+        }
+        finish()
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setResult(RESULT_CANCELED)
@@ -41,26 +62,36 @@ class WidgetConfigurationActivity : ComponentActivity() {
         val id = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, AppWidgetManager.INVALID_APPWIDGET_ID)
         val kind = WidgetUpdates.kindFor(this, id)
         setContent {
-            GalaxyBoxTheme {
+            BackHandler { returnToOverview() }
+            CompositionLocalProvider(LocalAppLanguage provides AppDisplayPreferences.language(this)) { GalaxyBoxTheme {
                 Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                     if (kind != null) WidgetConfiguration(id, kind, onSave = {
-                        setResult(RESULT_OK, Intent().putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, id)); finish()
-                    }, onCancel = ::finish) else WidgetChooser { finish() }
+                        setResult(RESULT_OK, Intent().putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, id)); returnToOverview()
+                    }, onCancel = ::returnToOverview) else WidgetChooser(onSelect = { chosen ->
+                        startActivity(WidgetRenderer.configurationIntent(this, chosen)); finish()
+                    }, onClose = ::returnToOverview)
                 }
-            }
+            } }
         }
     }
 }
 
-@Composable private fun WidgetChooser(onClose: () -> Unit) {
+/** The widget editor uses Material controls, but shares the app's language preference. */
+@Composable private fun Text(text: String, modifier: Modifier = Modifier, color: Color = Color.Unspecified,
+    fontWeight: FontWeight? = null, style: TextStyle = LocalTextStyle.current) {
+    androidx.compose.material3.Text(AppText.translate(text, LocalAppLanguage.current), modifier = modifier,
+        color = color, fontWeight = fontWeight, style = style)
+}
+
+@Composable private fun WidgetChooser(onSelect: (Int) -> Unit, onClose: () -> Unit) {
     val context = LocalContext.current
     val widgets = WidgetUpdates.installed(context)
     Column(Modifier.safeDrawingPadding().padding(20.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("小工具設定", style = MaterialTheme.typography.headlineMedium)
         Text("選擇要調整的桌面小工具。每個小工具分別保存設定。")
-        if (widgets.isEmpty()) Text("請先長按桌面 → 小工具 → Galaxy box，加入完整版或精簡版。")
+        if (widgets.isEmpty()) Text("請先長按桌面 → 小工具 → Galaxy box，選擇需要的版型。")
         widgets.forEach { (id, kind) ->
-            OutlinedButton(onClick = { context.startActivity(WidgetRenderer.configurationIntent(context, id)) }) {
+            OutlinedButton(onClick = { onSelect(id) }) {
                 Text("${kind.title()} · #$id")
             }
         }
@@ -68,7 +99,10 @@ class WidgetConfigurationActivity : ComponentActivity() {
     }
 }
 
-internal fun WidgetKind.title() = when (this) { WidgetKind.OVERVIEW -> "完整版"; WidgetKind.BATTERY -> "精簡版"; WidgetKind.RESOURCES -> "資源版" }
+internal fun WidgetKind.title() = when (this) {
+    WidgetKind.OVERVIEW -> "完整版"; WidgetKind.BATTERY -> "精簡版"; WidgetKind.RESOURCES -> "資源版"
+    WidgetKind.WIDE -> "5 欄資訊"; WidgetKind.STRIP -> "藍牙電量條"
+}
 
 @Composable private fun WidgetConfiguration(id: Int, kind: WidgetKind, onSave: () -> Unit, onCancel: () -> Unit) {
     val context = LocalContext.current
@@ -77,19 +111,24 @@ internal fun WidgetKind.title() = when (this) { WidgetKind.OVERVIEW -> "完整�
         restore = { WidgetSettings.decode(it.mapValues { entry -> entry.value as String }, kind) }) }
     var settings by rememberSaveable(id, stateSaver = saver) { mutableStateOf(store.load(id, kind)) }
     var data by remember { mutableStateOf(WidgetPresentation.from(Snapshot())) }
-    var previewHeight by rememberSaveable { mutableIntStateOf(if (kind == WidgetKind.OVERVIEW) 280 else 180) }
+    var previewHeight by rememberSaveable { mutableIntStateOf(if (kind == WidgetKind.OVERVIEW || kind == WidgetKind.WIDE) 280 else if (kind == WidgetKind.STRIP) 72 else 180) }
     var previewDark by rememberSaveable { mutableStateOf(true) }
     var saving by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
     val scope = rememberCoroutineScope()
-    LaunchedEffect(id) { data = withContext(Dispatchers.IO) { WidgetDataReader.read(context.applicationContext) } }
+    var bluetoothGranted by remember { mutableStateOf(Build.VERSION.SDK_INT < 31 || context.checkSelfPermission(Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) }
+    val bluetoothPermission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        bluetoothGranted = granted
+        if (granted) scope.launch { data = withContext(Dispatchers.IO) { WidgetDataReader.read(context.applicationContext, kind == WidgetKind.STRIP) } }
+    }
+    LaunchedEffect(id) { data = withContext(Dispatchers.IO) { WidgetDataReader.read(context.applicationContext, kind == WidgetKind.STRIP) } }
     Column(Modifier.safeDrawingPadding().padding(horizontal = 20.dp).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Spacer(Modifier.height(6.dp))
         Text("${kind.title()} · #$id", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
         Text("即時設定預覽 · 本機快照", color = MaterialTheme.colorScheme.onSurfaceVariant)
         BoxWithConstraints(Modifier.fillMaxWidth()) {
-            val width = maxWidth.value.toInt()
-            Box(Modifier.fillMaxWidth().height(previewHeight.dp)) {
+            val width = if (kind == WidgetKind.STRIP) minOf(maxWidth.value.toInt(), settings.preferredColumns * 72) else maxWidth.value.toInt()
+            Box(Modifier.width(width.dp).height(previewHeight.dp)) {
                 PreviewChecks(previewDark)
                 AndroidView(modifier = Modifier.fillMaxSize(), factory = { FrameLayout(it) }, update = { container ->
                     container.removeAllViews()
@@ -100,10 +139,16 @@ internal fun WidgetKind.title() = when (this) { WidgetKind.OVERVIEW -> "完整�
             }
         }
         Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-            listOf(180, 280, 380).forEach { height -> FilterChip(selected = previewHeight == height, onClick = { previewHeight = height }, label = { Text("${height}dp 高") }) }
+            if (kind == WidgetKind.WIDE) (2..6).forEach { rows ->
+                FilterChip(selected = settings.preferredRows == rows, onClick = { settings = settings.copy(preferredRows = rows); previewHeight = rows * 72 }, label = { Text("5 × $rows") })
+            } else if (kind == WidgetKind.STRIP) (2..5).forEach { columns ->
+                FilterChip(selected = settings.preferredColumns == columns, onClick = { settings = settings.copy(preferredColumns = columns) }, label = { Text("$columns × 1") })
+            } else listOf(180, 280, 380).forEach { height -> FilterChip(selected = previewHeight == height, onClick = { previewHeight = height }, label = { Text("${height}dp 高") }) }
             FilterChip(selected = previewDark, onClick = { previewDark = !previewDark }, label = { Text(if (previewDark) "深色底" else "淺色底") })
         }
-        Text("方格只用於檢查透明度，不會寫入小工具。預覽套用實際 RemoteViews 版面；桌面可拉寬、拉高。", style = MaterialTheme.typography.bodySmall)
+        Text(if (kind == WidgetKind.STRIP) "藍牙電量條預設 5 × 1，可在桌面縮至 2 × 1。只顯示手機和目前已連線裝置；耳機、手錶未回報電量時顯示 —。實際格數由桌面啟動器決定。"
+            else if (kind == WidgetKind.WIDE) "5 欄版可在桌面長按調整高度；列數選擇控制預覽，實際格數由桌面啟動器決定。"
+            else "方格只用於檢查透明度，不會寫入小工具。預覽套用實際 RemoteViews 版面；桌面可拉寬、拉高。", style = MaterialTheme.typography.bodySmall)
         InfoCard("背景") {
             WidgetBackground.entries.forEach { mode ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -127,7 +172,22 @@ internal fun WidgetKind.title() = when (this) { WidgetKind.OVERVIEW -> "完整�
                 OutlinedButton(onClick = { settings = settings.copy(backgroundColor = 0xFFF8FBFD.toInt(), textColor = 0xFF142537.toInt(), accentColor = 0xFF096B56.toInt()) }) { Text("淺底配色") }
             }
         }
-        InfoCard("顯示內容") {
+        if (kind == WidgetKind.STRIP) InfoCard("已連線裝置") {
+            Text("顯示手機電量，以及 Android 可辨識的已連線藍牙耳機與手錶。部分裝置不提供電量或僅由其專屬 App 掌握，會顯示 —。", style = MaterialTheme.typography.bodySmall)
+            if (!bluetoothGranted && Build.VERSION.SDK_INT >= 31) Button(onClick = { bluetoothPermission.launch(Manifest.permission.BLUETOOTH_CONNECT) }) {
+                Text("允許讀取藍牙裝置")
+            }
+        } else InfoCard("顯示內容") {
+            Text("單項小工具", fontWeight = FontWeight.SemiBold)
+            Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                listOf(WidgetField.CPU, WidgetField.MEMORY, WidgetField.STORAGE, WidgetField.TEMPERATURE, WidgetField.UPTIME)
+                    .forEach { field ->
+                        FilterChip(selected = settings.fields == setOf(field) && !settings.showClock && !settings.showModel,
+                            onClick = { settings = settings.copy(fields = setOf(field), showClock = false, showModel = false) },
+                            label = { Text(field.title) })
+                    }
+            }
             SettingCheck("日期與時鐘", settings.showClock) { settings = settings.copy(showClock = it) }
             SettingCheck("機型", settings.showModel) { settings = settings.copy(showModel = it) }
             WidgetField.entries.forEach { field -> SettingCheck(field.title, field in settings.fields) {
@@ -152,7 +212,7 @@ internal fun WidgetKind.title() = when (this) { WidgetKind.OVERVIEW -> "完整�
                 outcome.fold(onSuccess = { onSave() }, onFailure = { error = "更新失敗，請重試。" })
             }
         }) { Text(if (saving) "套用中…" else "儲存並套用") }
-        OutlinedButton(enabled = !saving, onClick = { scope.launch { data = withContext(Dispatchers.IO) { WidgetDataReader.read(context.applicationContext) } } }) { Text("重新取樣預覽資料") }
+        OutlinedButton(enabled = !saving, onClick = { scope.launch { data = withContext(Dispatchers.IO) { WidgetDataReader.read(context.applicationContext, kind == WidgetKind.STRIP) } } }) { Text("重新取樣預覽資料") }
         TextButton(onClick = onCancel, enabled = !saving) { Text("取消") }
         Spacer(Modifier.height(20.dp))
     }

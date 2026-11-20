@@ -40,7 +40,8 @@ object CameraDetails {
         known.forEach { (id, c) -> addAll(describe(id, c, parents[id].orEmpty(), id in listed)) }
     }
 
-    internal fun describe(id: String, c: C, parents: Set<String> = emptySet(), openable: Boolean = true): List<Reading> = buildList {
+    internal fun describe(id: String, c: C, parents: Set<String> = emptySet(), openable: Boolean = true,
+                          vendorKeys: List<C.Key<*>>? = null): List<Reading> = buildList {
         fun <T> get(key: C.Key<T>): T? = runCatching { c[key] }.getOrNull()
         val permissionKeys = if (Build.VERSION.SDK_INT >= 29) runCatching { c.keysNeedingPermission.toSet() }.getOrDefault(emptySet()) else emptySet()
         val facing = when (get(C.LENS_FACING)) { C.LENS_FACING_BACK -> "後置"; C.LENS_FACING_FRONT -> "前置"; C.LENS_FACING_EXTERNAL -> "外接"; else -> "方向未知" }
@@ -116,7 +117,44 @@ object CameraDetails {
                 largest(c[C.SCALER_STREAM_CONFIGURATION_MAP_MAXIMUM_RESOLUTION]?.getOutputSizes(ImageFormat.JPEG)?.toList().orEmpty())?.let(::sizeWithMp)
             }
         }
-        add(row("感光元件型號／廠商", null, "Camera2 無通用公開型號欄位", "不以 Camera ID、手機型號或像素猜 IMX／ISOCELL 型號。", group))
+        if (Build.VERSION.SDK_INT >= 28) field("相機版本字串", C.INFO_VERSION,
+            "廠商提供的版本資訊，可能描述 ISP、模組或感測器；不是標準化的感光元件型號。") { it.takeIf(String::isNotBlank) }
+        val sensorTags = vendorSensorNames(c, vendorKeys)
+        sensorTags.forEach { (key, value) ->
+            add(row("廠商感光元件識別字", value, "Camera2[$id] · $key",
+                "廠商自訂欄位原文；未經實體拆機驗證，也不由字串推定製造商。", group))
+        }
+        val logical = Build.VERSION.SDK_INT >= 28 && runCatching { c.physicalCameraIds.isNotEmpty() }.getOrDefault(false)
+        val unique = sensorTags.map { it.second }.distinct().singleOrNull()
+        add(row("感光元件型號／廠商", unique?.takeUnless { logical },
+            if (unique != null && !logical) "Camera2[$id] · 廠商 sensor name/model 欄位" else "Camera2 無通用公開型號欄位",
+            when {
+                logical && sensorTags.isNotEmpty() -> "邏輯相機可能包含多顆實體感測器；廠商欄位保留原文，不指定到單一鏡頭。"
+                sensorTags.map { it.second }.distinct().size > 1 -> "廠商欄位回報不同識別字；保留各欄原文，不擅自選一個。"
+                unique != null -> "廠商中繼資料回報；尚未確認實體料號或生產批次，不推定製造商。"
+                else -> "未公開可辨識的廠商 sensor name/model 欄位；不以 Camera ID、像素或機型猜測。"
+            }, group))
+    }
+
+    internal fun vendorSensorNames(c: C, vendorKeys: List<C.Key<*>>? = null): List<Pair<String, String>> =
+        (vendorKeys ?: runCatching { c.keys }.getOrDefault(emptyList()))
+        .asSequence().filter { key -> key.name.let { !it.startsWith("android.") && explicitSensorNameKey(it) } }
+        .mapNotNull { key -> vendorText(runCatching { c[key] }.getOrNull())?.let { key.name to it } }
+        .distinct().take(6).toList()
+
+    internal fun explicitSensorNameKey(key: String): Boolean {
+        val leaf = key.substringAfterLast('.').lowercase(Locale.ROOT).replace("_", "")
+        return leaf.endsWith("sensorname") || leaf.endsWith("sensormodel") || leaf.endsWith("sensorproductname")
+    }
+
+    internal fun vendorText(value: Any?): String? {
+        val raw = when (value) {
+            is String -> value
+            is ByteArray -> value.toString(Charsets.UTF_8)
+            else -> return null
+        }.trim().trimEnd('\u0000').trim()
+        return raw.takeIf { it.length in 2..120 && it.any(Char::isLetter) &&
+            it.all { ch -> !Character.isISOControl(ch) && ch != '{' && ch != '[' } }
     }
 
     private fun row(label: String, value: String?, source: String, detail: String, group: String) =

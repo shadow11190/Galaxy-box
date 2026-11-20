@@ -32,40 +32,53 @@ import dev.galaxy.toolbox.diagnostics.*
             if (intent != null) context.startActivity(intent) else uri.openUri("https://shizuku.rikka.app/download/")
         }.onFailure { linkError = "無法開啟 Shizuku" }
     }
-    InfoCard(if (kind == ProbeKind.BATTERY) "進階電池讀取 · Shizuku" else "可選備援 · Shizuku GPU 讀取") {
-        Text(availability.title, color = Mint)
-        Text("可透過無線偵錯或 Root 啟動 Shizuku，再授權本應用。只讀取資料，不修改系統。", color = Muted, style = MaterialTheme.typography.bodySmall)
+    InfoCard(if (kind == ProbeKind.BATTERY) "電池健康度 · 無線 ADB" else "可選備援 · Shizuku GPU 讀取") {
+        GalaxyText(availability.title, color = Mint)
+        GalaxyText(if (kind == ProbeKind.BATTERY) "透過 Shizuku 即時讀取系統回報的循環次數與容量。可用欄位因裝置而異。"
+            else "可透過無線偵錯或 Root 啟動 Shizuku，再授權本應用。只讀取資料，不修改系統。",
+            color = Muted, style = GalaxyTypography.bodySmall)
         if (busy) {
-            LinearProgressIndicator(Modifier.fillMaxWidth())
-            OutlinedButton(onClick = onCancel) { Text("取消讀取") }
+            GalaxyLinearProgressIndicator(Modifier.fillMaxWidth())
+            GalaxyOutlinedButton(onClick = onCancel) { GalaxyText("取消讀取") }
         } else when (availability.connection) {
-            ShizukuConnection.READY -> Button(onClick = onRead) { Text("讀取${if (kind == ProbeKind.BATTERY) "電池" else "GPU"}原始資料") }
+            ShizukuConnection.READY -> GalaxyPrimaryTextButton(
+                if (kind == ProbeKind.BATTERY) "讀取電池健康資料" else "讀取 GPU 原始資料", onRead)
             ShizukuConnection.NEED_PERMISSION -> if (availability.permissionBlocked) {
-                Button(onClick = ::openManager) { Text("前往 Shizuku 管理授權") }
-            } else Button(onClick = onRead) { Text("授權並讀取") }
-            else -> OutlinedButton(onClick = ::openManager) { Text("開啟 Shizuku") }
+                GalaxyPrimaryButton(onClick = ::openManager) { GalaxyText("前往 Shizuku 管理授權") }
+            } else GalaxyPrimaryButton(onClick = onRead) { GalaxyText("授權並讀取") }
+            else -> {
+                GalaxyPrimaryTextButton("開啟 Shizuku", ::openManager)
+                if (kind == ProbeKind.BATTERY && android.os.Build.VERSION.SDK_INT >= 30) {
+                    GalaxyText("在開發人員選項開啟無線偵錯，用 Shizuku 配對並啟動，再回到這裡授權讀取。",
+                        color = Muted, style = GalaxyTypography.bodySmall)
+                    GalaxyTextButton("開啟開發人員選項", {
+                        runCatching { context.startActivity(Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)) }
+                            .onFailure { linkError = "請從系統設定開啟開發人員選項。" }
+                    })
+                }
+            }
         }
-        TextButton(onClick = { runCatching { uri.openUri("https://shizuku.rikka.app/guide/setup/#start-via-wireless-debugging") }.onFailure { linkError = "無法開啟啟動說明" } }) { Text("無線偵錯啟動說明") }
-        error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
-        linkError?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+        GalaxyTextButton(onClick = { runCatching { uri.openUri("https://shizuku.rikka.app/guide/setup/#start-via-wireless-debugging") }.onFailure { linkError = "無法開啟啟動說明" } }) { GalaxyText("無線偵錯啟動說明") }
+        error?.let { GalaxyText(it, color = GalaxyPalette.error) }
+        linkError?.let { GalaxyText(it, color = GalaxyPalette.error) }
         snapshot?.let { result ->
-            HorizontalDivider()
-            Text("上次手動讀取 · ${formatImportTime(java.time.Instant.ofEpochMilli(result.atMs).toString())}", color = Muted, style = MaterialTheme.typography.bodySmall)
-            if (result.fields.isEmpty()) Text("未取得可用資料", color = Muted)
+            GalaxyDivider()
+            GalaxyText("上次手動讀取 · ${formatImportTime(java.time.Instant.ofEpochMilli(result.atMs).toString())}", color = Muted, style = GalaxyTypography.bodySmall)
+            if (result.fields.isEmpty()) GalaxyText("未取得可用資料", color = Muted)
             else {
-                Text("已取得 ${result.fields.size} 項；各來源分列。", color = Muted, style = MaterialTheme.typography.bodySmall)
+                GalaxyText("已取得 ${result.fields.size} 項；各來源分列。", color = Muted, style = GalaxyTypography.bodySmall)
                 result.fields.forEach { field ->
-                    TextButton(onClick = { onReading(field) }, contentPadding = PaddingValues(vertical = 6.dp), modifier = Modifier.fillMaxWidth()) {
+                    GalaxyTextButton(onClick = { onReading(field) }, contentPadding = PaddingValues(vertical = 6.dp), modifier = Modifier.fillMaxWidth()) {
                         Column(Modifier.fillMaxWidth()) {
-                            Text(field.label, color = Muted, style = MaterialTheme.typography.labelLarge)
-                            Text(field.value.orEmpty(), color = Mint, style = MaterialTheme.typography.titleMedium)
+                            GalaxyText(field.label, color = Muted, style = GalaxyTypography.labelLarge)
+                            GalaxyText(field.value.orEmpty(), color = Mint, style = GalaxyTypography.titleMedium)
                         }
                     }
                 }
             }
             if (result.diagnostics.isNotEmpty()) {
-                TextButton(onClick = { expanded = !expanded }) { Text(if (expanded) "收合來源診斷" else "查看來源診斷") }
-                if (expanded) result.diagnostics.forEach { Text(it, color = Muted, style = MaterialTheme.typography.bodySmall) }
+                GalaxyTextButton(onClick = { expanded = !expanded }) { GalaxyText(if (expanded) "收合來源診斷" else "查看來源診斷") }
+                if (expanded) result.diagnostics.forEach { GalaxyText(it, color = Muted, style = GalaxyTypography.bodySmall) }
             }
         }
     }

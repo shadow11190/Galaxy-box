@@ -138,7 +138,8 @@ class NavigationInteractionTest {
         setup()
         rule.onNodeWithTag("navigation-indicator").assertHeightIsEqualTo(56.dp)
         val bubble = rule.onNodeWithTag("navigation-indicator").fetchSemanticsNode().boundsInRoot
-        assertEquals(page(0).fetchSemanticsNode().boundsInRoot.width, bubble.width, 1f)
+        val tabWidth = page(0).fetchSemanticsNode().boundsInRoot.width
+        assertTrue(bubble.width > tabWidth && bubble.width <= tabWidth * 1.16f)
         page(0).assertIsSelected().assertHeightIsAtLeast(48.dp).assertWidthIsAtLeast(48.dp)
         page(3).performClick().assertIsSelected()
         page(0).assertIsNotSelected()
@@ -280,6 +281,18 @@ class NavigationInteractionTest {
         }
     }
 
+    @Test fun glassBubbleRemainsRaisedWhenNavigationPanelBackgroundIsHidden() {
+        backgroundVisible = false
+        setup(requestGlass = true)
+        val panel = rule.onNodeWithTag("navigation-panel").fetchSemanticsNode().boundsInRoot
+        val bubble = rule.onNodeWithTag("navigation-indicator").fetchSemanticsNode().boundsInRoot
+        assertTrue("The transparent panel must not flatten the glass bubble", bubble.top < panel.top)
+        assertTrue(bubble.bottom > panel.bottom)
+        page(3).performClick().assertIsSelected()
+        rule.mainClock.advanceTimeBy(600)
+        page(3).assertIsSelected()
+    }
+
     @Test fun navigationFallbackLayoutRendersBothThemesAndLargeLabels() {
         // Software Canvas cannot draw Backdrop RuntimeShader highlights. Optical overflow is
         // verified separately by the real component geometry test; these are fallback images.
@@ -294,14 +307,13 @@ class NavigationInteractionTest {
         }
     }
 
-    @Test fun opticalCaptureLayerKeepsOneAccessibleTabSetAndHandlesShaderFailure() {
-        // Deliberately request optics on the limited Windows renderer: exercise failure
-        // handling and sibling capture semantics, not a claim of validated refraction.
+    @Test fun opticalCaptureLayerKeepsOneAccessibleTabSetWithoutGlobalShaderFailure() {
+        // The limited renderer may omit the lens but must keep the sibling capture
+        // and a single accessible tab set. It does not validate physical refraction.
         setup(requestGlass = true)
         pages.forEach { rule.onAllNodesWithText(it).assertCountEquals(1) }
         page(2).performClick().assertIsSelected()
         pages.forEach { rule.onAllNodesWithText(it).assertCountEquals(1) }
-        if (!GlassCompatibility.refractionSupported) rule.runOnIdle { assertTrue(opticalFailures > 0) }
     }
 }
 

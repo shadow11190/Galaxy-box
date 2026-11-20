@@ -58,27 +58,27 @@ import org.json.JSONObject
         }.getOrElse { listOf("無法讀取目錄" to "請稍後重試") } }
         loading = false
     }
-    ModalBottomSheet(onDismissRequest = onDismiss, sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true), containerColor = Panel) {
+    GalaxyBottomSheet(onDismissRequest = onDismiss, sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true), containerColor = Panel) {
         Column(Modifier.fillMaxWidth().fillMaxHeight(.94f).padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Text("裝置與處理器目錄", style = MaterialTheme.typography.titleLarge)
-            Text(summary, color = Muted, style = MaterialTheme.typography.bodySmall)
-            Text("2018 年起的手機與平板逐筆核對；原有裝置名稱均保留，未核對者標示未知。上市年份不代表出廠 Android 版本。不同地區完整型號分列，公開規格與本機讀值分開。", color = Muted, style = MaterialTheme.typography.bodySmall)
+            GalaxyText("裝置與處理器目錄", style = GalaxyTypography.titleLarge)
+            GalaxyText(summary, color = Muted, style = GalaxyTypography.bodySmall)
+            GalaxyText("2018 年起的手機與平板逐筆核對；原有裝置名稱均保留，未核對者標示未知。上市年份不代表出廠 Android 版本。不同地區完整型號分列，公開規格與本機讀值分開。", color = Muted, style = GalaxyTypography.bodySmall)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                FilterChip(selected = !chips, onClick = { chips = false }, label = { Text("裝置型號") })
-                FilterChip(selected = chips, onClick = {
+                GalaxyFilterChip(selected = !chips, onClick = { chips = false }, label = { GalaxyText("裝置型號") })
+                GalaxyFilterChip(selected = chips, onClick = {
                     chips = true
                     query = if (Build.VERSION.SDK_INT >= 31) Build.SOC_MODEL.takeUnless { it.isBlank() || it.equals("unknown", true) }.orEmpty() else ""
-                }, label = { Text("處理器") })
+                }, label = { GalaxyText("處理器") })
             }
-            OutlinedTextField(value = query, onValueChange = { query = it.take(100) }, modifier = Modifier.fillMaxWidth(),
-                label = { Text(if (chips) "晶片名稱或代號" else "市售名稱、完整型號或內部代號") }, singleLine = true)
-            Text(if (loading) "查詢中…" else if (query.trim().length < 2) "輸入至少兩個字元" else "${results.size} 筆結果（最多顯示 ${if (chips) 60 else 100} 筆，請縮小搜尋範圍）", color = Muted, style = MaterialTheme.typography.bodySmall)
-            LazyColumn(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp), contentPadding = PaddingValues(bottom = 28.dp)) {
-                items(results) { (title, detail) ->
+            GalaxyTextField(value = query, onValueChange = { query = it.take(100) }, modifier = Modifier.fillMaxWidth(),
+                label = if (chips) "晶片名稱或代號" else "市售名稱、完整型號或內部代號", singleLine = true)
+            GalaxyText(if (loading) "查詢中…" else if (query.trim().length < 2) "輸入至少兩個字元" else "${results.size} 筆結果（最多顯示 ${if (chips) 60 else 100} 筆，請縮小搜尋範圍）", color = Muted, style = GalaxyTypography.bodySmall)
+            LazyColumn(Modifier.weight(1f).imePadding(), verticalArrangement = Arrangement.spacedBy(12.dp), contentPadding = PaddingValues(bottom = 28.dp)) {
+                items(results, key = { it.first + "\u0000" + it.second }, contentType = { "catalog-result" }) { (title, detail) ->
                     var expanded by remember(title, detail) { mutableStateOf(false) }
                     InfoCard(title) {
-                        SelectionContainer { Text(if (expanded) detail else detail.lineSequence().take(2).joinToString("\n"), style = MaterialTheme.typography.bodySmall) }
-                        TextButton(onClick = { expanded = !expanded }) { Text(if (expanded) "收合" else "查看對照") }
+                        SelectionContainer { GalaxyText(if (expanded) detail else detail.lineSequence().take(2).joinToString("\n"), style = GalaxyTypography.bodySmall) }
+                        GalaxyTextButton(onClick = { expanded = !expanded }) { GalaxyText(if (expanded) "收合" else "查看對照") }
                     }
                 }
             }

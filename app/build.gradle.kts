@@ -1,17 +1,16 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
 android {
     namespace = "dev.galaxy.toolbox"
-    compileSdk = 36
+    compileSdk = 37
     defaultConfig {
         applicationId = "dev.galaxy.toolbox"
         minSdk = 26
         targetSdk = 35
-        versionCode = 16
-        versionName = "0.7.1"
+        versionCode = 17
+        versionName = "0.7.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures { compose = true; aidl = true }
@@ -37,21 +36,27 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
-    kotlinOptions { jvmTarget = "21" }
 }
 dependencies {
     implementation(platform("androidx.compose:compose-bom:2025.11.01"))
-    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation("androidx.activity:activity-compose:1.13.0")
     implementation("androidx.compose.material3:material3")
+    // Android-only variants recommended by the upstream MIUIX project; keep versions pinned.
+    implementation("top.yukonga.miuix.kmp:miuix-ui-android:0.9.4")
+    implementation("top.yukonga.miuix.kmp:miuix-preference-android:0.9.4")
+    implementation("top.yukonga.miuix.kmp:miuix-squircle-android:0.9.4")
+    implementation("top.yukonga.miuix.kmp:miuix-icons-android:0.9.4")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    // Backdrop 1.0.0 / Compose 1.9.5; AGP 8.10.1's R8 supports Kotlin 2.2 metadata.
-    implementation("io.github.kyant0:backdrop:1.0.0")
+    // Backdrop stays pinned independently of the MIUIX/Compose toolchain.
+    implementation("io.github.kyant0:backdrop:2.0.1")
+    implementation("com.caverock:androidsvg-aar:1.4")
     implementation("dev.rikka.shizuku:api:13.1.5")
     implementation("dev.rikka.shizuku:provider:13.1.5")
     implementation("org.apache.commons:commons-compress:1.28.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.9.0")
+    implementation("androidx.datastore:datastore-preferences:1.3.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.16.1")

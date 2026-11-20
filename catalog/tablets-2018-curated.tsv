@@ -1,4 +1,5 @@
 brand	model	device	name	soc	releaseYear	source
+Blackshark	BSG1	Black_Shark_Gaming_Tablet	Black_Shark_Gaming_Tablet	Qualcomm Snapdragon 8s Gen 3	2026	https://storage.googleapis.com/play_public/supported_devices.csv | https://global.blackshark.com/products/black-shark-gaming-tablet | https://www.gizmochina.com/2026/02/25/xiaomi-black-shark-gaming-tablet-global-price-specs/
 Samsung	SM-X700	gts8wifi	Galaxy Tab S8	Qualcomm Snapdragon 8 Gen 1	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
 Samsung	SM-X706B	gts8	Galaxy Tab S8 5G	Qualcomm Snapdragon 8 Gen 1	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
 Samsung	SM-X800	gts8pwifi	Galaxy Tab S8+	Qualcomm Snapdragon 8 Gen 1	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
@@ -24,3 +25,86 @@ Xiaomi	2410CRP4CG	uke	Xiaomi Pad 7	Qualcomm Snapdragon 7+ Gen 3	2025	https://www
 Xiaomi	25079RPDCG	turner	Xiaomi Pad Mini	MediaTek Dimensity 9400+	2025	https://www.sogi.com.tw/products/xiaomi-xiaomi-pad-mini/17287 | https://www.mi.com/tw/product/xiaomi-pad-mini/specs/
 Redmi	25099RP13G	flute	Redmi Pad 2 Pro	Qualcomm Snapdragon 7s Gen 4	2025	https://www.sogi.com.tw/products/xiaomi-redmi-pad-2-pro/17286 | https://www.mi.com/tw/product/redmi-pad-2-pro/specs/
 Redmi	2509BRP2DG	organ	Redmi Pad 2 Pro 5G	Qualcomm Snapdragon 7s Gen 4	2025	https://www.sogi.com.tw/products/xiaomi-redmi-pad-2-pro-5g/17291 | https://www.mi.com/tw/product/redmi-pad-2-pro-5g/specs/
+Huawei	SHT-AL09	HWSHT	HUAWEI MediaPad M5 8.4	HiSilicon Kirin 960	2018	https://consumer.huawei.com/cn/support/content/zh-cn16040437/ | https://consumer.huawei.com/jp/tablets/mediapad-m5-8/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	SHT-W09	HWSHT	HUAWEI MediaPad M5 8.4	HiSilicon Kirin 960	2018	https://consumer.huawei.com/cn/support/content/zh-cn16040437/ | https://consumer.huawei.com/jp/tablets/mediapad-m5-8/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	CMR-AL09	HWCMR09	HUAWEI MediaPad M5 10.8	HiSilicon Kirin 960	2018	https://consumer.huawei.com/sk/tablets/mediapad-m5-10/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	CMR-W09	HWCMR09	HUAWEI MediaPad M5 10.8	HiSilicon Kirin 960	2018	https://consumer.huawei.com/sk/tablets/mediapad-m5-10/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	CMR-AL19	HWCMR	HUAWEI MediaPad M5 Pro	HiSilicon Kirin 960	2018	https://consumer.huawei.com/ie/tablets/mediapad-m5-back-up/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	CMR-W19	HWCMR	HUAWEI MediaPad M5 Pro	HiSilicon Kirin 960	2018	https://consumer.huawei.com/jp/support/content/ja-jp00747265/ | https://consumer.huawei.com/ie/tablets/mediapad-m5-back-up/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Motorola	XT2575-1	XT2575-1	moto pad 60 neo	MediaTek Dimensity 6300	2025	https://zh-asia.support.motorola.com/ci/fattach/get/87701992/1758312957/redirect/1/filename/moto%2Bpad%2B60%2Bneo%2BQSG%2BEN%2BZH-TW%2B125_85mm%2BV1.0_20250826.pdf | https://www.motorola.in/moto-pad-60-neo/p?skuId=584
+Motorola	XT2575-3	XT2575-3	moto pad 60 neo	MediaTek Dimensity 6300	2025	https://zh-asia.support.motorola.com/ci/fattach/get/87701992/1758312957/redirect/1/filename/moto%2Bpad%2B60%2Bneo%2BQSG%2BEN%2BZH-TW%2B125_85mm%2BV1.0_20250826.pdf | https://www.motorola.in/moto-pad-60-neo/p?skuId=584
+Motorola	moto tab g70	mototabg70	Moto Tab g70	MediaTek Helio G90T	2022	https://motorolanews.com/br/motorola-retorna-mercado-tablets-lancamento-moto-tab-g70-no-brasil/ | https://storage.googleapis.com/play_public/supported_devices.csv
+Motorola	moto tab g70 LTE	mototabg70LTE	Moto Tab g70	MediaTek Helio G90T	2022	https://motorolanews.com/br/motorola-retorna-mercado-tablets-lancamento-moto-tab-g70-no-brasil/ | https://storage.googleapis.com/play_public/supported_devices.csv
+Motorola	moto tab g20	mototabg20	moto tab g20	MediaTek Helio P22T	2021	https://www.motorola.in/development-html | https://www.gsmarena.com/motorola_moto_tab_g20_launched_with_8inch_lcd_helio_p22t_chipset-news-51209.php | https://storage.googleapis.com/play_public/supported_devices.csv
+Motorola	XT2673-1	XT2673-1	moto pad 70	MediaTek Dimensity 6400	2026	https://www.motorola.in/moto-pad-70/p?skuId=724 | https://www.91mobiles.com/hub/moto-pad-70-launched-india-price-specifications/
+Motorola	XT2673-2	XT2673-2	moto pad 70	MediaTek Dimensity 6400	2026	https://www.motorola.in/moto-pad-70/p?skuId=724 | https://www.91mobiles.com/hub/moto-pad-70-launched-india-price-specifications/
+Motorola	XT2675-1	XT2675-1	moto pad 70 groove	MediaTek Dimensity 7400	2026	https://www.motorola.in/moto-pad-70-groove/p?skuId=719 | https://www.gadgets360.com/tablets/news/moto-pad-70-groove-price-india-launch-availability-specifications-features-11847257
+Samsung	SM-X520	gts10fewifi	Galaxy Tab S10 FE	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526B	gts10fe	Galaxy Tab S10 FE 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526C	gts10fe	Galaxy Tab S10 FE 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526E	gts10fe	Galaxy Tab S10 FE 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526N	gts10fe	Galaxy Tab S10 FE 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X528U	gts10fe	Galaxy Tab S10 FE 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X620	gts10fepwifi	Galaxy Tab S10 FE+	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X626B	gts10fep	Galaxy Tab S10 FE+ 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X626C	gts10fep	Galaxy Tab S10 FE+ 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X626N	gts10fep	Galaxy Tab S10 FE+ 5G	Samsung Exynos 1580	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+OnePlus	OPD2203	OP59BCL1	OnePlus Pad	MediaTek Dimensity 9000	2023	https://www.oneplus.com/ae/oneplus-pad/specs
+OnePlus	OPD2403	OP5DAAL1	Oneplus Pad2	Qualcomm Snapdragon 8 Gen 3	2024	https://www.oneplus.com/cl/oneplus-pad-2/specs
+OnePlus	OPD2415	OP6190L1	Pad 3	Qualcomm Snapdragon 8 Elite	2025	https://www.oneplus.com/ca_en/oneplus-pad-3/specs
+Xiaomi	2410CRP4CC	uke	Xiaomi Pad 7	Qualcomm Snapdragon 7+ Gen 3	2024	https://www.mi.com/ae-en/product/xiaomi-pad-7/specs/
+Xiaomi	2410CRP4CI	uke	Xiaomi Pad 7	Qualcomm Snapdragon 7+ Gen 3	2024	https://www.mi.com/ae-en/product/xiaomi-pad-7/specs/
+Xiaomi	24091RPADC	muyu	Xiaomi Pad 7 Pro	Qualcomm Snapdragon 8s Gen 3	2024	https://www.mi.com/se/product/xiaomi-pad-7-pro/specs/
+Redmi	2405CRPFDC	dizi	Redmi Pad Pro	Qualcomm Snapdragon 7s Gen 2	2024	https://www.mi.com/sg/product/redmi-pad-pro/specs/
+Redmi	2405CRPFDG	dizi	Redmi Pad Pro	Qualcomm Snapdragon 7s Gen 2	2024	https://www.mi.com/sg/product/redmi-pad-pro/specs/
+Redmi	2405CRPFDI	dizi	Redmi Pad Pro	Qualcomm Snapdragon 7s Gen 2	2024	https://www.mi.com/sg/product/redmi-pad-pro/specs/
+Redmi	24074RPD2C	ruan	Redmi Pad Pro 5G	Qualcomm Snapdragon 7s Gen 2	2024	https://www.mi.com/ph/support/faq/details/KA-235524/
+Redmi	24074RPD2G	ruan	Redmi Pad Pro 5G	Qualcomm Snapdragon 7s Gen 2	2024	https://www.mi.com/ph/support/faq/details/KA-235524/
+POCO	2405CPCFBG	dizi	POCO Pad	Qualcomm Snapdragon 7s Gen 2	2024	https://www.mi.com/uk/product/poco-pad/specs/
+Google	Pixel Tablet	tangorpro	Pixel Tablet	Google Tensor G2	2023	https://support.google.com/googlepixeltablet/answer/13555146?hl=en
+Honor	HEY2-N09	HNHEY2-Q	HONOR Pad 9	Qualcomm Snapdragon 6 Gen 1	2024	https://www.honor.com/uk/tablets/honor-pad-9/spec/
+Honor	HEY2-W09	HNHEY2-Q	HONOR Pad 9	Qualcomm Snapdragon 6 Gen 1	2024	https://www.honor.com/uk/tablets/honor-pad-9/spec/
+realme	RMP2204	RE5C6EL1	realme Pad 2	MediaTek Helio G99	2023	https://www.realme.com/in/realme-pad-2/specs
+realme	RMP2205	RE5C70L1	realme Pad 2	MediaTek Helio G99	2023	https://www.realme.com/in/realme-pad-2/specs
+Lenovo	TB370FU	TB370FU	Lenovo Tab P12	MediaTek Dimensity 7050	2023	https://psref.lenovo.com/Detail/Tab_P12?M=ZACH0070IN | https://news.lenovo.com/pressroom/press-releases/lenovo-tab-p12-m10-5g-consumer-tablets-learning-mobility-multitasking/
+Lenovo	TB520FU	TB520FU	Lenovo Yoga Tab Plus	Qualcomm Snapdragon 8 Gen 3	2025	https://psref.lenovo.com/Detail/Yoga_Tab_Plus?M=ZAEG0110UA | https://news.lenovo.com/press-kits/ces-2025/yoga-tab-plus/
+Nokia	Nokia T21	AGT	Nokia T21	UNISOC T612	2022	https://www.hmd.com/en_int/nokia-t-21/specs
+Nokia	Nokia T21	AGTA	Nokia T21	UNISOC T612	2022	https://www.hmd.com/en_int/nokia-t-21/specs
+ZTE	NP02J	K68	nubia Pad 3D II	Qualcomm Snapdragon 8 Gen 2	2024	https://www.nubia.com/latam/news/zte-launches-the-world-s-first-5g-ai-eyewear-free-3d-tablet--nub.html
+Honor	HEY3-N09	HNHEY3-Q1	HONOR Pad 10	Qualcomm Snapdragon 7 Gen 3	2025	https://www.honor.com/za/tablets/honor-pad-10/spec/
+Honor	HEY3-W00	HNHEY3-Q1	HONOR Pad 10	Qualcomm Snapdragon 7 Gen 3	2025	https://www.honor.com/za/tablets/honor-pad-10/spec/
+Honor	HEY4-N09	HNHEY4-Q1	HONOR Pad 20	Qualcomm Snapdragon 7 Gen 3	2026	https://www.honor.com/global/tablets/honor-pad-20/
+Honor	HEY4-W09	HNHEY4-Q1	HONOR Pad 20	Qualcomm Snapdragon 7 Gen 3	2026	https://www.honor.com/global/tablets/honor-pad-20/
+Honor	MLA-W09	HNMLA-Q1	HONOR Pad 20 Pro	Qualcomm Snapdragon 8s Gen 4	2026	https://www.honor.com/global/tablets/honor-pad-20-pro/
+Honor	CGA-W00	HNCGA-Q1	HONOR MagicPad3	Qualcomm Snapdragon 8 Gen 3	2025	https://www.honor.com/global/tablets/honor-magicpad-3/
+Honor	YLE-W09	HNYLE-Q1	HONOR MagicPad4	Qualcomm Snapdragon 8 Gen 5	2026	https://www.honor.com/ae-en/tablets/honor-magicpad-4/spec/
+Honor	CHG-W60	HNCHG-Q	荣耀平板GT2 Pro	Qualcomm Snapdragon 8 Gen 3	2025	https://www.honor.com/cn/tablets/honor-pad-gt-2-pro/
+Honor	YLP-W00	HNYLP-Q	MagicPad3 Pro 13.3	Qualcomm Snapdragon 8 Elite Gen 5	2025	https://www.honor.com/global/news/honor-snapdragon-summit-2025/
+Honor	HEY3-W00	HNHEY3-Q	荣耀平板 10	Qualcomm Snapdragon 7 Gen 3	2025	https://www.honor.com/cn/tablets/honor-pad-10/
+Honor	ROL-W00	HNROL-M	荣耀平板V9	MediaTek Dimensity 8350 Ultimate	2024	https://www.honor.com/cn/tablets/honor-pad-v9/
+Honor	ROL-W60	HNROL-M	荣耀平板GT	MediaTek Dimensity 8350 Ultimate	2025	https://www.honor.com/cn/tablets/honor-pad-gt/
+Honor	HEY4-AN00	HNHEY4-Q	荣耀平板20	Qualcomm Snapdragon 7 Gen 3	2026	https://www.honor.com/cn/tablets/honor-pad-20/ | https://www.honor.com/global/tablets/honor-pad-20/
+Redmi	22081283G	yunluo	Redmi Pad	MediaTek Helio G99	2022	https://www.mi.com/global/product/redmi-pad/
+Redmi	23073RPBFC	xun	Redmi Pad SE	Qualcomm Snapdragon 680	2023	https://www.mi.com/in/product/redmi-pad-se/specs/
+Redmi	23073RPBFG	xun	Redmi Pad SE	Qualcomm Snapdragon 680	2023	https://www.mi.com/in/product/redmi-pad-se/specs/
+Redmi	23073RPBFL	xun	Redmi Pad SE	Qualcomm Snapdragon 680	2023	https://www.mi.com/in/product/redmi-pad-se/specs/
+Redmi	24075RP89G	flare	Redmi Pad SE 8.7	MediaTek Helio G85	2024	https://www.mi.com/sa-en/product/redmi-pad-se-8-7-inch/specs/
+Redmi	24076RP19G	spark	Redmi Pad SE 8.7 4G	MediaTek Helio G85	2024	https://www.mi.com/uk/product/redmi-pad-se-8-7-inch-4g/specs/
+Redmi	24076RP19I	spark	Redmi Pad SE 4G	MediaTek Helio G85	2024	https://www.mi.com/in/product/redmi-pad-se-4g/faq/
+Redmi	25040RP0AC	taiko	REDMI Pad 2	MediaTek Helio G100-Ultra	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AE	taiko	Redmi Pad 2	MediaTek Helio G100-Ultra	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AG	taiko	Redmi Pad 2	MediaTek Helio G100-Ultra	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AI	taiko	Redmi Pad 2	MediaTek Helio G100-Ultra	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AL	taiko	Redmi Pad 2	MediaTek Helio G100-Ultra	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	2505DRP06E	koto	Redmi Pad 2 4G	MediaTek Helio G100-Ultra	2025	https://www.mi.com/eg/product/redmi-pad-2-4g/specs/
+Redmi	2505DRP06G	koto	Redmi Pad 2 4G	MediaTek Helio G100-Ultra	2025	https://www.mi.com/eg/product/redmi-pad-2-4g/specs/
+Redmi	2505DRP06I	koto	Redmi Pad 2 Wi-Fi + Cellular	MediaTek Helio G100-Ultra	2025	https://www.mi.com/eg/product/redmi-pad-2-4g/specs/
+Redmi	25099RP13C	flute	REDMI Pad 2 Pro	Qualcomm Snapdragon 7s Gen 4	2025	https://www.mi.com/global/product/redmi-pad-2-pro/specs/
+Redmi	25099RP13I	flute	Redmi Pad 2 Pro	Qualcomm Snapdragon 7s Gen 4	2025	https://www.mi.com/global/product/redmi-pad-2-pro/specs/
+Redmi	2509BRP2DI	organ	Redmi Pad 2 Pro 5G	Qualcomm Snapdragon 7s Gen 4	2025	https://www.mi.com/tw/product/redmi-pad-2-pro-5g/specs/
+Redmi	25079RPDCC	turner	REDMI K Pad	MediaTek Dimensity 9400+	2025	https://m.mi.com/mfbs/dghd/m_universal?_rt=rn&pageid=16666
+Redmi	26048RP6AC	yili	REDMI K Pad 2	MediaTek Dimensity 9500	2026	https://m.mi.com/search/list?key=redmi
+Redmi	2603ARP14G	guitar	REDMI Pad 2 9.7	Qualcomm Snapdragon 6s 4G Gen 2	2026	https://www.mi.com/au/product/redmi-pad-2-9-7-inch/specs/
+Redmi	2604ERP4DG	erhu	REDMI Pad 2 9.7 4G	Qualcomm Snapdragon 6s 4G Gen 2	2026	https://www.mi.com/sg/product/redmi-pad-2-9-7-inch-4g/specs/
+POCO	2509ARPBDG	flute	POCO Pad M1	Qualcomm Snapdragon 7s Gen 4	2025	https://www.mi.com/pk/support/faq/details/KA-628081/
+POCO	2603APC14G	guitar	POCO Pad C1	Qualcomm Snapdragon 6s 4G Gen 2	2026	https://www.mi.com/co/product/poco-pad-c1/specs/

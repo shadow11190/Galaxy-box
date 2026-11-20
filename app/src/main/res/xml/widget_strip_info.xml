@@ -1,0 +1,7 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:targetApi="31"
+    android:minWidth="320dp" android:minHeight="40dp" android:minResizeWidth="140dp" android:minResizeHeight="40dp"
+    android:targetCellWidth="5" android:targetCellHeight="1" android:resizeMode="horizontal"
+    android:configure="dev.galaxy.toolbox.widgets.WidgetConfigurationActivity" android:widgetFeatures="reconfigurable|configuration_optional"
+    android:updatePeriodMillis="1800000" android:widgetCategory="home_screen"
+    android:initialLayout="@layout/widget_accessories" android:previewLayout="@layout/widget_picker_preview_accessories"
+    android:previewImage="@drawable/widget_strip_preview" android:description="@string/widget_strip_description" />

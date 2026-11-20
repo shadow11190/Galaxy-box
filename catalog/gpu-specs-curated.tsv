@@ -1,0 +1,50 @@
+soc	gpu	source
+MediaTek Helio G100-Ultra	Mali-G57 MC2	https://www.mi.com/global/product/redmi-pad-2/specs/
+Qualcomm Snapdragon 6s 4G Gen 2	Adreno 610	https://www.mi.com/co/product/poco-pad-c1/specs/
+MediaTek Helio P22T	PowerVR GE8320	https://psref.lenovo.com/syspool/Sys/PDF/Lenovo_Tablets/Tab_M10_HD_2nd_Gen/Tab_M10_HD_2nd_Gen_Spec.PDF
+MediaTek Dimensity 6400	Mali-G57 MC2	https://www.motorola.in/moto-pad-70/p?skuId=724
+MediaTek Dimensity 7400	Mali-G615 MC2	https://www.motorola.in/moto-pad-70-groove/p?skuId=719
+Qualcomm Snapdragon 7 Gen 1 Accelerated Edition	Adreno 644	https://www.motorola.com.br/smartphone-motorola-edge-50/p?idsku=1583
+Qualcomm Snapdragon 845	Adreno 630	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-845-mobile-platform
+Qualcomm Snapdragon 855	Adreno 640	https://www.mi.com/blackshark-game2/specs
+Qualcomm Snapdragon 855+	Adreno 640	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-855-plus-and-860-mobile-platform
+Qualcomm Snapdragon 865	Adreno 650	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/prod_brief_qcom_sd865_5g.pdf
+Qualcomm Snapdragon 870	Adreno 650	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/prod_brief_qcom_sd870_5g.pdf
+Qualcomm Snapdragon 888	Adreno 660	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/prod_brief_qcom_sd888_5g_1.pdf
+Qualcomm Snapdragon 888+	Adreno 660	https://www.qualcomm.com/news/onq/2021/06/snapdragon-888-leading-premium-android-platform
+Qualcomm Snapdragon 8 Gen 1	Adreno 730	https://www.qualcomm.com/smartphones/products/8-series/snapdragon-8-gen-1-mobile-platform
+Qualcomm Snapdragon 8s Gen 3	Adreno 735	https://www.mi.com/ph/support/faq/details/KA-166446/
+MediaTek Helio G85	Mali-G52 MC2	https://www.mediatek.com/products/smartphones/mediatek-helio-g85
+MediaTek Helio G88	Mali-G52 MC2	https://www.mediatek.com/products/smartphones/mediatek-helio-g88
+MediaTek Helio G100	Mali-G57 MC2	https://www.mediatek.com/products/smartphones/mediatek-helio-g100
+MediaTek Helio G200	Mali-G57 MC2	https://www.mediatek.com/products/smartphones/mediatek-helio-g200
+UNISOC T7300	Mali-G57 MC2	https://www.unisoc.com/en/product/SmartPhone/T7300
+MediaTek Dimensity 9000	Mali-G710 MC10	https://www.oneplus.com/ae/oneplus-pad/specs
+Qualcomm Snapdragon 8 Gen 3	Adreno 750	https://www.oneplus.com/cl/oneplus-pad-2/specs
+Qualcomm Snapdragon 8 Elite	Adreno 830	https://www.oneplus.com/ca_en/oneplus-pad-3/specs
+MediaTek Dimensity 9300+	Immortalis-G720 MC12	https://www.mi.com/jp/product/xiaomi-14t-pro/specs/
+Qualcomm Snapdragon 7+ Gen 3	Adreno（型號未公開）	https://www.mi.com/ae-en/product/xiaomi-pad-7/specs/
+MediaTek Dimensity 7200-Ultra	Mali-G610 MC4	https://www.mi.com/in/product/redmi-note-13-pro-plus-5g/specs/
+Qualcomm Snapdragon 7s Gen 2	Adreno（型號未公開）	https://www.mi.com/global/support/faq/details/KA-167166/
+MediaTek Dimensity 7300-Ultra	Mali-G615 MC2	https://www.mi.com/ae-en/product/redmi-note-14-pro-5g/specs/
+MediaTek Dimensity 8300-Ultra	Mali-G615（核心數未公開）	https://www.mi.com/pl/product/poco-x6-pro/specs/
+MediaTek Dimensity 8400-Ultra	Mali-G720（核心數未公開）	https://www.mi.com/global/product/poco-x7-pro/specs/
+Qualcomm Snapdragon 7s Gen 3	Adreno（型號未公開）	https://www.mi.com/uk/support/faq/details/KA-524664/
+Qualcomm Snapdragon 8 Gen 2	Adreno 740	https://www.oneplus.com/jo/11/specs
+MediaTek Helio G99	Mali-G57（核心數未公開）	https://www.realme.com/in/realme-pad-2/specs
+MediaTek Dimensity 7050	Mali-G68（核心數未公開）	https://psref.lenovo.com/syspool/Sys/PDF/Lenovo_Tablets/Tab_P12/Tab_P12_Spec.pdf
+Qualcomm Snapdragon 695	Adreno 619	https://www.qualcomm.com/smartphones/products/6-series/snapdragon-695-5g-mobile-platform
+Qualcomm Snapdragon 7 Gen 1	Adreno（型號未公開）	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/Snapdragon-7-Gen-1-Product-Brief.pdf
+MediaTek Dimensity 7200 Pro	Mali-G610 MC4	https://checkout-eu.nothing.tech/pages/phone-2a-plus
+MediaTek Dimensity 7350 Pro	Mali-G610 MC4	https://checkout-eu.nothing.tech/pages/phone-2a-plus
+MediaTek Dimensity 7300 Pro	Mali-G615（核心數未公開）	https://www.mediatek.com/products/smartphones/mediatek-dimensity-7300 | https://checkout-eu.nothing.tech/pages/cmf-phone-2-pro
+Qualcomm Snapdragon 632	Adreno 506	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/snapdragon_product_brief_632.pdf
+Qualcomm Snapdragon 750G	Adreno 619	https://www.qualcomm.com/media/documents/files/snapdragon-750g-5g-mobile-platform-product-brief.pdf
+Qualcomm QCM6490	Adreno（原廠文件型號衝突）	https://admin.fairphone.com/fairphone-5-e-operating-system | https://www.fairphone.com/wp-content/uploads/2023/12/Fairphone-5-Information-on-how-to-repair-and-recycle.pdf
+Qualcomm Snapdragon 675	Adreno 612	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/snapdragon_product_brief_675.pdf
+Qualcomm Snapdragon 730	Adreno 618	https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/qualcomm-snapdragon-730-mobile-platform-product-brief.pdf
+Qualcomm Snapdragon 8 Elite Extreme Gen 6	Adreno 850	https://www.honor.com/cn/shop/product/10086407229464.html?cid=132367
+MediaTek Dimensity 7025-Ultra	IMG BXM-8-256	https://www.honor.com/my/phones/honor-400-lite/spec/
+MediaTek Dimensity 7100 Elite	Mali-G610 MC2	https://www.honor.com/sg/phones/honor-600-lite/spec/
+Qualcomm Snapdragon 4 Gen 4	Adreno 613	https://www.honor.com/mx/phones/honor-600-elite-5g/spec/
+MediaTek Dimensity 6080	Mali-G57 MC2	https://www.honor.com/cl/phones/honor-200-lite/spec/

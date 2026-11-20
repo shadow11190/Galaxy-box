@@ -30,10 +30,10 @@ import dev.galaxy.toolbox.model.ChargingPowerReading
         else -> false
     }
     InfoCard("電池讀值校正") {
-        Text("電壓估算與雙電芯條件可依讀值自動啟用；手動切換後維持你的選擇。電流正負仍須人工確認。", color = Muted, style = MaterialTheme.typography.bodySmall)
+        GalaxyText("電壓估算與雙電芯條件可依讀值自動啟用；手動切換後維持你的選擇。電流正負仍須人工確認。", color = Muted, style = GalaxyTypography.bodySmall)
         if (mismatch && vendor in setOf(BatteryVendor.XIAOMI, BatteryVendor.OPPO)) {
-            Text("${vendor.title}：電流方向與系統充放電狀態不一致，可嘗試開啟反轉並比對原始值。不同機型／韌體不一定相同。",
-                color = Mint, style = MaterialTheme.typography.bodySmall)
+            GalaxyText("${vendor.title}：電流方向與系統充放電狀態不一致，可嘗試開啟反轉並比對原始值。不同機型／韌體不一定相同。",
+                color = Mint, style = GalaxyTypography.bodySmall)
         }
         OptionRow("反轉瞬時電流正負", "只反轉顯示與電池淨功率方向；不修改系統讀值。", invert) {
             invert = it; hasOverrides = true; prefs.edit { putBoolean(BatteryReadOptions.INVERT, it) }
@@ -45,11 +45,11 @@ import dev.galaxy.toolbox.model.ChargingPowerReading
             dualCell = it; hasOverrides = true; prefs.edit { putBoolean(BatteryReadOptions.DUAL_CELL, it) }
         }
         if (hasOverrides) {
-            TextButton(onClick = {
+            GalaxyTextButton(onClick = {
                 prefs.edit { remove(BatteryReadOptions.INVERT); remove(BatteryReadOptions.ESTIMATE); remove(BatteryReadOptions.DUAL_CELL) }
                 hasOverrides = false
                 invert = reading.invertCurrent; estimate = reading.voltageEstimated; dualCell = reading.possiblePerCellMilliVolts != null
-            }) { Text("恢復自動判斷") }
+            }) { GalaxyText("恢復自動判斷") }
         }
     }
 }
@@ -57,10 +57,10 @@ import dev.galaxy.toolbox.model.ChargingPowerReading
 @Composable private fun OptionRow(title: String, detail: String, checked: Boolean, onChange: (Boolean) -> Unit) {
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-            Text(title, style = MaterialTheme.typography.bodyLarge)
-            Text(detail, color = Muted, style = MaterialTheme.typography.bodySmall)
+            GalaxyText(title, style = GalaxyTypography.bodyLarge)
+            GalaxyText(detail, color = Muted, style = GalaxyTypography.bodySmall)
         }
         Spacer(Modifier.width(10.dp))
-        Switch(checked = checked, onCheckedChange = onChange)
+        GalaxySwitch(checked = checked, onCheckedChange = onChange)
     }
 }

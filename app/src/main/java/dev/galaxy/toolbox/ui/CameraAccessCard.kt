@@ -31,10 +31,11 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
         onDispose { owner.lifecycle.removeObserver(observer) }
     }
     InfoCard("相機資料存取") {
-        Text(if (granted) "已允許相機資訊存取" else "部分詳細欄位需要相機權限；不允許也可查看公開資料。", color = Muted, style = MaterialTheme.typography.bodySmall)
-        Text("僅讀取相機中繼資料，不啟動拍攝。", color = Muted, style = MaterialTheme.typography.bodySmall)
-        TextButton(enabled = !busy, onClick = { if (granted) onRefresh() else request.launch(Manifest.permission.CAMERA) }) {
-            Text(if (busy) "讀取中…" else if (granted) "重新讀取相機資訊" else "允許讀取完整相機資訊")
+        GalaxyText(if (granted) "已允許相機資訊存取" else "部分詳細欄位需要相機權限；不允許也可查看公開資料。", color = Muted, style = GalaxyTypography.bodySmall)
+        GalaxyText("僅讀取相機中繼資料，不啟動拍攝。", color = Muted, style = GalaxyTypography.bodySmall)
+        GalaxyText("感光元件識別字僅在廠商公開對應欄位時顯示。", color = Muted, style = GalaxyTypography.bodySmall)
+        GalaxyTextButton(enabled = !busy, onClick = { if (granted) onRefresh() else request.launch(Manifest.permission.CAMERA) }) {
+            GalaxyText(if (busy) "讀取中…" else if (granted) "重新讀取相機資訊" else "允許讀取完整相機資訊")
         }
     }
 }

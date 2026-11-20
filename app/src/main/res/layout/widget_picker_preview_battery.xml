@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="160dp" android:layout_height="160dp"
+    android:orientation="vertical" android:background="@drawable/widget_picker_surface" android:padding="15dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Galaxy box"
+        android:textColor="#76E1C3" android:textSize="13sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp"
+        android:text="@string/widget_preview_battery" android:textColor="#B9CBD9" android:textSize="12sp" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—"
+        android:textColor="#EDF3FF" android:textSize="28sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp"
+        android:text="@string/widget_preview_temperature" android:textColor="#B9CBD9" android:textSize="12sp" />
+</LinearLayout>

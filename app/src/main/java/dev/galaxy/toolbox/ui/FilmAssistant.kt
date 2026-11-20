@@ -63,6 +63,7 @@ internal fun FilmAssistant(onClose: () -> Unit) {
     var exporting by remember { mutableStateOf(false) }
     var exportMessage by remember { mutableStateOf<String?>(null) }
     val context = LocalContext.current
+    val language = LocalAppLanguage.current
     val view = LocalView.current
     LaunchedEffect(view, size) {
         if (android.os.Build.VERSION.SDK_INT >= 31) {
@@ -111,60 +112,60 @@ internal fun FilmAssistant(onClose: () -> Unit) {
     Box(Modifier.fillMaxSize().background(FilmBackgrounds[background].second)) {
         Canvas(Modifier.fillMaxSize().onSizeChanged { size = it }.testTag("film-preview")
             .semantics {
-                contentDescription = "貼膜測試圖。雙擊或長按開啟設定，也可按返回鍵。"
-                customActions = listOf(CustomAccessibilityAction("開啟貼膜設定") { controls = true; true })
+                contentDescription = AppText.translate("貼膜測試圖。雙擊或長按開啟設定，也可按返回鍵。", language)
+                customActions = listOf(CustomAccessibilityAction(AppText.translate("開啟貼膜設定", language)) { controls = true; true })
             }.pointerInput(Unit) { detectTapGestures(onDoubleTap = { controls = true }, onLongPress = { controls = true }) }) {
             pattern.draw(drawContext.canvas.nativeCanvas, this.size.width, this.size.height)
         }
-        if (!controls && tip) Text("雙擊或長按開啟設定 · 返回鍵也可開啟", color = Color.White,
+        if (!controls && tip) GalaxyText("雙擊或長按開啟設定 · 返回鍵也可開啟", color = Color.White,
             modifier = Modifier.align(Alignment.TopCenter).safeDrawingPadding().padding(16.dp).background(Panel).padding(12.dp),
-            style = MaterialTheme.typography.bodySmall)
+            style = GalaxyTypography.bodySmall)
         if (controls) {
-            Surface(Modifier.align(Alignment.BottomCenter).safeDrawingPadding().padding(horizontal = panelSidePadding, vertical = 12.dp).fillMaxWidth().fillMaxHeight(.83f),
-                shape = MaterialTheme.shapes.extraLarge, color = Panel) {
+            GalaxySurface(Modifier.align(Alignment.BottomCenter).safeDrawingPadding().padding(horizontal = panelSidePadding, vertical = 12.dp).fillMaxWidth().fillMaxHeight(.83f),
+                shape = GalaxyShapes.extraLarge, color = Panel) {
                 Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                        Text("貼膜輔助", Modifier.weight(1f), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        TextButton(onClick = onClose) { Text("結束") }
+                        GalaxyText("貼膜輔助", Modifier.weight(1f), style = GalaxyTypography.titleLarge, fontWeight = FontWeight.Bold)
+                        GalaxyTextButton(onClick = onClose) { GalaxyText("結束") }
                     }
-                    Button(onClick = { controls = false }, modifier = Modifier.fillMaxWidth()) { Text("全螢幕開始") }
+                    GalaxyPrimaryButton(onClick = { controls = false }, modifier = Modifier.fillMaxWidth()) { GalaxyText("全螢幕開始") }
                     Column(Modifier.weight(1f).verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Text("先選圖樣，再隱藏面板；檢視灰塵、黑邊遮擋與視覺對位。", color = Muted)
+                    GalaxyText("先選圖樣，再隱藏面板；檢視灰塵、黑邊遮擋與視覺對位。", color = Muted)
                     Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        OutlinedButton(onClick = { background = 0; ink = 0; border = 0f; cross = false; grid = false; showLabel = false }) { Text("除塵白底") }
-                        OutlinedButton(onClick = { background = 0; ink = 0; border = 4f; cross = false; grid = false; showLabel = true }) { Text("邊緣檢視") }
-                        OutlinedButton(onClick = { background = 0; ink = 0; border = 4f; cross = true; grid = true; showLabel = false }) { Text("格線對位") }
-                        OutlinedButton(onClick = { systemCorners = false; topRadius = 80f; bottomRadius = 80f; insetX = 12f; insetY = 12f; border = 4f }) { Text("圓角邊框") }
+                        GalaxyOutlinedButton(onClick = { background = 0; ink = 0; border = 0f; cross = false; grid = false; showLabel = false }) { GalaxyText("除塵白底") }
+                        GalaxyOutlinedButton(onClick = { background = 0; ink = 0; border = 4f; cross = false; grid = false; showLabel = true }) { GalaxyText("邊緣檢視") }
+                        GalaxyOutlinedButton(onClick = { background = 0; ink = 0; border = 4f; cross = true; grid = true; showLabel = false }) { GalaxyText("格線對位") }
+                        GalaxyOutlinedButton(onClick = { systemCorners = false; topRadius = 80f; bottomRadius = 80f; insetX = 12f; insetY = 12f; border = 4f }) { GalaxyText("圓角邊框") }
                     }
                     FilmColorChoice("背景", FilmBackgrounds, background) { background = it }
                     FilmColorChoice("邊框與文字", FilmInks, ink) { ink = it }
-                    Text("邊框寬度 ${border.toInt()} px", color = Mint)
-                    Slider(border, { border = it }, valueRange = 0f..24f, steps = 23,
-                        modifier = Modifier.semantics { contentDescription = "邊框寬度" })
+                    GalaxyText("邊框寬度 ${border.toInt()} px", color = Mint)
+                    GalaxySlider(border, { border = it }, valueRange = 0f..24f, steps = 23,
+                        modifier = Modifier.semantics { contentDescription = AppText.translate("邊框寬度", language) })
                     FilmToggle("使用系統回報 R 角", systemCorners) { systemCorners = it }
-                    Text(if (reportedCorners == null) "系統未提供 R 角，可手動調整。" else "系統 R 角：上 ${reportedCorners!!.first.toInt()}／下 ${reportedCorners!!.second.toInt()} px", color = Muted, style = MaterialTheme.typography.bodySmall)
+                    GalaxyText(if (reportedCorners == null) "系統未提供 R 角，可手動調整。" else "系統 R 角：上 ${reportedCorners!!.first.toInt()}／下 ${reportedCorners!!.second.toInt()} px", color = Muted, style = GalaxyTypography.bodySmall)
                     if (!systemCorners || reportedCorners == null) {
                         FilmDimensionSlider("上方 R 角", topRadius, 300f) { topRadius = it }
                         FilmDimensionSlider("下方 R 角", bottomRadius, 300f) { bottomRadius = it }
                     }
                     FilmDimensionSlider("水平內縮", insetX, 120f) { insetX = it }
                     FilmDimensionSlider("垂直內縮", insetY, 160f) { insetY = it }
-                    TextButton(onClick = { insetX = 0f; insetY = 0f; topRadius = 0f; bottomRadius = 0f; systemCorners = true }) { Text("重設圓角與內縮") }
+                    GalaxyTextButton(onClick = { insetX = 0f; insetY = 0f; topRadius = 0f; bottomRadius = 0f; systemCorners = true }) { GalaxyText("重設圓角與內縮") }
                     FilmToggle("中央十字", cross) { cross = it }
                     FilmToggle("對位格線", grid) { grid = it }
                     FilmToggle("中央文字", showLabel) { showLabel = it }
-                    if (showLabel) OutlinedTextField(label, { label = it.take(120) }, label = { Text("自訂中央文字") }, maxLines = 3, modifier = Modifier.fillMaxWidth())
+                    if (showLabel) GalaxyTextField(label, { label = it.take(120) }, label = "自訂中央文字", maxLines = 3, modifier = Modifier.fillMaxWidth())
                     FilmToggle("跟隨系統亮度", useSystemBrightness) { useSystemBrightness = it }
                     if (!useSystemBrightness) {
-                        Text("此畫面亮度 ${(brightness * 100).toInt()}%", color = Mint)
-                        Slider(brightness, { brightness = it }, valueRange = .05f..1f,
-                            modifier = Modifier.semantics { contentDescription = "此畫面亮度" })
+                        GalaxyText("此畫面亮度 ${(brightness * 100).toInt()}%", color = Mint)
+                        GalaxySlider(brightness, { brightness = it }, valueRange = .05f..1f,
+                            modifier = Modifier.semantics { contentDescription = AppText.translate("此畫面亮度", language) })
                     }
-                    Text("px 是目前畫面的繪圖像素，非毫米或面板原生像素；圖樣不代表保護貼裁切尺寸。離開或切到背景會還原亮度。", color = Muted, style = MaterialTheme.typography.bodySmall)
-                    OutlinedButton(enabled = !exporting, onClick = { export.launch("Galaxy-box-film.png") }, modifier = Modifier.fillMaxWidth()) {
-                        Text(if (exporting) "儲存中…" else "儲存測試圖 PNG")
+                    GalaxyText("px 是目前畫面的繪圖像素，非毫米或面板原生像素；圖樣不代表保護貼裁切尺寸。離開或切到背景會還原亮度。", color = Muted, style = GalaxyTypography.bodySmall)
+                    GalaxyOutlinedButton(enabled = !exporting, onClick = { export.launch("Galaxy-box-film.png") }, modifier = Modifier.fillMaxWidth()) {
+                        GalaxyText(if (exporting) "儲存中…" else "儲存測試圖 PNG")
                     }
-                    exportMessage?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+                    exportMessage?.let { GalaxyText(it, style = GalaxyTypography.bodySmall) }
                     }
                 }
             }
@@ -173,24 +174,26 @@ internal fun FilmAssistant(onClose: () -> Unit) {
 }
 
 @Composable private fun FilmColorChoice(title: String, colors: List<Pair<String, Color>>, selected: Int, onSelect: (Int) -> Unit) {
-    Text(title, color = Mint)
+    GalaxyText(title, color = Mint)
     Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         colors.forEachIndexed { index, choice ->
-            FilterChip(selected == index, { onSelect(index) }, label = { Text(choice.first) },
-                leadingIcon = { Box(Modifier.size(14.dp).background(choice.second, MaterialTheme.shapes.small)) })
+            GalaxyFilterChip(selected == index, { onSelect(index) }, label = { GalaxyText(choice.first) },
+                leadingIcon = { Box(Modifier.size(14.dp).background(choice.second, GalaxyShapes.small)) })
         }
     }
 }
 @Composable private fun FilmToggle(title: String, checked: Boolean, onChange: (Boolean) -> Unit) {
+    val description = AppText.translate(title, LocalAppLanguage.current)
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-        Text(title, Modifier.weight(1f))
-        Switch(checked, onChange, modifier = Modifier.semantics { contentDescription = title })
+        GalaxyText(title, Modifier.weight(1f))
+        GalaxySwitch(checked, onChange, modifier = Modifier.semantics { contentDescription = description })
     }
 }
 
 @Composable private fun FilmDimensionSlider(title: String, value: Float, maximum: Float, change: (Float) -> Unit) {
-    Text("$title ${value.toInt()} px", color = Mint)
-    Slider(value, change, valueRange = 0f..maximum, modifier = Modifier.semantics { contentDescription = title })
+    val description = AppText.translate(title, LocalAppLanguage.current)
+    GalaxyText("$title ${value.toInt()} px", color = Mint)
+    GalaxySlider(value, change, valueRange = 0f..maximum, modifier = Modifier.semantics { contentDescription = description })
 }
 
 /** Original renderer shared by the preview and PNG export; no Xiaomi code or assets. */

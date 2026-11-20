@@ -35,15 +35,15 @@ import java.io.File
         }
     }
     InfoCard("記憶體原始資料") {
-        TextButton(onClick = { open = !open }) { Text(if (open) "收合 /proc/meminfo" else "讀取 /proc/meminfo") }
+        GalaxyTextButton(onClick = { open = !open }) { GalaxyText(if (open) "收合 /proc/meminfo" else "讀取 /proc/meminfo") }
         if (open) {
             Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                listOf(0, 2, 5, 10).forEach { n -> FilterChip(seconds == n, { seconds = n }, label = { Text(if (n == 0) "手動" else "${n}s") }) }
+                listOf(0, 2, 5, 10).forEach { n -> GalaxyFilterChip(seconds == n, { seconds = n }, label = { GalaxyText(if (n == 0) "手動" else "${n}s") }) }
             }
-            TextButton(onClick = { refresh++ }) { Text("重新讀取") }
-            at?.let { Text("讀取時間 $it · Linux kB 依 KiB 解讀", color = Muted, style = MaterialTheme.typography.bodySmall) }
-            error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
-            text?.let { SelectionContainer { Text(it, modifier = Modifier.fillMaxWidth().heightIn(max = 360.dp).verticalScroll(rememberScrollState()), style = MaterialTheme.typography.bodySmall) } }
+            GalaxyTextButton(onClick = { refresh++ }) { GalaxyText("重新讀取") }
+            at?.let { GalaxyText("讀取時間 $it · Linux kB 依 KiB 解讀", color = Muted, style = GalaxyTypography.bodySmall) }
+            error?.let { GalaxyText(it, color = GalaxyPalette.error) }
+            text?.let { SelectionContainer { GalaxyText(it, modifier = Modifier.fillMaxWidth().heightIn(max = 360.dp).verticalScroll(rememberScrollState()), style = GalaxyTypography.bodySmall) } }
         }
     }
 }

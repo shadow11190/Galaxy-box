@@ -6,5 +6,5 @@ import dev.galaxy.toolbox.model.BatteryPresentation
 import dev.galaxy.toolbox.model.Reading
 
 internal fun LazyListScope.batteryInformation(readings: List<Reading>) {
-    items(BatteryPresentation.visible(readings)) { ReadingCard(it) }
+    items(BatteryPresentation.visible(readings), key = { "${it.label}|${it.source}" }, contentType = { "battery-reading" }) { ReadingCard(it) }
 }

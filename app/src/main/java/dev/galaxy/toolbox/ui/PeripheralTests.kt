@@ -40,10 +40,10 @@ import java.util.Locale
             val adapter = context.getSystemService(BluetoothManager::class.java)?.adapter
             if (adapter == null) "系統未提供藍牙介面" else "藍牙 ${if (adapter.isEnabled) "已開啟" else "已關閉"} · 已配對 ${adapter.bondedDevices.size} 個裝置"
         }.getOrElse { "藍牙狀態無法取得（${it.javaClass.simpleName}）" } }
-        Text(state)
-        Text("檢查狀態與系統配對流程；不會自動掃描或連接其他裝置。", color = Muted)
-        TextButton(onClick = { refresh++ }) { Text("重新讀取藍牙狀態") }
-        Button(onClick = { runCatching { context.startActivity(Intent(Settings.ACTION_BLUETOOTH_SETTINGS)) } }) { Text("開啟藍牙設定") }
+        GalaxyText(state)
+        GalaxyText("檢查狀態與系統配對流程；不會自動掃描或連接其他裝置。", color = Muted)
+        GalaxyTextButton(onClick = { refresh++ }) { GalaxyText("重新讀取藍牙狀態") }
+        GalaxyPrimaryButton(onClick = { runCatching { context.startActivity(Intent(Settings.ACTION_BLUETOOTH_SETTINGS)) } }) { GalaxyText("開啟藍牙設定") }
     }
     if (Build.VERSION.SDK_INT >= 31) PermissionGate(listOf(Manifest.permission.BLUETOOTH_CONNECT), "藍牙連線資訊") { read() }
     else read()
@@ -73,9 +73,9 @@ import java.util.Locale
         if (owner.lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) start()
         onDispose { owner.lifecycle.removeObserver(observer); am.unregisterAudioDeviceCallback(callback) }
     }
-    Text("插入或移除耳機，觀察公開音訊裝置是否改變。")
-    if (devices.isEmpty()) Text("目前未偵測到外接耳機", color = Muted) else devices.forEach { Text(it, color = Mint) }
-    Text("USB／有線／藍牙依系統回報列出；未偵測到不等同插孔故障。", color = Muted, style = MaterialTheme.typography.bodySmall)
+    GalaxyText("插入或移除耳機，觀察公開音訊裝置是否改變。")
+    if (devices.isEmpty()) GalaxyText("目前未偵測到外接耳機", color = Muted) else devices.forEach { GalaxyText(it, color = Mint) }
+    GalaxyText("USB／有線／藍牙依系統回報列出；未偵測到不等同插孔故障。", color = Muted, style = GalaxyTypography.bodySmall)
 }
 
 @Composable internal fun NfcTest() {
@@ -104,9 +104,9 @@ import java.util.Locale
         if (owner.lifecycle.currentState.isAtLeast(Lifecycle.State.RESUMED)) start()
         onDispose { stop(); owner.lifecycle.removeObserver(observer) }
     }
-    Text(message)
-    Button(onClick = { active = !active }) { Text(if (active) "停止 NFC 檢查" else "開始 NFC 檢查") }
-    Text("只偵測標籤與技術類型，不讀取標籤內容、不寫入，也不視為付款功能認證。", color = Muted, style = MaterialTheme.typography.bodySmall)
+    GalaxyText(message)
+    GalaxyPrimaryButton(onClick = { active = !active }) { GalaxyText(if (active) "停止 NFC 檢查" else "開始 NFC 檢查") }
+    GalaxyText("只偵測標籤與技術類型，不讀取標籤內容、不寫入，也不視為付款功能認證。", color = Muted, style = GalaxyTypography.bodySmall)
 }
 
 @SuppressLint("MissingPermission") // Start checks granted coarse/fine permissions; no background request.
@@ -137,12 +137,12 @@ import java.util.Locale
             val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_STOP) { stop(); running = false } }
             owner.lifecycle.addObserver(observer); onDispose { stop(); owner.lifecycle.removeObserver(observer) }
         }
-        Text(message)
+        GalaxyText(message)
         sample?.let { location ->
-            if (location.hasAccuracy() && location.accuracy.isFinite() && location.accuracy >= 0) Text(String.format(Locale.ROOT, "系統估計水平誤差 ± %.1f m", location.accuracy), color = Mint)
-            Text("來源 ${location.provider} · ${((now - location.elapsedRealtimeNanos).coerceAtLeast(0) / 1_000_000_000L)} 秒前", color = Muted)
+            if (location.hasAccuracy() && location.accuracy.isFinite() && location.accuracy >= 0) GalaxyText(String.format(Locale.ROOT, "系統估計水平誤差 ± %.1f m", location.accuracy), color = Mint)
+            GalaxyText("來源 ${location.provider} · ${((now - location.elapsedRealtimeNanos).coerceAtLeast(0) / 1_000_000_000L)} 秒前", color = Muted)
         }
-        Button(onClick = { sample = null; running = !running }) { Text(if (running) "停止定位" else "開始定位（最多 20 秒）") }
-        Text("誤差為系統估計，不是與已知座標比較的實測精度。", color = Muted, style = MaterialTheme.typography.bodySmall)
+        GalaxyPrimaryButton(onClick = { sample = null; running = !running }) { GalaxyText(if (running) "停止定位" else "開始定位（最多 20 秒）") }
+        GalaxyText("誤差為系統估計，不是與已知座標比較的實測精度。", color = Muted, style = GalaxyTypography.bodySmall)
     }
 }

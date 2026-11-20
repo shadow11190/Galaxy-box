@@ -39,7 +39,7 @@ class CatalogClassificationTest {
         assertTrue(classes.lookup("Xiaomi", "24091RPADG", "muyu")!!.isTabletSince2018)
         assertTrue(classes.lookup("Xiaomi", "25079RPDCG", "turner")!!.isTabletSince2018)
         assertTrue(classes.lookup("Redmi", "2509BRP2DG", "organ")!!.isTabletSince2018)
-        assertNull(classes.lookup("Redmi", "2509BRP2DI", "organ"))
+        assertTrue(classes.lookup("Redmi", "2509BRP2DI", "organ")!!.isTabletSince2018)
         assertFalse(classes.lookup("Samsung", "SM-T110", "goyawifi")?.isTabletSince2018 == true)
         assertNull(classes.lookup("Samsung", "NOT-A-MODEL", "m3q"))
     }

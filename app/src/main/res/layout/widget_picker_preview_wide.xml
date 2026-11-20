@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="320dp" android:layout_height="210dp"
+    android:orientation="vertical" android:background="@drawable/widget_picker_surface" android:padding="18dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Galaxy box"
+        android:textColor="#76E1C3" android:textSize="14sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="@string/widget_preview_date" android:textColor="#EDF3FF" android:textSize="20sp" android:textStyle="bold" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp"
+        android:text="@string/widget_preview_model" android:textColor="#B9CBD9" android:textSize="12sp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="@string/widget_preview_battery_memory" android:textColor="#EDF3FF" android:textSize="16sp" />
+        <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+            android:text="@string/widget_preview_temperature_storage" android:textColor="#EDF3FF" android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

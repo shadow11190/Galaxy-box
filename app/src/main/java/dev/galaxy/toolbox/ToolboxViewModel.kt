@@ -1,11 +1,8 @@
 package dev.galaxy.toolbox
 
 import android.app.Application
-import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import dev.galaxy.toolbox.data.BugreportDocument
-import dev.galaxy.toolbox.data.ImportProgress
 import kotlinx.coroutines.flow.update
 import dev.galaxy.toolbox.data.FirmwareRepository
 import dev.galaxy.toolbox.data.HardwareRepository
@@ -16,14 +13,16 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import java.time.Instant
 import android.os.SystemClock
+import android.os.BatteryManager
+import dev.galaxy.toolbox.data.ChargingTestHistory
 import dev.galaxy.toolbox.widgets.WidgetUpdates
 import dev.galaxy.toolbox.diagnostics.*
 
 data class ToolboxState(
     val snapshot: Snapshot = Snapshot(),
     val hardware: List<Reading> = emptyList(),
+    val hardwareLoadedAtMs: Long? = null,
     val cameraBusy: Boolean = false,
     val shizuku: ShizukuAvailability = ShizukuAvailability(),
     val privilegedBusy: Boolean = false,
@@ -32,14 +31,11 @@ data class ToolboxState(
     val privilegedGpu: PrivilegedSnapshot? = null,
     val privilegedError: String? = null,
     val history: List<Float> = emptyList(),
-    val report: ImportedReport? = null,
-    val importBusy: Boolean = false,
-    val importError: String? = null,
-    val importProgress: ImportProgress? = null,
     val firmware: FirmwareResult? = null,
     val firmwareBusy: Boolean = false,
     val firmwareError: String? = null,
     val monitorError: String? = null,
+    val chargingTest: ChargingTestState = ChargingTestState(),
     val temperatures: List<TemperatureReading> = emptyList(),
     val temperatureHistory: Map<String, List<TemperaturePoint>> = emptyMap(),
     val temperatureNowMs: Long = System.currentTimeMillis()
@@ -47,7 +43,10 @@ data class ToolboxState(
 
 class ToolboxViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = HardwareRepository(application)
-    private val mutable = MutableStateFlow(ToolboxState())
+    private val chargingTestHistory = ChargingTestHistory(application)
+    private val mutable = MutableStateFlow(ToolboxState(chargingTest = ChargingTestState(history = chargingTestHistory.read())))
+    private var chargingTestStart = 0L
+    private var chargingTestOptions: Triple<Boolean, Boolean, Boolean>? = null
     val state = mutable.asStateFlow()
     private var privilegedJob: Job? = null
     private var pendingPrivileged: ProbeKind? = null
@@ -60,9 +59,6 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
     private var staticJob: Job? = null
     private var cameraJob: Job? = null
     private var monitor: Job? = null
-    private var importJob: Job? = null
-    private var activeDocument: BugreportDocument? = null
-    private var importGeneration = 0L
     private var firmwareJob: Job? = null
     private var lastWidgetUpdate = -30_000L
     private val temperatureHistory = TemperatureHistory()
@@ -76,7 +72,7 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
                     listOf(Reading("硬體資訊", null, "公開 API", "讀取失敗：${it.message}"))
                 }
             }
-            mutable.update { it.copy(hardware = hardware) }
+            mutable.update { it.copy(hardware = hardware, hardwareLoadedAtMs = System.currentTimeMillis()) }
         }
     }
     fun refreshShizuku() { shizukuClient.refresh() }
@@ -153,6 +149,7 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
                     mutable.value = mutable.value.copy(snapshot = next, monitorError = null,
                         history = (mutable.value.history + listOfNotNull(next.memoryUsed)).takeLast(60),
                         temperatures = readings, temperatureHistory = series, temperatureNowMs = temperatureNow)
+                    sampleChargingTest(next.chargingPower)
                     val now = SystemClock.elapsedRealtime()
                     if (now - lastWidgetUpdate >= 30_000L) {
                         withContext(Dispatchers.IO) { runCatching { WidgetUpdates.publishAll(getApplication(), next) } }
@@ -160,6 +157,7 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
                     }
                 } catch (e: CancellationException) { throw e }
                 catch (e: Exception) {
+                    if (mutable.value.chargingTest.active) sampleChargingTest(null)
                     val now = System.currentTimeMillis()
                     val previous = mutable.value.temperatures
                     val (readings, series) = withContext(Dispatchers.Default) {
@@ -175,41 +173,71 @@ class ToolboxViewModel(application: Application) : AndroidViewModel(application)
             }
         }
     }
-    fun stopMonitoring() { monitor?.cancel(); monitor = null; cancelPrivileged() }
+    fun stopMonitoring() {
+        monitor?.cancel()
+        monitor = null
+        if (mutable.value.chargingTest.active) finishChargingTest("離開前景，已結束檢測。")
+        cancelPrivileged()
+    }
+
+    fun startChargingTest() {
+        val current = mutable.value
+        if (current.chargingTest.active) return
+        val reading = current.snapshot.chargingPower
+        val now = System.currentTimeMillis()
+        val message = when {
+            !reading.fresh(now) -> "正在等待電池資料。"
+            reading.full -> "電池已充滿。"
+            reading.connected != true -> "請先接上充電器。"
+            reading.statusCode != BatteryManager.BATTERY_STATUS_CHARGING -> "已接電，但目前未充電。"
+            else -> null
+        }
+        if (message != null) {
+            mutable.update { it.copy(chargingTest = it.chargingTest.copy(message = message)) }
+            return
+        }
+        chargingTestStart = SystemClock.elapsedRealtime()
+        chargingTestOptions = reading.testOptions()
+        val test = ChargingTestState(active = true,
+            result = ChargingTestResult(startedAt = now, startPercent = reading.batteryPercent),
+            history = current.chargingTest.history).addReading(reading, 0)
+        mutable.update { it.copy(chargingTest = test) }
+    }
+
+    fun stopChargingTest() = finishChargingTest("檢測已結束。")
+
+    private fun sampleChargingTest(reading: ChargingPowerReading?) {
+        val current = mutable.value.chargingTest
+        if (!current.active) return
+        val stop = when {
+            reading?.connected == false -> "電源已拔除，檢測已結束。"
+            reading?.full == true -> "電池已充滿，檢測已結束。"
+            reading != null && reading.testOptions() != chargingTestOptions -> "電池讀取設定已變更，檢測已結束。"
+            else -> null
+        }
+        if (stop != null) finishChargingTest(stop)
+        else {
+            val elapsed = SystemClock.elapsedRealtime() - chargingTestStart
+            val available = reading?.takeIf { it.connected == true }
+            mutable.update { it.copy(chargingTest = current.addReading(available, elapsed)) }
+        }
+    }
+
+    private fun finishChargingTest(message: String) {
+        val test = mutable.value.chargingTest
+        if (!test.active) return
+        val completed = test.result?.copy(durationMs = SystemClock.elapsedRealtime() - chargingTestStart)
+        val history = if (completed != null && completed.samples > 0)
+            (listOf(completed) + test.history).take(20) else test.history
+        mutable.update { it.copy(chargingTest = test.copy(active = false, result = completed, history = history, message = message)) }
+        if (history != test.history) chargingTestHistory.save(history)
+    }
+
+    private fun ChargingPowerReading.testOptions() = Triple(invertCurrent, estimateVoltageEnabled, dualCell)
     fun rescanGpuSources() { repository.rescanGpuSources(); repository.rescanTemperatureSources() }
     fun rescanTemperatureSources() { repository.rescanTemperatureSources() }
     fun setTemperatureVisible(visible: Boolean) { temperatureVisible = visible }
-    fun importReport(uri: Uri) {
-        if (importJob?.isActive == true) return
-        val generation = ++importGeneration
-        val document = BugreportDocument(getApplication())
-        activeDocument = document
-        mutable.update { it.copy(importBusy = true, importError = null, report = null, importProgress = ImportProgress("準備開啟 ZIP／TXT")) }
-        importJob = viewModelScope.launch {
-            try {
-                val fields = withContext(Dispatchers.IO) {
-                    document.readReport(uri) { progress ->
-                        viewModelScope.launch { if (generation == importGeneration) mutable.update { it.copy(importProgress = progress) } }
-                    }
-                }
-                if (generation == importGeneration) mutable.update { it.copy(importBusy = false, importProgress = null,
-                    report = ImportedReport("使用者選取的完整報告（ZIP／TXT／LOG）", fields.fields, Instant.now().toString(), fields.diagnostics)) }
-            } catch (e: CancellationException) {
-                if (generation == importGeneration) mutable.update { it.copy(importBusy = false, importProgress = null, importError = "已取消匯入") }
-                throw e
-            } catch (e: Exception) {
-                if (generation == importGeneration) mutable.update { it.copy(importBusy = false, importProgress = null,
-                    importError = "匯入失敗：${e.message ?: e.javaClass.simpleName}。若來源是雲端，請先下載到手機再選取。") }
-            } finally { if (generation == importGeneration) activeDocument = null }
-        }
-    }
-    fun cancelImport() {
-        ++importGeneration
-        importJob?.cancel(); activeDocument?.cancel(); activeDocument = null
-        mutable.update { it.copy(importBusy = false, importProgress = null, importError = "已取消匯入") }
-    }
-    override fun onCleared() { activeDocument?.cancel(); shizukuClient.close(); super.onCleared() }
-    fun clearReport() { mutable.value = mutable.value.copy(report = null, importError = null) }
+    override fun onCleared() { shizukuClient.close(); super.onCleared() }
     fun queryFirmware(model: String, csc: String) {
         if (firmwareJob?.isActive == true) return
         val query = try { FirmwareQuery.create(model, csc) }

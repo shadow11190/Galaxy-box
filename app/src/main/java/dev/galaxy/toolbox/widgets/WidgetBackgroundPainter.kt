@@ -4,7 +4,7 @@ import android.graphics.*
 
 /** RemoteViews carries only this static bitmap, never Compose, RenderEffect or wallpaper capture. */
 object WidgetBackgroundPainter {
-    fun create(settings: WidgetSettings, width: Int, height: Int): Bitmap? {
+    fun create(settings: WidgetSettings, width: Int, height: Int, pill: Boolean = false): Bitmap? {
         if (!settings.drawsBackground) return null
         // Bound the RemoteViews bitmap payload across multiple responsive sizes.
         val scale = minOf(1f, 320f / maxOf(width, height).coerceAtLeast(1))
@@ -14,10 +14,13 @@ object WidgetBackgroundPainter {
             val canvas = Canvas(bitmap)
             val rect = RectF(1f, 1f, w - 1f, h - 1f)
             val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-            val radius = minOf(28f * scale, minOf(w, h) / 4f)
+            val radius = if (pill) minOf(w, h) / 2f else minOf(28f * scale, minOf(w, h) / 4f)
             paint.color = settings.backgroundColor
             val layer = canvas.saveLayerAlpha(0f, 0f, w.toFloat(), h.toFloat(), settings.opacity.coerceIn(0, 100) * 255 / 100)
-            paint.alpha = if (settings.drawsDecoration) 96 else 255
+            // The narrow accessory pill needs a deeper tint so labels remain legible
+            // over bright wallpapers. It is still translucent and uses the same
+            // static highlight layers as the other AppWidgets.
+            paint.alpha = if (settings.drawsDecoration) (if (pill) 215 else 96) else 255
             canvas.drawRoundRect(rect, radius, radius, paint)
             if (settings.drawsDecoration) {
                 fun tint(color: Int, fraction: Float) = (color and 0xFFFFFF) or ((255 * fraction).toInt().coerceIn(0, 255) shl 24)

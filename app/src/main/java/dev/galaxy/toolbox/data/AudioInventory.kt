@@ -1,6 +1,7 @@
 package dev.galaxy.toolbox.data
 
 import android.media.AudioDeviceInfo
+import android.os.Build
 import dev.galaxy.toolbox.model.HardwareCategory
 import dev.galaxy.toolbox.model.Reading
 
@@ -16,7 +17,8 @@ internal object AudioInventory {
         val note = "目前系統列出的音訊端點，不是實體喇叭數；聲道數也不代表實體單體數。聽筒與安全音量路徑分列，避免加總成喇叭顆數。"
         row("內建喇叭端點", p?.count { it.output && it.type == AudioDeviceInfo.TYPE_BUILTIN_SPEAKER }, api, note)
         row("聽筒端點", p?.count { it.output && it.type == AudioDeviceInfo.TYPE_BUILTIN_EARPIECE }, api, note)
-        if (p?.any { it.output && it.type == AudioDeviceInfo.TYPE_BUILTIN_SPEAKER_SAFE } == true)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R &&
+            p?.any { it.output && it.type == AudioDeviceInfo.TYPE_BUILTIN_SPEAKER_SAFE } == true)
             row("安全音量喇叭端點", p.count { it.output && it.type == AudioDeviceInfo.TYPE_BUILTIN_SPEAKER_SAFE }, api, note)
         val m = microphones?.filter { it.type == AudioDeviceInfo.TYPE_BUILTIN_MIC }
         val identities = m?.map { mic -> mic.description.takeIf { it.isNotBlank() } ?: if (mic.group >= 0 && mic.index >= 0) "group:${mic.group}/index:${mic.index}" else null }

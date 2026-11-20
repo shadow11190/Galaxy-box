@@ -3,7 +3,8 @@ package dev.galaxy.toolbox.widgets
 enum class WidgetBackground(val title: String) { GLASS("液態玻璃風格（靜態）"), SOLID("純色背景"), TRANSPARENT("完全透明／無背景") }
 enum class WidgetClick(val title: String) { APP("開啟 App"), SETTINGS("小工具設定"), NONE("無動作") }
 enum class WidgetField(val title: String) {
-    BATTERY("電量"), TEMPERATURE("電池溫度"), MEMORY("記憶體"), STORAGE("儲存空間"), CPU("CPU 最高頻率"), TRAFFIC("流量 · 自開機累計")
+    BATTERY("電量"), TEMPERATURE("電池溫度"), MEMORY("記憶體"), STORAGE("儲存空間"), CPU("CPU 最高頻率"),
+    TRAFFIC("流量 · 自開機累計"), UPTIME("開機時間")
 }
 
 data class WidgetSettings(
@@ -15,7 +16,9 @@ data class WidgetSettings(
     val showClock: Boolean = true,
     val showModel: Boolean = true,
     val fields: Set<WidgetField> = linkedSetOf(WidgetField.BATTERY, WidgetField.TEMPERATURE, WidgetField.MEMORY, WidgetField.STORAGE),
-    val click: WidgetClick = WidgetClick.APP
+    val click: WidgetClick = WidgetClick.APP,
+    val preferredRows: Int = 3,
+    val preferredColumns: Int = 3
 ) {
     // Transparent is a separate rendering policy, never just an alpha applied to a decorated card.
     val drawsBackground: Boolean get() = background != WidgetBackground.TRANSPARENT && opacity.coerceIn(0, 100) > 0
@@ -24,12 +27,17 @@ data class WidgetSettings(
         "background" to background.name, "opacity" to opacity.coerceIn(0, 100).toString(),
         "backgroundColor" to backgroundColor.toString(), "textColor" to textColor.toString(), "accentColor" to accentColor.toString(),
         "clock" to showClock.toString(), "model" to showModel.toString(),
-        "fields" to fields.joinToString(",") { it.name }, "click" to click.name
+        "fields" to fields.joinToString(",") { it.name }, "click" to click.name,
+        "rows" to preferredRows.coerceIn(1, 6).toString(), "columns" to preferredColumns.coerceIn(2, 5).toString()
     )
     companion object {
         fun defaults(kind: WidgetKind) = when (kind) {
             WidgetKind.BATTERY -> WidgetSettings(showClock = false, showModel = false, fields = linkedSetOf(WidgetField.BATTERY, WidgetField.TEMPERATURE))
             WidgetKind.RESOURCES -> WidgetSettings(showClock = false, fields = linkedSetOf(WidgetField.MEMORY, WidgetField.STORAGE, WidgetField.CPU))
+            WidgetKind.WIDE -> WidgetSettings(preferredRows = 3)
+            WidgetKind.STRIP -> WidgetSettings(background = WidgetBackground.GLASS, opacity = 90,
+                backgroundColor = 0xFF202936.toInt(), showClock = false, showModel = false,
+                fields = emptySet(), click = WidgetClick.SETTINGS, preferredRows = 1, preferredColumns = 5)
             WidgetKind.OVERVIEW -> WidgetSettings()
         }
         fun decode(values: Map<String, String>, kind: WidgetKind): WidgetSettings {
@@ -42,7 +50,9 @@ data class WidgetSettings(
                 showClock = values["clock"]?.toBooleanStrictOrNull() ?: d.showClock,
                 showModel = values["model"]?.toBooleanStrictOrNull() ?: d.showModel,
                 fields = if ("fields" in values) values.getValue("fields").split(',').mapNotNull { name -> WidgetField.entries.firstOrNull { it.name == name } }.toSet() else d.fields,
-                click = WidgetClick.entries.firstOrNull { it.name == values["click"] } ?: d.click
+                click = WidgetClick.entries.firstOrNull { it.name == values["click"] } ?: d.click,
+                preferredRows = values["rows"]?.toIntOrNull()?.coerceIn(1, 6) ?: d.preferredRows,
+                preferredColumns = values["columns"]?.toIntOrNull()?.coerceIn(2, 5) ?: d.preferredColumns
             )
         }
         fun parseColor(value: String): Int? = value.removePrefix("#").takeIf { Regex("[0-9a-fA-F]{6}").matches(it) }

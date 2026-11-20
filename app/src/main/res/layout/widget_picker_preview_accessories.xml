@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="330dp" android:layout_height="68dp"
+    android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/widget_picker_glass_surface"
+    android:paddingStart="4dp" android:paddingEnd="4dp">
+    <LinearLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center">
+        <ImageView android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/widget_preview_arc" android:contentDescription="@null" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="77%" android:textColor="#EDF3FF" android:textSize="12sp" android:gravity="center" />
+    </LinearLayout>
+    <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="34dp" android:src="@drawable/widget_preview_arc" android:contentDescription="@null" />
+    <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="34dp" android:src="@drawable/widget_preview_arc" android:contentDescription="@null" />
+    <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="34dp" android:src="@drawable/widget_preview_arc" android:contentDescription="@null" />
+    <ImageView android:layout_width="0dp" android:layout_weight="1" android:layout_height="34dp" android:src="@drawable/widget_preview_arc" android:contentDescription="@null" />
+    <TextView android:layout_width="28dp" android:layout_height="48dp" android:gravity="center" android:text="↻" android:textColor="#76E1C3" android:textSize="20sp" android:contentDescription="@string/widget_refresh_description" />
+</LinearLayout>

@@ -55,6 +55,24 @@ class CameraDetailsTest {
         assertFalse(rows.any { it.value?.contains("主鏡") == true })
         assertFalse(rows.any { it.value?.contains("ISOCELL") == true })
     }
+    @Test fun vendorSensorNameIsShownWithItsActualKey() {
+        val c = camera()
+        val key = C.Key("com.vendor.camera.sensor_name", String::class.java)
+        Shadow.extract<ShadowCameraCharacteristics>(c).set(key, "IMX989")
+        // Robolectric's shadow stores custom keys but does not add them to getKeys().
+        val rows = CameraDetails.describe("0", c, vendorKeys = listOf(key))
+        assertEquals("IMX989", rows.single { it.label == "感光元件型號／廠商" }.value)
+        assertTrue(rows.single { it.label == "廠商感光元件識別字" }.source.contains(key.name))
+    }
+    @Test fun onlyExplicitTextualSensorTagsCanBecomeModelCandidates() {
+        assertTrue(CameraDetails.explicitSensorNameKey("com.vendor.camera.sensor_name"))
+        assertTrue(CameraDetails.explicitSensorNameKey("com.vendor.sensorModel"))
+        assertFalse(CameraDetails.explicitSensorNameKey("com.vendor.camera.sensorId"))
+        assertFalse(CameraDetails.explicitSensorNameKey("com.vendor.camera.moduleSerial"))
+        assertNull(CameraDetails.vendorText(12345))
+        assertNull(CameraDetails.vendorText(byteArrayOf(0, 1, 2)))
+        assertEquals("S5KHP2", CameraDetails.vendorText("S5KHP2\u0000".toByteArray()))
+    }
     @Test fun physicalMetadataPreservesParentsAndDoesNotClaimStandaloneCamera() {
         val rows = CameraDetails.describe("9", camera(), setOf("0", "2"), false)
         val relation = rows.single { it.label == "Camera ID 關係" }

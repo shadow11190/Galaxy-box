@@ -75,42 +75,21 @@ fun ScreenTool(tool: String, onClose: () -> Unit) {
             touches.forEach { drawCircle(Color(0xFF76E1C3), 25.dp.toPx(), it, style = androidx.compose.ui.graphics.drawscope.Stroke(3.dp.toPx())) }
         }
         Column(Modifier.align(androidx.compose.ui.Alignment.TopCenter).statusBarsPadding().padding(12.dp)
-            .background(Color(0xE6162237), MaterialTheme.shapes.medium).padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            Text(if (tool == "觸控") "觸控 ${touches.size} 指 · 本次最多 $maxTouches 指" else "$tool · ${names[mode]}色", color = Color.White)
+            .background(Color(0xE6162237), GalaxyShapes.medium).padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+            GalaxyText(if (tool == "觸控") "觸控 ${touches.size} 指 · 本次最多 $maxTouches 指" else "$tool · ${names[mode]}色", color = Color.White)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 if (tool != "觸控") {
-                    TextButton(onClick = { mode = (mode + 1) % colors.size }) { Text("切換顏色") }
-                    TextButton(onClick = { grid = !grid }) { Text(if (grid) "隱藏格線" else "顯示格線") }
-                } else TextButton(onClick = { trail = emptyList(); maxTouches = 0 }) { Text("清除軌跡") }
-                Button(onClick = onClose) { Text("結束") }
+                    GalaxyTextButton(onClick = { mode = (mode + 1) % colors.size }) { GalaxyText("切換顏色") }
+                    GalaxyTextButton(onClick = { grid = !grid }) { GalaxyText(if (grid) "隱藏格線" else "顯示格線") }
+                } else GalaxyTextButton(onClick = { trail = emptyList(); maxTouches = 0 }) { GalaxyText("清除軌跡") }
+                GalaxyPrimaryButton(onClick = onClose) { GalaxyText("結束") }
             }
-            Text("返回鍵可離開 · 畫面使用目前系統亮度", color = Color.White, style = MaterialTheme.typography.labelSmall)
+            GalaxyText("返回鍵可離開 · 畫面使用目前系統亮度", color = Color.White, style = GalaxyTypography.labelSmall)
         }
     }
 }
 
-@Composable fun VibrationCard() {
-    val context = LocalContext.current
-    val vibrator = remember(context) {
-        if (Build.VERSION.SDK_INT >= 31) context.getSystemService(VibratorManager::class.java).defaultVibrator
-        else @Suppress("DEPRECATION") (context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator)
-    }
-    var result by remember { mutableStateOf("按下後請自行確認是否感受到震動。") }
-    val lifecycle = LocalLifecycleOwner.current.lifecycle
-    DisposableEffect(vibrator, lifecycle) {
-        val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_STOP) vibrator.cancel() }
-        lifecycle.addObserver(observer)
-        onDispose { lifecycle.removeObserver(observer); vibrator.cancel() }
-    }
-    InfoCard("震動馬達") {
-        Text(result)
-        Button(enabled = vibrator.hasVibrator(), onClick = {
-            runCatching { vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE)) }
-                .onSuccess { result = "已送出 300 ms 震動指令；請自行確認結果。" }
-                .onFailure { result = "無法啟動震動：${it.message}" }
-        }) { Text(if (vibrator.hasVibrator()) "測試震動" else "裝置未回報震動馬達") }
-    }
-}
+@Composable fun VibrationCard() = HapticMotorCard()
 
 @Composable fun SensorCard() {
     val context = LocalContext.current
@@ -144,9 +123,9 @@ fun ScreenTool(tool: String, onClose: () -> Unit) {
     }
     InfoCard("即時感測器") {
         supported.forEachIndexed { i, (_, title) ->
-            Text(title, color = MaterialTheme.colorScheme.primary)
-            Text(readings[types[i]] ?: "未知")
+            GalaxyText(title, color = GalaxyPalette.primary)
+            GalaxyText(readings[types[i]] ?: "未知")
         }
-        Text("來源：SensorManager · 約 5 Hz；僅在此頁與 App 前景註冊。距離值可能只提供遠／近。", style = MaterialTheme.typography.bodySmall)
+        GalaxyText("來源：SensorManager · 約 5 Hz；僅在此頁與 App 前景註冊。距離值可能只提供遠／近。", style = GalaxyTypography.bodySmall)
     }
 }

@@ -8,6 +8,8 @@ import dev.galaxy.toolbox.charging.*
 import dev.galaxy.toolbox.model.ChargingPowerReading
 import org.junit.Assert.*
 import org.junit.Test
+import org.junit.Before
+import org.junit.After
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
@@ -16,6 +18,12 @@ import org.robolectric.annotation.Config
 @Config(sdk = [34])
 class ChargingNotificationTest {
     private fun reading() = ChargingPowerReading(2_000_000, 4000, 62, true, false, 1000, BatteryManager.BATTERY_STATUS_CHARGING)
+    @Before fun useTraditionalForExistingNotificationAssertions() {
+        ApplicationProvider.getApplicationContext<Context>().getSharedPreferences("display", 0).edit().putString("language", "zh-TW").commit()
+    }
+    @After fun clearLanguageOverride() {
+        ApplicationProvider.getApplicationContext<Context>().getSharedPreferences("display", 0).edit().remove("language").commit()
+    }
     @Test fun notificationContainsOnlyStatusPercentAndNetPower() {
         val context = ApplicationProvider.getApplicationContext<Context>(); ChargingNotification.createChannel(context)
         val n = ChargingNotification.build(context, reading(), 1000)
@@ -24,6 +32,22 @@ class ChargingNotificationTest {
         assertFalse(n.extras.toString().contains("10⁹")); assertEquals("停止監控", n.actions.single().title)
         assertTrue(n.flags and Notification.FLAG_ONGOING_EVENT != 0)
         assertFalse(n.extras.getBoolean("android.requestPromotedOngoing", false))
+    }
+    @Test fun simplifiedNotificationUsesTheSelectedLanguage() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        context.getSharedPreferences("display", 0).edit().putString("language", "zh-CN").commit()
+        ChargingNotification.createChannel(context)
+        val notification = ChargingNotification.build(context, reading(), 1000)
+        assertEquals("充电中 · 62%", notification.extras.getCharSequence(Notification.EXTRA_TITLE).toString())
+        assertEquals("电池净功率 +8.0 W", notification.extras.getCharSequence(Notification.EXTRA_TEXT).toString())
+        assertEquals("停止监控", notification.actions.single().title)
+    }
+    @Test fun englishNotificationKeepsLivePowerAndPercent() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        context.getSharedPreferences("display", 0).edit().putString("language", "en").commit()
+        val notification = ChargingNotification.build(context, reading(), 1000)
+        assertEquals("Charging · 62%", notification.extras.getCharSequence(Notification.EXTRA_TITLE).toString())
+        assertEquals("Battery net power +8.0 W", notification.extras.getCharSequence(Notification.EXTRA_TEXT).toString())
     }
     @Test fun missingOrStaleValuesNeverBecomeZero() {
         assertEquals("電池淨功率 —", ChargingNotification.content(ChargingPowerReading(), 1000))

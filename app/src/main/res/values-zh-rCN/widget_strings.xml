@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Galaxy box</string>
+    <string name="widget_overview_name">Galaxy box · 完整版</string>
+    <string name="widget_battery_name">Galaxy box · 精简版</string>
+    <string name="widget_resources_name">Galaxy box · 内存与存储</string>
+    <string name="widget_wide_name">Galaxy box · 5 栏信息</string>
+    <string name="widget_strip_name">Galaxy box · 蓝牙电量条</string>
+    <string name="widget_overview_description">日期时间、机型、内存、存储、电量与电池温度，可单独设置背景。</string>
+    <string name="widget_battery_description">电量、电池温度与充电状态，支持点按更新。</string>
+    <string name="widget_resources_description">RAM、数据分区及可读取核心最高频率的快照。</string>
+    <string name="widget_wide_description">5 栏宽、高度可在桌面调整的信息小组件。</string>
+    <string name="widget_strip_description">手机及已连接耳机、手表的电量；5 × 1，可缩至 2 × 1。无数据显示 —。</string>
+    <string name="widget_refresh_symbol">↻</string>
+    <string name="widget_refresh_description">重新采样小组件数据</string>
+    <string name="widget_waiting">尚未采样 · 点按 ↻ 更新</string>
+    <string name="widget_unknown">—</string>
+    <string name="widget_config_title">小组件设置</string>
+    <string name="widget_preview_date">日期与时间</string>
+    <string name="widget_preview_model">设备名称</string>
+    <string name="widget_preview_battery_memory">电量\n—\n\n内存\n—</string>
+    <string name="widget_preview_temperature_storage">电池温度\n—\n\n存储空间\n—</string>
+    <string name="widget_preview_waiting">数据更新后显示</string>
+    <string name="widget_preview_battery">电量</string>
+    <string name="widget_preview_temperature">电池温度  —</string>
+    <string name="widget_preview_memory">内存   —</string>
+    <string name="widget_preview_storage">存储空间   —</string>
+    <string name="widget_preview_cpu">CPU 频率   —</string>
+</resources>

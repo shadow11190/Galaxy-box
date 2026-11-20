@@ -12,6 +12,8 @@ import dev.galaxy.toolbox.model.*
 import dev.galaxy.toolbox.widgets.*
 import org.junit.Assert.*
 import org.junit.Test
+import org.junit.Before
+import org.junit.After
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -24,6 +26,12 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class WidgetRenderingTest {
     private val context: Context get() = RuntimeEnvironment.getApplication()
+    @Before fun useTraditionalForExistingRenderingAssertions() {
+        context.getSharedPreferences("display", 0).edit().putString("language", "zh-TW").commit()
+    }
+    @After fun clearLanguageOverride() {
+        context.getSharedPreferences("display", 0).edit().remove("language").commit()
+    }
     private val data = WidgetPresentation.from(Snapshot(batteryPercent = 0, batteryTemperature = 0f,
         memory = ByteUsage.of(40, 100), storage = ByteUsage.of(65, 100), sampledAtMillis = 1792380000000L), model = "Galaxy box · 渲染測試")
 
@@ -32,6 +40,88 @@ class WidgetRenderingTest {
         val texts = descendants(view).filterIsInstance<TextView>().map { it.text.toString() }
         assertTrue(texts.containsAll(listOf("電量", "電池溫度", "記憶體", "儲存空間", "0%", "0.0 °C")))
         assertTrue(view.findViewById<TextClock>(R.id.widget_clock).visibility == View.VISIBLE)
+    }
+    @Test fun simplifiedLanguageAlsoUpdatesWidgetLabelsAndAccessibility() {
+        context.getSharedPreferences("display", 0).edit().putString("language", "zh-CN").commit()
+        val view = WidgetRenderer.create(context, WidgetKind.OVERVIEW, 171, data, 320, 280, preview = true).apply(context, FrameLayout(context))
+        val texts = descendants(view).filterIsInstance<TextView>().map { it.text.toString() }
+        assertTrue(texts.contains("电池温度"))
+        assertTrue(texts.contains("内存"))
+        assertTrue(descendants(view).any { it.id == R.id.widget_cell && it.contentDescription?.contains("电池温度") == true })
+    }
+    @Test fun wideWidgetUsesTheSharedRecognizedBrandMark() {
+        val samsung = data.copy(model = "Galaxy S26 Ultra", brandMark = "SAMSUNG")
+        val view = WidgetRenderer.create(context, WidgetKind.WIDE, 81, samsung, 380, 220, preview = true).apply(context, FrameLayout(context))
+        assertEquals("Galaxy S26 Ultra", view.findViewById<TextView>(R.id.widget_model).text.toString())
+        assertEquals(View.VISIBLE, view.findViewById<ImageView>(R.id.widget_model_logo).visibility)
+        assertNotNull(view.findViewById<ImageView>(R.id.widget_model_logo).drawable)
+    }
+    @Test fun accessoryBarResizesFromFiveToTwoColumnsWithoutADeviceModel() {
+        val batteries = listOf(ConnectedBattery("手機", 77, ConnectedBattery.Kind.PHONE),
+            ConnectedBattery("耳機", 42, ConnectedBattery.Kind.HEADPHONES),
+            ConnectedBattery("手錶", null, ConnectedBattery.Kind.WATCH),
+            ConnectedBattery("其他裝置", 100, ConnectedBattery.Kind.ACCESSORY))
+        val snapshot = data.copy(model = "不應顯示的型號", connectedBatteries = batteries)
+        val narrow = WidgetRenderer.create(context, WidgetKind.STRIP, 83, snapshot, 150, 84, preview = true).apply(context, FrameLayout(context))
+        val wide = WidgetRenderer.create(context, WidgetKind.STRIP, 83, snapshot, 360, 84, preview = true).apply(context, FrameLayout(context))
+        assertEquals(2, descendants(narrow).count { it.id == R.id.widget_battery_slot })
+        assertEquals(5, descendants(wide).count { it.id == R.id.widget_battery_slot })
+        assertTrue(descendants(narrow).filter { it.id == R.id.widget_battery_name }.all { it.visibility == View.GONE })
+        assertEquals(1, descendants(wide).filter { it.id == R.id.widget_battery_value && it.visibility == View.GONE }.size)
+        assertNull(wide.findViewById<View>(R.id.widget_model))
+        assertTrue(descendants(wide).filterIsInstance<TextView>().any { it.text == "—" })
+        assertEquals(0, descendants(wide).filterIsInstance<TextView>().count { it.text == "不應顯示的型號" })
+        for ((view, dp) in listOf(narrow to 150, wide to 360)) {
+            val density = context.resources.displayMetrics.density
+            val width = (dp * density).toInt(); val height = (84 * density).toInt()
+            view.measure(View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(height, View.MeasureSpec.EXACTLY))
+            view.layout(0, 0, width, height)
+            val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+            view.draw(Canvas(bitmap))
+            val file = File("build/reports/visual-checks/accessory-$dp.png")
+            file.parentFile?.mkdirs(); file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+            bitmap.recycle()
+        }
+    }
+    @Test fun accessoryBarHasHonestEmptyAndTransparentStates() {
+        val empty = WidgetPresentation.from(Snapshot(batteryPercent = null)).copy(connectedBatteries = listOf(ConnectedBattery("手機", null, ConnectedBattery.Kind.PHONE)), accessoryStatus = "需允許藍牙裝置權限")
+        val transparent = WidgetSettings.defaults(WidgetKind.STRIP).copy(background = WidgetBackground.TRANSPARENT)
+        val view = WidgetRenderer.create(context, WidgetKind.STRIP, 84, empty, 150, 84, transparent, preview = true).apply(context, FrameLayout(context))
+        assertEquals(View.GONE, view.findViewById<View>(R.id.widget_background_layer).visibility)
+        assertEquals(2, descendants(view).count { it.id == R.id.widget_battery_slot })
+        assertTrue(descendants(view).any { it.id == R.id.widget_battery_slot && it.contentDescription == "需允許藍牙裝置權限" })
+        assertTrue(descendants(view).filterIsInstance<TextView>().any { it.text == "—" })
+    }
+    @Test fun pickerPreviewsHaveDedicatedVisibleContent() {
+        for (layout in listOf(R.layout.widget_picker_preview_full, R.layout.widget_picker_preview_battery,
+            R.layout.widget_picker_preview_resources, R.layout.widget_picker_preview_wide, R.layout.widget_picker_preview_accessories)) {
+            val preview = android.view.LayoutInflater.from(context).inflate(layout, FrameLayout(context), false)
+            assertNotNull(preview.background)
+            assertTrue(descendants(preview).filterIsInstance<TextView>().any { it.text.isNotBlank() })
+            val width = preview.layoutParams.width
+            val height = preview.layoutParams.height
+            preview.measure(View.MeasureSpec.makeMeasureSpec(width, View.MeasureSpec.EXACTLY), View.MeasureSpec.makeMeasureSpec(height, View.MeasureSpec.EXACTLY))
+            preview.layout(0, 0, width, height)
+            val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+            preview.draw(Canvas(bitmap))
+            val file = File("build/reports/visual-checks/picker-$layout.png")
+            file.parentFile?.mkdirs(); file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+            bitmap.recycle()
+        }
+    }
+    @Test @Config(qualifiers = "zh-rCN-w411dp-h891dp-xhdpi") fun pickerMetadataAndPreviewUseSimplifiedSystemResources() {
+        val localized = RuntimeEnvironment.getApplication() as Context
+        assertTrue(localized.getString(R.string.widget_overview_description).contains("内存"))
+        val preview = android.view.LayoutInflater.from(localized)
+            .inflate(R.layout.widget_picker_preview_full, FrameLayout(localized), false)
+        assertTrue(descendants(preview).filterIsInstance<TextView>().any { it.text.contains("电池温度") })
+    }
+    @Test @Config(qualifiers = "en-rUS-w411dp-h891dp-xhdpi") fun pickerMetadataAndPreviewUseEnglishSystemResources() {
+        val localized = RuntimeEnvironment.getApplication() as Context
+        assertTrue(localized.getString(R.string.widget_overview_description).contains("memory"))
+        val preview = android.view.LayoutInflater.from(localized)
+            .inflate(R.layout.widget_picker_preview_full, FrameLayout(localized), false)
+        assertTrue(descendants(preview).filterIsInstance<TextView>().any { it.text.contains("Battery temperature") })
     }
     @Test fun unknownDataHasDashAndNoProgressImage() {
         val view = WidgetRenderer.create(context, WidgetKind.BATTERY, 72, WidgetPresentation.from(Snapshot()), preview = true).apply(context, FrameLayout(context))

@@ -12,6 +12,7 @@ object HardwareCatalog {
     @Volatile private var classifications: DeviceClassifications? = null
     @Volatile private var processorPhoneUsage: ProcessorPhoneUsage? = null
     @Volatile private var processorDeviceUsage: ProcessorDeviceUsage? = null
+    @Volatile private var gpuSpecs: GpuSpecs? = null
     @Synchronized fun names(context: Context): DeviceNames = names ?: context.assets.open("android-device-names.tsv")
         .bufferedReader().use { DeviceNames.parse(it.lineSequence()) }.also { names = it }
     @Synchronized fun variants(context: Context): DeviceVariants = variants ?: context.assets.open("device-variants.tsv")
@@ -25,8 +26,35 @@ object HardwareCatalog {
     @Synchronized fun processorDeviceUsage(context: Context): ProcessorDeviceUsage = processorDeviceUsage ?:
         context.assets.open("processor-device-usage-2018plus.tsv").bufferedReader()
             .use { ProcessorDeviceUsage.parse(it.lineSequence()) }.also { processorDeviceUsage = it }
-    fun identity(context: Context, reports: List<ChipReport> = chipReports()): HardwareIdentity = HardwareIdentityResolver.resolve(
-        names(context), variants(context), Build.MANUFACTURER, Build.MODEL, Build.DEVICE, Build.BRAND, reports)
+    @Synchronized fun gpuSpecs(context: Context): GpuSpecs = gpuSpecs ?: context.assets.open("gpu-specs.tsv")
+        .bufferedReader().use { GpuSpecs.parse(it.lineSequence()) }.also { gpuSpecs = it }
+    private val firmwareMarketName by lazy { readProperty("ro.product.marketname") }
+
+    fun identity(context: Context, reports: List<ChipReport> = chipReports()): HardwareIdentity {
+        val identity = HardwareIdentityResolver.resolve(
+            names(context), variants(context), Build.MANUFACTURER, Build.MODEL, Build.DEVICE, Build.BRAND, reports)
+        if (identity.name != null && !DeviceNames.looksLikeModelCode(identity.name, Build.MODEL)) return identity
+        val marketName = firmwareMarketName?.takeUnless { DeviceNames.looksLikeModelCode(it, Build.MODEL) }
+        return when {
+            marketName != null -> identity.copy(name = marketName, nameSource = "ro.product.marketname")
+            identity.name != null -> identity
+            Build.MODEL.isNotBlank() && !Build.MODEL.equals("unknown", true) ->
+                identity.copy(name = Build.MODEL, nameSource = "Build.MODEL")
+            else -> identity
+        }
+    }
+
+    private fun readProperty(key: String): String? = runCatching {
+        val process = ProcessBuilder("/system/bin/getprop", key).redirectErrorStream(true).start()
+        try {
+            if (!process.waitFor(200, TimeUnit.MILLISECONDS) || process.exitValue() != 0) null
+            else process.inputStream.bufferedReader().use { it.readLine()?.take(128)?.trim() }
+                ?.takeUnless { it.isBlank() || it.equals("unknown", true) }
+        } finally {
+            process.destroy()
+            process.inputStream.close()
+        }
+    }.getOrNull()
     fun chipReports(): List<ChipReport> = buildList {
         fun report(source: String, value: String?) {
             value?.trim()?.takeIf { it.isNotBlank() && !it.equals("unknown", true) }?.let { add(ChipReport(source, it)) }
@@ -36,14 +64,7 @@ object HardwareCatalog {
         report("Build.BOARD", Build.BOARD)
         // Fixed read-only properties. No shell, root, serial, IMEI or location inference.
         for (key in listOf("ro.soc.model", "ro.board.platform", "ro.mediatek.platform", "ro.chipname", "ro.hardware.chipname")) {
-            val value = runCatching {
-                val process = ProcessBuilder("/system/bin/getprop", key).redirectErrorStream(true).start()
-                try {
-                    if (!process.waitFor(200, TimeUnit.MILLISECONDS)) null
-                    else if (process.exitValue() == 0) process.inputStream.bufferedReader().use { it.readLine()?.take(256) } else null
-                } finally { process.destroy(); process.inputStream.close() }
-            }.getOrNull()
-            report("getprop $key", value)
+            report("getprop $key", readProperty(key))
         }
         for (path in listOf("/sys/devices/soc0/machine", "/sys/devices/soc0/family", "/sys/devices/system/soc/soc0/machine")) {
             report(path, runCatching { File(path).bufferedReader().use { it.readLine()?.take(256) } }.getOrNull())

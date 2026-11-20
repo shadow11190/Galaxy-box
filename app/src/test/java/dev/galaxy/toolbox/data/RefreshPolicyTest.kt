@@ -5,6 +5,14 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class RefreshPolicyTest {
+    @Test fun explicitDisplayModeMustBeAdvertisedAndPowerLimitsStillWin() {
+        val current = RefreshMode(1, 1080, 2400, 60f)
+        val alternative = RefreshMode(2, 1440, 3200, 90f)
+        val modes = listOf(current, alternative)
+        assertEquals(2, RefreshPolicy.decide(current, modes, true, false, false, 2).modeId)
+        assertEquals(1, RefreshPolicy.decide(current, modes, true, false, false, 99).modeId)
+        assertNull(RefreshPolicy.decide(current, modes, true, true, false, 2).modeId)
+    }
     private val current = RefreshMode(1, 1440, 3120, 60f)
     private val modes = listOf(current, RefreshMode(2,1440,3120,90f), RefreshMode(3,1440,3120,144f), RefreshMode(4,1080,2340,240f))
     @Test fun choosesDynamicMaximumWithoutChangingResolution() {

@@ -21,6 +21,9 @@ object DeviceDetails {
         add(Reading("裝置名稱", name, identity?.nameSource ?: DeviceNames.SOURCE,
             "優先對照完整型號，缺少時使用同品牌的內部代號；多個市售名稱衝突時保留未知。不是使用者自訂的藍牙名稱。"))
         add(Reading("裝置型號", text(Build.MODEL), "Build.MODEL"))
+        runCatching { android.provider.Settings.Global.getString(context.contentResolver, "device_name") }
+            .getOrNull()?.trim()?.takeIf { it.isNotBlank() && !it.equals(name, true) }
+            ?.let { add(Reading("系統裝置名稱", it, "Settings.Global device_name")) }
         identity?.market?.let { add(Reading("地區版本", it, variants.map { r -> r.source }.distinct().joinToString("\n"), "此為完整型號的發售版本，不代表目前位置、SIM 國家或作用中 CSC。")) }
         add(Reading("品牌 / 製造商", "${Build.BRAND} / ${Build.MANUFACTURER}", "Build.BRAND / MANUFACTURER"))
         add(Reading("內部裝置代號", text(Build.DEVICE), "Build.DEVICE", "另列供查核，不當作市售名稱。"))
@@ -43,6 +46,9 @@ object DeviceDetails {
         val gpu = GpuInfo.read()
         val glSource = "EGL14 離屏 Context · GLES20.glGetString"
         add(Reading("GPU 名稱", gpu?.renderer, "$glSource · GL_RENDERER", "驅動實際回報名稱；ANGLE 或軟體 renderer 會如實顯示，不以晶片規格覆蓋。"))
+        val gpuSpec = runCatching { HardwareCatalog.gpuSpecs(context).forChip(chip) }.getOrNull()
+        add(Reading("GPU 型號（晶片規格）", gpuSpec?.gpu, gpuSpec?.source ?: "離線晶片規格表",
+            "公開晶片規格，非本機正在使用的 GPU 或實際驅動回報；不覆蓋上方即時讀值。"))
         add(Reading("GPU 廠商", gpu?.vendor, "$glSource · GL_VENDOR"))
         add(Reading("GPU OpenGL ES Context", gpu?.version, "$glSource · GL_VERSION", "離屏 GLES 2 Context 回報的驅動版本，不代表裝置最高支援版本。"))
         add(Reading("GPU GLSL", gpu?.shading, "$glSource · GL_SHADING_LANGUAGE_VERSION"))

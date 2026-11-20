@@ -33,6 +33,11 @@ class WidgetSettingsTest {
         assertTrue(full.showClock); assertTrue(full.showModel)
         assertTrue(full.fields.containsAll(listOf(WidgetField.MEMORY, WidgetField.STORAGE, WidgetField.BATTERY, WidgetField.TEMPERATURE)))
         assertEquals(setOf(WidgetField.BATTERY, WidgetField.TEMPERATURE), WidgetSettings.defaults(WidgetKind.BATTERY).fields)
+        assertEquals(1, WidgetSettings.defaults(WidgetKind.STRIP).preferredRows)
+        assertEquals(5, WidgetSettings.defaults(WidgetKind.STRIP).preferredColumns)
+        assertEquals(WidgetBackground.GLASS, WidgetSettings.defaults(WidgetKind.STRIP).background)
+        assertTrue(WidgetSettings.defaults(WidgetKind.STRIP).drawsDecoration)
+        assertEquals(5, WidgetSettings.decode(WidgetSettings.defaults(WidgetKind.WIDE).copy(preferredRows = 5).encode(), WidgetKind.WIDE).preferredRows)
     }
     @Test fun largeTextAndNarrowWidthsSwitchToSingleColumnWithoutDroppingFields() {
         val s = WidgetSettings()
@@ -50,5 +55,11 @@ class WidgetSettingsTest {
     @Test fun colorInputRequiresSixHexDigits() {
         assertEquals(0xFF123ABC.toInt(), WidgetSettings.parseColor("#123abc"))
         assertNull(WidgetSettings.parseColor("#12")); assertNull(WidgetSettings.parseColor("GGGGGG"))
+    }
+    @Test fun uptimeCanBeDisplayedAsTheOnlyMetric() {
+        val widget = WidgetSettings(fields = setOf(WidgetField.UPTIME))
+        assertEquals(widget, WidgetSettings.decode(widget.encode(), WidgetKind.OVERVIEW))
+        assertEquals("2d 03:04", WidgetPresentation.from(Snapshot(),
+            uptimeMillis = (2L * 1_440 + 3 * 60 + 4) * 60_000).metric(WidgetField.UPTIME).value)
     }
 }

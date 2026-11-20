@@ -16,6 +16,8 @@ class HighRefreshController(private val activity: Activity) {
     private val handler = Handler(Looper.getMainLooper())
     private val mutable = MutableStateFlow(RefreshSnapshot())
     val state = mutable.asStateFlow()
+    private val preferences = activity.getSharedPreferences("display_mode", Context.MODE_PRIVATE)
+    private var preferredModeId: Int? = preferences.getInt("preferred_mode_id", 0).takeIf { it > 0 }
     private var active = false
     private var originalRate = 0f
     private var originalMode = 0
@@ -61,19 +63,26 @@ class HighRefreshController(private val activity: Activity) {
         val modes = runCatching { display.supportedModes.map { RefreshMode(it.modeId, it.physicalWidth, it.physicalHeight, it.refreshRate) } }.getOrDefault(emptyList())
         val currentMode = current?.let { RefreshMode(it.modeId, it.physicalWidth, it.physicalHeight, it.refreshRate) }
         val severe = Build.VERSION.SDK_INT >= 29 && runCatching { power.currentThermalStatus >= PowerManager.THERMAL_STATUS_SEVERE }.getOrDefault(false)
-        val decision = RefreshPolicy.decide(currentMode, modes, true, power.isPowerSaveMode, severe)
+        val decision = RefreshPolicy.decide(currentMode, modes, true, power.isPowerSaveMode, severe, preferredModeId)
         val applied = runCatching {
             val params = activity.window.attributes
             val rate = decision.hz ?: originalRate
             // Keep resolution under system control. Legacy devices use an exact same-resolution mode.
-            val mode = if (Build.VERSION.SDK_INT < 30 && decision.hz != null) decision.modeId ?: originalMode else originalMode
+            val mode = if (decision.hz != null && (preferredModeId != null || Build.VERSION.SDK_INT < 30)) decision.modeId ?: originalMode else originalMode
             if (params.preferredRefreshRate != rate || params.preferredDisplayModeId != mode) {
                 params.preferredRefreshRate = rate; params.preferredDisplayModeId = mode; activity.window.attributes = params
             }
         }.isSuccess
         mutable.value = RefreshSnapshot(if (applied) decision.hz else null,
             runCatching { display.refreshRate.takeIf { it.isFinite() && it > 0f } }.getOrNull(),
-            current?.physicalWidth, current?.physicalHeight, if (applied) decision.reason else "系統未接受刷新率偏好")
+            current?.physicalWidth, current?.physicalHeight, if (applied) decision.reason else "系統未接受刷新率偏好", preferredModeId)
+    }
+    fun setPreferredMode(id: Int?) {
+        val display = activity.window.decorView.display ?: return
+        if (id != null && display.supportedModes.none { it.modeId == id }) return
+        preferredModeId = id
+        preferences.edit().putInt("preferred_mode_id", id ?: 0).apply()
+        refresh()
     }
     private fun clearPreference() {
         runCatching {

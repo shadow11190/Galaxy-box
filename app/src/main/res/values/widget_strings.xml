@@ -2,11 +2,26 @@
     <string name="widget_overview_name">Galaxy box · 完整版</string>
     <string name="widget_battery_name">Galaxy box · 精簡版</string>
     <string name="widget_resources_name">Galaxy box · 記憶體與儲存</string>
+    <string name="widget_wide_name">Galaxy box · 5 欄資訊</string>
+    <string name="widget_strip_name">Galaxy box · 藍牙電量條</string>
     <string name="widget_overview_description">日期時間、機型、記憶體、儲存、電量與電池溫度，可獨立設定背景。</string>
     <string name="widget_battery_description">電量、電池溫度與充電狀態，支援點按更新。</string>
     <string name="widget_resources_description">RAM、資料分割區及可讀核心最高頻率的快照。</string>
+    <string name="widget_wide_description">5 欄寬、高度可在桌面調整的資訊小工具。</string>
+    <string name="widget_strip_description">手機及已連線耳機、手錶的電量；5 × 1，可縮至 2 × 1。無資料顯示 —。</string>
     <string name="widget_refresh_symbol">↻</string>
     <string name="widget_refresh_description">重新取樣小工具資料</string>
     <string name="widget_waiting">尚未取樣 · 點 ↻ 更新</string>
     <string name="widget_unknown">—</string>
+    <string name="widget_config_title">小工具設定</string>
+    <string name="widget_preview_date">日期與時間</string>
+    <string name="widget_preview_model">裝置名稱</string>
+    <string name="widget_preview_battery_memory">電量\n—\n\n記憶體\n—</string>
+    <string name="widget_preview_temperature_storage">電池溫度\n—\n\n儲存空間\n—</string>
+    <string name="widget_preview_waiting">資料更新後顯示</string>
+    <string name="widget_preview_battery">電量</string>
+    <string name="widget_preview_temperature">電池溫度  —</string>
+    <string name="widget_preview_memory">記憶體   —</string>
+    <string name="widget_preview_storage">儲存空間   —</string>
+    <string name="widget_preview_cpu">CPU 頻率   —</string>
 </resources>

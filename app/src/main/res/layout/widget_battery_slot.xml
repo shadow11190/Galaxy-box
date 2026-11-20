@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/widget_battery_slot"
+    android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center" android:paddingStart="2dp" android:paddingEnd="2dp">
+    <ImageView android:id="@+id/widget_battery_ring" android:layout_width="32dp" android:layout_height="32dp"
+        android:scaleType="fitCenter" android:importantForAccessibility="no" />
+    <TextView android:id="@+id/widget_battery_value" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="12sp" android:textStyle="bold" android:gravity="center" android:maxLines="1" android:includeFontPadding="false" />
+    <TextView android:id="@+id/widget_battery_name" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="10sp" android:gravity="center" android:maxLines="1" android:ellipsize="end" android:includeFontPadding="false" />
+</LinearLayout>

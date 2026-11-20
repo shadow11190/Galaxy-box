@@ -1,15 +1,38 @@
 # brand	model	device	type	releaseYear	source
 10.or	G	G	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/G.yml
+Asus	ASUS_AI2201_A	ASUS_AI2201	phone	2022	https://rog.asus.com/phones/rog-phone-6-model/
+Asus	ASUS_AI2201_B	ASUS_AI2201	phone	2022	https://rog.asus.com/phones/rog-phone-6-model/
+Asus	ASUS_AI2201_C	ASUS_AI2201	phone	2022	https://rog.asus.com/phones/rog-phone-6-model/
+Asus	ASUS_AI2201_D	ASUS_AI2201	phone	2022	https://rog.asus.com/phones/rog-phone-6-model/
+Asus	ASUS_AI2203_C	ASUS_AI2203	phone	2022	https://rog.asus.com/ro/phones/rog-phone-6d-ultimate-model/spec/
+Asus	ASUS_AI2203_D	ASUS_AI2203	phone	2022	https://rog.asus.com/ro/phones/rog-phone-6d-ultimate-model/spec/
+Asus	ASUS_AI2205_A	ASUS_AI2205	phone	2023	https://rog.asus.com/phones/rog-phone-7/spec/
+Asus	ASUS_AI2205_C	ASUS_AI2205	phone	2023	https://rog.asus.com/phones/rog-phone-7/spec/
+Asus	ASUS_AI2302	ASUS_AI2302	phone	2023	https://www.asus.com/us/mobile-handhelds/phones/zenfone/zenfone-10/techspec/
+Asus	ASUS_AI2401_A	ASUS_AI2401	phone	2024	https://rog.asus.com/phones/rog-phone-8/spec/
+Asus	ASUS_AI2401_C	ASUS_AI2401	phone	2024	https://rog.asus.com/phones/rog-phone-8/spec/
+Asus	ASUS_AI2401_D	ASUS_AI2401	phone	2024	https://rog.asus.com/phones/rog-phone-8/spec/
+Asus	ASUS_AI2401_H	ASUS_AI2401	phone	2024	https://www.asus.com/us/mobile-handhelds/phones/zenfone/zenfone-11-ultra/techspec/
+Asus	ASUS_AI2401_N	ASUS_AI2401	phone	2025	https://rog.asus.com/ph/phones/rog-phone-9-fe/spec/
 Asus	ZS590KS	ASUS_I006D	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sake.yml
 Asus	ZS661KS	ASUS_I003_1	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/obiwan.yml
+Blackshark	BSG1	Black_Shark_Gaming_Tablet	tablet	2026	https://storage.googleapis.com/play_public/supported_devices.csv | https://global.blackshark.com/products/black-shark-gaming-tablet | https://www.gizmochina.com/2026/02/25/xiaomi-black-shark-gaming-tablet-global-price-specs/
+Blackshark	DLT-A0	darklighter	phone	2019	https://storage.googleapis.com/play_public/supported_devices.csv | https://blackshark.gg/blogs/news/black-shark-2-pro-the-gaming-phone-legend-is-here | https://www.gsmarena.com/black_shark_2_pro_is_now_available_in_europe-news-39552.php
+Blackshark	DLT-H0	darklighter	phone	2019	https://storage.googleapis.com/play_public/supported_devices.csv | https://blackshark.gg/blogs/news/black-shark-2-pro-the-gaming-phone-legend-is-here | https://www.gsmarena.com/black_shark_2_pro_is_now_available_in_europe-news-39552.php
+Blackshark	SHARK KSR-H0	kaiser-os	phone	2022	https://blackshark.gg/blogs/press-room/black-shark-releases-the-120w-fast-charging-gaming-flagship-black-shark-4-pro-globally
+Blackshark	SKW-A0	skywalker	phone	2019	https://storage.googleapis.com/play_public/supported_devices.csv | https://www.mi.com/blackshark-game2/specs | https://www.gsmarena.com/black_shark_2_unveiled_with_low_latency_pressure_sensitive_super_amoled_screen-news-36077.php
+Blackshark	SKW-H0	skywalker	phone	2019	https://storage.googleapis.com/play_public/supported_devices.csv | https://www.mi.com/blackshark-game2/specs | https://www.gsmarena.com/black_shark_2_unveiled_with_low_latency_pressure_sensitive_super_amoled_screen-news-36077.php
+CMF by Nothing	A001	Galaga	phone	2025	https://checkout-eu.nothing.tech/pages/cmf-phone-2-pro
+CMF by Nothing	A015	Tetris	phone	2024	https://checkout-eu.nothing.tech/pages/cmf-phone-1
 Fairphone	FP2	FP2	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP2.yml
-Fairphone	FP4	FP4	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP4.yml
-Fairphone	FP5	FP5	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP5.yml
+Fairphone	FP3	FP3	phone	2019	https://www.fairphone.com/wp-content/uploads/2019/08/FP3-Press-Release-INT.pdf
+Fairphone	FP4	FP4	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP4.yml|https://www.fairphone.com/wp-content/uploads/2021/09/Fairphones-modular-5G-smartphone-proves-the-latest-tech-can-be-made-sustainably.pdf
+Fairphone	FP5	FP5	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/FP5.yml|https://www.fairphone.com/wp-content/uploads/2023/08/Press_release_Fairphone_5.pdf
 Google	Pixel	sailfish	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/sailfish.yml
 Google	Pixel 10	frankel	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/frankel.yml
-Google	Pixel 10 Pro	blazer	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/blazer.yml
+Google	Pixel 10 Pro	blazer	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/blazer.yml|https://store.google.com/product/pixel_10_pro_specs?hl=en-US
 Google	Pixel 10 Pro Fold	rango	foldable	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rango.yml
-Google	Pixel 10 Pro XL	mustang	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mustang.yml
+Google	Pixel 10 Pro XL	mustang	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mustang.yml|https://store.google.com/product/pixel_10_pro_specs?hl=en-US
 Google	Pixel 10a	stallion	phone	2026	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/stallion.yml
 Google	Pixel 2	walleye	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/walleye.yml
 Google	Pixel 2 XL	taimen	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/taimen.yml
@@ -26,17 +49,94 @@ Google	Pixel 7	panther	phone	2022	https://github.com/LineageOS/lineage_wiki/blob
 Google	Pixel 7 Pro	cheetah	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/cheetah.yml
 Google	Pixel 7a	lynx	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lynx.yml
 Google	Pixel 8	shiba	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/shiba.yml
-Google	Pixel 8 Pro	husky	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/husky.yml
+Google	Pixel 8 Pro	husky	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/husky.yml|https://store.google.com/product/pixel_8_pro?hl=en-US
 Google	Pixel 8a	akita	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/akita.yml
 Google	Pixel 9	tokay	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tokay.yml
-Google	Pixel 9 Pro	caiman	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caiman.yml
+Google	Pixel 9 Pro	caiman	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caiman.yml|https://store.google.com/magazine/compare_pixel?hl=en-US&toggler0=Pixel+9+Pro+XL&toggler1=Pixel+9+Pro&toggler2=Pixel+9
 Google	Pixel 9 Pro Fold	comet	foldable	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/comet.yml
 Google	Pixel 9 Pro XL	komodo	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/komodo.yml
 Google	Pixel 9a	tegu	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tegu.yml
 Google	Pixel C	dragon	tablet	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dragon.yml
 Google	Pixel Fold	felix	foldable	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/felix.yml
-Google	Pixel Tablet	tangorpro	tablet	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tangorpro.yml
+Google	Pixel Tablet	tangorpro	tablet	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tangorpro.yml|https://support.google.com/googlepixeltablet/answer/13555146?hl=en
 Google	Pixel XL	marlin	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/marlin.yml
+Honor	ABR-NX1	HNABR-M	phone	2025	https://www.honor.com/my/phones/honor-400-lite/spec/
+Honor	ABR-NX3	HNABR-M	phone	2025	https://www.honor.com/my/phones/honor-400-lite/spec/
+Honor	ALI-NX1	HNALI-Q	phone	2024	https://www.honor.com/fr/phones/honor-magic6-lite/spec/
+Honor	ALI-NX1	HNALI-Q	phone	2024	https://www.honor.com/fr/phones/honor-magic6-lite/spec/
+Honor	ALI-NX3	HNALI-Q	phone	2024	https://www.honor.com/fr/phones/honor-magic6-lite/spec/
+Honor	BKQ-N49	HNBKQ	phone	2025	https://www.honor.com/global/phones/honor-magic8-pro/
+Honor	BRC-AN00	HNBRC-M	phone	2024	https://www.honor.com/cn/phones/honor-x60/spec/
+Honor	BRP-AN00	HNBRP-Q	phone	2024	https://www.honor.com/cn/phones/honor-x60-pro/ | https://club.honor.com/cn/thread-28900554-1-1.html
+Honor	BRP-AN80	HNBRP-Q	phone	2024	https://www.honor.com/cn/phones/honor-x60-pro/ | https://club.honor.com/cn/thread-28900554-1-1.html
+Honor	BRP-NX1M	HNBRP-Q1	phone	2025	https://www.honor.com/pl/phones/honor-magic7-lite/spec/
+Honor	BRP-NX3	HNBRP-Q1	phone	2025	https://www.honor.com/pl/phones/honor-magic7-lite/spec/
+Honor	BSN-AN00	HNBSN-Q	phone	2026	https://www.honor.com/cn/phones/honor-x80-pro-max/ | https://club.honor.com/cn/thread-30266571-1-1.html
+Honor	BVL-AN00	HNBVL-AN00	phone	2024	https://www.honor.com/cn/news/magic-6-all-series/
+Honor	BVL-AN16	HNBVL	phone	2024	https://www.honor.com/latam/phones/honor-magic6-pro/spec/
+Honor	BVL-N49	HNBVL	phone	2024	https://www.honor.com/latam/phones/honor-magic6-pro/spec/
+Honor	CGA-W00	HNCGA-Q	tablet	2025	https://www.honor.com/global/tablets/honor-magicpad-3/
+Honor	CGA-W00	HNCGA-Q1	tablet	2025	https://www.honor.com/global/tablets/honor-magicpad-3/
+Honor	CHG-W60	HNCHG-Q	tablet	2025	https://www.honor.com/cn/tablets/honor-pad-gt-2-pro/
+Honor	DNP-NX9	HNDNPX	phone	2025	https://www.honor.com/sd/phones/honor-400-pro/spec/
+Honor	DNY-NX9	HNDNYX	phone	2025	https://www.honor.com/uk/shop/buying-guide/introducing-honor-600-series/
+Honor	DVD-AN00	HNDVD-Q	phone	2025	https://www.honor.com/cn/phones/honor-power/ | https://club.honor.com/cn/thread-29357725-1-1.html
+Honor	DVD-AN80	HNDVD-Q	phone	2025	https://www.honor.com/cn/phones/honor-power/ | https://club.honor.com/cn/thread-29357725-1-1.html
+Honor	ELI-AN00	HNELI	phone	2024	https://www.honor.com/cn/phones/honor-200/
+Honor	ELI-NX9	HNELIX	phone	2024	https://www.honor.com/za/phones/honor-200/spec/
+Honor	ELP-AN00	HNELP	phone	2024	https://www.honor.com/cn/phones/honor-200-pro/
+Honor	ELP-NX9	HNELPX	phone	2024	https://www.honor.com/fr/phones/honor-200-pro/spec/
+Honor	FCP-N49	HNFCPX	phone	2024	https://www.honor.com/de/phones/honor-magic-v3/spec/
+Honor	HEY2-N09	HNHEY2-Q	tablet	2024	https://www.honor.com/uk/tablets/honor-pad-9/spec/
+Honor	HEY2-W09	HNHEY2-Q	tablet	2024	https://www.honor.com/uk/tablets/honor-pad-9/spec/
+Honor	HEY3-N09	HNHEY3-Q1	tablet	2025	https://www.honor.com/za/tablets/honor-pad-10/spec/
+Honor	HEY3-W00	HNHEY3-Q	tablet	2025	https://www.honor.com/cn/tablets/honor-pad-10/|https://www.honor.com/za/tablets/honor-pad-10/spec/
+Honor	HEY3-W00	HNHEY3-Q1	tablet	2025	https://www.honor.com/cn/tablets/honor-pad-10/|https://www.honor.com/za/tablets/honor-pad-10/spec/
+Honor	HEY3-W00	HNHEY3-Q1	tablet	2025	https://www.honor.com/cn/tablets/honor-pad-10/|https://www.honor.com/za/tablets/honor-pad-10/spec/
+Honor	HEY4-AN00	HNHEY4-Q	tablet	2026	https://www.honor.com/cn/tablets/honor-pad-20/ | https://www.honor.com/global/tablets/honor-pad-20/
+Honor	HEY4-N09	HNHEY4-Q1	tablet	2026	https://www.honor.com/global/tablets/honor-pad-20/
+Honor	HEY4-W09	HNHEY4-Q	tablet	2026	https://www.honor.com/global/tablets/honor-pad-20/
+Honor	HEY4-W09	HNHEY4-Q1	tablet	2026	https://www.honor.com/global/tablets/honor-pad-20/
+Honor	LDY-AN00	HNLDY-M	phone	2026	https://www.honor.com/cn/phones/honor-magic8-pro-air/spec/
+Honor	LGE-NX9	HNLGE	phone	2022	https://www.honor.com/content/dam/honor/si/support/product-manual/honor-magic4-pro-qsg.pdf
+Honor	LGN-NX1	HNLGN-Q1	phone	2025	https://www.honor.com/uk/phones/honor-400-smart-5g/buy/
+Honor	LGN-NX3	HNLGN-Q1	phone	2025	https://www.honor.com/uk/phones/honor-400-smart-5g/buy/
+Honor	LLY-NX1	HNLLY-M1	phone	2024	https://www.honor.com/cl/phones/honor-200-lite/spec/
+Honor	LLY-NX3	HNLLY-M1	phone	2024	https://www.honor.com/cl/phones/honor-200-lite/spec/
+Honor	LNA-AN00	HNLNA-M	phone	2026	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-x80i/ | https://www.ithome.com/0/937/959.htm|https://www.honor.com/cn/phones/honor-x80i/ | https://club.honor.com/cn/thread-30129597-1-1.html
+Honor	LNA-AN00	HNLNA-M	phone	2026	https://developer.honor.com/cn/docs/game_center/guides/jieruzhinan/jixing | https://www.honor.com/cn/phones/honor-x80i/ | https://www.ithome.com/0/937/959.htm|https://www.honor.com/cn/phones/honor-x80i/ | https://club.honor.com/cn/thread-30129597-1-1.html
+Honor	LNA-NX1	HNLNA-M1	phone	2026	https://www.honor.com/sg/phones/honor-600-lite/spec/
+Honor	MAA-AN00	HNMAA	phone	2023	https://www.honor.com/cn/phones/honor-100/
+Honor	MAA-AN10	HNMAP	phone	2023	https://www.honor.com/cn/phones/honor-100-pro/spec/
+Honor	MAG-AN00	HNMAG	phone	2023	https://www.honor.com/cn/phones/honor-90-gt/
+Honor	MBH-N49	HNMBHX	phone	2025	https://www.honor.com/uk/phones/honor-magic-v5/spec/
+Honor	MEY-AN00	HNMEY	phone	2025	https://www.honor.com/ie/news/honor-500-launch/
+Honor	MLA-W09	HNMLA-Q	tablet	2026	https://www.honor.com/global/tablets/honor-pad-20-pro/
+Honor	MLA-W09	HNMLA-Q1	tablet	2026	https://www.honor.com/global/tablets/honor-pad-20-pro/
+Honor	MRK-NX1	HNMRK-Q	phone	2026	https://www.honor.com/ro/news/honor-lanseaza-honor-600-smart-5g/
+Honor	MRK-NX3	HNMRK-Q	phone	2026	https://www.honor.com/mx/phones/honor-600-elite-5g/spec/
+Honor	MTN-AN00	HNMTN-Q	phone	2025	https://www.honor.com/cn/phones/honor-x70/
+Honor	MTN-AN80	HNMTN-Q	phone	2025	https://www.honor.com/cn/phones/honor-x70/
+Honor	MTN-NX1	HNMTN-Q1	phone	2025	https://www.honor.com/my/phones/honor-x9d/spec/
+Honor	MTN-NX1	HNMTN-Q1	phone	2025	https://www.honor.com/my/phones/honor-x9d/spec/
+Honor	MTN-NX1M	HNMTN-Q1	phone	2025	https://www.honor.com/it/phones/honor-magic8-lite/spec/
+Honor	MTN-NX3	HNMTN-Q1	phone	2025	https://www.honor.com/it/phones/honor-magic8-lite/spec/
+Honor	MTN-NX3	HNMTN-Q1	phone	2025	https://www.honor.com/it/phones/honor-magic8-lite/spec/
+Honor	PGT-N19	HNPGT	phone	2023	https://www.honor.com/content/dam/honor/hr/support/product-manual/honor-magic5-pro-qsg.pdf
+Honor	PNM-N49	HNPNMX	phone	2026	https://www.honor.com/sg/phones/honor-magic-v6/spec/
+Honor	PTP-N29	HNPLPX	phone	2025	https://www.honor.com/global/phones/honor-magic7/spec/
+Honor	PTP-N49	HNPTPX	phone	2025	https://www.honor.com/mea/phones/honor-magic7-pro/spec/ | https://www.honor.com/content/dam/honor/de/shop/overview/honor-magic7-pro/honor-magic7-pro-pdf.pdf
+Honor	ROL-W00	HNROL-M	tablet	2024	https://www.honor.com/cn/tablets/honor-pad-v9/
+Honor	ROL-W00	HNROL-M1	tablet	2024	https://www.honor.com/cn/tablets/honor-pad-v9/
+Honor	ROL-W60	HNROL-M	tablet	2025	https://www.honor.com/cn/tablets/honor-pad-gt/
+Honor	SER-AN00	HNSER-M	phone	2026	https://www.honor.com/cn/news/honor-power2-launch/|https://www.honor.com/cn/phones/honor-win-turbo/
+Honor	SER-AN00	HNSER-M	phone	2026	https://www.honor.com/cn/news/honor-power2-launch/|https://www.honor.com/cn/phones/honor-win-turbo/
+Honor	VER-N49	HNVER	phone	2023	https://www.honor.com/global/phones/honor-magic-v2/
+Honor	VKJ-NX9	HNVKJX	phone	2026	https://www.honor.com/global/news/honor-600-series-launch/
+Honor	VKP-NX9	HNVKPX	phone	2026	https://www.honor.com/global/news/honor-600-series-launch/
+Honor	YLE-W09	HNYLE-Q	tablet	2026	https://www.honor.com/ae-en/tablets/honor-magicpad-4/spec/
+Honor	YLE-W09	HNYLE-Q1	tablet	2026	https://www.honor.com/ae-en/tablets/honor-magicpad-4/spec/
+Honor	YLP-W00	HNYLP-Q	tablet	2025	https://www.honor.com/global/news/honor-snapdragon-summit-2025/
 Huawei	ANE-AL00	HWANE	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
 Huawei	ANE-LX1	HWANE	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
 Huawei	ANE-LX2	HWANE	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/anne.yml
@@ -55,6 +155,10 @@ Huawei	CLT-L29	HWCLT	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/5
 Huawei	CLT-L29	HWCLT	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
 Huawei	CLT-TL00	HWCLT	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
 Huawei	CLT-TL01	HWCLT	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/charlotte.yml
+Huawei	CMR-AL09	HWCMR09	tablet	2018	https://consumer.huawei.com/sk/tablets/mediapad-m5-10/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	CMR-AL19	HWCMR	tablet	2018	https://consumer.huawei.com/ie/tablets/mediapad-m5-back-up/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	CMR-W09	HWCMR09	tablet	2018	https://consumer.huawei.com/sk/tablets/mediapad-m5-10/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	CMR-W19	HWCMR	tablet	2018	https://consumer.huawei.com/jp/support/content/ja-jp00747265/ | https://consumer.huawei.com/ie/tablets/mediapad-m5-back-up/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
 Huawei	FIG-AL10	HWFIG-H	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/figo.yml
 Huawei	FIG-LA1	HWFIG-H	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/figo.yml
 Huawei	FIG-LX1	HWFIG-H	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/figo.yml
@@ -72,6 +176,15 @@ Huawei	KIW-L24	HNKIW-Q	phone	2015	https://github.com/LineageOS/lineage_wiki/blob
 Huawei	KIW-TL00	HNKIW-Q	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kiwi.yml
 Huawei	KIW-TL00H	HNKIW-Q	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kiwi.yml
 Huawei	KIW-UL00	HNKIW-Q	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kiwi.yml
+Huawei	LYA-AL00	HWLYA	phone	2018	https://consumer.huawei.com/cn/support/content/zh-cn00757272/ | https://consumer.huawei.com/hk/press/news/2018/mate20series-globallaunch/
+Huawei	LYA-AL00P	HWLYA	phone	2018	https://consumer.huawei.com/cn/support/content/zh-cn00757272/ | https://consumer.huawei.com/hk/press/news/2018/mate20series-globallaunch/
+Huawei	LYA-AL10	HWLYA	phone	2018	https://consumer.huawei.com/cn/support/content/zh-cn00757272/ | https://consumer.huawei.com/hk/press/news/2018/mate20series-globallaunch/
+Huawei	LYA-L09	HWLYA	phone	2018	https://consumer.huawei.com/fi/phones/mate20-pro2/specs/ | https://consumer.huawei.com/hk/press/news/2018/mate20series-globallaunch/
+Huawei	LYA-L29	HWLYA	phone	2018	https://consumer.huawei.com/fi/phones/mate20-pro2/specs/ | https://consumer.huawei.com/hk/press/news/2018/mate20series-globallaunch/
+Huawei	LYA-L29	HWLYA	phone	2018	https://consumer.huawei.com/fi/phones/mate20-pro2/specs/ | https://consumer.huawei.com/hk/press/news/2018/mate20series-globallaunch/
+Huawei	LYA-TL00	HWLYA	phone	2018	https://consumer.huawei.com/cn/support/content/zh-cn00757272/ | https://consumer.huawei.com/hk/press/news/2018/mate20series-globallaunch/
+Huawei	SHT-AL09	HWSHT	tablet	2018	https://consumer.huawei.com/cn/support/content/zh-cn16040437/ | https://consumer.huawei.com/jp/tablets/mediapad-m5-8/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
+Huawei	SHT-W09	HWSHT	tablet	2018	https://consumer.huawei.com/cn/support/content/zh-cn16040437/ | https://consumer.huawei.com/jp/tablets/mediapad-m5-8/specs/ | https://consumer.huawei.com/hk/press/news/2018/m5-m5pro-hk/
 LGE	L-01K	L-01K	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/l01k.yml
 LGE	L-41A	L-41A	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/style3lm.yml
 LGE	L-51A	L-51A	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml
@@ -79,9 +192,13 @@ LGE	LG-D620	g2m	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157
 LGE	LG-D722J	jagnm	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/jagnm.yml
 LGE	LG-D724	jag3gds	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/jag3gds.yml
 LGE	LG-D727	jagnm	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/jagnm.yml
+LGE	LG-G710	judyln	phone	2018	https://www.lg.com/global/newsroom/news/corporate/lg-g7-thinq-offers-deep-ai-integration-for-maximum-user-convenience/
 LGE	LGV35	joan	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/l01k.yml
-LGE	LM-F100N	winglm	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/winglm.yml
-LGE	LM-G710N	judyln	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g710n.yml
+LGE	LM-F100	winglm	phone	2020	https://www.lg.com/us/mobile-phones/wing-5g/specs
+LGE	LM-F100N	winglm	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/winglm.yml|https://www.lg.com/us/mobile-phones/wing-5g/specs
+LGE	LM-G710	judyln	phone	2018	https://www.lg.com/global/newsroom/news/corporate/lg-g7-thinq-offers-deep-ai-integration-for-maximum-user-convenience/
+LGE	LM-G710N	judyln	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g710n.yml|https://www.lg.com/global/newsroom/news/corporate/lg-g7-thinq-offers-deep-ai-integration-for-maximum-user-convenience/
+LGE	LM-G710VM	judyln	phone	2018	https://www.lg.com/global/newsroom/news/corporate/lg-g7-thinq-offers-deep-ai-integration-for-maximum-user-convenience/
 LGE	LM-G820N	alphaplus	phone	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/alphaplus_variant2.yml
 LGE	LM-G900N	caymanlm	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanlm.yml
 LGE	LM-G910N	caymanlm	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caymanlm.yml
@@ -89,8 +206,14 @@ LGE	LM-V350N	judyp	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a
 LGE	LM-V409N	judypn	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/judypn.yml
 LGE	LM-V500N	flashlmdd	phone	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/flashlmdd.yml
 LGE	LM-V510N	mh2lm	phone	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/mh2lm_variant3.yml
-LGE	LM-V600N	timelm	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml
+LGE	LM-V600	timelm	phone	2020	https://www.lg.com/global/newsroom/news/corporate/lg-announces-v60-thinq-5g-with-lg-dual-screen-designed-for-a-truly-mobile-future-3/
+LGE	LM-V600	timelm	phone	2020	https://www.lg.com/global/newsroom/news/corporate/lg-announces-v60-thinq-5g-with-lg-dual-screen-designed-for-a-truly-mobile-future-3/
+LGE	LM-V600N	timelm	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/timelm.yml|https://www.lg.com/global/newsroom/news/corporate/lg-announces-v60-thinq-5g-with-lg-dual-screen-designed-for-a-truly-mobile-future-3/
 LGE	VS996	joan	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/joan_variant3.yml
+Lenovo	TB370FU	TB370FU	tablet	2023	https://psref.lenovo.com/Detail/Tab_P12?M=ZACH0070IN | https://news.lenovo.com/pressroom/press-releases/lenovo-tab-p12-m10-5g-consumer-tablets-learning-mobility-multitasking/
+Lenovo	TB370FU	TB370FU	tablet	2023	https://psref.lenovo.com/Detail/Tab_P12?M=ZACH0070IN | https://news.lenovo.com/pressroom/press-releases/lenovo-tab-p12-m10-5g-consumer-tablets-learning-mobility-multitasking/
+Lenovo	TB520FU	TB520FU	tablet	2025	https://psref.lenovo.com/Detail/Yoga_Tab_Plus?M=ZAEG0110UA | https://news.lenovo.com/press-kits/ces-2025/yoga-tab-plus/
+Lenovo	TB520FU	TB520FU	tablet	2025	https://psref.lenovo.com/Detail/Yoga_Tab_Plus?M=ZAEG0110UA | https://news.lenovo.com/press-kits/ces-2025/yoga-tab-plus/
 Motorola	XT1021	condor_umts	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/condor.yml
 Motorola	XT1021	lux	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/condor.yml
 Motorola	XT1021	lux	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/condor.yml
@@ -163,17 +286,52 @@ Motorola	XT2175-2	xpeng	phone	2021	https://github.com/LineageOS/lineage_wiki/blo
 Motorola	XT2243-2	tundra	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tundra_variant2.yml
 Motorola	XT2301-5	rtwo	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/rtwo_variant2.yml
 Motorola	XT2363-4	fogos	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fogos_variant1.yml
+Motorola	XT2575-1	XT2575-1	tablet	2025	https://zh-asia.support.motorola.com/ci/fattach/get/87701992/1758312957/redirect/1/filename/moto%2Bpad%2B60%2Bneo%2BQSG%2BEN%2BZH-TW%2B125_85mm%2BV1.0_20250826.pdf | https://www.motorola.in/moto-pad-60-neo/p?skuId=584
+Motorola	XT2575-3	XT2575-3	tablet	2025	https://zh-asia.support.motorola.com/ci/fattach/get/87701992/1758312957/redirect/1/filename/moto%2Bpad%2B60%2Bneo%2BQSG%2BEN%2BZH-TW%2B125_85mm%2BV1.0_20250826.pdf | https://www.motorola.in/moto-pad-60-neo/p?skuId=584
+Motorola	XT2673-1	XT2673-1	tablet	2026	https://www.motorola.in/moto-pad-70/p?skuId=724 | https://www.91mobiles.com/hub/moto-pad-70-launched-india-price-specifications/
+Motorola	XT2673-2	XT2673-2	tablet	2026	https://www.motorola.in/moto-pad-70/p?skuId=724 | https://www.91mobiles.com/hub/moto-pad-70-launched-india-price-specifications/
+Motorola	XT2675-1	XT2675-1	tablet	2026	https://www.motorola.in/moto-pad-70-groove/p?skuId=719 | https://www.gadgets360.com/tablets/news/moto-pad-70-groove-price-india-launch-availability-specifications-features-11847257
 Motorola	XT897	asanti_c	phone (slider)	2012	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xt897.yml
 Motorola	XT910	umts_spyder	phone	2011	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/umts_spyder_variant1.yml|https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/umts_spyder_variant2.yml
+Motorola	moto tab g20	mototabg20	tablet	2021	https://www.motorola.in/development-html | https://www.gsmarena.com/motorola_moto_tab_g20_launched_with_8inch_lcd_helio_p22t_chipset-news-51209.php | https://storage.googleapis.com/play_public/supported_devices.csv
+Motorola	moto tab g70	mototabg70	tablet	2022	https://motorolanews.com/br/motorola-retorna-mercado-tablets-lancamento-moto-tab-g70-no-brasil/ | https://storage.googleapis.com/play_public/supported_devices.csv
+Motorola	moto tab g70 LTE	mototabg70LTE	tablet	2022	https://motorolanews.com/br/motorola-retorna-mercado-tablets-lancamento-moto-tab-g70-no-brasil/ | https://storage.googleapis.com/play_public/supported_devices.csv
+Motorola	motorola edge 50	tank	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://en-us.support.motorola.com/app/answers/detail/a_id/183654/~/motorola-edge-50---specifications
+Motorola	motorola edge 50 neo	nice	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://www.motorola.com.br/smartphone-motorola-edge-50-neo/p/
+Motorola	motorola edge 50 neo	nice	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://www.motorola.com.br/smartphone-motorola-edge-50-neo/p/
+Motorola	motorola edge 50 neo	oulu	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://www.motorola.com.br/smartphone-motorola-edge-50-neo/p/
+Motorola	motorola edge 50 neo	scout	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://www.motorola.com.br/smartphone-motorola-edge-50-neo/p/
+Motorola	motorola edge 50 neo	scout	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://www.motorola.com.br/smartphone-motorola-edge-50-neo/p/
+Motorola	motorola edge 50 neo	vienna	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://www.motorola.com.br/smartphone-motorola-edge-50-neo/p/
+Motorola	motorola edge 50 neo	vienna	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/167829/p/11066 | https://www.motorola.com.br/smartphone-motorola-edge-50-neo/p/
+Motorola	motorola edge 50 pro	eqe	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179259/~/uk-psti-soc-xt2403-2-motorola-edge-50-pro | https://www.motorola.in/smartphones-motorola-edge-50-pro/p?skuId=440
+Motorola	motorola edge 50 ultra	blanc	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179389/~/uk-psti-soc-xt2401-1-motorola-edge-50-ultra | https://www.motorola.com/we/en/p/phones/motorola-edge/motorola-edge-50-ultra/pmipmgn36m2
+Motorola	motorola edge 50 ultra	blanc	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179389/~/uk-psti-soc-xt2401-1-motorola-edge-50-ultra | https://www.motorola.com/we/en/p/phones/motorola-edge/motorola-edge-50-ultra/pmipmgn36m2
+Motorola	motorola edge 50 ultra	ctwo	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179389/~/uk-psti-soc-xt2401-1-motorola-edge-50-ultra | https://www.motorola.com/we/en/p/phones/motorola-edge/motorola-edge-50-ultra/pmipmgn36m2
+Motorola	motorola edge 50 ultra	marvel	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179389/~/uk-psti-soc-xt2401-1-motorola-edge-50-ultra | https://www.motorola.com/we/en/p/phones/motorola-edge/motorola-edge-50-ultra/pmipmgn36m2
+Motorola	motorola edge 50 ultra	marvel	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179389/~/uk-psti-soc-xt2401-1-motorola-edge-50-ultra | https://www.motorola.com/we/en/p/phones/motorola-edge/motorola-edge-50-ultra/pmipmgn36m2
+Motorola	motorola edge 50 ultra	roadstr	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179389/~/uk-psti-soc-xt2401-1-motorola-edge-50-ultra | https://www.motorola.com/we/en/p/phones/motorola-edge/motorola-edge-50-ultra/pmipmgn36m2
+Motorola	motorola edge 50 ultra	vantage	phone	2024	https://en-emea.support.motorola.com/app/answers/detail/a_id/179389/~/uk-psti-soc-xt2401-1-motorola-edge-50-ultra | https://www.motorola.com/we/en/p/phones/motorola-edge/motorola-edge-50-ultra/pmipmgn36m2
 NVIDIA	SHIELD Tablet	shieldtablet	tablet	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/shieldtablet.yml
 Nextbit	Robin	ether	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ether.yml
+Nokia	Nokia G60 5G	APO_sprout	phone	2022	https://www.hmd.com/es_es/nokia-g-60/specs
+Nokia	Nokia T21	AGT	tablet	2022	https://www.hmd.com/en_int/nokia-t-21/specs
+Nokia	Nokia T21	AGTA	tablet	2022	https://www.hmd.com/en_int/nokia-t-21/specs
+Nokia	Nokia XR21	SNT_sprout	phone	2023	https://www.hmd.com/en_gb/nokia-xr-21/specs
 Nokia	TA-1004	NB1	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/NB1.yml
 Nokia	TA-1012	NB1	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/NB1.yml
 Nokia	TA-1041	C1N	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/B2N.yml
 Nokia	TA-1052	NB1	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/NB1.yml
-Nothing	A063	Spacewar	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Spacewar.yml
-Nothing	A065	Pong	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Pong.yml
-Nothing	AIN065	Pong	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Pong.yml
+Nothing	A024	Metroid	phone	2025	https://jp.nothing.tech/products/phone-3
+Nothing	A059	Asteroids	phone	2025	https://lt.nothing.tech/pages/phone-3a
+Nothing	A059P	Asteroids	phone	2025	https://nothing.tech/products/phone-3a-pro
+Nothing	A063	Spacewar	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Spacewar.yml|https://us.nothing.tech/pages/phone-1
+Nothing	A065	Pong	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Pong.yml|https://in.nothing.tech/pages/phone-2
+Nothing	A142	Pacman	phone	2024	https://checkout.nothing.tech/pages/phone-2a
+Nothing	A142P	PacmanPro	phone	2024	https://nothing.tech/pages/phone-2a-plus
+Nothing	AIN065	Pong	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/Pong.yml|https://in.nothing.tech/pages/phone-2
+Nubia	NX779J	PQ83A06	phone	2025	https://uk.redmagic.gg/pages/redmagic-10-air-specs
+Nubia	NX779J	PQ83A06	phone	2025	https://uk.redmagic.gg/pages/redmagic-10-air-specs
 OnePlus	AC2001	Nord	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avicii.yml
 OnePlus	AC2003	Nord	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avicii.yml
 OnePlus	BE2025	OnePlusN10METRO	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/billie.yml
@@ -193,21 +351,18 @@ OnePlus	CPH2465	OP5958L1	phone	2023	https://github.com/LineageOS/lineage_wiki/bl
 OnePlus	CPH2467	OP5958L1	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/larry_variant1.yml
 OnePlus	CPH2513	OP5958L1	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/larry_variant2.yml
 OnePlus	CPH2551	OP5973L1	foldable	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/xueying.yml
-OnePlus	CPH2573	OP595DL1	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/waffle.yml
-OnePlus	CPH2581	OP595DL1	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/waffle.yml
-OnePlus	CPH2583	OP595DL1	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/waffle.yml
 OnePlus	CPH2585	OP5D35L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aston.yml
 OnePlus	CPH2609	OP5D35L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aston.yml
 OnePlus	CPH2611	OP5D35L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aston.yml
 OnePlus	CPH2613	OP5D3FL1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/benz.yml
-OnePlus	CPH2645	OP5D3BL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml
-OnePlus	CPH2647	OP5D3BL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml
-OnePlus	CPH2649	OP5D55L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml
-OnePlus	CPH2653	OP5D55L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml
-OnePlus	CPH2655	OP5D55L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml
+OnePlus	CPH2645	OP5D3BL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml|https://www.oneplus.com/uk/13r/specs
+OnePlus	CPH2647	OP5D3BL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml|https://www.oneplus.com/uk/13r/specs
+OnePlus	CPH2649	OP5D55L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml|https://www.oneplus.com/us/13/specs
+OnePlus	CPH2653	OP5D55L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml|https://www.oneplus.com/us/13/specs
+OnePlus	CPH2655	OP5D55L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dodge.yml|https://www.oneplus.com/us/13/specs
 OnePlus	CPH2661	OP5E93L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avalon.yml
 OnePlus	CPH2663	OP5E93L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/avalon.yml
-OnePlus	CPH2691	OP5D3BL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml
+OnePlus	CPH2691	OP5D3BL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/giulia.yml|https://www.oneplus.com/uk/13r/specs
 OnePlus	CPH2707	OP6131L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lexus.yml
 OnePlus	CPH2709	OP6131L1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lexus.yml
 OnePlus	CPH2745	OP611FL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/infiniti.yml
@@ -263,10 +418,11 @@ OnePlus	MT2110	OP5154L1	phone	2021	https://github.com/LineageOS/lineage_wiki/blo
 OnePlus	MT2111	OP5155L1	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/martini.yml
 OnePlus	ONE A2003	OnePlus2	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oneplus2.yml
 OnePlus	ONE A2003	OnePlus2	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oneplus2.yml
-OnePlus	OPD2403	OP5DAAL1	tablet	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caihong_variant2.yml
+OnePlus	OPD2203	OP59BCL1	tablet	2023	https://www.oneplus.com/ae/oneplus-pad/specs
+OnePlus	OPD2403	OP5DAAL1	tablet	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caihong_variant2.yml|https://www.oneplus.com/cl/oneplus-pad-2/specs
 OnePlus	OPD2404	OP5D77L1	tablet	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/caihong_variant1.yml
 OnePlus	OPD2413	OP615EL1	tablet	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/erhai_variant1.yml
-OnePlus	OPD2415	OP6190L1	tablet	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/erhai_variant2.yml
+OnePlus	OPD2415	OP6190L1	tablet	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/erhai_variant2.yml|https://www.oneplus.com/ca_en/oneplus-pad-3/specs
 OnePlus	OPD2513	OP6547L1	tablet	2026	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/iceland_variant1.yml
 OnePlus	OPD2514	OP657AL1	tablet	2026	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/iceland_variant2.yml
 OnePlus	PHB110	OP591BL1	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/salami.yml
@@ -298,15 +454,96 @@ Oppo	R7plusf	R7Plusm	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/5
 Oppo	R7plusf	R7Plusm	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r7plus.yml
 Oppo	R7sf	R7sf	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r7sf.yml
 Oppo	R7sf	R7sm	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/r7sf.yml
-Razer	Phone 2	aura	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml
-Razer	Phone 2	bolt	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml
-Razer	Phone 2	linus	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml
+POCO	21121210G	ingres	phone	2022	https://www.mi.com/sg/product/poco-f4-gt/specs/
+POCO	22021211RG	munch	phone	2022	https://www.mi.com/ae-ar/product/poco-f4/specs/
+POCO	22021211RI	munch	phone	2022	https://www.mi.com/ae-ar/product/poco-f4/specs/
+POCO	23049PCD8G	marble	phone	2023	https://www.mi.com/global/product/poco-f5/
+POCO	23049PCD8I	marble	phone	2023	https://www.mi.com/global/product/poco-f5/
+POCO	23113RKC6G	vermeer	phone	2024	https://www.mi.com/es/product/poco-f6-pro/specs/
+POCO	2311DRK48G	duchamp	phone	2024	https://www.mi.com/pl/product/poco-x6-pro/specs/
+POCO	2311DRK48I	duchamp	phone	2024	https://www.mi.com/global/support/faq/details/KA-242801/
+POCO	23122PCD1G	garnet	phone	2024	https://www.mi.com/global/product/poco-x6/
+POCO	23122PCD1I	garnet	phone	2024	https://www.mi.com/uk/support/faq/details/KA-243362/
+POCO	2405CPCFBG	dizi	tablet	2024	https://www.mi.com/uk/product/poco-pad/specs/
+POCO	24069PC21G	peridot	phone	2024	https://www.mi.com/global/support/faq/details/KA-165333/
+POCO	24069PC21I	peridot	phone	2024	https://www.mi.com/global/support/faq/details/KA-165333/
+POCO	24095PCADG	malachite	phone	2025	https://www.mi.com/uk/product/poco-x7/specs/
+POCO	24095PCADI	malachite	phone	2025	https://www.mi.com/uk/product/poco-x7/specs/
+POCO	24117RK2CG	zorn	phone	2025	https://www.mi.com/co/product/poco-f7-pro/
+POCO	24122RKC7G	miro	phone	2025	https://www.mi.com/uk/product/poco-f7-ultra/specs/
+POCO	2412DPC0AG	rodin	phone	2025	https://www.mi.com/global/product/poco-x7-pro/specs/
+POCO	2412DPC0AI	rodin	phone	2025	https://www.mi.com/global/product/poco-x7-pro/specs/
+POCO	25053PC47G	onyx	phone	2025	https://www.mi.com/es/product/poco-f7/specs/
+POCO	25053PC47I	onyx	phone	2025	https://www.mi.com/es/product/poco-f7/specs/
+POCO	2509ARPBDG	flute	tablet	2025	https://www.mi.com/pk/support/faq/details/KA-628081/
+POCO	25102PCBEG	myron	phone	2025	https://www.mi.com/uk/product/poco-f8-ultra/specs/
+POCO	2510DPC44G	annibale	phone	2025	https://www.mi.com/uk/product/poco-f8-pro/specs/
+POCO	2603APC14G	guitar	tablet	2026	https://www.mi.com/co/product/poco-pad-c1/specs/
+POCO	M2012K11AG	alioth	phone	2021	https://www.mi.com/uk/support/faq/details/KA-07266/
+POCO	M2104K10I	aresin	phone	2021	https://www.mi.com/np/f3gt/specs
+POCO	POCO F2 Pro	lmi	phone	2020	https://www.mi.com/uk/poco-f2-pro/specs
+Razer	Phone 2	aura	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml|https://www.razer.com/newsroom/product-news/razer-announces-the-razer-phone-2 | https://mysupport.razer.com/app/answers/detail/a_id/3758/kw/battery%2Bissues
+Razer	Phone 2	bolt	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml|https://www.razer.com/newsroom/product-news/razer-announces-the-razer-phone-2 | https://mysupport.razer.com/app/answers/detail/a_id/3758/kw/battery%2Bissues
+Razer	Phone 2	linus	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/aura.yml|https://www.razer.com/newsroom/product-news/razer-announces-the-razer-phone-2 | https://mysupport.razer.com/app/answers/detail/a_id/3758/kw/battery%2Bissues
 Realme	RMX1801	RMX1801	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1801.yml
 Realme	RMX1851	RMX1851	phone	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/RMX1851.yml
+Redmi	22081283G	yunluo	tablet	2022	https://www.mi.com/global/product/redmi-pad/
+Redmi	22127RK46C	socrates	phone	2022	https://ir.mi.com/static-files/0935e50a-7984-4d69-8d91-f809e1f99c28
+Redmi	23013RK75C	mondrian	phone	2022	https://ir.mi.com/static-files/0935e50a-7984-4d69-8d91-f809e1f99c28
+Redmi	23049RAD8C	marble	phone	2023	https://ir.mi.com/static-files/645b5520-40a0-4840-b88e-57ebbab1e880
+Redmi	23073RPBFC	xun	tablet	2023	https://www.mi.com/in/product/redmi-pad-se/specs/
+Redmi	23073RPBFG	xun	tablet	2023	https://www.mi.com/in/product/redmi-pad-se/specs/
+Redmi	23073RPBFL	xun	tablet	2023	https://www.mi.com/in/product/redmi-pad-se/specs/
+Redmi	23090RA98C	zircon	phone	2023	https://ir.mi.com/system/files-encrypted/nasdaq_kms/assets/2024/04/25/5-36-08/2023%20Annual%20Report.pdf
+Redmi	23090RA98G	zircon	phone	2024	https://www.mi.com/my/product/redmi-note-13-pro-plus-5g/specs/
+Redmi	23090RA98I	zircon	phone	2024	https://www.mi.com/my/product/redmi-note-13-pro-plus-5g/specs/
+Redmi	23113RKC6C	vermeer	phone	2023	https://www.mi.com/shop/buy/detail?product_id=1230801285
+Redmi	23117RK66C	manet	phone	2023	https://www.mi.com/redmi-k70-pro
+Redmi	2312CRAD3C	garnet	phone	2023	https://www.mi.com/global/product/redmi-note-13-pro-5g/
+Redmi	2312DRA50G	garnet	phone	2024	https://www.mi.com/global/product/redmi-note-13-pro-5g/
+Redmi	2312DRA50I	garnet	phone	2024	https://www.mi.com/in/product/redmi-note-13-pro-5g/faq/
+Redmi	24040RA98R	zircon	phone	2024	https://www.mi.com/my/product/redmi-note-13-pro-plus-5g/specs/
+Redmi	2405CRPFDC	dizi	tablet	2024	https://www.mi.com/sg/product/redmi-pad-pro/specs/
+Redmi	2405CRPFDG	dizi	tablet	2024	https://www.mi.com/sg/product/redmi-pad-pro/specs/
+Redmi	2405CRPFDI	dizi	tablet	2024	https://www.mi.com/sg/product/redmi-pad-pro/specs/
+Redmi	24069RA21C	peridot	phone	2024	https://ir.mi.com/system/files-encrypted/nasdaq_kms/assets/2024/05/23/9-05-17/Xiaomi_Corp_24Q1_ER_CHN_vF_upload.pdf
+Redmi	24074RPD2C	ruan	tablet	2024	https://www.mi.com/ph/support/faq/details/KA-235524/
+Redmi	24074RPD2G	ruan	tablet	2024	https://www.mi.com/ph/support/faq/details/KA-235524/
+Redmi	24075RP89G	flare	tablet	2024	https://www.mi.com/sa-en/product/redmi-pad-se-8-7-inch/specs/
+Redmi	24076RP19G	spark	tablet	2024	https://www.mi.com/uk/product/redmi-pad-se-8-7-inch-4g/specs/
+Redmi	24076RP19I	spark	tablet	2024	https://www.mi.com/in/product/redmi-pad-se-4g/faq/
+Redmi	2407FRK8EC	rothko	phone	2024	https://ir.mi.com/static-files/ad1290a8-475f-4375-8281-a86f8bb79f67
+Redmi	24090RA29G	malachite	phone	2025	https://www.mi.com/ae-en/product/redmi-note-14-pro-5g/specs/
+Redmi	24090RA29I	malachite	phone	2025	https://www.mi.com/in/product/redmi-note-14-pro-5g/specs/
+Redmi	24115RA8EG	amethyst	phone	2025	https://www.mi.com/uk/support/faq/details/KA-524664/
+Redmi	24115RA8EI	amethyst	phone	2025	https://www.mi.com/uk/support/faq/details/KA-524664/
+Redmi	24117RK2CC	zorn	phone	2024	https://ir.mi.com/static-files/ad1290a8-475f-4375-8281-a86f8bb79f67
+Redmi	24122RKC7C	miro	phone	2024	https://www.mi.com/shop/buy/detail?cfrom=search&product_id=20779
+Redmi	25040RP0AC	taiko	tablet	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AE	taiko	tablet	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AG	taiko	tablet	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AI	taiko	tablet	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	25040RP0AL	taiko	tablet	2025	https://www.mi.com/global/product/redmi-pad-2/specs/
+Redmi	2505DRP06E	koto	tablet	2025	https://www.mi.com/eg/product/redmi-pad-2-4g/specs/
+Redmi	2505DRP06G	koto	tablet	2025	https://www.mi.com/eg/product/redmi-pad-2-4g/specs/
+Redmi	2505DRP06I	koto	tablet	2025	https://www.mi.com/eg/product/redmi-pad-2-4g/specs/
+Redmi	25060RK16C	dali	phone	2025	https://m.mi.com/mfbs/dghd/m_universal?_rt=rn&pageid=16666
+Redmi	25079RPDCC	turner	tablet	2025	https://m.mi.com/mfbs/dghd/m_universal?_rt=rn&pageid=16666
 Redmi	25080RABDG	lapis	phone	2026	https://www.sogi.com.tw/products/xiaomi-redmi-note-15-pro-5g/17263 | https://www.mi.com/tw/product/redmi-note-15-pro-5g/specs/
+Redmi	25099RP13C	flute	tablet	2025	https://www.mi.com/global/product/redmi-pad-2-pro/specs/
 Redmi	25099RP13G	flute	tablet	2025	https://www.sogi.com.tw/products/xiaomi-redmi-pad-2-pro/17286 | https://www.mi.com/tw/product/redmi-pad-2-pro/specs/
+Redmi	25099RP13I	flute	tablet	2025	https://www.mi.com/global/product/redmi-pad-2-pro/specs/
 Redmi	2509BRP2DG	organ	tablet	2025	https://www.sogi.com.tw/products/xiaomi-redmi-pad-2-pro-5g/17291 | https://www.mi.com/tw/product/redmi-pad-2-pro-5g/specs/
-SHIFT	SHIFT6mq	axolotl	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/axolotl.yml
+Redmi	2509BRP2DI	organ	tablet	2025	https://www.mi.com/tw/product/redmi-pad-2-pro-5g/specs/
+Redmi	25102RK69C	myron	phone	2025	https://www.mi.com/a/h/78523.html
+Redmi	25102RKBEC	myron	phone	2025	https://www.mi.com/a/h/78523.html
+Redmi	2510DRK44C	annibale	phone	2025	https://www.mi.com/shop/buy/detail?cfrom=search&product_id=22172
+Redmi	2602BRT18C	dash	phone	2026	https://m.mi.com/commodity/detail/22527
+Redmi	2603ARP14G	guitar	tablet	2026	https://www.mi.com/au/product/redmi-pad-2-9-7-inch/specs/
+Redmi	26048RP6AC	yili	tablet	2026	https://m.mi.com/search/list?key=redmi
+Redmi	2604ERP4DG	erhu	tablet	2026	https://www.mi.com/sg/product/redmi-pad-2-9-7-inch-4g/specs/
+SHIFT	SHIFT6mq	axolotl	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/axolotl.yml|https://www.shift.eco/en/shift6mq/ | https://www.shift.eco/hilfe_faqs/welche-shiftphone-modelle-wurden-bereits-entwickelt/
+SHIFT	SHIFTphone 8	otter	phone	2024	https://shop.shift.eco/shiftphone-8 | https://www.shift.eco/hilfe_faqs/welche-shiftphone-modelle-wurden-bereits-entwickelt/
 Samsung	GT-I9100	GT-I9100	phone	2011	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/i9100.yml
 Samsung	GT-I9100M	GT-I9100M	phone	2011	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/i9100.yml
 Samsung	GT-I9100P	GT-I9100P	phone	2011	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/i9100.yml
@@ -372,6 +609,9 @@ Samsung	SM-A525F	a52q	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/
 Samsung	SM-A525M	a52q	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52q.yml
 Samsung	SM-A528B	a52sxq	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
 Samsung	SM-A528N	a52sxq	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a52sxq.yml
+Samsung	SM-A5560	a55x	phone	2024	https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf
+Samsung	SM-A556B	a55x	phone	2024	https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf
+Samsung	SM-A556E	a55x	phone	2024	https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_4Q_Interim_Report.pdf
 Samsung	SM-A5660	a56x	phone	2025	https://www.sogi.com.tw/products/samsung-galaxy-a56-5g/17189 | https://www.samsung.com/tw/support/model/SM-A5660ZGDBRI/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
 Samsung	SM-A566B	a56x	phone	2025	https://www.sogi.com.tw/products/samsung-galaxy-a56-5g/17189 | https://www.samsung.com/es/support/model/SM-A566BZGCEUB/ | https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf
 Samsung	SM-A710F	a7xelte	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/a7xelte.yml
@@ -490,6 +730,28 @@ Samsung	SM-S901B	r0s	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/5
 Samsung	SM-S906B	g0s	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/g0s.yml
 Samsung	SM-S908B	b0s	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/b0s.yml
 Samsung	SM-S911B	dm1q	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/dm1q.yml
+Samsung	SM-S9310	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S931B	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S931N	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S931Q	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S931U	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S931U1	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S931W	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S931Z	pa1q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S9360	pa2q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S936B	pa2q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S936N	pa2q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S936U	pa2q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S936U1	pa2q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S936W	pa2q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S9380	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S938B	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S938N	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S938Q	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S938U	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S938U1	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S938W	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
+Samsung	SM-S938Z	pa3q	phone	2025	https://images.samsung.com/is/content/samsung/assets/us/business/mobile/phones/galaxy-s25/10102025/S25_Series_B2B_spec_sheet_update_c.pdf
 Samsung	SM-S942B	m1s	phone	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
 Samsung	SM-S947B	m2s	phone	2026	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-s26-ultra-vs-galaxy-s26plus-vs-galaxy-s26/ | https://news.samsung.com/global/galaxy-unpacked-2026-a-first-look-at-the-galaxy-s26-series-samsungs-most-intuitive-ai-phone-yet
 Samsung	SM-S9480	m3q	phone	2026	https://www.samsung.com/tw/support/model/SM-S9480ZV8BRI/ | https://www.samsung.com/tw/smartphones/galaxy-s26-ultra/
@@ -537,6 +799,16 @@ Samsung	SM-T875	gts7l	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob
 Samsung	SM-T970	gts7xlwifi	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gts7xlwifi.yml
 Samsung	SM-T975	gts7xl	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gts7xl.yml
 Samsung	SM-T976B	gts7xl	tablet	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gts7xl.yml
+Samsung	SM-X520	gts10fewifi	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526B	gts10fe	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526C	gts10fe	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526E	gts10fe	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X526N	gts10fe	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X528U	gts10fe	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X620	gts10fepwifi	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X626B	gts10fep	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X626C	gts10fep	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
+Samsung	SM-X626N	gts10fep	tablet	2025	https://www.samsung.com/us/support/answer/ANS10005059/
 Samsung	SM-X700	gts8wifi	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
 Samsung	SM-X706B	gts8	tablet	2022	https://www.samsung.com/ie/support/mobile-devices/galaxy-tab-s8-vs-s8-vs-s8-ultra-comparison/ | https://news.samsung.com/global/after-record-breaking-preorders-samsung-announces-global-availability-of-new-galaxy-s22-series-and-galaxy-tab-s8-series
 Samsung	SM-X710	gts9wifi	tablet	2023	https://www.samsung.com/de/support/mobile-devices/vergleich-galaxy-tab-s9-serie/ | https://news.samsung.com/global/samsung-galaxy-tab-s9-sets-the-new-standard-to-bring-galaxys-premium-experience-to-a-tablet
@@ -560,6 +832,8 @@ Samsung	SM-X936B	gts11u	tablet	2025	https://www.samsung.com/tr/support/mobile-de
 Samsung	SPH-L710	d2spr	phone	2012	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2spr.yml
 Samsung	SPH-L710	d2vmu	phone	2012	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/d2spr.yml
 Samsung	SPH-L720	jfltespr	phone	2013	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/jfltespr.yml
+Sony	A401SO	A401SO	phone	2024	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vi-256gb/specifications
+Sony	A501SO	XQ-FS	phone	2025	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vii-256gb/specifications
 Sony	D5803	D5803	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/z3c.yml
 Sony	D5803	aries	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/z3c.yml
 Sony	D5833	D5833	phone	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/z3c.yml
@@ -612,6 +886,10 @@ Sony	SGP512	SGP512	tablet	2014	https://github.com/LineageOS/lineage_wiki/blob/56
 Sony	SGP521	SGP521	tablet	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/castor.yml
 Sony	SGP551	SGP551	tablet	2014	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/castor.yml
 Sony	SO-02J	SO-02J	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kugo.yml
+Sony	SO-51E	SO-51E	phone	2024	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vi-256gb/specifications
+Sony	SO-51F	SO-51F	phone	2025	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vii-256gb/specifications
+Sony	SOG13	SOG13	phone	2024	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vi-256gb/specifications
+Sony	SOG15	XQ-FS	phone	2025	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vii-256gb/specifications
 Sony	XQ-AS42	XQ-AS42	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx206.yml
 Sony	XQ-AS52	XQ-AS52	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx206.yml
 Sony	XQ-AS62	XQ-AS62	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx206.yml
@@ -643,11 +921,18 @@ Sony	XQ-DE54	XQ-DE54	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/5
 Sony	XQ-DE72	XQ-DE72	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx237.yml
 Sony	XQ-DQ54	XQ-DQ54	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx234.yml
 Sony	XQ-DQ72	XQ-DQ72	phone	2023	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx234.yml
-Sony	XQ-EC54	XQ-EC54	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml
-Sony	XQ-EC72	XQ-EC72	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml
+Sony	XQ-EC44	XQ-EC44	phone	2024	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vi-256gb/specifications
+Sony	XQ-EC54	XQ-EC54	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml|https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vi-256gb/specifications
+Sony	XQ-EC72	XQ-EC72	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx245.yml|https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vi-256gb/specifications
 Sony	XQ-FE54	XQ-FE	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
 Sony	XQ-FE72	XQ-FE	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pdx257.yml
+Sony	XQ-FS44	XQ-FS	phone	2025	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vii-256gb/specifications
+Sony	XQ-FS54	XQ-FS	phone	2025	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vii-256gb/specifications
+Sony	XQ-FS72	XQ-FS	phone	2025	https://www.sony.co.uk/electronics/support/mobile-phones-tablets-mobile-phones/xperia-1-vii-256gb/specifications
 Vivo	V2413	V2413	phone	2024	https://www.vivo.com/eu/features | https://www.vivo.com/in/products/param/x200-pro | https://www.vivo.com/it/about-vivo/news/x200-event
+Vsmart	Aris	jacaranda	phone	2020	https://www.vingroup.net/tin-tuc-su-kien/bai-viet/2237/vinsmart-ra-mat-aris-pro-dien-thoai-camera-an-dau-tien-tai-viet-nam
+Vsmart	Aris Pro	jacarandapro	phone	2020	https://www.vingroup.net/tin-tuc-su-kien/bai-viet/2237/vinsmart-ra-mat-aris-pro-dien-thoai-camera-an-dau-tien-tai-viet-nam
+Vsmart	Live	V620A	phone	2019	https://vingroup.net/vi/tin-tuc-su-kien/bai-viet/2087/vinsmart-ra-mat-tai-thi-truong-nga
 Wileyfox	Wileyfox Storm	kipper	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/kipper.yml
 Wileyfox	Wileyfox Swift	crackling	phone	2015	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/crackling.yml
 Xiaomi	2107119DC	lisa	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/lisa_variant3.yml
@@ -670,13 +955,22 @@ Xiaomi	2210132G	nuwa	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/5
 Xiaomi	2211133C	fuxi	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fuxi.yml
 Xiaomi	2211133G	fuxi	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/fuxi.yml
 Xiaomi	22200414R	diting	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
+Xiaomi	2407FPN8EG	rothko	phone	2024	https://www.mi.com/jp/product/xiaomi-14t-pro/specs/ | https://www.mi.com/tw/product/xiaomi-14t-pro/specs/
+Xiaomi	2407FPN8ER	rothko	phone	2024	https://www.mi.com/jp/product/xiaomi-14t-pro/specs/ | https://www.mi.com/tw/product/xiaomi-14t-pro/specs/
+Xiaomi	24091RPADC	muyu	tablet	2024	https://www.mi.com/se/product/xiaomi-pad-7-pro/specs/
 Xiaomi	24091RPADG	muyu	tablet	2025	https://www.mi.com/tw/product/xiaomi-pad-7-pro/specs/ | https://www.mi.com/tw/product/xiaomi-pad-7-pro/faq/
+Xiaomi	2410CRP4CC	uke	tablet	2024	https://www.mi.com/ae-en/product/xiaomi-pad-7/specs/
 Xiaomi	2410CRP4CG	uke	tablet	2025	https://www.mi.com/tw/product/xiaomi-pad-7/specs/ | https://www.mi.com/tw/support/terms/xiaomi-15-series/
+Xiaomi	2410CRP4CI	uke	tablet	2024	https://www.mi.com/ae-en/product/xiaomi-pad-7/specs/
+Xiaomi	25010PN30C	xuanyuan	phone	2025	https://www.mi.com/de/product/xiaomi-15-ultra/specs/
+Xiaomi	25010PN30G	xuanyuan	phone	2025	https://www.mi.com/de/product/xiaomi-15-ultra/specs/
+Xiaomi	25010PN30I	xuanyuan	phone	2025	https://www.mi.com/de/product/xiaomi-15-ultra/specs/
 Xiaomi	25042PN24C	dijun	phone	2025	https://ir.mi.com/static-files/f032d2b5-8fa8-4cb7-b00e-a22ec00b954d | https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/README/README.md
 Xiaomi	2506BPN68G	klimt	phone	2025	https://www.sogi.com.tw/products/xiaomi-xiaomi-15t-pro/17285 | https://www.mi.com/tw/product/xiaomi-15t-pro/specs/
 Xiaomi	25079RPDCG	turner	tablet	2025	https://www.sogi.com.tw/products/xiaomi-xiaomi-pad-mini/17287 | https://www.mi.com/tw/product/xiaomi-pad-mini/specs/
 Xiaomi	2608BPX34C	lhasa	phone	2026	https://www.mi.com/shop/buy/detail?cfrom=search&product_id=1230808907 | https://www.gadgets360.com/xiaomi-18-fold-price-in-india-137366
 Xiaomi	A201XM	diting	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/diting_variant1.yml
+Xiaomi	A402XM	rothko	phone	2024	https://www.mi.com/jp/product/xiaomi-14t-pro/specs/ | https://www.mi.com/tw/product/xiaomi-14t-pro/specs/
 Xiaomi	M2002J9G	monet	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/monet.yml
 Xiaomi	M2007J17G	gauguin	phone	2020	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gauguin_variant1.yml
 Xiaomi	M2007J17I	gauguininpro	phone	2021	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/gauguin_variant2.yml
@@ -719,12 +1013,24 @@ Xiaomi	Redmi Note 5	whyred	phone	2018	https://github.com/LineageOS/lineage_wiki/
 Xiaomi	Redmi Note 5 Pro	whyred	phone	2018	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/whyred.yml
 Xiaomi	Redmi Note 8	ginkgo	phone	2019	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ginkgo_variant1.yml
 Xiaomi	ido	ido	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/ido_variant1.yml
+ZTE	NP02J	K68	tablet	2024	https://www.nubia.com/latam/news/zte-launches-the-world-s-first-5g-ai-eyewear-free-3d-tablet--nub.html
+ZTE	NX724J	P745F01	phone	2024	https://www.nubia.com/eu/products/smartphones/nubia/nubia-flip-5g.html | https://www.nubia.com/mx/frecuenciasnubia/
+ZTE	NX724J	P745F01	phone	2024	https://www.nubia.com/eu/products/smartphones/nubia/nubia-flip-5g.html | https://www.nubia.com/mx/frecuenciasnubia/
+ZTE	NX724J	Z8888S	phone	2024	https://www.nubia.com/eu/products/smartphones/nubia/nubia-flip-5g.html | https://www.nubia.com/mx/frecuenciasnubia/
+ZTE	NX769J	NX769J	phone	2024	https://jp.redmagic.gg/blogs/product-information/redmagic-9-pro
+ZTE	NX769J	NX769J	phone	2024	https://jp.redmagic.gg/blogs/product-information/redmagic-9-pro
+ZTE	NX789J	NX789J	phone	2024	https://uk.redmagic.gg/blogs/product-information/redmagic-10-pro-powered-by-snapdragon-8-elite-the-chipset-set-to-change-the-game
+ZTE	NX789J	NX789J	phone	2024	https://uk.redmagic.gg/blogs/product-information/redmagic-10-pro-powered-by-snapdragon-8-elite-the-chipset-set-to-change-the-game
 ZTE	Z2464N	P780F01	phone	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
 ZTE	Z2465N	P820F05	phone	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
 ZTE	Z2465N	Z7606O	phone	2025	https://www.nubia.com/mx/frecuenciasnubia/ | https://www.unisoc.com/en/news/2025-04-02
+ZTE	ZTE A2022PG	P875A11	phone	2021	https://www.zte.com.cn/global/about/news/20210415e2.html
+ZTE	ZTE A2022PG	P875A11	phone	2021	https://www.zte.com.cn/global/about/news/20210415e2.html
 bq	Aquaris U	chaozu	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/chaozu.yml
 bq	Aquaris U Plus	tenshi	phone	2016	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/tenshi.yml
 bq	Aquaris X	bardock	phone	2017	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bardock.yml
+realme	RMP2204	RE5C6EL1	tablet	2023	https://www.realme.com/in/realme-pad-2/specs
+realme	RMP2205	RE5C70L1	tablet	2023	https://www.realme.com/in/realme-pad-2/specs
 realme	RMX3471	RE54CBL1	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscar.yml
 realme	RMX3472	RE54CBL1	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscar.yml
 realme	RMX3474	RE54CBL1	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscarru.yml
@@ -732,8 +1038,10 @@ realme	RMX3474	RE54CBL1	phone	2022	https://github.com/LineageOS/lineage_wiki/blo
 realme	RMX3478	RE547D	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/oscarc.yml
 realme	RMX3660	RE588BL1	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/luigi.yml
 realme	RMX3661	RE588BL1	phone	2022	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/luigi.yml
+realme	RMX3851	RE5CA6L1	phone	2024	https://www.realme.com/sg/realme-gt-6
 realme	RMX3852	RE5C46L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/bale.yml
 realme	RMX5010	RE6018L1	phone	2024	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/pista.yml
+realme	RMX5011	RE605FL1	phone	2024	https://www.realme.com/global/realme-gt-7-pro/specs
 realme	RMX5090	RE602CL1	phone	2025	https://github.com/LineageOS/lineage_wiki/blob/56a157866af6232edf646ae0f3e1b300e509c8e5/_data/devices/piloti.yml
 vivo	V2503	V2503	phone	2025	https://www.sogi.com.tw/products/vivo-x200-fe/17232 | https://ru.vivo.com/smartfony/72022/smartfon-vivo-x200-fe-12-256-gb-5g-elite-black/
 vivo	V2514	V2514	phone	2025	https://www.sogi.com.tw/products/vivo-x300-pro/17296 | https://www.vivo.com/tw/products/param/x300-pro | https://de-gdpr-exstatic-vivofs.vivo.com/sFhAQhTYYDsNOJz1/1759492495417/0bc690d53b474d44c9c149914bed216c.pdf

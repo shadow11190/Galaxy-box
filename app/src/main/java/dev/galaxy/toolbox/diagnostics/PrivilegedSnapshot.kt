@@ -60,6 +60,19 @@ object PrivilegedSnapshotParser {
                 "$shizukuSource · ${vendor.title}\n$path", "$unit\n原始值 ${result.raw}")
         }
         if (expected == ProbeKind.BATTERY) {
+            results.keys.map { it.substringBeforeLast('/') }.distinct().forEach { directory ->
+                val type = results["$directory/type"]
+                if (type?.status != TemperatureReadStatus.OK || !type.raw.equals("Battery", true)) return@forEach
+                fun capacity(name: String) = results["$directory/$name"]
+                    ?.takeIf { it.status == TemperatureReadStatus.OK }?.raw?.trim()?.toLongOrNull()
+                    ?.takeIf { it >= 100_000 }
+                val full = capacity("charge_full") ?: return@forEach
+                val design = capacity("charge_full_design") ?: return@forEach
+                val ratio = full.toDouble() / design * 100
+                fields += Reading("容量比估計 · ${directory.substringAfterLast('/')}",
+                    String.format(Locale.ROOT, "%.1f%%", ratio),
+                    "$shizukuSource · $directory", "同一電池來源的滿充容量除以設計容量。")
+            }
             val dump = json.getJSONObject("dump")
             if (dump.getString("status") == "OK") {
                 val text = dump.getString("text"); require(text.length <= 48 * 1024)

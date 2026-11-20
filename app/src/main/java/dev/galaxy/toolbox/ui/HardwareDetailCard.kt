@@ -21,33 +21,35 @@ import dev.galaxy.toolbox.model.*
     val visible = if (expanded) readings else readings.take(initialCount)
     InfoCard(title) {
         if (category == HardwareCategory.CAMERA && title.contains("ID")) {
-            Text("Camera2 公開中繼資料", color = Mint, style = MaterialTheme.typography.labelMedium)
+            GalaxyText("Camera2 公開中繼資料", color = Mint, style = GalaxyTypography.labelMedium)
         }
         visible.forEachIndexed { index, reading ->
-            if (index > 0) HorizontalDivider(color = Muted.copy(alpha = .12f))
+            if (index > 0) GalaxyDivider(color = Muted.copy(alpha = .12f))
             HardwareDetailRow(reading, onReading)
         }
-        if (readings.size > initialCount) TextButton(onClick = { expanded = !expanded }, modifier = Modifier.fillMaxWidth()) {
-            Text(if (expanded) "收合 $title" else "展開 $title（共 ${readings.size} 項）")
+        if (readings.size > initialCount) GalaxyTextButton(onClick = { expanded = !expanded }, modifier = Modifier.fillMaxWidth()) {
+            GalaxyText(if (expanded) "收合 $title" else "展開 $title（共 ${readings.size} 項）")
         }
     }
 }
 
 @Composable private fun HardwareDetailRow(reading: Reading, onReading: (Reading) -> Unit) {
+    val language = LocalAppLanguage.current
     val large = LocalDensity.current.fontScale > 1.3f
-    val value = reading.value ?: "未知"
+    val value = catalogReadingValue(reading, language)
     val prominent = reading.label in listOf("最大 JPEG（一般模式）", "處理器名稱", "GPU 名稱", "啟動時顯示模式")
-    val color = if (prominent && reading.value != null) Mint else if (reading.value == null) Muted else MaterialTheme.colorScheme.onSurface
-    val style = if (prominent) MaterialTheme.typography.titleMedium else MaterialTheme.typography.bodyMedium
-    BoxWithConstraints(Modifier.fillMaxWidth().clickable(role = Role.Button, onClickLabel = "查看${reading.label}詳細資訊") { onReading(reading) }.padding(vertical = 9.dp)) {
+    val color = if (prominent && reading.value != null) Mint else if (reading.value == null) Muted else GalaxyPalette.onSurface
+    val style = if (prominent) GalaxyTypography.titleMedium else GalaxyTypography.bodyMedium
+    BoxWithConstraints(Modifier.fillMaxWidth().clickable(role = Role.Button,
+        onClickLabel = AppText.translate("查看${reading.label}詳細資訊", language)) { onReading(reading) }.padding(vertical = 9.dp)) {
         if (large || maxWidth < 290.dp || prominent) {
             Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
-                Text(reading.label, color = Muted, style = MaterialTheme.typography.labelLarge)
-                Text(value, color = color, style = style, fontWeight = FontWeight.Medium, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                GalaxyText(reading.label, color = Muted, style = GalaxyTypography.labelLarge)
+                GalaxyText(value, color = color, style = style, fontWeight = FontWeight.Medium, maxLines = 3, overflow = TextOverflow.Ellipsis)
             }
         } else Row(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text(reading.label, Modifier.weight(.42f), color = Muted, style = MaterialTheme.typography.bodyMedium)
-            Text(value, Modifier.weight(.58f), color = color, style = style, textAlign = TextAlign.End, maxLines = 3, overflow = TextOverflow.Ellipsis)
+            GalaxyText(reading.label, Modifier.weight(.42f), color = Muted, style = GalaxyTypography.bodyMedium)
+            GalaxyText(value, Modifier.weight(.58f), color = color, style = style, textAlign = TextAlign.End, maxLines = 3, overflow = TextOverflow.Ellipsis)
         }
     }
 }

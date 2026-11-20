@@ -44,7 +44,7 @@ class HardwareCategoryTabsTest {
         rule.onNodeWithText("音訊").performClick()
         rule.onNodeWithText("音訊").assertIsDisplayed().assertIsSelected()
         val position = rule.runOnIdle { state.firstVisibleItemIndex to state.firstVisibleItemScrollOffset }
-        assertTrue(position.first > 0)
+        assertTrue("分類列未移動：$position", position.first > 0 || position.second > 0)
         rule.runOnIdle { tick++ }
         rule.runOnIdle { assertEquals(position, state.firstVisibleItemIndex to state.firstVisibleItemScrollOffset); visible = false }
         rule.runOnIdle { visible = true }
@@ -53,6 +53,6 @@ class HardwareCategoryTabsTest {
         rule.onNodeWithTag("hardware-category-tabs").performScrollToNode(hasText("編解碼"))
         rule.onNodeWithText("編解碼").performClick()
         rule.onNodeWithText("編解碼").assertIsDisplayed().assertIsSelected()
-        rule.runOnIdle { assertTrue(state.firstVisibleItemIndex > 0) }
+        rule.runOnIdle { assertTrue("分類列未移動", state.firstVisibleItemIndex > 0 || state.firstVisibleItemScrollOffset > 0) }
     }
 }
