@@ -76,7 +76,8 @@ internal val LocalCardBackdrop = staticCompositionLocalOf<Backdrop?> { null }
         backdrop = backdrop, shape = { shape },
         effects = {
             if (!failed.get()) try {
-                colorControls(saturation = 1.08f)
+                colorControls(saturation = 1.35f)
+                vibrancy()
                 blur((if (compact) 5.dp else if (floating) 8.dp else tokens.glassBlur).toPx())
                 if (shape is CornerBasedShape && tier == GlassTier.REFRACTIVE) lens(
                     (if (compact) 4.dp else if (floating) 8.dp else tokens.glassLensHeight).toPx(),
@@ -85,19 +86,27 @@ internal val LocalCardBackdrop = staticCompositionLocalOf<Backdrop?> { null }
             }
             catch (_: Exception) { renderEffect = null; padding = 0f; failed.set(true); onFailure() }
         },
-        highlight = { Highlight(width = tokens.glassHighlightWidth, alpha = .62f,
+        highlight = { Highlight(width = tokens.glassHighlightWidth, alpha = if (dark) .75f else .9f,
             style = HighlightStyle.Default) },
-        shadow = if (floating) ({ Shadow(radius = tokens.glassShadowRadius, color = Color.Black.copy(alpha = .14f)) }) else null,
-        innerShadow = { InnerShadow(radius = 4.dp, alpha = .09f) },
+        shadow = if (floating) ({ Shadow(radius = tokens.glassShadowRadius, color = Color.Black.copy(alpha = if (dark) .32f else .16f)) }) else null,
+        innerShadow = { InnerShadow(radius = 6.dp, alpha = if (dark) .14f else .10f) },
         onDrawSurface = {
             val opacity = if (readable) { if (dark) .68f else .72f }
                 else if (floating) { if (dark) .58f else .52f }
                 else if (compact) { if (dark) .20f else .24f }
-                else { if (dark) .70f else .70f }
+                else { if (dark) .52f else .50f }
             drawRect(tint.copy(alpha = if (failed.get()) 1f else opacity))
-            if (!failed.get()) drawRect(Brush.linearGradient(
-                listOf(Color.White.copy(alpha = if (dark) .10f else .18f), Color.Transparent,
-                    Color.Black.copy(alpha = .025f)), start = Offset.Zero, end = Offset(size.width, size.height)))
+            if (!failed.get()) {
+                // Specular sheen from the top-left, then a faint cool rim on the opposite corner.
+                drawRect(Brush.linearGradient(
+                    listOf(Color.White.copy(alpha = if (dark) .20f else .38f), Color.White.copy(alpha = .04f),
+                        Color.Transparent, Color(0xFF9BD7FF).copy(alpha = if (dark) .10f else .08f)),
+                    start = Offset.Zero, end = Offset(size.width, size.height)))
+                // Thin bright band along the top edge, like light catching a glass lip.
+                drawRect(Brush.verticalGradient(
+                    listOf(Color.White.copy(alpha = if (dark) .14f else .26f), Color.Transparent),
+                    endY = size.height * .16f))
+            }
         }
     )
 }
@@ -150,6 +159,15 @@ internal val LocalCardBackdrop = staticCompositionLocalOf<Backdrop?> { null }
         drawCircle(Brush.radialGradient(listOf(ambient.copy(alpha = if (dark) .22f else .20f), Color.Transparent),
             center = Offset(size.width * .98f, size.height * .72f), radius = size.width),
             radius = size.width, center = Offset(size.width * .98f, size.height * .72f))
+        // Extra colour pools give the lens distinct hues to bend at card edges.
+        val violet = if (dark) Color(0xFF8E7CFF) else Color(0xFFB9A8FF)
+        drawCircle(Brush.radialGradient(listOf(violet.copy(alpha = if (dark) .26f else .22f), Color.Transparent),
+            center = Offset(size.width * .85f, size.height * .06f), radius = size.width * .7f),
+            radius = size.width * .7f, center = Offset(size.width * .85f, size.height * .06f))
+        val coral = if (dark) Color(0xFFFF8FB0) else Color(0xFFFFB3C7)
+        drawCircle(Brush.radialGradient(listOf(coral.copy(alpha = if (dark) .16f else .18f), Color.Transparent),
+            center = Offset(size.width * .1f, size.height * .92f), radius = size.width * .65f),
+            radius = size.width * .65f, center = Offset(size.width * .1f, size.height * .92f))
         // Quiet, recognizable contours make refraction visible without competing with data.
         repeat(4) { index ->
             drawCircle(accent.copy(alpha = if (dark) .12f else .10f),

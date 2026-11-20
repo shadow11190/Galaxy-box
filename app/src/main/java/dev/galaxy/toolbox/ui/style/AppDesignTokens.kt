@@ -42,8 +42,8 @@ internal val LocalAppDesignTokens = staticCompositionLocalOf {
         cardRadius = 22.dp, floatingRadius = 28.dp, sideInset = 16.dp,
         sectionGap = 10.dp, largeTitle = 34.sp, title = 22.sp, body = 17.sp,
         caption = 12.sp, springDamping = .78f, springStiffness = 410f,
-        glassBlur = 6.dp, glassLensHeight = 7.dp, glassLensAmount = 14.dp,
-        glassHighlightWidth = .7.dp, glassShadowRadius = 12.dp,
+        glassBlur = 8.dp, glassLensHeight = 10.dp, glassLensAmount = 20.dp,
+        glassHighlightWidth = 1.dp, glassShadowRadius = 18.dp,
     )
 }
 
