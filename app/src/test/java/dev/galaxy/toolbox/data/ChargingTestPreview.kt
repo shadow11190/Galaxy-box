@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -21,6 +20,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 import java.io.File
@@ -33,6 +33,7 @@ class ChargingTestPreview {
     @get:Rule val compose = createComposeRule()
 
     @Test fun renderChargingTestStates() {
+        AppText.install(RuntimeEnvironment.getApplication())
         val points = List(61) { index ->
             ChargingPoint(index * 2_000L, 18.0 - index * .107 + 1.55 * sin(index * .29))
         }
@@ -48,9 +49,7 @@ class ChargingTestPreview {
         lateinit var drawingView: View
         compose.setContent {
             val view = LocalView.current
-            val context = LocalContext.current
             SideEffect { drawingView = view }
-            remember(context) { AppText.install(context) }
             val language = if (finished) AppLanguage.EN else AppLanguage.ZH_TW
             GalaxyBoxTheme(dark = !finished, style = AppStyle.LIQUID_GLASS, themeMode = if (finished) "light" else "dark") {
                 CompositionLocalProvider(LocalAppLanguage provides language) {

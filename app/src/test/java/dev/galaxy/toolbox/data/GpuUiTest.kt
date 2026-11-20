@@ -43,7 +43,7 @@ class GpuUiTest {
     } }
     @Test fun diagnosticDoesNotTurnPermissionFailureIntoZeroOrRequireAdb() {
         show()
-        rule.onNodeWithText("GPU 一般讀取 · 免 Root／ADB").assertIsDisplayed()
+        rule.onNodeWithText("GPU 即時監控").assertIsDisplayed()
         rule.onNodeWithText("查看 GPU 來源診斷").performClick()
         rule.onNodeWithText("權限不足", substring = true).assertIsDisplayed()
         rule.onNodeWithText("0.0 MHz").assertDoesNotExist()
@@ -56,7 +56,7 @@ class GpuUiTest {
         for (isDark in listOf(false, true)) for (font in listOf(1f, 1.6f)) {
             rule.runOnIdle { dark = isDark; scale = font }
             rule.onNodeWithText("開啟充電通知").performScrollTo().assertIsDisplayed()
-            rule.onNodeWithText("GPU 一般讀取 · 免 Root／ADB").performScrollTo().assertIsDisplayed()
+            rule.onNodeWithText("GPU 即時監控").performScrollTo().assertIsDisplayed()
             val bitmap = rule.runOnIdle { val v = view!!; Bitmap.createBitmap(v.width, v.height, Bitmap.Config.ARGB_8888).also { v.draw(Canvas(it)) } }
             val file = File("build/reports/visual-checks/gpu-charging-${if (isDark) "dark" else "light"}-${if (font > 1f) "large" else "standard"}.png")
             file.parentFile?.mkdirs(); file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }

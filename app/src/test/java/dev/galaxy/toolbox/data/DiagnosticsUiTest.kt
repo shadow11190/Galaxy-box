@@ -144,7 +144,7 @@ class DiagnosticsUiTest {
         show { ShizukuDiagnosticsCard(ProbeKind.BATTERY, ShizukuAvailability(ShizukuConnection.READY), busy, null, null,
             { reads++; busy = true }, { cancels++; busy = false }, {}, {}) }
         rule.runOnIdle { assertEquals(0, reads) }
-        rule.onNodeWithText("讀取電池原始資料").performClick()
+        rule.onNodeWithText("讀取電池健康資料").performClick()
         rule.onNodeWithText("取消讀取").assertIsDisplayed().performClick()
         rule.runOnIdle { assertEquals(1, reads); assertEquals(1, cancels) }
     }

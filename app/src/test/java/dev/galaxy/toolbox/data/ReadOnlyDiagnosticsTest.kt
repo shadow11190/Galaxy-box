@@ -25,13 +25,14 @@ class ReadOnlyDiagnosticsTest {
             "$battery/charge_full" to "4850000", "$battery/energy_full_design" to "19000000",
             "$battery/batt_asoc" to "97", "$battery/battery_cycle" to "12345", "$battery/cycle_count" to "0"))
         val result = PrivilegedSnapshotParser.parse(data.toString(), ProbeKind.BATTERY)
-        assertEquals(6, result.fields.size)
+        assertEquals(7, result.fields.size)
         assertEquals("5000.0 mAh", result.fields.first { it.label.startsWith("設計電荷") }.value)
         assertEquals("4850.0 mAh", result.fields.first { it.label.startsWith("驅動回報滿充容量") }.value)
         assertEquals("19000.0 mWh", result.fields.first { it.label.startsWith("設計能量") }.value)
         assertEquals("12345", result.fields.first { it.label.startsWith("Samsung 循環欄位") }.value)
         assertTrue(result.fields.first { it.label.startsWith("Samsung 循環欄位") }.detail.contains("不除以 100"))
         assertEquals("未提供（原始 0）", result.fields.first { it.label.startsWith("循環次數") }.value)
+        assertEquals("97.0%", result.fields.single { it.label.startsWith("容量比估計") }.value)
         assertFalse(result.fields.any { it.label.contains("SOH") })
     }
     @Test fun wrongPowerSupplyTypeCannotBecomeBatteryCapacity() {
