@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101821">
+  <meta name="description" content="Galaxy Box 是以 Samsung Galaxy 為主的 Android 工具箱，提供硬體辨識、充電測試、溫度趨勢與桌面小工具。">
+  <meta property="og:title" content="Galaxy Box｜Android 裝置工具箱">
+  <meta property="og:description" content="看懂手機的硬體、溫度與充電狀態。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="preview.js" defer></script>
+  <title>Galaxy Box｜Android 裝置工具箱</title>
+</head>
+<body>
+  <a href="#main" class="skip">跳至主要內容</a>
+  <header class="shell masthead">
+    <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="36" height="36">Galaxy Box</a>
+    <nav aria-label="主選單">
+      <a href="#features">功能</a>
+      <a href="#install">安裝</a>
+      <a href="https://github.com/shadow11190/Galaxy-box">GitHub</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="shell hero" id="top" aria-labelledby="hero-title">
+      <div class="intro">
+        <p class="eyebrow">Android 裝置工具箱</p>
+        <h1 id="hero-title">看懂你的<br>手機硬體<span>。</span></h1>
+        <p class="lede">處理器、溫度、充電功率和藍牙配件電量，集中在 Galaxy Box。主要為 Samsung Galaxy 手機設計，也支援其他 Android 裝置。</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/shadow11190/Galaxy-box/releases/download/v0.7.2/Galaxy-box-v0.7.2.apk">下載 v0.7.2 APK</a>
+          <a class="button secondary" href="https://github.com/shadow11190/Galaxy-box/releases/tag/v0.7.2">查看更新紀錄</a>
+        </div>
+        <p class="release"><span>技術預覽版</span><span>Android 8.0 以上</span></p>
+      </div>
+      <figure class="showcase">
+        <div class="phone"><img id="screen" src="assets/charging.png" width="822" height="1782" alt="充電檢測畫面，顯示電池端淨功率與趨勢圖"></div>
+        <figcaption>
+          <div class="switcher" aria-label="切換介面預覽" hidden>
+            <button type="button" aria-pressed="true" data-screen="charging">充電檢測</button>
+            <button type="button" aria-pressed="false" data-screen="hardware">處理器</button>
+            <button type="button" aria-pressed="false" data-screen="overview">總覽</button>
+          </div>
+          <span class="caption">App 介面預覽，數值為測試資料</span>
+        </figcaption>
+      </figure>
+    </section>
+    <section class="band" id="features" aria-labelledby="features-title">
+      <div class="shell features">
+        <h2 id="features-title">從硬體規格到即時讀值</h2>
+        <div class="feature-grid">
+          <article><h3>裝置與硬體資訊</h3><p>查閱處理器、記憶體、儲存、螢幕及感測器。辨識支援的手機和平板型號，包含部分地區版本。</p></article>
+          <article><h3>充電與溫度趨勢</h3><p>記錄電池端淨功率、峰值與充電歷程。裝置提供資料時，也能查看 CPU、SoC、GPU 與電池溫度。</p></article>
+          <article><h3>藍牙音訊與配件</h3><p>查看編解碼資訊與配件電量。桌面電量條可調整寬度，並顯示可讀取的已連線配件。</p></article>
+          <article><h3>檢測與監控</h3><p>提供硬體檢測、貼膜輔助、桌面小工具，也可按需啟用浮動監控、效能通知和 App 用量分析。</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="shell installation" id="install" aria-labelledby="install-title">
+      <div>
+        <h2 id="install-title">下載與安裝</h2>
+        <p class="muted">v0.7.2 技術預覽版 · 2026-11-20</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/shadow11190/Galaxy-box/releases/download/v0.7.2/Galaxy-box-v0.7.2.apk">下載 APK</a>
+          <a class="text-link" href="https://github.com/shadow11190/Galaxy-box/releases/download/v0.7.2/Galaxy-box-v0.7.2.sha256.txt">SHA-256 校驗檔</a>
+        </div>
+      </div>
+      <div class="details">
+        <details open><summary>我的手機可以使用嗎？</summary><p>支援 Android 8.0 以上。配件電量、電池循環與溫度讀值依機型及韌體而異。</p></details>
+        <details><summary>如何安裝 APK？</summary><p>下載後在手機上開啟檔案。若 Android 提示允許安裝，請依系統提示替開啟檔案的 App 授權。</p></details>
+        <details><summary>什麼時候需要 Shizuku？</summary><p>一般硬體總覽可直接使用。進階電池健康讀取需要啟動並授權 Shizuku。部分裝置仍可能缺少資料。</p></details>
+      </div>
+    </section>
+  </main>
+  <footer class="shell footer">
+    <p>Galaxy Box · 個人開發的開源專案</p>
+    <div><a href="https://www.coolapk.com/u/39601996">作者酷安</a><a href="https://github.com/shadow11190/Galaxy-box">原始碼</a><a href="https://github.com/shadow11190/Galaxy-box/issues">回報問題</a></div>
+  </footer>
+</body>
+</html>
