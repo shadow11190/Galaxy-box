@@ -9,7 +9,7 @@
   <meta property="og:description" content="看懂手機的硬體、溫度與充電狀態。">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/icon.png">
-  <link rel="stylesheet" href="style.css?v=device">
+  <link rel="stylesheet" href="style.css?v=features">
   <script src="preview.js?v=device" defer></script>
   <title>Galaxy Box｜Android 裝置工具箱</title>
 </head>
@@ -50,14 +50,42 @@
     <section class="band" id="features" aria-labelledby="features-title">
       <div class="shell features">
         <h2 id="features-title">從硬體規格到即時讀值</h2>
+        <nav class="feature-jumps" aria-label="功能章節">
+          <a href="#widgets">桌面小工具</a>
+          <a href="#customization">App 個人化</a>
+        </nav>
         <div class="feature-grid">
-          <article><h3>裝置與硬體資訊</h3><p>查閱處理器、記憶體、儲存、螢幕及感測器。辨識支援的手機和平板型號，包含部分地區版本。</p></article>
-          <article><h3>充電與溫度趨勢</h3><p>記錄電池端淨功率、峰值與充電歷程。裝置提供資料時，也能查看 CPU、SoC、GPU 與電池溫度。</p></article>
-          <article><h3>藍牙音訊與配件</h3><p>查看編解碼資訊與配件電量。桌面電量條可調整寬度，並顯示可讀取的已連線配件。</p></article>
-          <article><h3>檢測與監控</h3><p>提供硬體檢測、貼膜輔助、桌面小工具，也可按需啟用浮動監控、效能通知和 App 用量分析。</p></article>
+          <article><h3>裝置與硬體資訊</h3><p>辨識支援的手機與平板型號，包含部分地區版本。查看處理器名稱、核心頻率、記憶體、儲存、螢幕與感測器。</p><p>總覽可匯出含來源及時間的 JSON 裝置報告，方便回報讀值異常。</p></article>
+          <article><h3>充電與溫度趨勢</h3><p>記錄電池端淨功率、平均、峰值與充電歷程。裝置提供資料時，也能查看 CPU、SoC、GPU 與電池溫度。</p><p>可透過已授權的 Shizuku 讀取裝置開放的電池循環與容量資料。</p></article>
+          <article><h3>藍牙音訊與配件</h3><p>查看目前使用的編解碼器、取樣率與聲道模式。支援的裝置可調整編解碼設定，也能在桌面查看部分配件電量。</p></article>
+          <article><h3>檢測與監控</h3><p>逐項檢查顯示、觸控、喇叭與麥克風，或用貼膜輔助調整螢幕圓角與對位格線。</p><p>按需求啟用浮動監控、效能通知或 App 用量分析。檢測項目與讀值依硬體和權限而異。</p></article>
         </div>
       </div>
     </section>
+    <div class="shell feature-details">
+      <section id="widgets" aria-labelledby="widgets-title">
+        <h2 id="widgets-title">桌面小工具</h2>
+        <p class="feature-lede">在 Android 桌面長按空白處，選擇「小工具」並找到 Galaxy Box。已加入的小工具可在桌面長按調整，也可從 App 總覽進入設定。</p>
+        <dl class="feature-spec">
+          <div><dt>完整版與 5 欄資訊</dt><dd>將時鐘、機型及多項讀值放在同一個小工具。機型、日期與讀值欄位可依喜好顯示。</dd></div>
+          <div><dt>電池精簡版與資源版</dt><dd>精簡版以電量、充電狀態與電池溫度為主。資源版用來查看記憶體和儲存。也能切成只顯示 CPU 頻率、記憶體、儲存、電池溫度或開機時間的單項小工具。</dd></div>
+          <div><dt>藍牙電量條</dt><dd>一列顯示手機及已連線耳機、手錶的電量。預設寬 5 格、高 1 格，可縮至寬 2 格，實際尺寸依桌面啟動器而異。</dd></div>
+          <div><dt>每個小工具獨立設定</dt><dd>可選靜態玻璃、純色或完全透明，調整背景不透明度、文字和強調色。點擊小工具可設定為開啟 App、進入設定或無動作。</dd></div>
+          <div><dt>快照與手動更新</dt><dd>資料附取樣時間，點 ↻ 可立即重新讀取。背景更新由 Android 排程，時間可能延後。裝置沒有提供的讀值會顯示「—」。</dd></div>
+        </dl>
+      </section>
+      <section id="customization" aria-labelledby="customization-title">
+        <h2 id="customization-title">App 個人化</h2>
+        <p class="feature-lede">在 App 右上方點齒輪，就能調整外觀、背景、語言與溫度單位。</p>
+        <dl class="feature-spec">
+          <div><dt>介面風格與主題</dt><dd>可切換原有介面與 Miuix 風格，選擇跟隨系統、淺色或深色。Android 12 以上也支援動態取色。</dd></div>
+          <div><dt>液態玻璃與導覽列</dt><dd>玻璃效果可獨立開關，也可降低透明度或關閉導覽列底板。實際光學效果依裝置支援而定。</dd></div>
+          <div><dt>自訂背景</dt><dd>匯入圖片後可裁切，選擇覆蓋、適應、拉伸、置中或平鋪，並調整模糊度、亮度與遮罩不透明度。支援的圖片格式依裝置而異，單檔上限 20 MB。</dd></div>
+          <div><dt>儲存背景組合</dt><dd>可替不同背景命名，再套用、重新命名、刪除或恢復預設。匯入的背景圖片保存在手機上。</dd></div>
+          <div><dt>語言與溫度</dt><dd>介面可切換繁體中文、簡體中文或英文，溫度可用攝氏 °C 或華氏 °F 顯示。</dd></div>
+        </dl>
+      </section>
+    </div>
     <section class="shell installation" id="install" aria-labelledby="install-title">
       <div>
         <h2 id="install-title">下載與安裝</h2>

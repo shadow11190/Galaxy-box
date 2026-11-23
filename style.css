@@ -57,6 +57,14 @@ h3 { font-size: 1.18rem; line-height: 1.35; }
 .feature-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.45rem; margin-top: 2rem; }
 .feature-grid article { border-top: 2px solid #41615f; padding-top: 1rem; }
 .feature-grid p, .details p { color: var(--muted); margin-top: .55rem; }
+.feature-jumps { display: flex; flex-wrap: wrap; gap: .3rem 1.3rem; margin-top: .8rem; }
+.feature-jumps a { display: inline-flex; align-items: center; min-height: 44px; color: var(--mint); text-underline-offset: .25em; }
+.feature-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2.25rem, 6vw, 5.5rem); padding-block: clamp(3rem, 6vw, 5rem); border-bottom: 1px solid var(--line); }
+.feature-lede { margin-top: .75rem; color: var(--muted); }
+.feature-spec { margin: 1.45rem 0 0; border-top: 1px solid var(--line); }
+.feature-spec div { padding-block: .85rem; border-bottom: 1px solid var(--line); }
+.feature-spec dt { font-weight: 720; }
+.feature-spec dd { margin: .25rem 0 0; color: var(--muted); }
 .installation { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); }
 .muted { color: var(--muted); margin-top: .7rem; }
 .text-link { color: var(--mint); display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: .28em; }
@@ -82,7 +90,7 @@ summary::marker { color: var(--mint); }
   .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 43rem) {
-  .hero, .installation { grid-template-columns: minmax(0, 1fr); }
+  .hero, .installation, .feature-details { grid-template-columns: minmax(0, 1fr); }
   .hero { padding-top: 3rem; }
   .showcase { max-width: 29rem; width: 100%; margin-inline: auto; }
   .phone { width: min(60%, 15rem); }
